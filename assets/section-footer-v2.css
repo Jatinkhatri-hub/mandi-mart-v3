@@ -1,0 +1,175 @@
+.footer{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-padding-top {
+  padding-block: 1rem;
+}
+.wave {
+  display: none;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:  column;
+  padding: 2rem 1rem;
+}
+
+.footer__brand-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.description-desktop {
+  display: none;
+}
+
+.footer__payment-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 25px;
+  margin-top: 2.5rem;
+}
+
+.footer__payment-img {
+  width: 350px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.footer__menu-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 2.5rem;
+  height: 310px;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer__menu-item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.footer__menu-item {
+  font-size: 24px;
+}
+
+.footer__menu-child-item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.footer__menu-child-item-wrapper a {
+  color: rbg(var(--color-foreground));
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer__disclaimer-wrapper {
+  width: 325px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.footer__disclaimer-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+
+.footer__disclaimer-wrapper p {
+  font-size: 16px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  text-align: center;
+}
+
+.footer__copyright-mobile p{
+  font-size: 16px;
+  text-align: center;
+  display: block;
+}
+
+
+@media screen and (min-width: 789px) { 
+  
+  .footer-padding-top {
+    padding-top: 8rem;
+  }
+
+  .wave {
+    display: block;
+  }
+  
+  .footer-container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .footer__brand-info {
+    width: 380px;
+    align-items: baseline;
+  }
+
+  .description-desktop {
+    display: block;
+  }
+
+  .footer__payment-wrapper {
+    width: 380px;
+    height: 28px;
+    margin: 0;
+  }
+
+  .footer__payment-img {
+    width: 380px;
+    height: 28px;
+  }
+
+  .footer__menu-wrapper {
+    height: 350px;
+    gap: 0;
+  }
+
+  .footer__menu-item {
+    margin-bottom: 4.5rem;
+    margin-right: 8.5rem;
+  }
+
+  .footer__menu-child-item-wrapper a {
+    font-size: 20px;
+  }
+
+  .footer__disclaimer-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+
+
+  .footer__copyright-mobile {
+    display: none;
+  }
+}

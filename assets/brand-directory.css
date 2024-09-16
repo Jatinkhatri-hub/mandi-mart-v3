@@ -1,0 +1,90 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.brand-directory-content {
+    /* margin: 0rem 9.225rem;
+    padding: 1rem 2rem;  */
+}
+.brand-directory-heading {
+    font-size: 4.8rem;
+    padding-bottom: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.brand-directory-heading p {
+    margin: 0;
+}
+.brand-directory-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 2rem; /* 15px / 16 */
+}
+.brand-item {
+    text-decoration: none; /* Removes underline from links */
+}
+.brand-content {
+    height: 129px;
+    width: 250px; /* 275px / 16 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F7F7;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    border-radius: 0.3rem; /* 5px / 16 */
+     /* 20px / 16 */
+}
+.brand-content:hover {
+    border: 0.125rem black solid; /* 2px / 16 */
+}
+.brand-content img {
+    height: 45px; /* 45px / 16 */
+    width: fit-content;
+    max-height: 80%; /* Adjust image height as needed */
+    max-width: 100%; 
+    object-fit: cover;
+}
+.brand-content p {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    font-weight: 400; /* This value is abnormally large and might need adjustment */
+}
+/* MEDIA QUERIES... */
+
+@media(min-width : 319px) and (max-width : 900px){
+ .brand-directory-heading{
+    font-size: 32px;
+    margin: 0;
+ }
+ .brand-directory-content{
+    margin: 0;
+    padding: 0;
+ }
+ .brand-content{
+    height: 74px;
+    width: 150px;
+    padding: 0;
+}
+.brand-content p {
+    font-size: 15px;
+}
+.brand-content img{
+    height: 24px;
+    object-fit: contain;
+}
+.brand-directory-container{
+    gap: 10px;
+    margin: 0;
+}
+
+}
+
+

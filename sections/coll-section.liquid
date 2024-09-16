@@ -1,0 +1,43 @@
+{{ 'coll-section.css' | asset_url | stylesheet_tag }}
+<div class="coll-section custom-section">
+    <div class="coll-section-container">
+        
+        <div class="coll-section-text">
+            <img class="coll-section-ratings" src="{{ 'ratings.png' |  asset_url }}" alt="ratings">
+            <div class="coll-section-ratings"></div>
+            <h2>{{ section.settings.heading }}</h2>
+            <p>{{ section.settings.subhead }} </p>
+
+        </div>
+        <img class="coll-section-img" src="{{section.settings.image |  img_url: 'master'}}" alt="section image">
+    </div>
+</div>
+
+{% schema  %} 
+{
+    "name": "coll-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "text",
+            "id": "subhead",
+            "label": "Sub Heading"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "coll-section"
+        }
+    ]
+}
+ {% endschema %}
+

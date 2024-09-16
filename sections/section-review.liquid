@@ -1,0 +1,298 @@
+{{ 'section-review.css' |  asset_url |  stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+
+    .swiper-slide-{{ section.id }} {
+      width: 280px !important;
+      height: 210px !important;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    /* .swiper-slide-{{ section.id }} {
+      width: 310px !important;
+      height: 200px !important;
+    } */
+
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} review__container custom-section">
+  <div class="review__carousel-wrapper page-width color-{{ section.settings.color_scheme }}">
+      <div class="btn-group-review">
+        <div class="swiper-btn button--{{ section.id }} swiper-button-prev"></div>
+        <div class="swiper-btn button--{{ section.id }} swiper-button-next"></div>
+      </div>
+      <div class="review__section-header-wrapper">
+        <h1 class="review__section-header">{{ section.settings.heading }}</h1>
+      </div>
+
+      <div class="review__list-wrapper swiper mySwiper mySwiper-{{ section.id }}">
+      <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="review__card swiper-slide swiper-slide-{{ section.id }} custom-card">
+          <div class="review__card-header">
+            <div class="review__user-wrapper">
+              <h3 class="review__user-name">{{ block.settings.user_name }}</h3>
+              <div class="review__verified-badge">{% render 'icon-tick-2' %} <span>Verified Customer</span></div>
+            </div>
+            <div class="review__star-wrapper">
+              {% render 'icon-star' %}
+              {% render 'icon-star' %}
+              {% render 'icon-star' %}
+              {% render 'icon-star' %}
+              {% render 'icon-star' %}
+            </div>
+          </div>
+            <div class="review__description-wrapper">
+              <p class="review__description">{{ block.settings.user_description }}</p>
+            </div>
+        </div>
+      {% endfor %}
+      </div>
+      <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
+      </div>
+  </div>
+</div>
+
+
+<style>
+
+.review__carousel-wrapper {
+  position: relative
+}
+
+.review__carousel-wrapper.page-width {
+  padding: 0;
+}
+
+.btn-group-review {
+    display: flex;
+    position: absolute;
+    gap: 20px;
+    right: 20px;
+    top: 75px;
+    
+  }
+
+  .swiper-btn {
+    display: flex !important;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #008780;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: initial;
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .swiper-wrapper {
+    padding-bottom: 50px;
+
+  }
+
+  .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    bottom: 0;
+    width: 600px;
+    height: 8px;
+    border-radius: 24px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: white;
+    top: 350px;
+  }
+
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #008780;
+  }
+
+  .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 0px !important;
+}
+  
+  /* .swiper-pagination {
+    top: 45px;
+  } */
+
+  /* .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  } */
+
+  .swiper-pagination-bullet-active {
+    background-color: #008780;
+  }
+
+  .swiper-button-disabled {
+    background-color: transparent;
+    border: 2px solid #008780;
+    color: black;
+  }
+
+  @media screen and (max-width: 769px) {
+
+  .review__carousel-wrapper.page-width {
+    padding: 1rem;
+  }
+
+    .btn-group-review {
+      top: auto;
+      bottom: 0;
+    }
+      
+    .swiper-btn {
+      width: 35px;
+      height: 35px;
+      
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .swiper-pagination {
+    text-align: start;
+  }
+  }
+
+</style>
+
+
+<script>
+
+ document.addEventListener('DOMContentLoaded', () => {
+    const id = "{{ section.id }}"
+
+    const swiperClass = `.mySwiper-${id}`;
+    const swiperPaginationClass = `.swiper-pagination-${id}`;
+    const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
+    const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
+
+    const swiperContainer = document.querySelector(swiperClass);
+    const swiperPagination = document.querySelector(swiperPaginationClass);
+    const swiperButtonNext = document.querySelector(swiperButtonNextClass);
+    const swiperButtonPrev = document.querySelector(swiperButtonPrevClass);
+
+    let swiper = new Swiper(swiperClass, {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      loop: true,
+      navigation: {
+        nextEl: swiperButtonNextClass,
+        prevEl: swiperButtonPrevClass,
+      },
+      pagination: {
+        el: swiperPaginationClass,
+        clickable: true,
+      },
+      breakpoints: {
+        786: {
+          slidesPerView: 'auto',
+          spaceBetween: 10,
+          pagination: {
+            type: "progressbar"
+          },
+        }
+      },
+      observer: true, 
+      observeParents: true,
+    });    
+});
+</script>
+
+
+{% schema %}
+  {
+    "name": "Review Section",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Heading",
+        "default": "<p>Rich text</p>"
+      },
+      {
+        "type": "color_scheme",
+        "id": "section_color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.multirow.settings.container_color_scheme.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "review_carousle",
+        "name": "Review Carousle",
+        "settings": [
+          {
+            "type": "text",
+            "id": "user_name",
+            "label": "Name",
+            "default": "Name"
+          },
+          {
+            "type": "text",
+            "id": "user_description",
+            "label": "Description",
+            "default": "Lorem ipsum dolor sit amet"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Review Carousel"
+      }
+    ]
+  }
+{% endschema %}

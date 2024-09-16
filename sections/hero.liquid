@@ -1,0 +1,491 @@
+{{ 'https://unpkg.com/swiper/swiper-bundle.min.css' | stylesheet_tag }}
+
+<div class="hero-slider swiper mySwiper mySwiper-{{ section.id }}">
+  <div class="swiper-wrapper section-wrapper-{{ section.id }}">
+  {% for block in section.blocks %}
+    {% if block.type == 'banner' %}
+      <div class="hero-div section-{{ section.id }} color-{{ section.settings.hero_color_scheme }} swiper-slide">
+        <div class="banner-img-wrapper">
+          {% if block.settings.hero_bg_image != blank %}
+            {{ block.settings.hero_bg_image | image_url: width: block.settings.image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: "hero-bg" }}
+          {% endif %}
+        </div>
+
+        <div class="banner-img-wrapper-mobile">
+          {% if block.settings.hero_bg_image_mobile != blank %}
+            {{ block.settings.hero_bg_image_mobile | image_url: width: block.settings.image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700', class: "hero-bg-mobile" }}
+          {% endif %}
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-ratings">
+            <img src="{{ 'hero-ratings.png' | asset_url }}" alt="ratings" /> 
+          </div>
+
+          {% if block.settings.hero_title_text != blank %}
+            <div class="hero-title">
+              <h3 class="hero-title-text">{{ block.settings.hero_title_text | default: 'Transform Your Health With Premium Supplements' }}</h3>
+            </div>
+          {% endif %}
+
+          {% if block.settings.hero_para_text != blank %}
+            <div class="hero-para">
+              <p class="hero-para-text">{{ block.settings.hero_para_text | default: 'Discover our range of curated health supplements by trusted brands!' }}</p>
+            </div>
+          {% endif %}
+
+          
+            <div class="hero-points">
+              {% if block.settings.hero_point_text_1 != blank %}
+              <div class="hero-point">
+                <div class="hero-point-svg">
+                  {% render 'tick' %}
+                </div>
+                <p class="hero-point-text">{{ block.settings.hero_point_text_1 | default: 'Wide range of brands and categories' }}</p>
+              </div>
+            {% endif %}
+
+            {% if block.settings.hero_point_text_2 != blank %}
+              <div class="hero-point">
+                <div class="hero-point-svg">
+                  {% render 'tick' %}
+                </div>
+                <p class="hero-point-text">{{ block.settings.hero_point_text_2 | default: 'Premium supplements trusted by experts' }}</p>
+              </div>
+            {% endif %}
+
+            {% if block.settings.hero_point_text_3 != blank %}
+              <div class="hero-point">
+                <div class="hero-point-svg">
+                  {% render 'tick' %}
+                </div>
+                <p class="hero-point-text">{{ block.settings.hero_point_text_3 | default: 'Best prices and fast delivery' }}</p>
+              </div>
+            {% endif %}
+            </div>
+          
+
+          {% if block.settings.hero_button_text != blank %}
+            <a class="button-link" href="{{ block.settings.button_link }}">
+              <button class="hero-button">
+                {{ block.settings.hero_button_text | default: 'Default Button Text' }}
+              </button>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+
+
+  <div class="swiper-button-next explore-btn-left">.</div>
+  <div class="swiper-button-prev explore-btn-right">.</div>
+</div>
+
+
+
+
+<style>
+  .hero-slider{
+    width: 100vw;
+  }
+    .swiper-wrapper-{{ section.id }} {
+      width: fit-content;
+      display: flex;
+      overflow: hidden;
+      height: 610px;
+    }
+    .hero-div {
+        height: 610px;
+        width: 100%;
+        position: relative;
+        background-color: transparent;
+        /* padding-left: 10px;
+        padding-right: ; */
+    }
+
+    .banner-img-wrapper{
+      height: 610px;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+        height: 610px;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -3;
+    }
+    .banner-img-wrapper-mobile{
+      display: none;
+    }
+
+    .hero-content {
+        margin-left: 120px;
+        padding-top: 54px;
+        width: 594px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .hero-ratings img {
+        height: 32px;
+    }
+
+    .hero-title{
+      margin: 0;
+      padding: 0;
+    }
+    .hero-title-text {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 54px;
+    }
+
+    .hero-para{
+      margin: 0;
+      padding: 0;
+    }
+    .hero-para-text {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 31.1px;
+
+    }
+
+    .hero-points {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-point {
+      margin: 0;
+      padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 50px;
+        padding: 0 15.5px;
+        height: 33px;
+    }
+
+    .hero-point-svg {
+      margin: 0;
+      padding: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #074542;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-point-text {
+      margin: 0;
+      padding: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: 400px;
+        line-height: 27px;
+    }
+
+    .hero-button {
+        height: 77px;
+        width: 419px;
+        border: none;
+        border-radius: 82px;
+        background-color:rgb(var(--color-button)); ;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 37.32px;
+        color: rgb(var(--color-button-text));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-button:hover{
+      background-color: rgb(var(--color-button-text));
+      color:rgb(var(--color-button)); ;
+
+    }
+    .button-link{
+      text-decoration: none;
+    
+    }
+
+    .explore-btn-left{
+      color: black; 
+  z-index: 10;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  font-size: 0px;
+
+    }
+.explore-btn-right {
+  color: black; 
+  z-index: 10;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  font-size: 0px;
+
+}
+
+
+   /* MEDIA QUERIES... */
+
+   @media(min-width : 319px) and (max-width : 700px){
+
+   .swiper-wrapper-{{ section.id }} {
+    height: 695px;
+    
+   }
+
+    .hero-div{
+      margin: 0;
+      height: 695px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      /* padding-left: 10px;
+      padding-right: 10px; */
+
+      margin-right: 0 !important;
+    }
+    .banner-img-wrapper{
+      display: none;
+    }
+
+    .banner-img-wrapper-mobile{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 695px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -3;
+      overflow: hidden;
+    }
+
+    .hero-bg-mobile {
+      height: 695px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -3;
+    }
+
+    .hero-content{
+      margin: 0;
+      padding: 0;
+      padding-top: 28.5px;
+      /* width: 379px; */
+      width: 100%;
+      gap: 9px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-ratings img {
+      width: 330.64px;
+      height: auto;
+    }
+
+
+    .hero-title-text{
+      font-size: 24px;
+      line-height: 32.4px;
+    }
+    .hero-para-text{
+      font-size: 16px;
+      line-height: 24.88px;
+    }
+    
+    .hero-points{
+      gap: 4px;
+    }
+    .hero-point{
+      width: fit-content;
+      min-width: 329px;
+      min-height: 33px;
+      height: 33px;
+      padding: 0px 10px;
+      gap: 5px;
+    }
+    .hero-point-svg{
+      width: 15px;
+      height: 15px;
+    }
+    .hero-point-text{
+      font-size: 14px;
+      line-height: 21px;
+      text-align: left;
+    }
+
+    .hero-button{
+      width: 331px;
+      height: 58px;
+      margin-top: 270px;
+    }
+    .swiper-button-next{
+      width: 15px;
+      height: 20px;
+    }
+    .swiper-button-prev{
+      width: 12px;
+      height: 20px;
+    }
+   }
+
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<script>
+  const swiperId = "{{ section.id }}"
+  var swiper = new Swiper(`.mySwiper-${swiperId}`, {
+  loop: true, 
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.explore-btn-left',
+    prevEl: '.explore-btn-right',
+  },
+  autoplay: {
+    delay: 6000, 
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1, // For smaller screens, show one slide at a time
+    },
+    640: {
+      slidesPerView: 1, // Show more slides for larger mobile devices
+    },
+    1024: {
+      slidesPerView: 1, // For tablet and up, show 3 slides at a time
+    },
+  },
+});
+
+
+</script>
+
+{% schema %}
+  {
+    "name": "Hero Section",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "hero_color_scheme",
+        "label": "Color Scheme",
+        "default": "background-1"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "banner",
+        "name": "Banner",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "hero_bg_image",
+            "label": "Hero Background Image (Desktop)"
+          },
+          {
+            "type": "image_picker",
+            "id": "hero_bg_image_mobile",
+            "label": "Hero Background Image (Mobile)"
+          },
+          {
+            "type": "text",
+            "id": "hero_title_text",
+            "label": "Hero Title Text",
+            "default": "Transform Your Health With Premium Supplements"
+          },
+          {
+            "type": "textarea",
+            "id": "hero_para_text",
+            "label": "Paragraph Text",
+            "default": "Discover our range of curated health supplements by trusted brands!"
+          },
+          {
+            "type": "text",
+            "id": "hero_point_text_1",
+            "label": "Point Text",
+            "default": "Wide range of brands and categories"
+          },
+          {
+            "type": "text",
+            "id": "hero_point_text_2",
+            "label": "Point Text",
+            "default": "Premium supplements trusted by experts"
+          },
+          {
+            "type": "text",
+            "id": "hero_point_text_3",
+            "label": "Point Text",
+            "default": "Best prices and fast delivery"
+          },
+          {
+            "type": "text",
+            "id": "hero_button_text",
+            "label": "Button Text",
+            "default": "Default Button Text"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Section",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
+  

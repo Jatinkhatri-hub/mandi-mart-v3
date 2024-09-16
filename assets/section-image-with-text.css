@@ -1,0 +1,120 @@
+.iwt__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.iwt__img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 355px;
+  height: 280px;
+}
+
+.iwt__img {
+  width: 355px;
+  height: 280px;
+  object-fit: contain;
+}
+
+.iwt__info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 2.5rem 2.5rem;
+  gap: 1rem;
+}
+
+.iwt__title {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+.iwt__info-wrapper p {
+  font-size: 16px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+.iwt__button {
+  cursor: pointer;
+  border-radius: 80px;
+  padding: 1rem 8rem;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-size: 24px;
+}
+
+.solid-btn {
+  background: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+  border: 4px solid rgb(var(--color-button));
+}
+
+.solid-btn:hover {
+  background: rgb(var(--color-button-text));
+  color: rgb(var(--color-button));
+  border: 4px solid rgb(var(--color-button));
+}
+
+.outline-btn {
+  background: none;
+  color: rgb(var(--color-secondary-button-text));
+  border: 4px solid rgb(var(--color-secondary-button-text));
+}
+
+.outline-btn:hover {
+  background: rgb(var(--color-secondary-button-text));;
+  color: rgb(var(--color-background));
+  border: 4px solid rgb(var(--color-background));
+}
+
+@media screen and (min-width: 789px) {
+  .iwt__wrapper {
+    flex-direction: row;
+
+  }
+  
+  .iwt__img-wrapper {
+    height: 385px;
+    width: auto;
+  }
+
+  .iwt__img {
+    height: 385px;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .iwt__info-wrapper {
+    align-items: baseline;
+    padding: 0 2.5rem 0 0;
+  }
+
+  .iwt__title {
+    text-align: start;
+    font-size: 40px;
+
+  }
+
+  .iwt__info-wrapper p {
+    font-size: 16px;
+    text-align: start;
+  }
+
+  .iwt__button {
+    font-size: 24px;
+    padding: 1.2rem 10rem;
+    
+  }
+}
+

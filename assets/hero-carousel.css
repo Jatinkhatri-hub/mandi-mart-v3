@@ -1,0 +1,111 @@
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.hero-carousel {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    height: 70rem;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ensure carousel takes full width */
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Make sure each item takes up full width */
+    height: 70rem;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: 4.5rem;
+    width: 4.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    border: #008780 solid 0.1rem;
+    border-radius: 50%;
+    color: #008780;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hero-carousel button:hover {
+    color: #ffffff;
+    background-color: #008780;
+}
+
+.carousel-control-prev {
+    left: 2rem;
+}
+
+.carousel-control-next {
+    right: 4rem;
+}
+
+/* MEDIA QUERIES... */
+
+@media (min-width: 319px) and (max-width: 480px) {
+    /* html {
+        font-size: 5px;
+    } */
+    .hero-carousel {
+        height: 70rem;
+    }
+    .carousel-item {
+        height: 70rem;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        height: 3rem;
+        width: 3rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 700px) {
+    /* html {
+        font-size: 7px;
+    } */
+    .hero-carousel {
+        height: 70rem;
+    }
+    .carousel-item {
+        height: 70rem;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        height: 3rem;
+        width: 3rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1200px) {
+    /* html {
+        font-size: 7px;
+    } */
+    .hero-carousel {
+        height: 80rem;
+    }
+    .carousel-item {
+        height: 80rem;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        font-size: 2rem;
+    }
+}

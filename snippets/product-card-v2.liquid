@@ -1,0 +1,43 @@
+<a href="{{product.url}}" class="product-card__wrapper-v2 custom-card">
+  <div class="product-card__badges-container">
+    {% assign original_price = product.compare_at_price %}
+    {% assign current_price = product.price %}
+
+    {% if original_price > current_price %}
+      {% assign savings = original_price | minus: current_price %}
+      {% assign savings_percentage = savings | times: 100 | divided_by: original_price | abs %}
+      {% assign savings_percentage_rounded = savings_percentage | round %}
+
+      <div class="product-card__badge-container poppins-semibold" style="background-color: #FF6B00; color: white;">
+        <span class="poppins-semibold">SALE</span>
+        {{ savings_percentage_rounded }}%
+      </div>
+    {% endif %}
+
+    {% if product.metafields.custom.product_card_badge_text %}
+      <div class="product-card__badge-container poppins-semibold" style="background-color: {{ product.metafields.custom.product_card_badge_color.value |  color_to_hex }}; color: white; ">
+        {{ product.metafields.custom.product_card_badge_text }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="product-card__img-wrapper-v2">
+    <img src="{{ product.featured_image |  img_url: 'medium' }}" class="product-card__img-v2">
+  </div>
+  <div class="product-card__info-v2">
+    <div class="product-card__rating-v2">
+      <div class="product-card__rating-star-v2">
+        {% render 'icon-star' %}
+        {% render 'icon-star' %}
+        {% render 'icon-star' %}
+        {% render 'icon-star' %}
+        {% render 'icon-star' %}
+      </div>
+      <span class="poppins-regular">100 Reviews</span>
+    </div>
+    <h6 class="product-card__title-v2 poppins-semibold">{{ product.title }}</h6>
+    <p class="product-card__vendor-v2 poppins-regular">{{ product.vendor }}</p>
+    <p class="product-card__price-v2 poppins-semibold">{{ product.price |  money_with_currency }}</p>
+    <button class="product-card__atc-btn-v2" data-variant-id="{{ product.variants.first.id }}">{% render 'icon-bag-v2' %}</button>
+  </div>
+  
+</a>

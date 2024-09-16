@@ -1,0 +1,283 @@
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+<div class="explore-now-div section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} custom-section">
+    <div class="page-width color-{{ section.settings.color_scheme }}">
+    {% for block in section.blocks %}
+    <div class="explore-box">
+        <div class="explore-text-content">
+            <h4 style="color: {{ block.settings.h4_text_color }};">{{ block.settings.h4_text }}</h4>
+            <a href="{{ block.settings.button_link }}" style="text-decoration: none;">
+            <button class="explore-now-btn" style="color: {{ block.settings.button_text_color }};">{{ block.settings.button_text }}</button>
+            </a>
+        </div>
+            <div class="explore-now-img" style="width: {{ block.settings.explore_img_width }}px;  margin-bottom: {{ block.settings.explore_img_margin_bottom }}px;" >
+                <img src="{{ block.settings.explore_img | image_url: width: block.settings.image.width }}" alt="explore Image"  />
+            </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+
+
+<style>
+    .explore-now-div{
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+        width: 1160px;
+        
+       
+    }
+    .page-width{
+        margin: auto;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        height: fit-content;
+    }
+
+    .explore-box{
+        margin: 0;
+        padding: 0;
+        width: 380px;
+        height: 330px;
+        background: linear-gradient(0deg, #3AAFA9, #3AAFA9, #7CE9E3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        border: none;
+        border-radius: 20px;
+    }
+
+    .explore-text-content{
+        margin: 0;
+        padding: 0;  
+        margin-top: 40px;      
+        height: 131px;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+    .explore-text-content h4{
+        margin: 0;
+        padding: 0;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 62.1px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .explore-text-content button{
+        margin: 0;
+        padding: 0;
+        width: 327px;
+        height: 63px;
+        border: 3px solid #074542;
+        background-color: #ffffff;
+        border-radius: 82px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 37.32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+    }
+    .explore-text-content button:hover{
+        background-color: transparent;
+    }
+
+    .explore-now-img{
+        margin: 0;
+        padding: 0;
+        height: fit-content;
+        background-color: transparent;
+        object-fit: cover;
+        position: absolute;
+        background-position: center;
+        bottom: 0;
+        z-index: ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .explore-now-img img{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
+        background-position: center;
+    }
+
+
+    /* MEDIA QUERRIES... */
+
+    @media(min-width : 319px) and (max-width : 700px){
+        .explore-now-div{
+            width: 308.42px;
+            height: fit-content;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        .explore-box{
+            width: 308.42px;
+            height: 247.6px;
+        }
+        .explore-text-content{
+            height: 92.95px;
+            gap: 4.26px;
+            margin-top: 30px;
+        }
+        .explore-text-content h4{
+            font-size: 32.64px;
+            line-height: 44.06px;
+        }
+        .explore-text-content button{
+            width: 232px;
+            height: 44.7px;
+            border: 3px solid #074542;
+            border-radius: 58.18px;
+            font-size: 17.03px;
+            line-height: 26.48px;
+        }
+
+        .explore-now-img{
+            height: 105px !important;
+            width: fit-content !important;
+
+    }
+    .explore-now-img img{
+        height: 100%;
+        width: auto;
+    }
+}
+
+</style>
+
+
+{% schema %}
+    {
+      "name": "Explore Section 2",
+      "settings": [
+        {
+        "type": "color_scheme",
+        "id": "section_color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.multirow.settings.container_color_scheme.label",
+        "default": "scheme-1"
+      },
+        {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+      ],
+      "blocks": [
+        {
+          "type": "explore_box",
+          "name": "Explore Box",
+          "settings": [
+            {
+              "type": "text",
+              "id": "h4_text",
+              "label": "Heading Text",
+              "default": "BEST SELLERS"
+            },
+            {
+              "type": "color",
+              "id": "h4_text_color",
+              "label": "Heading Text Color",
+              "default": "#000000"
+            },
+            {
+              "type": "text",
+              "id": "button_text",
+              "label": "Button Text",
+              "default": "Explore Now"
+            },
+            {
+              "type": "color",
+              "id": "button_text_color",
+              "label": "Button Text Color",
+              "default": "#000000"
+            },
+            {
+  "type": "url",
+  "id": "button_link",
+  "label": "Button Link"
+},
+
+            {
+                    "type": "image_picker",
+                    "id": "explore_img",
+                    "label": "explore box Image"
+                },
+                {
+                    "type": "range",
+                    "id": "explore_img_width",
+                    "label": "explore Image Width (px)",
+                    "default": 250,
+                    "min": 100,
+                    "max": 1000,
+                    "step": 10
+                },
+                {
+                    "type": "range",
+                    "id": "explore_img_margin_bottom",
+                    "label": "Explore Image Margin Bottom (px)",
+                    "default": 0,
+                    "min": 0,
+                    "max": 100,
+                    "step": 1
+                }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Explore Section 2",
+          "category": "Custom"
+        }
+      ]
+    }
+    {% endschema %}
+    

@@ -1,0 +1,154 @@
+{{ 'explore.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="section-{{ section.id }}-padding custom-section">
+  <div class="explore-categories page-width">
+    <h2 class="explore-heading">Explore our categories</h2>
+    <div class="explore-categories-container">
+      {% if section.settings.image_1 %}
+        <a
+          href="{{ section.settings.link_1 }}"
+          target="_blank"
+          class="image-1 custom-card">
+          <img src="{{ section.settings.image_1 | img_url: 'master' }}" alt="Category Image 1">
+        </a>
+      {% endif %}
+      {% if section.settings.image_2 %}
+        <a
+          href="{{ section.settings.link_2 }}"
+          target="_blank"
+          class="image-2 custom-card">
+          <img src="{{ section.settings.image_2 | img_url: 'master' }}" alt="Category Image 2">
+        </a>
+      {% endif %}
+      {% if section.settings.image_3 %}
+        <a
+          href="{{ section.settings.link_3 }}"
+          target="_blank"
+          class="image-3 custom-card">
+          <img src="{{ section.settings.image_3 | img_url: 'master' }}" alt="Category Image 3">
+        </a>
+      {% endif %}
+      {% if section.settings.image_4 %}
+        <a
+          href="{{ section.settings.link_4 }}"
+          target="_blank"
+          class="image-4 custom-card">
+          <img src="{{ section.settings.image_4 | img_url: 'master' }}" alt="Category Image 4">
+        </a>
+      {% endif %}
+    </div>
+    {% if section.settings.h4_link %}
+      <h4 class="explore-categories-link">
+        <a href="{{ section.settings.h4_link }}" target="_blank">{{ section.settings.h4_text }}</a>
+      </h4>
+    {% else %}
+      <h4 class="explore-categories-link">{{ section.settings.h4_text }}</h4>
+    {% endif %}
+  </div>
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "explore",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "section_color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.multirow.settings.container_color_scheme.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "Category Image 1"
+      },
+      {
+        "type": "url",
+        "id": "link_1",
+        "label": "Category Link 1"
+      }, {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "Category Image 2"
+      }, {
+        "type": "url",
+        "id": "link_2",
+        "label": "Category Link 2"
+      }, {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "Category Image 3"
+      }, {
+        "type": "url",
+        "id": "link_3",
+        "label": "Category Link 3"
+      }, {
+        "type": "image_picker",
+        "id": "image_4",
+        "label": "Category Image 4"
+      }, {
+        "type": "url",
+        "id": "link_4",
+        "label": "Category Link 4"
+      }, {
+        "type": "text",
+        "id": "h4_text",
+        "label": "H4 Text",
+        "default": "Explore all categories"
+      }, {
+        "type": "url",
+        "id": "h4_link",
+        "label": "H4 Link"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "presets": [
+      {
+        "name": "explore"
+      }
+    ]
+  }
+{% endschema %}

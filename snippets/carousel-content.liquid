@@ -1,0 +1,22 @@
+{{ 'carousel-content.css' | asset_url | stylesheet_tag }}
+<div class="carousel-container {{ carousel_alignment }}">
+    <h2 class="carousel-heading">{{ carousel_heading }}</h2>
+    <p class="carousel-sub-heading">{{ carousel_sub_heading }}</p>
+    <ul class="carousel-list">
+        {% if carousel_list_item_1 != blank %}
+            <li class="carousel-list-item list-item-1">{% render 'icon-tick' %} {{ carousel_list_item_1 }}</li>
+        {% endif %}
+        {% if carousel_list_item_2 != blank %}
+            <li class="carousel-list-item list-item-2">{% render 'icon-tick' %} {{ carousel_list_item_2 }}</li>
+        {% endif %}
+        {% if carousel_list_item_3 != blank %}
+            <li class="carousel-list-item list-item-3">{% render 'icon-tick' %} {{ carousel_list_item_3 }}</li>
+        {% endif %}
+    </ul>
+    {% if carousel_button_text != blank %}
+        <button class="carousel-button">{{ carousel_button_text }}</button>
+    {% endif %}
+</div>
+
+
+

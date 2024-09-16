@@ -1,0 +1,118 @@
+.review__container {
+  border-top-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  overflow: hidden;
+}
+
+.review__carousel-wrapper{
+  padding: 2rem;
+  position: relative;
+}
+
+.review__section-header-wrapper{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.review__section-header {
+  font-size: 3.7rem;
+  color: rgb(var(--color-foreground));
+  font-weight: 600;
+}
+
+.review__list-wrapper {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.review__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 3rem 3.5rem;
+  gap: 15px;
+  background: white;
+  width: 310px;
+  height: 230px;
+}
+
+.review__card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.review__user-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.review__user-name {
+  font-size: 1.9rem;
+  color: black;
+  margin: 0;
+}
+
+.review__verified-badge {
+  font-size: 16px;
+  color: #3aafa9;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  align-items: center;
+}
+
+.review__verified-badge svg {
+  width: 13px;
+  height: 13px;
+}
+
+.review__verified-badge svg path {
+  fill: #3aafa9;
+}
+
+.review__description {
+  font-size: 16px;
+  text-align: start;
+  color: black;
+  margin: 0;
+}
+
+
+@media screen and (max-width: 789px){
+
+  .review__section-header p {
+    font-size: 35px ;
+    margin-bottom: 10px  ;
+  }
+
+  .review__container {
+    overflow: visible;
+    border-radius: 0;
+  }
+
+  .review__section-header-wrapper {
+    justify-content: center;
+  }
+
+  .review__user-name {
+    font-size: 15px;
+  }
+
+  .review__section-header p {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 0;
+  }
+
+  .review__description {
+    font-size: 15px;
+  }
+}

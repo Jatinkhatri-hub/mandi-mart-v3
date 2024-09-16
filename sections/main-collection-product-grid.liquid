@@ -1,0 +1,436 @@
+{{ 'product-card-v2.css' | asset_url | stylesheet_tag }}
+{{ 'add-to-cart.js' | asset_url | script_tag }}
+{{ 'main-collection-product-grid-new.css' | asset_url | stylesheet_tag }}
+{{ 'feature-product-collection.css' |  asset_url |  stylesheet_tag }}
+
+
+<div class="custom-collection-product-grid filter-collection__page-width">
+  {% if collection.filters.size > 0 %}
+    <div class="custom-filters">
+      <div class="collection__mobile-filter">
+        <span>Filters</span>
+        {% render 'icon-arrow-down' %}
+      </div>
+      <form class="custom-filters-form visible">
+        {%- for filter in collection.filters -%}
+          <div class="collection__custom-filter">
+            <span class="collection__filter-label">{{ filter.label }}:</span>
+            <details class="collection__filter-box">
+              <summary>
+                <div class="collection__filter-box-title">
+                  <span>{{ filter.label }}</span>
+                  {% render 'icon-arrow-down' %}
+                {% comment %} {%- if filter.active_values.size > 0 -%}
+                                                                                                                              <span>({{ filter.active_values.size }})</span>
+                                                                                                                {%- endif -%} {% endcomment %}
+                </div>
+              </summary>
+
+              <div class="collection__filter-dropdown">
+                {% comment %} <div>
+                                                                                                            <p>{{ filter.active_values.size }} selected</p>
+                                                                                                            {%- if filter.active_values.size > 0 -%}
+                                                                                                              <p>
+                                                                                                                <a href="{{ filter.url_to_remove }}">Reset</a>
+                                                                                                              </p>
+                                                                                                            {%- endif -%}
+                                                                                                </div> {% endcomment %}
+                {%- case filter.type -%}
+                  {%- when 'boolean' -%}
+                    <ul>
+                      <li class="li__remove-default-style">
+                        <label for="Filter-{{ filter.param_name }}-{{ filter.true_value.value }}">
+                          <input
+                            type="radio"
+                            name="{{ filter.param_name }}"
+                            value="{{ filter.true_value.value }}"
+                            id="Filter-{{ filter.param_name }}"
+                            {% if filter.true_value.active -%}
+                            checked{%- endif %}
+                            {% if filter.true_value.count == 0 and filter.true_value.active == false -%}
+                            disabled{%- endif -%}
+                            class="hidden-radio-button">{{ filter.true_value.label }}</label>
+                      </li>
+                      <li class="li__remove-default-style">
+                        <label for="Filter-{{ filter.param_name }}-{{ filter.false_value.value }}">
+                          <input
+                            type="radio"
+                            name="{{ filter.param_name }}"
+                            value="{{ filter.false_value.value }}"
+                            id="Filter-{{ filter.param_name }}"
+                            {% if filter.false_value.active -%}
+                            checked{%- endif %}
+                            {% if filter.false_value.count == 0 and filter.false_value.active == false -%}
+                            disabled{%- endif %}
+                            class="hidden-radio-button">{{ filter.false_value.label }}</label>
+                      </li>
+                    </ul>
+
+                  {% comment %} <div>
+                                                                                                                          <input type="submit" value="Apply">
+                                                                                                              </div> {% endcomment %}
+                  {%- when 'list' -%}
+                    <ul>
+                      {%- for filter_value in filter.values -%}
+                        <li class="li__remove-default-style">
+                          <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                            <input
+                              type="radio"
+                              name="{{ filter_value.param_name }}"
+                              value="{{ filter_value.value }}"
+                              id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                              {% if filter_value.active -%}
+                              checked{%- endif %}
+                              {% if filter_value.count == 0 and filter_value.active == false -%}
+                              disabled{%- endif %}
+                              class="hidden-radio-button">
+                            <span>
+                              {%- case filter_value.display.type -%}
+                                {%- when 'colors' -%}
+                                  {% liquid
+                                    assign size_limit = filter_value.display.value.size | at_most: 4
+                                    assign rotation = '0deg'
+                                    if size_limit == 2
+                                      assign rotation = '45deg'
+                                    endif
+
+                                    assign angle_increment = 360 | divided_by: size_limit
+                                    assign angle = 0
+                                  %}
+                                  {%- capture conic_gradient -%}
+                            {%- for color in filter_value.display.value limit: size_limit -%}
+                              {{ color }} {{ angle }}deg{%- assign angle = angle | plus: angle_increment %} {{ angle }}deg{%- unless forloop.last %}, {%- endunless -%}
+                            {%- endfor -%}
+                          {%- endcapture -%}
+                                  <span style="
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: conic-gradient({{ conic_gradient }}); transform: rotateZ({{ rotation }});
+                          ">
+</span>
+                                {%- when 'image' -%}
+                                  {{
+                                    filter_value.display.value | image_url: width: 65 | image_tag: alt: filter_value.display.value.alt
+                                  }}
+                                {%- else -%}
+                                  <span class="visual-display__child"></span>
+                              {%- endcase -%}
+                            </span>
+                            {{ filter_value.label }}
+                          </label>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+
+                  {% comment %} <div>
+                                                                                                                          <input type="submit" value="Apply">
+                                                                                                              </div> {% endcomment %}
+                  {%- when 'price_range' -%}
+                    <div class="filter-group-display__price-range">
+                      <div class="filter-group-display__price-range-from">
+                        <span>{{ cart.currency.symbol }}</span>
+
+                        <input
+                          name="{{ filter.min_value.param_name }}"
+                          id="Filter-{{ filter.min_value.param_name }}"
+                          {% if filter.min_value.value -%}
+                          value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                          {%- endif %}
+                          type="number"
+                          placeholder="0"
+                          min="0"
+                          max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+                        <label for="Filter-{{ filter.min_value.param_name }}">From</label>
+                      </div>
+                      <div class="filter-group-display__price-range-to">
+                        <span>{{ cart.currency.symbol }}</span>
+
+                        <input
+                          name="{{ filter.max_value.param_name }}"
+                          id="Filter-{{ filter.max_value.param_name }}"
+                          {% if filter.max_value.value -%}
+                          value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+                          {%- endif %}
+                          type="number"
+                          placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                          min="0"
+                          max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+                        <label for="Filter-{{ filter.max_value.param_name }}">To</label>
+                      </div>
+                    </div>
+
+                {% comment %} <div class="filter-group-display__submit">
+                                                                                                                <input type="submit" value="Apply">
+                                                                                                    </div> {% endcomment %}
+                {%- endcase -%}
+              </div>
+            </details>
+          </div>
+        {%- endfor -%}
+        <div class="collection__custom-sort-by">
+          <span class="collection__filter-label">Sort by:</span>
+          <div class="custom-select">
+            <select id="sort-by">
+              {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+
+              {% for option in collection.sort_options %}
+                <option
+                  value="{{ option.value }}"
+                  {% if option.value == sort_by %}
+                  selected="selected"
+                  {% endif %}>
+                  {{ option.name }}
+                </option>
+              {% endfor %}
+            </select>
+            {% render 'icon-arrow-down' %}
+          </div>
+        </div>
+
+        <div class="collection__reset-filter-btn">
+          <p class="collection__reset-filter-text">
+            <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}">Reset filters</a>
+            {% render 'icon-filter-two' %}
+          </p>
+
+          {%- for filter in collection.filters -%}
+            {%- if filter.type == "price_range" -%}
+              {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+                <p>
+                  <a href="{{ filter.url_to_remove }}">
+                    {%- assign min_value = filter.min_value.value | default: 0 -%}
+                    {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
+                    {{ min_value | money }} - {{ max_value | money }} X
+                  </a>
+                </p>
+              {%- endif -%}
+            {%- else -%}
+              {% comment %} {%- for filter_value in filter.active_values -%}
+                                <p>
+                                  <a href="{{ filter_value.url_to_remove }}">
+                                    {{ filter.label }}: {{ filter_value.label }} X
+                                  </a>
+                                </p>
+                            {%- endfor -%} {% endcomment %}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </form>
+
+    </div>
+  {% endif %}
+
+  {% paginate collection.products by 16 %}
+    <div class="collection__product-wrapper custom-section custom-collection-product-grid collection__filter">
+      {% for product in collection.products %}
+        {% render 'product-card-v2'
+          , product: product
+        %}
+      {% endfor %}
+    </div>
+
+    <div class="collection__pagination">
+      {% if paginate.pages > 1 %}
+        <nav class="pagination__nav">
+
+          <a
+            {% if paginate.previous %}
+            href="{{ paginate.previous.url }}"
+            {% endif %}
+            class="pagination__item {% if paginate.previous %} paginate-active 
+            {%  else %} paginate-deactive {% endif %}">
+            {% render 'icon-arrow-left' %}</a>
+
+          {% for part in paginate.parts %}
+            {% if part.is_link %}
+              <a href="{{ part.url }}" class="pagination__item">{{ part.title }}</a>
+            {% else %}
+              <span class="pagination__item pagination__item--current">{{ part.title }}</span>
+            {% endif %}
+          {% endfor %}
+
+          <a
+            {% if paginate.next %}
+            href="{{ paginate.next.url }}"
+            {% endif %}
+            class="pagination__item {% if paginate.next %} paginate-active 
+              {%  else %} paginate-deactive {% endif %}">
+            {% render 'icon-arrow-right' %}</a>
+
+        </nav>
+      {% endif %}
+    </div>
+  {% endpaginate %}
+</div>
+
+<script>
+
+  
+document.addEventListener('DOMContentLoaded', () => {
+
+let filterForm = document.querySelector('.custom-filters-form');
+let filterMobileBtn = document.querySelector('.collection__mobile-filter');
+
+Shopify.queryParams = {};
+
+// Preserve existing query parameters
+if (location.search.length) {
+  var params = location.search.substr(1).split('&');
+
+  for (var i = 0; i < params.length; i++) {
+    var keyValue = params[i].split('=');
+
+    if (keyValue.length) {
+      Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+    }
+  }
+}
+
+function attachEventListeners() {
+  document.querySelectorAll('.hidden-radio-button').forEach(function(radioButton) {
+    radioButton.addEventListener('change', function() {
+      var paramName = this.name;
+      var value = this.value;
+
+      Shopify.queryParams[paramName] = value;
+      var newQueryString = new URLSearchParams(Shopify.queryParams).toString();
+      var newUrl = window.location.pathname + '?' + newQueryString;
+
+      history.replaceState(null, '', newUrl);
+
+      fetch(newUrl, {
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      })
+      .then(function(response) {
+        return response.text();
+      })
+      .then(function(html) {
+        var newDocument = new DOMParser().parseFromString(html, 'text/html');
+        var newContent = newDocument.querySelector('.custom-collection-product-grid').innerHTML;
+
+        document.querySelector('.custom-collection-product-grid').innerHTML = newContent;
+
+        // Re-attach event listeners to the new content
+        attachEventListeners();
+      });
+    });
+  });
+
+  document.querySelector('#sort-by').addEventListener('change', function(e) {
+    var value = e.target.value;
+
+    Shopify.queryParams.sort_by = value;
+    var newQueryString = new URLSearchParams(Shopify.queryParams).toString();
+    var newUrl = window.location.pathname + '?' + newQueryString;
+
+    history.replaceState(null, '', newUrl);
+
+    fetch(newUrl, {
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest'
+      }
+    })
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(html) {
+      var newDocument = new DOMParser().parseFromString(html, 'text/html');
+      var newContent = newDocument.querySelector('.custom-collection-product-grid').innerHTML;
+
+      document.querySelector('.custom-collection-product-grid').innerHTML = newContent;
+
+      // Re-attach event listeners to the new content
+      attachEventListeners();
+    });
+  });
+
+  // Re-attach the filter mobile button event listener
+  filterMobileBtn = document.querySelector('.collection__mobile-filter');
+  filterForm = document.querySelector('.custom-filters-form');
+  filterMobileBtn.addEventListener('click', function() {
+    filterForm.classList.toggle('visible');
+    filterMobileBtn.classList.toggle('open');
+    console.log('filter btn clicked');
+  });
+}
+
+// Initial attachment of event listeners
+attachEventListeners();
+});
+  
+  // const fiterForm = document.querySelector('.custom-filters-form');
+  // const filterMobileBtn = document.querySelector('.collection__mobile-filter');
+
+  // Shopify.queryParams = {};
+
+  // // Preserve existing query parameters
+  // if (location.search.length) {
+  //   var params = location.search.substr(1).split('&');
+
+  //   for (var i = 0; i < params.length; i++) {
+  //     var keyValue = params[i].split('=');
+
+  //     if (keyValue.length) {
+  //       Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+  //     }
+  //   }
+  // }
+
+  
+
+
+  // document.querySelectorAll('.hidden-radio-button').forEach(function(radioButton) {
+  //   radioButton.addEventListener('change', function() {
+  //     var paramName = this.name;
+  //     var value = this.value;
+
+  //     Shopify.queryParams[paramName] = value;
+  //     history.replaceState(null, '', '?' + new URLSearchParams(Shopify.queryParams).toString());
+
+  //     fetch(window.location.href, {
+  //       headers: {
+  //         'X-Requested-With': 'XMLHttpRequest'
+  //       }
+  //     })
+  //     .then(function(response) {
+  //       return response.text();
+  //     })
+  //     .then(function(html) {
+  //       var newDocument = new DOMParser().parseFromString(html, 'text/html');
+  //       var newContent = newDocument.querySelector('.container__custom-product-grid').innerHTML;
+
+  //       document.querySelector('.container__custom-product-grid').innerHTML = newContent;
+  //     });
+  //   });
+  // });
+
+  // // Update sort_by query parameter on select change
+  // document.querySelector('#sort-by').addEventListener('change', function(e) {
+  //   var value = e.target.value;
+
+  //   Shopify.queryParams.sort_by = value;
+  //   location.search = new URLSearchParams(Shopify.queryParams).toString();
+  // });
+
+  // filterMobileBtn.addEventListener('click', function() {
+  //   fiterForm.classList.toggle('visible')
+  //   filterMobileBtn.classList.toggle('open')
+  //   console.log('filter btn clicked')
+  // });
+</script>
+
+{% schema %}
+  {
+    "name": "t:sections.main-collection-product-grid.name",
+    "class": "section",
+    "settings": []
+  }
+{% endschema %}

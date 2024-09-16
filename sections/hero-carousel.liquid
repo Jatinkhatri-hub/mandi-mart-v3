@@ -1,0 +1,115 @@
+{{ 'hero-carousel.css' | asset_url | stylesheet_tag }}
+<div class="hero-carousel">
+    <div class="carousel" style="transform: translateX(0%);">
+        {% for block in section.blocks %}
+        <div class="carousel-item" id="slide-{{ forloop.index }}">
+            {% if block.settings.image %}
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.alt | default: 'Slide ' | append: forloop.index }}">
+            {% endif %}
+            <div class="carousel-content">
+                {% render 'carousel-content',
+                    carousel_heading: block.settings.carousel_heading,
+                    carousel_sub_heading: block.settings.carousel_sub_heading,
+                    carousel_list_item_1: block.settings.carousel_list_item_1,
+                    carousel_list_item_2: block.settings.carousel_list_item_2,
+                    carousel_list_item_3: block.settings.carousel_list_item_3,
+                    carousel_button_text: block.settings.carousel_button_text,
+                    carousel_alignment: block.settings.carousel_alignment
+                %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <button class="carousel-control-prev" onclick="prevSlide()">❮</button>
+    <button class="carousel-control-next" onclick="nextSlide()">❯</button>
+</div>
+
+<script src="{{ 'hero-carousel.js' | asset_url }}"></script>
+
+
+{% schema %}
+{
+    "name": "Hero Carousel",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Slide",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Slide Image"
+                },
+                {
+                    "type": "text",
+                    "id": "alt",
+                    "label": "Alt Text",
+                    "default": "Slide "
+                },
+                {
+                    "type": "text",
+                    "id": "carousel_heading",
+                    "label": "Carousel Heading",
+                    "default": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+                },
+                {
+                    "type": "textarea",
+                    "id": "carousel_sub_heading",
+                    "label": "Carousel Sub-Heading",
+                    "default": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, architecto. Atque voluptate delectus deleniti labore laborum?"
+                },
+                {
+                    "type": "text",
+                    "id": "carousel_list_item_1",
+                    "label": "Carousel List Item 1",
+                    "default": "Lorem ipsum dolor"
+                },
+                {
+                    "type": "text",
+                    "id": "carousel_list_item_2",
+                    "label": "Carousel List Item 2",
+                    "default": "Lorem ipsum dolor"
+                },
+                {
+                    "type": "text",
+                    "id": "carousel_list_item_3",
+                    "label": "Carousel List Item 3",
+                    "default": "Lorem ipsum dolor"
+                },
+                {
+                    "type": "text",
+                    "id": "carousel_button_text",
+                    "label": "Carousel Button Text",
+                    "default": "CTA TEXT"
+                },
+                {
+                    "type": "select",
+                    "id": "carousel_alignment",
+                    "label": "Carousel Content Alignment",
+                    "default": "left",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Right"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Carousel"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,478 @@
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} custom-section">
+<div class="explore-page color-{{ section.settings.color_scheme }}">
+    <h3 style="color: {{ section.settings.h3_color }};">{{ section.settings.h3_text }}</h3>
+
+    <div class="explore-container">
+        {% for block in section.blocks %}
+            {% if block.type == 'big-div' %}
+                <div class="big-div">
+                    <div class="big-div-img" style="width: {{ block.settings.big_img_width }}px;">
+                        <img src="{{ block.settings.big_img | image_url }}" alt="Big Div Image" />
+                    </div>
+                    <div class="big-div-content">
+                        <h4>{{ block.settings.big_heading }}</h4>
+                        <a href="{{ block.settings.big_div_button_link }}">
+                        <button class="big-div-btn explore-btn">{{ block.settings.big_button_text }}</button>
+                        </a>
+                    </div>
+                </div>
+            {% elsif block.type == 'small-div' %}
+                <div class="small-div">
+                    <div class="small-div-content">
+                        <h4>{{ block.settings.small_heading }}</h4>
+                        <a href="{{ block.settings.small_div_button_link }}" style="text-decoration: none;">
+                        <button class="big-div-btn explore-btn">{{ block.settings.small_button_text }}</button>
+                        </a>
+                    </div>
+                    <div class="small-div-img" style="width: {{ block.settings.small_img_width }}px;">
+                        <img src="{{ block.settings.small_img | image_url }}" alt="Small Div Image" />
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <h5 style="color: {{ section.settings.h5_color }};">
+        <a href="{{ section.settings.h5_link }}" style="color: inherit; text-decoration: none;">
+            {{ section.settings.h5_text }}
+        </a>
+    </h5>
+</div>
+</div>
+
+<style>
+    .explore-page{
+        width: 1203px;
+        height: fit-content;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .explore-page h3{
+        margin: 0;
+        padding: 0;
+        font-size: 37px;
+        font-weight: 600;
+        line-height: 49.95px;
+        color: #074542;
+    }
+    
+    .explore-container{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .big-div{
+        margin: 0;
+        padding: 0;
+        width: 758.27px;
+        height: 349px;
+        background: linear-gradient(0deg, #3AAFA9, #3AAFA9, #7CE9E3);
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+    .big-div-img{
+        margin: 0;
+        padding: 0;
+        /* width: 363px;
+        height: 349px; */
+       
+        overflow: hidden;
+        object-fit: cover;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .big-div-img img{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        /* width: 363px;
+        height: 349px; */
+        background-position: center;
+    }
+    .big-div-content{
+        margin: 0;
+        padding: 0;
+        height: 349px;
+        width: 512px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+    .big-div-content h4{
+        margin: 0;
+        padding: 0;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 62.1px;
+        color: #074542;
+    }
+    .big-div-content button{
+        margin: 0;
+        padding: 0;
+        width: 327px;
+        height: 63px;
+        border: 1px solid rgb(var(--color-button));
+        border-radius: 82px;
+        color: rgb(var(--color-button));
+        background-color: transparent;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 37.32px;
+    }
+    .big-div-content button:hover{
+        background-color: #ffffff;
+    }
+
+    .small-div{
+        margin: 0;
+        padding: 0;
+        height: 349px;
+        width: 434.73px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(0deg, #3AAFA9, #3AAFA9, #7CE9E3);
+        position: relative;
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .small-div-content{
+        margin: 0;
+        padding: 0;
+        width: 434.73px;
+        height: 171px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 6px;
+    }
+    .small-div-content h4{
+        margin: 0;
+        padding: 0;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 62.1px;
+        color: #074542;
+    }
+    .small-div-content button{
+        margin: 0;
+        padding: 0;
+        width: 327px;
+        height: 63px;
+        border: 1px solid rgb(var(--color-button));
+        border-radius: 82px;
+        color: rgb(var(--color-button));
+        background-color: transparent;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 37.32px;
+    }
+    .small-div-content button:hover{
+        background-color: #ffffff;
+    }
+    .small-div-img{
+        margin: 0;
+        padding: 0;
+        height: 234px !important;
+        min-height: 234px;
+        width: 356.33px;
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        object-fit: cover;
+        overflow: hidden;
+        background-color: transparent;
+        display: block !important;
+        z-index: 10;
+    }
+    .small-div-img img{
+        margin: 0;
+        padding: 0;
+        height: 234px;
+        width: 356.33px;
+        background-position: center;
+    }
+
+    .explore-page h5{
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 37.32px;
+        color: #074542;
+    }
+
+
+    /* MEDIA QUERIES... */
+
+    @media(min-width : 319px) and (max-width : 700px){
+        .explore-page h3{
+            font-size: 24px;
+            line-height: 32.4px;
+            text-align: center;
+           
+        }
+        .explore-page h5{
+            font-size: 20px;
+            line-height: 31.1px; 
+            text-align: center;          
+        }
+
+        .explore-page{
+            width: 340px;
+            align-items: center;
+        }
+        .explore-container{
+            gap: 8px;
+        }
+        .big-div{
+            width: 340px;
+            height: 166px;
+        }
+        .big-div-img{
+            width: 153px !important;
+            height: fit-content;
+            bottom: 0 !important;
+            top: 20px;
+        }
+        .big-div-content{
+            width: 212.02px;
+            height: 166px;
+        }
+        .big-div-content h4{
+            font-size: 18px;
+            line-height: 24.3px;
+            font-family: "Poppins", sans-serif;
+        }
+        .big-div-content button{
+            width: 168px;
+            height: 42px;
+            font-size: 16px;
+            line-height: 24.88px;
+            font-family: "Poppins", sans-serif;
+
+        }
+        .small-div{
+            width: 166px;
+            height: 166px;
+        }
+        .small-div-img{
+            /* width: 166px !important; */
+            height: 98px !important;
+            width: 100% !important;
+            bottom: 0;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-end !important;
+        }
+        .small-div-img img{
+            height: 98px !important;
+            width: 100% !important;           
+        }
+        .small-div-content{
+            width: 166px;
+            height: 83px;
+        }
+        .small-div-content h4{
+            font-size: 18px;
+            line-height: 24.3px;
+            font-family: "Poppins", sans-serif;
+        }
+        .small-div-content button{
+            width: 140px;
+            height: 33px;
+            font-size: 16px;
+            line-height: 24.88px;
+            font-family: "Poppins", sans-serif;
+        }
+    }
+
+
+</style>
+
+{% schema %}
+   {
+    "name": "Explore Section 1",
+    "settings": [
+        {
+            "type": "text",
+            "id": "h3_text",
+            "label": "Heading 3 Text",
+            "default": "Explore Our Categories"
+        },
+        {
+            "type": "color",
+            "id": "h3_color",
+            "label": "Heading 3 Color",
+            "default": "#074542"
+        },
+        {
+            "type": "text",
+            "id": "h5_text",
+            "label": "Heading 5 Text",
+            "default": "Explore all categories"
+        },
+        {
+            "type": "color",
+            "id": "h5_color",
+            "label": "Heading 5 Color",
+            "default": "#074542"
+        },
+        {
+            "type": "url",
+            "id": "h5_link",
+            "label": "Heading 5 Link"
+        },
+       
+        {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "color_scheme",
+        "id": "section_color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.multirow.settings.container_color_scheme.label",
+        "default": "scheme-1"
+      }
+    ],
+    "blocks": [
+        {
+            "type": "big-div",
+            "name": "Big Div",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "big_img",
+                    "label": "Big Div Image"
+                },
+                {
+                    "type": "range",
+                    "id": "big_img_width",
+                    "label": "Big Div Image Width (px)",
+                    "default": 360,
+                    "min": 100,
+                    "max": 1000,
+                    "step": 10
+                },
+                {
+                    "type": "text",
+                    "id": "big_heading",
+                    "label": "Big Div Heading",
+                    "default": "AMINO ACID"
+                },
+                {
+                    "type": "text",
+                    "id": "big_button_text",
+                    "label": "Big Div Button Text",
+                    "default": "Explore Now"
+                },
+                {
+  "type": "url",
+  "id": "big_div_button_link",
+  "label": " big div Button Link"
+}
+            ]
+        },
+        {
+            "type": "small-div",
+            "name": "Small Div",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "small_img",
+                    "label": "Small Div Image"
+                },
+                {
+                    "type": "range",
+                    "id": "small_img_width",
+                    "label": "Small Div Image Width (px)",
+                    "default": 350,
+                    "min": 100,
+                    "max": 1000,
+                    "step": 10
+                },
+                {
+                    "type": "text",
+                    "id": "small_heading",
+                    "label": "Small Div Heading",
+                    "default": "EFA'S OIL"
+                },
+                {
+                    "type": "text",
+                    "id": "small_button_text",
+                    "label": "Small Div Button Text",
+                    "default": "Explore Now"
+                },
+                {
+  "type": "url",
+  "id": "small_div_button_link",
+  "label": " small div Button Link"
+}
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Explore Section 1",
+            "category": "Sections"
+        }
+    ]
+}
+
+    {% endschema %}

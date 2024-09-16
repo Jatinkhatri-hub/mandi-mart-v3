@@ -1,0 +1,113 @@
+{{ 'section-feature-collection-v2.css' |  asset_url |  stylesheet_tag }}
+
+{% comment %} <script src="{{ 'section-onScroll.js' | asset_url }}" defer></script> {% endcomment %}
+{% comment %} 
+<script src="{{ 'card-onScroll.js' | asset_url }}" defer></script> {% endcomment %}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} custom-section">
+  <div class="page-width color-{{ section.settings.color_scheme }}">
+    <div class="feature-collection__header-wrapper">
+      <h1 class="poppins-semibold">{{ section.settings.heading }}</h1>
+    </div>
+    <div class="feature-collection__wrapper">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.collection.url }}" class="feature-collection__card-wrapper custom-card">
+          <div class="feature-collection__img-wrapper" style="background: {{ block.settings.card_background }};">
+            <img src="{{ block.settings.collection_img |  img_url: 'medium' }}" class="feature-collection__img">
+          </div>
+          <h2 class="feature-collection__title poppins-semibold">{{ block.settings.collection.title }}</h2>
+
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Feature Collection",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Heading"
+      },
+      {
+        "type": "color_scheme",
+        "id": "section_color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.multirow.settings.container_color_scheme.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection_card",
+        "name": "Collection Card",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "collection_img",
+            "label": "Collection Image"
+          }, {
+            "type": "color_background",
+            "id": "card_background",
+            "label": "Card Background",
+            "default": "#3AAFA9"
+          }, {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ]
+      }
+    ], 
+    "presets": [
+      {
+        "name": "Feature Collection",
+        "category": "Section"
+      }
+    ]
+  }
+
+{% endschema %}

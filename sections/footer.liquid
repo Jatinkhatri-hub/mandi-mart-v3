@@ -1,0 +1,197 @@
+{{ 'section-footer-v2.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .custom-shape-divider-top-1719067451 {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .custom-shape-divider-top-1719067451 svg {
+      position: relative;
+      display: block;
+      width: calc(134% + 1.3px);
+      height: 152px;
+    }
+
+    .custom-shape-divider-top-1719067451 .shape-fill {
+      /* fill: #FFFFFF; */
+      fill: #F3F7F7;
+    }
+{% endstyle %}
+
+<div class="footer custom-section footer-padding-top color-{{ section.settings.color_scheme }}" style="position: relative">
+  {%- liquid
+    assign has_social_icons = true
+    if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
+      assign has_social_icons = false
+    endif
+
+    if settings.brand_image == blank and settings.brand_headline == blank and settings.brand_description == blank
+      assign brand_empty = true
+    endif
+  -%}
+  <div class="custom-shape-divider-top-1719067451 wave">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+  </div>
+
+
+  <div class="footer-container">
+    {% assign menu_started = false %}
+    {% assign menu_closed = false %}
+
+    {% for block in section.blocks %}
+      {% if block.type == 'footer_menu' and menu_started == false %}
+        <div class="footer__menu-wrapper">
+          {% assign menu_started = true %}
+      {% endif %}
+
+      {% if block.type != 'footer_menu' and menu_started == true and menu_closed == false %}
+
+        </div>
+        {% assign footer_closed = true %}
+      {% endif %}
+      {% case block.type %}
+        {% when 'brand_information' %}
+          <div class="footer__brand-info">
+            {% if settings.brand_image != blank %}
+              {% assign brand_image_height = settings.brand_image_width | divided_by: settings.brand_image.aspect_ratio %}
+              <div class="footer-block__image-wrapper" style="max-width: min(100%, {{ settings.brand_image_width }}px);">
+                {{
+                  settings.brand_image | image_url: width: 1100 | image_tag: loading: 'lazy', widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100', height: brand_image_height, width: settings.brand_image_width
+                }}
+              </div>
+            {%- endif -%}
+            
+            {%- if settings.brand_headline != blank -%}
+              <h2 class="footer__info-heading">{{ settings.brand_headline }}</h2>
+            {%- endif -%}
+            {%- if settings.brand_description != blank -%}
+              <div class="footer__info-description description-desktop">{{ settings.brand_description }}</div>
+            {%- endif -%}
+            {% if block.settings.payment_img %}
+              <div class="footer__payment-wrapper">
+                <img src="{{ block.settings.payment_img |  img_url: 'medium' }}" class="footer__payment-img">
+              </div>
+            {% endif %}
+          </div>
+        {% when 'footer_menu' %}
+          {% for link in block.settings.menu.links %}
+            <div class="footer__menu-item-wrapper">
+              <h2 class="footer__menu-item poppins-bold">{{ link.title }}</h2>
+              <div class="footer__menu-child-item-wrapper">
+                {% for child in link.links %}
+                  <a href="{{ child.url }}">{{ child.title }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        {% when 'disclaimer' %}
+          <div class="footer__disclaimer-wrapper" style="background: {{ block.settings.background_color }}; color: {{ block.settings.text_color }}">
+            <h1 class="footer__disclaimer-title poppins-bold">{{ block.settings.title }}</h1>
+            {{ block.settings.description }}
+          </div>
+      {% endcase %}
+    {% endfor %}
+    {% if menu_started and menu_close == false %}
+      </div>
+    {% endif %}
+    <div class="footer__copyright-mobile poppins-regular">
+      {{ settings.brand_description }}
+    </div>
+
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "brand_information",
+        "name": "t:sections.footer.blocks.brand_information.name",
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "t:sections.footer.blocks.brand_information.settings.paragraph.content"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.footer.blocks.brand_information.settings.header__1.content"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_social",
+            "default": true,
+            "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
+            "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
+          },
+          {
+            "type": "text",
+            "id": "copyright_text_block",
+            "label": "Copyright Info"
+          }, {
+            "type": "image_picker",
+            "id": "payment_img",
+            "label": "Payment Image"
+          }
+
+        ]
+      }, {
+        "type": "footer_menu",
+        "name": "Footer Menu",
+        "settings": [
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Menu"
+          }
+        ]
+      },
+      {
+        "type": "disclaimer",
+        "name": "Disclaimer",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "<p>Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames gravida et rhoncus ut. Sit cras!</p>"
+          },
+          {
+            "type": "color_background",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#074542"
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#ffffff"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

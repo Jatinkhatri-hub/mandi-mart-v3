@@ -1,0 +1,219 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 0rem 5rem 15rem;
+    gap: 4rem;
+    color: white;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    text-align: left;
+}
+.carousel-list-item {
+    margin: 1rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 2rem;
+    background-color: white;
+    color: #022b29;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    /* align-items: flex-start;
+    text-align: left; */
+    width: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-container.left {
+    left: 0; /* Move to the left */
+    transform: translateX(0%); /* Reset transform for left alignment */
+    padding-left: 10rem;
+    padding-right: 0;
+}
+
+.carousel-container.center {
+    left: 50%; /* Start at the center */
+    transform: translateX(-50%); /* Move back by half of its width to center it */
+    padding-left: 0;
+    padding-right: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-container.right {
+    left: auto; /* Move to the right */
+    right: 0;
+    transform: translateX(0%); /* Reset transform for right alignment */
+    padding-left: 0;
+    padding-right: 10rem;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.carousel-heading {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    color: #022b29;
+    font-weight: 600;
+}
+
+.carousel-sub-heading {
+    padding: 0;
+    margin: 0;
+    color: #074542;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.carousel-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.carousel-list-item {
+    font-size: 1.8rem;
+}
+
+
+.carousel-list-item svg {
+    height: 1.6rem;
+    color: white;
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+    background-color: #022b29;
+    border-radius: 50%;
+    /* margin-top: 0.7rem; */
+}
+
+.carousel-button {
+    padding: 1.7rem 13rem;
+    background: linear-gradient(#3AAFA9, #228B85);
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 2rem;
+    font-stretch: expanded;
+    border-radius: 2.8rem;
+    border: none;
+}
+
+/* MEDIA QUERIES... */
+
+@media(min-width : 319px) and (max-width : 480px){
+    .carousel-heading {
+        text-align: center;
+    }
+    .carousel-container {
+        width: 100%;
+        padding: 2rem;
+        align-items: center;
+        gap: 1rem;
+    }
+    .carousel-container.left {
+    align-items: center;
+    text-align: center;
+    padding-left: 1rem;
+}
+.carousel-container.right {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 1rem;
+}
+.carousel-container.center {
+    padding-left: 0;
+    padding-right: 0;
+    align-items: center;
+    text-align: center;
+}
+    .carousel-heading {
+        font-size: 2.4rem;
+    }
+
+    .carousel-sub-heading {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .carousel-list-item {
+        font-size: 1.4rem;
+        margin: 1rem;
+        padding: .3rem 2rem;
+        border-radius: 3rem;
+    }
+    .carousel-button {
+        padding: 1.1rem 11rem;
+        font-size: 2.4rem;
+        border-radius: 8rem;
+        margin-top: 20rem;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        height: 3rem;
+        width: 3rem;
+        font-size: 1rem;
+    }
+}
+
+@media(min-width : 481px) and (max-width : 700px){
+    .carousel-container {
+        width: 100%;
+        padding: 3rem;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .carousel-container.left {
+    align-items: center;
+    text-align: center;
+    padding-left: 1rem;
+}
+.carousel-container.right {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 1rem;
+}
+    .carousel-heading {
+        font-size: 4.6rem;
+        text-align: center;
+    }
+    .carousel-sub-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .carousel-list-item {
+        font-size: 1.5rem;
+        margin: 2rem;
+        padding: 0.5rem 4rem;
+        border-radius: 3rem;
+    }
+    .carousel-button {
+        padding: 1.7rem 15rem;
+        font-size: 4rem;
+        border-radius: 4rem;
+        margin-top: 45rem;
+    }
+}
+
+@media(min-width : 701px) and (max-width : 1200px){
+    .carousel-heading {
+        font-size: 3rem;
+    }
+    .carousel-heading {
+        font-size: 4rem;
+    }
+    .carousel-sub-heading {
+        font-size: 2rem;
+    }
+    .carousel-container {
+        padding: 1rem 0rem 10rem 5rem;
+    }
+}

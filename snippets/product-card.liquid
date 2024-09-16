@@ -1,0 +1,45 @@
+<a href="#" class="product-card__wrapper custom-card">
+  <div class="product-card__badges-container">
+    {% assign original_price = product.compare_at_price %}
+    {% assign current_price = product.price %}
+
+    {% if original_price > current_price %}
+      {% assign savings = original_price | minus: current_price %}
+      {% assign savings_percentage = savings | times: 100 | divided_by: original_price | abs %}
+      {% assign savings_percentage_rounded = savings_percentage | round %}
+
+      <div class="product-card__badge-container poppins-semibold" style="background-color: #FF6B00; color: white;">
+        <span class="poppins-semibold">SALE</span>
+        {{ savings_percentage_rounded }}%
+      </div>
+    {% endif %}
+
+    {% if product.metafields.custom.product_card_badge_text %}
+      <div class="product-card__badge-container poppins-semibold" style="background-color: {{ product.metafields.custom.product_card_badge_color.value |  color_to_hex }}; color: white; ">
+        {{ product.metafields.custom.product_card_badge_text }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="product-card__img-wrapper">
+    <img src="{{ product.featured_image |  img_url: 'medium' }}" class="product-card__img">
+  </div>
+  <div class="product-card__info">
+    <div class="product-card__rating">
+      <div class="product-card__rating-star">
+        {% render 'icon-star' %}
+        {% render 'icon-star' %}
+        {% render 'icon-star' %}
+        {% render 'icon-star' %}
+        {% render 'icon-star' %}
+      </div>
+
+      <span class="poppins-regular">{{ product.vendor }}</span>
+
+    </div>
+    <h6 class="product-card__title poppins-semibold">{{ product.title }}</h6>
+    <div class="product-card__info-footer">
+      <span class="poppins-semibold">{{ product.price | money_with_currency }}</span>
+      <button class="product-card__atc-btn poppins-semibold" data-variant-id="{{ product.variants.first.id }}">+ Add to Cart</button>
+    </div>
+  </div>
+</a>
