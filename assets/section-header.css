@@ -40,6 +40,34 @@
   display: none;
 }
 
+.search-input {
+  border: none;
+  outline: none;
+  height: 43px;
+  width: 345px;
+  background: white;
+  font-family: 'Poppins';
+  font-weight: 400;
+  border-radius: 4px 0 0 4px;
+  padding-inline-start: 30px;
+}
+
+.search-input:focus-visible {
+  outline-offset: 0;
+  box-shadow: none;
+}
+
+.nav-bar__search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  border: none;
+  background: #00878030;
+  border-radius: 0 4px 4px 0;
+}
+
 @media screen and (min-width: 789px) {
 
   .nav-bar__items {
