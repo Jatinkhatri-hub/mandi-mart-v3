@@ -102,7 +102,11 @@
             <span class="icon-arrow-down"> {% render 'icon-arrow-down' %}</span>
             {% endif %}
           </a>
-          {% if link.links != blank %} {% endif %}
+          {% if link.links != blank %} 
+            <ul class="mega-">
+
+            </ul>
+          {% endif %}
         </li>
       {% endfor %}
       </ul>
