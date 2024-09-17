@@ -109,6 +109,9 @@
               {% assign child_collection = collections[child_collection_handle] %}
               <li class="child-links">
                 <a href="{{ child.url }}">
+                  {% if child_collection.image != blank %}
+                    <img src="{{ child_collection.image | img_url: 'medium'}}" class="collection-brand__featured-image">
+                  {% endif %}
                   
                 </a>
 
