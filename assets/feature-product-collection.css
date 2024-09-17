@@ -22,6 +22,6 @@
   grid-template-columns: repeat(2, minmax(0, 160px));
 }
 
-@media screen  {
-  
+@media screen and (min-width: 789px) {
+  d
 }
