@@ -109,12 +109,15 @@
   justify-content: flex-start;
   text-decoration: none;
   gap: 30px;
+  position: relative;
 }
 
 .collection__featured-image {
   height: 50px;
   width: 50px;
 }
+
+
 
 
 @media screen and (min-width: 789px) {
