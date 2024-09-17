@@ -108,6 +108,7 @@
   z-index: 10;
   padding-block: 25px;
   transition: width .5s;
+  overflow-y: auto;
 }
 
 .mega-menu__items {
