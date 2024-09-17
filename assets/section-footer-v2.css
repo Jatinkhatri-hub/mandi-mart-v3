@@ -72,11 +72,12 @@
   display: flex;
   justify-content: center;
   align-items: baseline;
-  flex-direction: column;
-  position: relative;
 }
 
+flex-direction: column;
+position: relative;
 
+.foot
 
 .footer__menu-child-item-wrapper::after {
   content: '';
