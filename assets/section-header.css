@@ -358,7 +358,9 @@
   }
 
   .mega-menu__child-dropdown {
-    width: ;
+    position: absolute;
+    
+    
   }
 
   
