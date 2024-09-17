@@ -79,11 +79,11 @@
   top: 0;
   bottom: 0;
   height: 100vh;
-  width: 85%;
+  width: 0;
   background-color: rgb(var(--color-background));
   z-index: 10;
   padding-block: 25px;
-  transition: width;
+  transition: width .5s;
 }
 
 .mega-menu__items {

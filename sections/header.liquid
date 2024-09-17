@@ -80,7 +80,7 @@
         <button class="nav-bar__search-btn" type="submit">{% render 'icon-search-2' %}</button>
       </form>
 
-      <ul class="mega-menu__items">
+      <ul class="mega-menu__items close">
       {% for link in section.settings.mega_menu.links %} 
         {% assign collection_handle = link.url | remove: '/collections/' %}
         {% assign collection = collections[collection_handle] %}
