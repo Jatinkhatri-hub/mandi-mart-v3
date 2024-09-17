@@ -390,7 +390,10 @@
   z-index: 8; /* Below the drawer */
   }
 
-  #desktop
+  #desktopBackdrop.show {
+    visibility: visible;
+    opacity: 1;
+  }
 
   
 
