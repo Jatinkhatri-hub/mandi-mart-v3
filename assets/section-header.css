@@ -115,6 +115,7 @@
   .nav-bar__menu-item a svg {
     width: 14px;
     height: 14px;
+    margin-right: 5px;
   }
 
 }
