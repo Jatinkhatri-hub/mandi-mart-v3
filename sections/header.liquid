@@ -37,7 +37,7 @@
     </div>
     <ul class="nav-bar__menu close"></ul>
       
-      {% for link in section.settings.mai.links %}
+      {% for link in section.settings.main_menu.links %}
         <li class="nav-bar__menu-item">
           <a href="{{ link.url }}">{{ link.title }}</a>
         </li>
@@ -71,7 +71,8 @@
       {
         "type": "link_list",
         "id": "main_menu",
-        "label": "Main Menu"
+        "label": "Main Menu",
+        
       },
       {
         "type": "color_scheme",
