@@ -119,7 +119,14 @@
   width: 50px;
 }
 
+.close {
+  padding: 0;
+}
 
+.open {
+  width: 85%;
+  
+}
 
 .icon-arrow-down {
   position: absolute;
