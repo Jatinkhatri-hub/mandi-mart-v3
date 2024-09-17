@@ -389,7 +389,7 @@
   }
 
   .child-links a {
-    width: auto;
+    width: auto !important;
   }
 
   .collection__featured-image {
