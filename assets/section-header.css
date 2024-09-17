@@ -189,8 +189,9 @@
 
 }
 
-.collection-brand__feature-image {
-  width: ;
+.collection-brand__featured-image {
+  width: 65px;
+  height: 30px;
 }
 
 
