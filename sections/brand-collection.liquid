@@ -29,7 +29,7 @@
     <div class="collection__list swiper mySwiper mySwiper-{{ section.id }}">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
-          <a href="{{}}" class="container__collection-card swiper-slide custom-card">
+          <a href="{{ block.settings.collection.url }}" class="container__collection-card swiper-slide custom-card">
             <div class="container__brand-product-image">
               <img src="{{ block.settings.product_image |  img_url: 'medium' }}" class="brand-image">
             </div>
