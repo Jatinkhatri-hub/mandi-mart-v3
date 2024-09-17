@@ -51,7 +51,7 @@ addEventListener('DOMContentLoaded', () => {
 
         desktopBackdrop.addEventListener('click', () => {
           desktopBackdrop.classList.remove('show')
-          ope
+          
         });
 
         // If it was closed, open it; otherwise, close it
