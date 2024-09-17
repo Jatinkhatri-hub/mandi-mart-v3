@@ -15,7 +15,9 @@
   padding: 10px 25px
 }
 
-.na
+.nav-bar__open-btn {
+  display: block;
+}
 
 .nav-bar__brand-img {
   width: 150px;
