@@ -91,6 +91,9 @@
 
 .card-information {
   text-align: var(--text-alignment);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card__media,
