@@ -12,7 +12,7 @@ addEventListener('DOMContentLoaded', () => {
     navDrawer.classList.add('open');
     navDrawer.classList.remove('close');
     megaMenuWrapper.style.display= "block";
-    navCloseBtn.style.
+    navCloseBtn.classList.add = ''
     console.log(open);
   })
 
