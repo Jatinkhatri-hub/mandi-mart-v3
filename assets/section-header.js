@@ -37,7 +37,7 @@ addEventListener('DOMContentLoaded', () => {
         <div class="product-card show">
           <img src="${productImage}" alt="${product.title}">
           <h3>${product.title}</h3>
-          <p>${Shopify.formatMoney(product.variants[0].price)}</p>
+          <p>${(product.variants[0].price)}</p>
         </div>
       `;
     });
