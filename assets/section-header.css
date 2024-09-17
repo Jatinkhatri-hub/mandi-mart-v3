@@ -290,7 +290,8 @@
   
   .nav-bar__mega-menu-item {
     padding: 0;
-    bor
+    border: 0;
+    position: relative;
   }
 
   
