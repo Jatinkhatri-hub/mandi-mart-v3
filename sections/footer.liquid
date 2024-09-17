@@ -76,7 +76,7 @@
             {%- endif -%}
             {% if block.settings.payment_img %}
               <div class="footer__payment-wrapper">
-                <img src="{{ block.settings.payment_img | bloc }}" class="footer__payment-img">
+                <img src="{{ block.settings.payment_img |  image_url: width: block.settings.payment_img.width  }}" class="footer__payment-img">
               </div>
             {% endif %}
           </div>
