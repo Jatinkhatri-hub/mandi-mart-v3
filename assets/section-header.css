@@ -292,7 +292,7 @@
     align-items: center;
     gap: 70px;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 1300px;
   }
 
   .collection__featured-image {
@@ -308,7 +308,7 @@
   .nav-bar__mega-menu-item a {
     font-size: 18px;
     font-weight: 500;
-    font
+    font-family: 'Poppins';
   }
 
   .icon-arrow-down{
