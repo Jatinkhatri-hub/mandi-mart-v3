@@ -71,7 +71,9 @@
 .nav-bar__mega-menu {
   position: fixed;
   top: 0;
-  
+  bottom: 0;
+  height: 100vh;
+  width: 80%;
 }
 
 @media screen and (min-width: 789px) {
