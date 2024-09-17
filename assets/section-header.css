@@ -57,7 +57,9 @@
     align-items: center;
   }
 
-  .sea
+  .search-input {
+    
+  }
 
   .nav-bar__search-btn {
     display: flex;
