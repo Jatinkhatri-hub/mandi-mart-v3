@@ -402,7 +402,7 @@
     position: relative;
   }
 
-  .nav-bar__mega-menu-item a {
+  .nav-bar__mega-menu-item .a {
     font-size: 18px;
     font-weight: 500;
     font-family: 'Poppins';
