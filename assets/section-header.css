@@ -112,5 +112,8 @@
     font-family: 'Poppins';
     font-weight: 500;
   }
+  .nav-bar__menu-item a svg {
+    width: ;
+  }
 
 }
