@@ -110,7 +110,7 @@
               <li class="child-links">
                 <a href="{{ child.url }}">
                   {% if child_collection.image != blank %}
-                    <img src="{{ child_collection.image | image_url: width: child_collection.image.width }}" class="collection-brand__featured-image">
+                    <img src="{{ child_collection.image | image_url: width: child_collection.width }}" class="collection-brand__featured-image">
                   {% endif %}
                   {{ child.title }}
                 </a>
