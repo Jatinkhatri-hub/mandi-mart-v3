@@ -98,7 +98,7 @@ function renderProductCards(products, container) {
   products.forEach(product => {
     const productImage = product.images.length > 0 ? product.images[0].src : 'default-image.jpg';
     productHTML += `
-      <div href='${product}' class="product-card show">
+      <div href='${product.url[0]}' class="product-card show">
         <p class="mega-menu__product-title">${product.title}</p>
         <div class="mega-menu__product-card-container">
           <div class="mega-menu__product-card-info">
