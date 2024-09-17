@@ -36,7 +36,9 @@
   display: none;
 }
 
-.nav-bar__menu
+.nav-bar__menu {
+  display: none;
+}
 
 @media screen and (min-width: 789px) {
 
