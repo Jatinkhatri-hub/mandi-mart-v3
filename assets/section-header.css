@@ -218,6 +218,7 @@
 
   .nav-bar__items {
     height: 80px;
+    padding: 0 60px ;
   }
 
   .nav-bar__open-btn {
