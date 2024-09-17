@@ -51,18 +51,22 @@
 }
 
 .backdrop {
-  background-color: black;
-  opacity: 0.3;
-  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease;
+  z-index: 1000; /* Below the drawer */
 }
 
-.openBackdrop {
-  display: flex;
+/* Show backdrop */
+.backdrop.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .search-input {
