@@ -387,7 +387,7 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s, opacity 0.3s ease;
-  z-index: 8; /* Below the drawer */
+  z-index: 11; /* Below the drawer */
   }
 
   #desktopBackdrop.show {
