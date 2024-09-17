@@ -368,6 +368,7 @@
     flex-direction: column;
     transform: translateX(-50%);
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .mega-menu__child-dropdown.open {
