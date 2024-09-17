@@ -32,6 +32,12 @@
   gap: 10px;
 }
 
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .search-form.desktop {
   display: none;
 }
