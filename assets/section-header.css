@@ -183,6 +183,10 @@
   transition: max-height 0.3s ease-out;
 }
 
+.mega-menu__child-dropdown.open {
+  
+}
+
 .child-links {
   list-style-type: none;
 }
