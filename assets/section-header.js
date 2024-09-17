@@ -10,9 +10,11 @@ addEventListener('DOMContentLoaded', () => {
 
   const productPreview = document.getElementById('product-preview');
 
-  // Function to fetch collection data
+  const productPreview = document.getElementById('product-preview');
+
+  // Function to fetch collection data and render products
   function fetchProducts(collectionHandle) {
-    // Add fade-out class before changing the products
+    // Add fade-out animation before loading new products
     productPreview.classList.add('fade-out');
 
     fetch(`/collections/${collectionHandle}/products.json?limit=2`)
@@ -20,10 +22,10 @@ addEventListener('DOMContentLoaded', () => {
       .then(data => {
         const products = data.products;
 
-        // Small delay to allow fade-out animation to play
+        // Small delay to allow fade-out animation to complete
         setTimeout(() => {
-          renderProductCards(products);
-          productPreview.classList.remove('fade-out'); // Remove fade-out after rendering
+          renderProductCards(products); // Render the new products
+          productPreview.classList.remove('fade-out'); // Remove fade-out effect after loading
         }, 300); // Adjust timing as per the fade-out duration
       })
       .catch(error => console.error('Error fetching products:', error));
@@ -34,24 +36,27 @@ addEventListener('DOMContentLoaded', () => {
     let productHTML = '';
     products.forEach(product => {
       const productImage = product.images.length > 0 ? product.images[0].src : 'default-image.jpg';
+      const price = Shopify.formatMoney(product.variants[0].price); // Adjust this format if needed
+
       productHTML += `
         <div class="product-card show">
           <img src="${productImage}" alt="${product.title}">
           <h3>${product.title}</h3>
-          <p>${Shopify.formatMoney(product.variants[0].price)}</p>
+          <p>${price}</p>
         </div>
       `;
     });
-    productPreview.innerHTML = productHTML; // Update the product preview area
 
-    // Ensure the fade-in effect starts after the cards are added
+    productPreview.innerHTML = productHTML; // Update the product preview area with new cards
+
+    // Ensure the fade-in effect starts after cards are added
     setTimeout(() => {
       const productCards = productPreview.querySelectorAll('.product-card');
-      productCards.forEach(card => card.classList.add('show')); // Add the 'show' class to trigger fade-in
+      productCards.forEach(card => card.classList.add('show')); // Add 'show' class to trigger fade-in
     }, 100);
   }
 
-  // Event listener for hovering over child links
+  // Add event listeners to the collection links
   const childLinks = document.querySelectorAll('.our-top-brands .child-links');
   childLinks.forEach(link => {
     link.addEventListener('mouseover', function () {
@@ -59,7 +64,7 @@ addEventListener('DOMContentLoaded', () => {
       fetchProducts(collectionHandle); // Fetch products for the hovered collection
     });
   });
-
+});
 
   navOpenBtn.addEventListener('click', () => {
     navDrawer.classList.add('open');
