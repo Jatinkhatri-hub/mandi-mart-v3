@@ -100,8 +100,9 @@ function renderProductCards(products, container) {
     const productURL = `/products/${product.handle}`;
     productHTML += `
       <div href='${productURL}' class="product-card show">
-        <a href='${prod}'></a>
-        <p class="mega-menu__product-title">${product.title}</p>
+        <a href='${productURL}'>
+          <p class="mega-menu__product-title">${product.title}</p>
+        </a>
         <div class="mega-menu__product-card-container">
           <div class="mega-menu__product-card-info">
             <p>${product.vendor}</p>
