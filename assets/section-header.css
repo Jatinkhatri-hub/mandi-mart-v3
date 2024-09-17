@@ -28,6 +28,6 @@
   gap: 10px;
 }
 
-@media screen and min {
-  
+@media screen and (min-width: 789px) {
+  .nav-bar
 }
