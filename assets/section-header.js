@@ -49,7 +49,13 @@ addEventListener('DOMContentLoaded', () => {
         </div>
       `;
     });
-    container.innerHTML = productHTML; // Update the product 
+    container.innerHTML = productHTML; // Update the product preview area
+
+    // Ensure the fade-in effect starts after the cards are added
+    // setTimeout(() => {
+    //   const productCards = productPreview.querySelectorAll('.product-card');
+    //   productCards.forEach(card => card.classList.add('show')); // Add the 'show' class to trigger fade-in
+    // }, 100);
   }
 
   // Event listener for hovering over child links
