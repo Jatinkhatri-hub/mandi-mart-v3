@@ -52,10 +52,10 @@ addEventListener('DOMContentLoaded', () => {
         // If it was closed, open it; otherwise, close it
         if (!isOpen) {
           childDropdown.classList.add('open');
-          backdrop.classList.add('show');        
+          desktopBackdrop.classList.add('show');        
         } else {
           childDropdown.classList.remove('open');
-          desktopBackdrop.classList.add('show');
+          desktopBackdrop.classList.remove('show');
         }
       });
     }
