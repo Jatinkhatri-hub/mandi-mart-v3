@@ -283,14 +283,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scaleX();
     list-style-type: none;
     color: rgb(var(--color-foreground));
     text-decoration: none;
     text-transform: capitalize;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
   }
+
+  
 
   .nav-bar__menu-item a {
     text-decoration: none;
