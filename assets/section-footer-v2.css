@@ -74,12 +74,13 @@
   align-items: baseline;
 }
 
-flex-direction: column;
-position: relative;
 
-.foot
+.footer__menu-child-item-wrapper a {
+  flex-direction: column;
+  position: relative;
+}
 
-.footer__menu-child-item-wrapper::after {
+.footer__menu-child-item-wrapper::after a{
   content: '';
   position: absolute;
   width: 100%;
