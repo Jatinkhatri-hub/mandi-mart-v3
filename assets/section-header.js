@@ -16,8 +16,8 @@ addEventListener('DOMContentLoaded', () => {
   })
 
   .navCloseBtn.addEventListener('click', () => {
-    navDrawer.classList.remove('close');
-    navDrawer.classList.add('')
+    navDrawer.classList.remove('open');
+    navDrawer.classList.add('close');
   });
 
 
