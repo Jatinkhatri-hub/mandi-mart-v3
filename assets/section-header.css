@@ -454,6 +454,7 @@
     flex-direction: column;
     align-items: baseline;
     justify-content: center;
+    padding-left: 10px;
   }
 
   .mega-menu__product-card-info p {
