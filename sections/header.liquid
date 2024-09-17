@@ -103,7 +103,7 @@
             {% endif %}
           </a>
           {% if link.links != blank %} 
-            <ul class="mega-menu__child-dropdown child-dropdown">
+            <ul class="mega-menu__child-dropdown ">
             {% for child in link.links %}
               {% assign child_collection_handle = child.url | remove: '/collections/' %}
               {% assign child_collection = collections[child_collection_handle] %}
