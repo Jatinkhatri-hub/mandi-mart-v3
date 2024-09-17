@@ -51,11 +51,11 @@ addEventListener('DOMContentLoaded', () => {
     });
     container.innerHTML = productHTML; // Update the product preview area
 
-    // Ensure the fade-in effect starts after the cards are added
-    // setTimeout(() => {
-    //   const productCards = productPreview.querySelectorAll('.product-card');
-    //   productCards.forEach(card => card.classList.add('show')); // Add the 'show' class to trigger fade-in
-    // }, 100);
+    setTimeout(() => {
+      container.classList.remove('fade-out');
+      container.classList.add('show'); // Ensure the 'show' class is added correctly
+      // Existing product rendering logic
+    }, 300); 
   }
 
   // Event listener for hovering over child links
