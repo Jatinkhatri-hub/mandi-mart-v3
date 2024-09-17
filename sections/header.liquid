@@ -103,8 +103,10 @@
             {% endif %}
           </a>
           {% if link.links != blank %} 
-            <ul class="mega-menu__child-drop">
-
+            <ul class="mega-menu__child-dropdown">
+            {% for child in link.links %}
+              
+            {% endfor %}
             </ul>
           {% endif %}
         </li>
