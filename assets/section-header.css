@@ -178,6 +178,7 @@
   align-items: baseline;
   padding-inline-start: 30px;
   gap: 15px;
+  max-
 }
 
 .child-links {
@@ -194,6 +195,8 @@
   width: 65px;
   height: 30px;
 }
+
+
 
 
 
