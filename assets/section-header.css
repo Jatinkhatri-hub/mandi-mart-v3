@@ -449,7 +449,12 @@
     align-items: baseline;
   }
 
-  .me
+  .mega-menu__product-card-info p {
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: #;
+  }
 
 
   .mega-menu__product-image {
