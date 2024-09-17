@@ -32,6 +32,10 @@
   gap: 10px;
 }
 
+.mega-menu__wrapper {
+  display: none;
+}
+
 .search-form {
   display: flex;
   justify-content: center;
