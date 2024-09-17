@@ -43,13 +43,13 @@
         </li>
       {% endfor %}
     </ul> {% endcomment %}
-    {% comment %} <ul class="nav-bar__menu">
+    <ul class="nav-bar__menu">
       {% for link in section.settings.main_menu.links %}
         <li class="nav-bar__menu-item">
           <a href="{{ link.url }}"><span>{% render 'icon-user' %}</span> {{ link.title }}</a>
         </li>
       {% endfor %}
-    </ul> {% endcomment %}
+    </ul>
     <div class="nav-bar__options">
       <span>{% render 'icon-search-2' %}</span>
       <a href="{{ routes.account_login_url }}">{% render 'icon-user' %}</a>

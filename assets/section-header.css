@@ -92,7 +92,7 @@
     gap: 35px;
   }
 
-  .nav-bar__menu-item a {
+  .nav-bar__menu-item {
     display: flex;
     justify-content: center;
     align-items: center;
