@@ -82,6 +82,7 @@
   width: 85%;
   background-color: rgb(var(--color-background));
   z-index: 10;
+  padding-block: 25px;
 }
 
 @media screen and (min-width: 789px) {
