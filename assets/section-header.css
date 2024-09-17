@@ -73,7 +73,7 @@
   top: 0;
   bottom: 0;
   height: 100vh;
-  width: 80%;
+  width: 85%;
   background-color: rgb(var(--color-background));
   z-index: 10;
 }
