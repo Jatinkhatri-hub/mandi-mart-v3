@@ -12,7 +12,7 @@ addEventListener('DOMContentLoaded', () => {
     navDrawer.classList.add('open');
     navDrawer.classList.remove('close');
     megaMenuWrapper.style.display= "block";
-    navCloseBtn.classList.add = 'openBackdrop'
+    navCloseBtn.classList.add = 'openBackdrop';
     console.log(open);
   })
 
@@ -20,7 +20,7 @@ addEventListener('DOMContentLoaded', () => {
     navDrawer.classList.remove('open');
     navDrawer.classList.add('close');
     megaMenuWrapper.style.display = 'none';
-    navCloseBtn.classList.
+    navCloseBtn.classList.remove = 'openBackdrop';
     
   });
 
