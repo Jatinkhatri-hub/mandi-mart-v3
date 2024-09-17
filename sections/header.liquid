@@ -38,7 +38,8 @@
     <ul class="nav-bar__menu">
       {% for link in section.settings.main-nav.links %}
         <li class="nav-bar__menu-item">
-          <a href=""></a>
+          
+          <a href="{{ link.url }}">{{ link.title }}</a>
         </li>
       {% endfor %}
     </ul>
