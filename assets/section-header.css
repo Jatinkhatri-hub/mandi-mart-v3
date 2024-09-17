@@ -473,7 +473,9 @@
     padding: 7px 40px;
     font-family: 'Poppins';
     font-weight: 600;
-    border: #008780;
+    border: 1px solid #008780;
+    background-color: #008780;
+    
   }
   
 
