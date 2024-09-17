@@ -104,6 +104,8 @@
             {% endif %}
           </a>
           {% if link.links != blank %} 
+            {% assign variant_title_parts = variant.title | split: ' ' %}
+{% assign variant_title_hyphenated = variant_title_parts | join: '-' %}
             <ul class="mega-menu__child-dropdown ">
             {% for child in link.links %}
               {% assign child_collection_handle = child.url | remove: '/collections/' %}
