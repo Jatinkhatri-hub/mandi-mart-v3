@@ -21,6 +21,7 @@ addEventListener('DOMContentLoaded', () => {
   backdrop.addEventListener('click', () => {
     navDrawer.classList.remove('open');
     navDrawer.classList.add('close');
+    megaMenuWrapper.style.display= "none";
     backdrop.classList.remove('show');
   });
 
