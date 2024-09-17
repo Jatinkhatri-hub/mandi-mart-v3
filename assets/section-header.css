@@ -95,7 +95,8 @@
   .nav-bar__menu-item {
     display: flex;
     justify-content: center;
-    align-items: cet;
+    align-items: center;
+    list-style-type: none;
   }
 
 }
