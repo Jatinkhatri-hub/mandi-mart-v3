@@ -8,7 +8,7 @@ addEventListener('DOMContentLoaded', () => {
   navOpenBtn.addEventListener('click', () => {
     navDrawer.classList.add('open');
     navDrawer.classList.remove('close');
-    mega-
+    megaMenuWrapper.st
     console.log(open);
   })
 
