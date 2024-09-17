@@ -45,7 +45,7 @@ addEventListener('DOMContentLoaded', () => {
       <img src="${product.images[0].src}" alt="${product.title}" class="mega-menu__product-image"/>
       </div>
       </div>
-    <a class="mega-menu__atc-btn" href="#" data-variant-id="${product.variants[0].id}">+ ADD TO CART</a>
+    <button class="mega-menu__atc-btn" href="#" data-variant-id="${product.variants[0].id}">+ ADD TO CART</button>
         </a>
       `;
     });
