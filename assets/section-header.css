@@ -180,6 +180,7 @@
   gap: 15px;
   max-height: 0;
   overflow: hidden;
+  opacity: 0;
   transition: max-height 0.3s ease-out;
 }
 
