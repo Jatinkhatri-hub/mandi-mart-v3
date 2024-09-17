@@ -364,7 +364,9 @@
     right: 0;
     z-index: 1000;
     background-color: white;
-    
+    display: flex;
+    flex-direction: column;
+    flex
   }
 
   
