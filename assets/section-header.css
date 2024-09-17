@@ -400,7 +400,7 @@
   .product-preview {
     display: flex;
     gap: 20px;
-    position: relative;
+    position: absolute;
     width: 250px;
     height: 510px;
   }
