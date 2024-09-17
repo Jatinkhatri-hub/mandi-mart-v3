@@ -388,6 +388,10 @@
     max-width: 1300px;
   }
 
+  .child-links a {
+    width: auto;
+  }
+
   .collection__featured-image {
     display: none;
   }
