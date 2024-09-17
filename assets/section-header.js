@@ -34,7 +34,7 @@ addEventListener('DOMContentLoaded', () => {
     products.forEach(product => {
       const productImage = product.images.length > 0 ? product.images[0].src : 'default-image.jpg';
       productHTML += `
-        <a href="${product.url}" class="product-card show">
+        <div class="product-card show">
           <p class="mega-menu__product-title">${product.title}</p>
     <div class="mega-menu__product-card-container">
       <div class="mega-menu__product-card-info">
@@ -46,7 +46,7 @@ addEventListener('DOMContentLoaded', () => {
       </div>
       </div>
     <button class="mega-menu__atc-btn" href="#" data-variant-id="${product.variants[0].id}">+ ADD TO CART</button>
-        </a>
+        </div>
       `;
     });
     container.innerHTML = productHTML; // Update the product preview area
