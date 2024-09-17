@@ -55,7 +55,7 @@ addEventListener('DOMContentLoaded', () => {
           backdrop.classList.add('show');        
         } else {
           childDropdown.classList.remove('open');
-          backdrop.classList.add('show');
+          desktopBackdrop.classList.add('show');
         }
       });
     }
