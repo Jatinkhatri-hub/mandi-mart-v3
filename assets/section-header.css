@@ -62,6 +62,8 @@
     outline: none;
     height: 43px;
     width: 345px;
+    background: white;
+    font-family: ;
   }
 
   .nav-bar__search-btn {
