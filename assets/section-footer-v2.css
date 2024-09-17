@@ -73,13 +73,11 @@
   justify-content: center;
   align-items: baseline;
   flex-direction: column;
-}
-
-.nav-bar__mega-menu-item {
-  display: inline-block;
   position: relative;
   color: #0087ca;
 }
+
+
 
 .nav-bar__mega-menu-item::after {
   content: '';
