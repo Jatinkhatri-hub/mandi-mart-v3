@@ -50,6 +50,11 @@
   display: none;
 }
 
+.dropdown {
+  display: flex !important;
+  
+}
+
 .search-input {
   border: none;
   outline: none;
