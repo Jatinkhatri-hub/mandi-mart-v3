@@ -65,6 +65,7 @@
     background: white;
     font-family: 'Poppins';
     font-weight: 400;
+    border-radius: 4px 0 0 4px;
   }
 
   .nav-bar__search-btn {
