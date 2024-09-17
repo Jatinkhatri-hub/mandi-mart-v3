@@ -483,6 +483,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
   }
   
   /* Show the product cards when loaded */
@@ -528,6 +529,7 @@
     font-weight: 400;
     color: #737373;
     margin: 0;
+    padding-left: 10px;
   }
 
   .mega-menu__product-price {
