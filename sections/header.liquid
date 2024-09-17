@@ -90,7 +90,9 @@
               <img src="{{ collection.image | image_url: width: collection.image.width }}" class="collection__featured-image">
             {% endif %}
             {{ link.title }}
+            {% if link.links != blank %}
             <span class="icon-arrow-down"> {% render 'icon-arrow-down' %}</span>
+            {% endif %}
           </a>
         </li>
       {% endfor %}
