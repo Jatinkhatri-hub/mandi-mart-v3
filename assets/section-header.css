@@ -102,6 +102,9 @@
     text-transform: capitalize;
   }
 
-  .
+  .nav-bar__menu-item a {
+    text-decoration: none;
+    text-transform: capitalize;
+  }
 
 }
