@@ -50,6 +50,7 @@ addEventListener('DOMContentLoaded', () => {
           backdrop.classList.add('show');
         } else {
           childDropdown.classList.remove('open');
+          backdrop.classList.remove('show');
         }
       });
     }
