@@ -58,7 +58,7 @@
     height: 265px;
   }
 
-   {
-    font-size: 37px;
+   .feature-collection__title {
+    font-size: 30px;
   }
 }
