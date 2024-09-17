@@ -88,9 +88,9 @@
 .nav-bar__mega-menu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
-  padding: 15px 30px 0 30px;
+  padding: ;
 }
 
 .nav-bar__mega-menu-item {
