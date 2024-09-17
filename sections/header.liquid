@@ -106,8 +106,11 @@
             <ul class="mega-menu__child-dropdown">
             {% for child in link.links %}
               {% assign child_collection_handle = child.url | remove: '/collections/' %}
-                  {% assign child_collection = collections[child_collection_handle] %}
+              {% assign child_collection = collections[child_collection_handle] %}
               <li class="child-links">
+                <a href="{{ child.url }}">
+                  
+                </a>
 
               </li>
             {% endfor %}
