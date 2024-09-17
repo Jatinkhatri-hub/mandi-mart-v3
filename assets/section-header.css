@@ -113,7 +113,8 @@
     font-weight: 500;
   }
   .nav-bar__menu-item a svg {
-    width: ;
+    width: 14px;
+    height: 14px;
   }
 
 }
