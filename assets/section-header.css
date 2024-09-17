@@ -428,7 +428,9 @@
 
   mega-menu__product-card-container {
     width: 210px;
-    height: 1;
+    height: 115px;
+    display: flex;
+    
   }
 
   .mega-menu__product-image {
