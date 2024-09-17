@@ -90,7 +90,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
-  padding: 15px 30px 0
+  padding: 15px 30px 0 30px;
 }
 
 @media screen and (min-width: 789px) {
