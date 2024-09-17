@@ -33,6 +33,11 @@
 }
 
 @media screen and (min-width: 789px) {
+
+  .nav-bar__items {
+    height: ;
+  }
+
   .nav-bar__open-btn {
     display: none;
   }
