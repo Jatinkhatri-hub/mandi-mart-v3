@@ -367,6 +367,7 @@
     display: flex;
     flex-direction: column;
     transform: translateX(-50%);
+    flex-wrap: wrap;
   }
 
   .mega-menu__child-dropdown.open {
