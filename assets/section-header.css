@@ -426,6 +426,10 @@
     opacity: 0;
   }
 
+  mega-menu__product-card-container {
+    width: ;
+  }
+
   .mega-menu__product-image {
     width: 110px;
     height: 115px;
