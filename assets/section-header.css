@@ -59,7 +59,7 @@
     height: 43px;
     border: none;
     background: #00878030;
-    
+    border-radius: 0 4px 4px 0;
   }
 
 }
