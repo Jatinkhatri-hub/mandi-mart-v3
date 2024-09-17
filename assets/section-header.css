@@ -101,7 +101,8 @@
   color: rgb(var(--color-foreground));
   font-size: 16px;
   font-family: 'Poppins';
-  font
+  font-weight: 400;
+  
 }
 
 @media screen and (min-width: 789px) {
