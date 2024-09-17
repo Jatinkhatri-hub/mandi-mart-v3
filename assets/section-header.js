@@ -15,7 +15,7 @@ addEventListener('DOMContentLoaded', () => {
     console.log(open);
   })
 
-  .navCloseBtn.addEventListener('click', () => {
+  navCloseBtn.addEventListener('click', () => {
     navDrawer.classList.remove('open');
     navDrawer.classList.add('close');
     megaMenuWrapper.style.display = 'none';
