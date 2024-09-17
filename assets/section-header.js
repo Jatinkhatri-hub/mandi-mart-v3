@@ -6,6 +6,7 @@ addEventListener('DOMContentLoaded', () => {
   const megaMenuWrapper = document.querySelector('.mega-menu__wrapper');
 
   const backdrop = document.getElementById('backdrop');
+  const 
 
 
   navOpenBtn.addEventListener('click', () => {
@@ -46,8 +47,7 @@ addEventListener('DOMContentLoaded', () => {
 
         // If it was closed, open it; otherwise, close it
         if (!isOpen) {
-          childDropdown.classList.add('open');
-        
+          childDropdown.classList.add('open');        
         } else {
           childDropdown.classList.remove('open');
         }
