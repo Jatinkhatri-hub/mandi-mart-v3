@@ -10,7 +10,7 @@ addEventListener('DOMContentLoaded', () => {
   const productPreview = document.getElementById('product-preview');
 
   // Function to fetch collection data
-  function fetchProducts(collectionHandle) {
+  function fetchProducts(collectionHandle, product) {
     // Add fade-out class before changing the products
     productPreview.classList.add('fade-out');
 
