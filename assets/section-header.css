@@ -277,6 +277,7 @@
     display: flex;
     height: 70px;
     align-items: center;
+    justify-content: center;
   }
 
   .search-form.mobile {
