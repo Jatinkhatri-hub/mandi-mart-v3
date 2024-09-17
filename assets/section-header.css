@@ -85,7 +85,12 @@
   padding-block: 25px;
 }
 
-.nav-bar__mega
+.nav-bar__mega-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
 
 @media screen and (min-width: 789px) {
 
