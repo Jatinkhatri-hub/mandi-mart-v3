@@ -423,7 +423,10 @@
     opacity: 0;
   }
 
-  .mega-menu
+  .mega-menu__product-image {
+    width: 110px;
+    height: 15px;
+  }
   
 
 }
