@@ -127,7 +127,8 @@
   background-color: #074542;
   display: flex;
   align-items: center;
-  justify-content: ;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .icon-arrow-down svg path {
