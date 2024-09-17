@@ -283,7 +283,10 @@
 
   .mega-menu__items {
     flex-direction: row;
+    width: 100%;
+    margin: 0;
   }
+  
 
   
 
