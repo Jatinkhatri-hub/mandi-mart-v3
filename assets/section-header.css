@@ -184,7 +184,8 @@
 }
 
 .child-links a {
-  color: ;
+  color: rgb(var(--color-foreground));
+  font-size: ;
 }
 
 
