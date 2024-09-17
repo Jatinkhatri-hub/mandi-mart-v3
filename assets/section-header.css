@@ -55,7 +55,8 @@
   background-color: black;
   opacity: 0.3;
   z-index: 3;
-  position: ;
+  position: fixed;
+  top: 
 }
 
 .search-input {
