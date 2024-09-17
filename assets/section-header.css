@@ -399,7 +399,6 @@
 
   .product-preview {
     display: flex;
-    gap: 20px;
     position: absolute;
     width: 250px;
     height: 510px;
