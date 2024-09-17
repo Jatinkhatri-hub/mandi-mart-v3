@@ -287,6 +287,8 @@
     color: rgb(var(--color-foreground));
     text-decoration: none;
     text-transform: capitalize;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
 
   .nav-bar__menu-item a {
