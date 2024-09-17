@@ -81,7 +81,7 @@
       </form>
 
       <ul class="mega-menu__items">
-      {% for link in section.settings.mega-menu.links %} 
+      {% for link in section.settings.mega_menu.links %} 
         {% assign collection_handle = link.url | remove: '/collections/' %}
         {% assign collection = collections[collection_handle] %}
         <li class="nav-bar__mega-menu-item">
@@ -124,7 +124,8 @@
       {
         "type": "link_list",
         "id": "mega_menu",
-        "label": "Mega Menu"
+        "label": "Mega Menu",
+        "default": "main-menu"
       }, {
         "type": "color_scheme",
         "id": "mega_menu_color_scheme",
