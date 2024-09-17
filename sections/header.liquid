@@ -91,7 +91,11 @@
           <a href="{{ link.url }}">
             {% if collection.image != blank %}
               <img src="{{ collection.image | image_url: width: collection.image.width }}" class="collection__featured-image">
-            
+            {% elsif counter == 0 %}
+            <img src="https://cdn.shopify.com/s/files/1/0852/8553/6031/files/Rectangle_49.png?v=1726555526" class="collection__featured-image">
+
+            {% elsif counter == 4 %}
+            <img src="https://cdn.shopify.com/s/files/1/0852/8553/6031/files/Rectangle_52.png?v=1726555709" class="">
             {% endif %}
             {{ link.title }}
             {% if link.links != blank %}
