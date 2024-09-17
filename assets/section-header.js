@@ -5,7 +5,8 @@ addEventListener('DOMContentLoaded', () => {
   const navDrawer = document.querySelector('.nav-bar__mega-menu');
   const megaMenuWrapper = document.querySelector('.mega-menu__wrapper');
 
-  const navCloseBtn = document.querySelector('.nav-drawer__')
+  const navCloseBtn = document.querySelector('.backdrop');
+
 
   navOpenBtn.addEventListener('click', () => {
     navDrawer.classList.add('open');
@@ -13,6 +14,8 @@ addEventListener('DOMContentLoaded', () => {
     megaMenuWrapper.style.display= "block"
     console.log(open);
   })
+
+  .navCloseBtn.add
 
 
 
