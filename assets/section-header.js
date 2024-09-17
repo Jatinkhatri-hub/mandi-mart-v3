@@ -49,6 +49,11 @@ addEventListener('DOMContentLoaded', () => {
           openDropdown.classList.remove('open');
         });
 
+        desktopBackdrop.addEventListener('click', () => {
+          desktopBackdrop.classList.remove('show')
+          ope
+        });
+
         // If it was closed, open it; otherwise, close it
         if (!isOpen) {
           childDropdown.classList.add('open');
