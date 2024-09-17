@@ -6,7 +6,7 @@ addEventListener('DOMContentLoaded', () => {
   const megaMenuWrapper = document.querySelector('.mega-menu__wrapper');
 
   const backdrop = document.getElementById('backdrop');
-  const 
+  const desktopBackdrop = document.getElementById('')
 
 
   navOpenBtn.addEventListener('click', () => {
