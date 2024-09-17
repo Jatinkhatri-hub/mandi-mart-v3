@@ -407,6 +407,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #F3F7F7;
   }
   
   /* Hide the product cards initially (when changing) */
