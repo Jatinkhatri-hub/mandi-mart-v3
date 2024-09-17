@@ -404,6 +404,8 @@
     width: 250px;
     height: 510px;
     right: 0;
+    flex-direction: column;
+    jus
   }
   
   /* Hide the product cards initially (when changing) */
@@ -425,7 +427,7 @@
 
   .mega-menu__product-image {
     width: 110px;
-    height: 15px;
+    height: 115px;
   }
   
 
