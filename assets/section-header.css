@@ -456,12 +456,14 @@
     font-family: 'Poppins';
     font-weight: 400;
     color: #737373;
+    margin: 0;
   }
 
   .mega-menu__product-price {
     font-size: 12px;
     font-weight: 600;
     color: #008780;
+    margin: 0;
   }
 
 
