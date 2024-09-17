@@ -7,7 +7,7 @@ addEventListener('DOMContentLoaded', () => {
 
   const backdrop = document.getElementById('backdrop');
   const desktopBackdrop = document.getElementById('desktopBackdrop');
-  const productPreviewClass = document.getElementById('product-preview');
+  const productPreviewClass = 'product-preview';
 
   // Function to fetch collection data
   function fetchProducts(collectionHandle, productPreview) {
