@@ -62,7 +62,7 @@ addEventListener('DOMContentLoaded', () => {
       fetchProducts(collectionHandle); // Fetch products for the hovered collection
     });
   });
-  });
+  
 
   
 
