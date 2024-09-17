@@ -52,8 +52,12 @@
   }
 
   .search-form {
-    display: flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .sea
 
   .nav-bar__search-btn {
     display: flex;
