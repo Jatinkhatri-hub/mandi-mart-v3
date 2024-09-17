@@ -55,6 +55,7 @@ addEventListener('DOMContentLoaded', () => {
   childLinks.forEach(link => {
     link.addEventListener('mouseover', function () {
       const collectionHandle = this.getAttribute('data-collection-handle');
+      const previewContainer = this.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
       fetchProducts(collectionHandle); // Fetch products for the hovered collection
     });
   });
