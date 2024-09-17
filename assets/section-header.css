@@ -273,7 +273,9 @@
     height: 70px;
   }
 
-  .me
+  .mega-menu__wrapper {
+    display: flex;
+  }
 
   .search-form.mobile {
     display: none;
