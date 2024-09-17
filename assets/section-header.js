@@ -112,7 +112,7 @@ function renderProductCards(products, container) {
             <img src="${product.images[0].src}" alt="${product.title}" class="mega-menu__product-image"/>
           </div>
         </a>
-        <button href='${productURL}' class="mega-menu__atc-btn" href="#" data-variant-id="${product.variants[0].id}">+ ADD TO CART</button>
+        <a href='${productURL}' class="mega-menu__atc-btn" href="#" data-variant-id="${product.variants[0].id}">+ ADD TO CART</a>
       </div>
     `;
   });
