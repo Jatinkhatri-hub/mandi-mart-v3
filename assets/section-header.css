@@ -264,7 +264,8 @@
   }
 
   .nav-bar__mega-menu {
-    
+    position: relative;
+    width: 100%;
   }
 
 }
