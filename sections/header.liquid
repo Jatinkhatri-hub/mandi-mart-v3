@@ -57,7 +57,30 @@
     </div>
   </div>
   <div class="nav-bar__mega-menu">
-    
+    <div>
+      <form class="search-form desktop" action="{{ routes.search_url }}">
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Explore 1000+ Supplements"
+          name="q"
+          value="{{ search.terms | escape }}" />
+        <input
+          type="hidden"
+          name="type"
+          value="product,page" />
+        <input
+          type="hidden"
+          name="options[unavailable_products]"
+          value="hide" />
+        <input
+          type="hidden"
+          name="options[prefix]"
+          value="last" />
+        <button class="nav-bar__search-btn" type="submit">{% render 'icon-search-2' %}</button>
+      </form>
+
+    </div>
   </div>
 </header>
 
