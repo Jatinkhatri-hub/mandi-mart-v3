@@ -344,6 +344,7 @@
     height: 70px;
     align-items: center;
     justify-content: center;
+    margin-inline: 20px;
   }
 
   .search-form.mobile {
