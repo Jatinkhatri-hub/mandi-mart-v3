@@ -97,6 +97,7 @@
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    color: rgb(var(--color-foreground));
   }
 
 }
