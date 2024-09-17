@@ -444,6 +444,8 @@
   }
 
   .mega-menu__product-card-info {
+    display: flex;
+    flex-direction: column;
     
   }
 
