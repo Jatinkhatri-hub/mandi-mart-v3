@@ -6,5 +6,8 @@
 
 .nav-bar__items {
   display: flex;
-  flex-direction: ;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
 }
