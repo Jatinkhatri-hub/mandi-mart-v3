@@ -68,6 +68,10 @@
     border-radius: 4px 0 0 4px;
   }
 
+  .search-input:focus-visible {
+    of
+  }
+
   .nav-bar__search-btn {
     display: flex;
     justify-content: center;
