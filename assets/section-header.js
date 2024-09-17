@@ -16,16 +16,11 @@ addEventListener('DOMContentLoaded', () => {
     console.log(open);
   })
 
-  navCloseBtn.addEventListener('click', () => {
-    navDrawer.classList.remove('open');
-    navDrawer.classList.add('close');
-    megaMenuWrapper.style.display = 'none';
-    navCloseBtn.classList.remove = 'openBackdrop';
-    
-  });
+  
 
   backdrop.addEventListener('click', () => {
-    navdrawer.classList.remove('open');
+    navDrawer.classList.remove('open');
+    navDrawer.classList.add('close');
     backdrop.classList.remove('show');
   });
 
