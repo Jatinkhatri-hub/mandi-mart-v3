@@ -283,6 +283,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scaleX();
     list-style-type: none;
     color: rgb(var(--color-foreground));
     text-decoration: none;
