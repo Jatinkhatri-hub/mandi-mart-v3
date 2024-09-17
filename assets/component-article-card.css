@@ -54,6 +54,9 @@
 .blog__posts .article-card .card__information {
   padding-left: 2rem;
   padding-right: 2rem;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .article-card__info {
