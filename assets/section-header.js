@@ -36,12 +36,23 @@ addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent default anchor behavior
 
-        // Toggle the open class to show/hide child links
-        childDropdown.classList.toggle('open');
+        // Check if the dropdown is open
+        const isOpen = childDropdown.classList.contains('open');
+
+        // Close any other open dropdowns
+        document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
+          openDropdown.classList.remove('open');
+        });
+
+        // If it was closed, open it; otherwise, close it
+        if (!isOpen) {
+          childDropdown.classList.add('open');
+        } else {
+          childDropdown.classList.remove('open');
+        }
       });
     }
   });
-
 
 
 });
