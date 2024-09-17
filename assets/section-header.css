@@ -86,7 +86,12 @@
   }
 
   .nav-bar__menu {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
   }
+
+  .nav
 
 }
