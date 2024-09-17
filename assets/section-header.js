@@ -11,14 +11,15 @@ addEventListener('DOMContentLoaded', () => {
   navOpenBtn.addEventListener('click', () => {
     navDrawer.classList.add('open');
     navDrawer.classList.remove('close');
-    megaMenuWrapper.style.display= "block"
+    megaMenuWrapper.style.display= "block";
     console.log(open);
   })
 
   .navCloseBtn.addEventListener('click', () => {
     navDrawer.classList.remove('open');
     navDrawer.classList.add('close');
-    megaMenuWrapper.st
+    megaMenuWrapper.style.display = 'none';
+    
   });
 
 
