@@ -487,7 +487,6 @@
   }
 
   .mega-menu__atc-btn {
-    width: 100%;
     padding: 7px 40px;
     font-family: 'Poppins';
     font-weight: 600;
@@ -495,10 +494,13 @@
     background-color: #008780;
     color: white !important;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .our-top-brands {
-    height: 510px;
+    height: 550px;
   }
   
 
