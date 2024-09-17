@@ -83,8 +83,8 @@
       <ul class="nav-bar__mega-menu">
       {% for link in section.settings.mega-menu.links %} 
         {% assign collection_handle = link.url | remove: '/collections/' %}
-          {% assign collection = collections[collection_handle] %}
-        <li>
+        {% assign collection = collections[collection_handle] %}
+        <li class="">
 
         </li>
       {% endfor %}
