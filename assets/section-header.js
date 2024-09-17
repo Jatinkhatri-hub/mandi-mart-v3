@@ -6,7 +6,8 @@ addEventListener('DOMContentLoaded', () => {
 
   navOpenBtn.addEventListener('click', () => {
     navDrawer.classList.add('open');
-    navDrawer.classList.remove
+    navDrawer.classList.remove('close');
+    console.log(open);
   })
 
 
