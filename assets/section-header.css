@@ -58,7 +58,9 @@
   }
 
   .search-input {
-    
+    border: none;
+    outline: none;
+    height: ;
   }
 
   .nav-bar__search-btn {
