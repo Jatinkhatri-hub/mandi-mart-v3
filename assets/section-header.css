@@ -374,6 +374,7 @@
     padding: 30px;
     border-radius: 20px;
     max-height: 510px;
+    z-index: 12;
   }
 
   #desktopBackdrop {
