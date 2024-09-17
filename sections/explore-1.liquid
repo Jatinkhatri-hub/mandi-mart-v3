@@ -26,9 +26,9 @@
                     </div>
                     <div class="big-div-content">
                         <h4>{{ block.settings.big_heading }}</h4>
-                         href="{{ block.settings.big_div_button_link }}">
+                        <button href="{{ block.settings.big_div_button_link }}">
                         <button class="big-div-btn explore-btn">{{ block.settings.big_button_text }}</button>
-                        </>
+                        </button>
                     </div>
                 </a>
             {% elsif block.type == 'small-div' %}
@@ -96,6 +96,7 @@
         border-radius: 20px;
         overflow: hidden;
         position: relative;
+        cursor: pointer;
     }
     .big-div-img{
         margin: 0;
