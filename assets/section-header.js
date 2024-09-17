@@ -21,7 +21,7 @@ addEventListener('DOMContentLoaded', () => {
 
         // Small delay to allow fade-out animation to play
         setTimeout(() => {
-          renderProductCards(products);
+          renderProductCards(products, productPreview);
           productPreview.classList.remove('fade-out'); // Remove fade-out after rendering
         }, 300); // Adjust timing as per the fade-out duration
       })
