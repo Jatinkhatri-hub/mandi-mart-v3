@@ -51,6 +51,10 @@
     display: none;
   }
 
+  .search-form {
+    display: flex
+  }
+
   .nav-bar__search-btn {
     display: flex;
     justify-content: center;
