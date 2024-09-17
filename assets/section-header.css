@@ -69,7 +69,8 @@
   }
 
   .search-input:focus-visible {
-    of
+    outline-offset: 0;
+    box-shadow: ;
   }
 
   .nav-bar__search-btn {
