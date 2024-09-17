@@ -20,7 +20,7 @@
     <div class="explore-container">
         {% for block in section.blocks %}
             {% if block.type == 'big-div' %}
-                <a class="big-div">
+                <a class="big-div" href="{{ block.settings.big_div_button_link }}">
                     <div class="big-div-img" style="width: {{ block.settings.big_img_width }}px;">
                         <img src="{{ block.settings.big_img | image_url }}" alt="Big Div Image" />
                     </div>
