@@ -127,14 +127,14 @@ childLinks.forEach(link => {
 });
 
 // Ensure the first child element's products are shown initially when the dropdown is opened
-document.addEventListener('DOMContentLoaded', function () {
+
   const firstChildLink = document.querySelector('.our-top-brands .child-links');
   if (firstChildLink) {
     const collectionHandle = firstChildLink.getAttribute('data-collection-handle');
     const previewContainer = firstChildLink.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
     fetchRandomProducts(collectionHandle, previewContainer); // Fetch random products for the first child element
   }
-});
+
 
   navOpenBtn.addEventListener('click', () => {
     navDrawer.classList.add('open');
