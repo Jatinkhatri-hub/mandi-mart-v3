@@ -85,7 +85,7 @@
   padding-block: 25px;
 }
 
-.nav-bar__mega-menu {
+.mega-menu-items {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
