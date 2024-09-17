@@ -401,6 +401,8 @@
     display: flex;
     gap: 20px;
     position: relative;
+    width: 250px;
+    
   }
   
   /* Hide the product cards initially (when changing) */
