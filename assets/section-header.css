@@ -60,7 +60,8 @@
   .search-input {
     border: none;
     outline: none;
-    height: ;
+    height: 43px;
+    width: 345px;
   }
 
   .nav-bar__search-btn {
