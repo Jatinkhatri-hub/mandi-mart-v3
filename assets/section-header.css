@@ -175,6 +175,10 @@
 
 @media screen and (min-width: 789px) {
 
+  .nav-bar__container {
+    flex-direction: column;
+  }
+
   .nav-bar__items {
     height: 80px;
   }
@@ -267,6 +271,10 @@
     position: relative;
     width: 100%;
     height: 70px;
+  }
+
+  .search-form.mobile {
+    display: none;
   }
 
 }
