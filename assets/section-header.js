@@ -103,7 +103,7 @@ function renderProductCards(products, container) {
         <a href='${productURL}'>
           <p class="mega-menu__product-title">${product.title}</p>
         </a>
-        <a href='${}' class="mega-menu__product-card-container">
+        <a href='${productURL}' class="mega-menu__product-card-container">
           <div class="mega-menu__product-card-info">
             <p>${product.vendor}</p>
             <p class="mega-menu__product-price">$${product.variants[0].price}</p>
