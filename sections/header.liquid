@@ -46,7 +46,7 @@
     <ul class="nav-bar__menu">
       {% for link in section.settings.main_menu.links %}
         <li class="nav-bar__menu-item">
-          <a href="{{ link.url }}"><span>{% render 'icon-user' %}</span> {{ link.title }}</a>
+          <a href="{{ link.url }}">{% render 'icon-user' %} {{ link.title }}</a>
         </li>
       {% endfor %}
     </ul>
