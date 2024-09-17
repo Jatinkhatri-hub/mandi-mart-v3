@@ -1,14 +1,37 @@
-{{ 'section-header.css' |  asset_url |  stylesheet_tag }}
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
 
 <header class="nav-bar__container color-{{ section.settings.color_scheme }}">
   <div class="nav-bar__items">
     <div class="nav-bar__open-btn">
-      {%  render 'icon-hamburger-2' %} 
+      {% render 'icon-hamburger-2' %}
     </div>
     <a href="/">
-      <img src="{{ section.settings.brand_logo |  image_url: width: section.settings.brand_logo.width  }}" alt="{{ stie.name }}" class="nav-bar__brand-img">
+      <img
+        src="{{ section.settings.brand_logo |  image_url: width: section.settings.brand_logo.width  }}"
+        alt="{{ stie.name }}"
+        class="nav-bar__brand-img">
     </a>
     <div class="store-search">
+      <form action="{{ routes.search_url }}">
+        <input
+          type="text"
+          placeholder="Search"
+          name="q"
+          value="{{ search.terms | escape }}" />
+        <input
+          type="hidden"
+          name="type"
+          value="product,page" />
+        <input
+          type="hidden"
+          name="options[unavailable_products]"
+          value="hide" />
+        <input
+          type="hidden"
+          name="options[prefix]"
+          value="last" />
+        <input type="submit" value="Search" />
+      </form>
 
     </div>
     <div class="nav-bar__options">
@@ -19,38 +42,37 @@
   </div>
 </header>
 
-{%  schema  %} 
- {
-  "name": "Header",
-  "class": "section-header",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "brand_logo",
-      "label": "Header Logo"
-    },
-    {
-      "type": "link_list",
-      "id":"main-nav",
-      "label": "Main Menu"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
-    },
-    {
-      "type": "link_list",
-      "id": "mega-menu",
-      "label": "Mega Menu"
-    },
-    {
-      "type": "color_scheme",
-      "id": "mega_menu_color_scheme",
-      "label": "Mega Menu color Scheme",
-      "default": "scheme-1"
-    }
-  ]
- }
+{% schema %}
+  {
+    "name": "Header",
+    "class": "section-header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "brand_logo",
+        "label": "Header Logo"
+      },
+      {
+        "type": "link_list",
+        "id": "main-nav",
+        "label": "Main Menu"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "link_list",
+        "id": "mega-menu",
+        "label": "Mega Menu"
+      }, {
+        "type": "color_scheme",
+        "id": "mega_menu_color_scheme",
+        "label": "Mega Menu color Scheme",
+        "default": "scheme-1"
+      }
+    ]
+  }
 {% endschema %}
