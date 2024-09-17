@@ -102,7 +102,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  height: 100vh;
+  height: 100%;
   width: 0;
   background-color: rgb(var(--color-background));
   z-index: 10;
