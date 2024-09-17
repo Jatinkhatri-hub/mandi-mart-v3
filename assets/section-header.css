@@ -431,6 +431,8 @@
     height: 115px;
     display: flex;
     flex-direction: row;
+    background-color: #FFFFFF;
+    border-radius: 4px;
   }
 
   .mega-menu__product-title {
