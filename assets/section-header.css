@@ -405,7 +405,8 @@
     height: 510px;
     right: 0;
     flex-direction: column;
-    jus
+    justify-content: center;
+    align-items: center;
   }
   
   /* Hide the product cards initially (when changing) */
