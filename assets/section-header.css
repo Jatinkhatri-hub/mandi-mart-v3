@@ -474,6 +474,7 @@
   .mega-menu__product-img-wrapper {
     width: 110px;
     height: 115px;
+    padding-block: 10px;
   }
 
   .mega-menu__product-image {
