@@ -15,7 +15,9 @@ addEventListener('DOMContentLoaded', () => {
     console.log(open);
   })
 
-  .navCloseBtn.add
+  .navCloseBtn.addEventListener('click', () => {
+    
+  })
 
 
 
