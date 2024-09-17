@@ -32,7 +32,7 @@
                     </div>
                 </a>
             {% elsif block.type == 'small-div' %}
-                <div class="small-div">
+                <a class="small-div" href="{{ block.settings.small_div_button_link }}">
                     <div class="small-div-content">
                         <h4>{{ block.settings.small_heading }}</h4>
                         <a href="{{ block.settings.small_div_button_link }}" style="text-decoration: none;">
@@ -42,7 +42,7 @@
                     <div class="small-div-img" style="width: {{ block.settings.small_img_width }}px;">
                         <img src="{{ block.settings.small_img | image_url }}" alt="Small Div Image" />
                     </div>
-                </div>
+                </a>
             {% endif %}
         {% endfor %}
     </div>
