@@ -99,6 +99,7 @@
     list-style-type: none;
     color: rgb(var(--color-foreground));
     text-decoration: none;
+    text-transform: capitalize;
   }
 
 }
