@@ -127,6 +127,10 @@
   background-color: #074542;
 }
 
+.icon-arrow-down svg path {
+  fill: white;
+}
+
 
 
 
