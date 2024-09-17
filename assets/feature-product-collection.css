@@ -13,8 +13,8 @@
 
 
 .collection__product-wrapper {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  justify-content: ;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
