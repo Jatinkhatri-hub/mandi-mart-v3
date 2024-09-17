@@ -23,5 +23,5 @@
 }
 
 @media screen and (min-width: 789px) {
-  grid-template-columns: ;;
+  grid-template-columns: repeat(4, minmax(0,));;
 }
