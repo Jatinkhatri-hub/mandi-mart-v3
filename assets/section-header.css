@@ -561,11 +561,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .mega-menu__atc-btn:hover {
     background: white;
-    color: #008780;
+    color: #008780 !important;
   }
 
   .our-top-brands {
