@@ -178,7 +178,9 @@
   align-items: baseline;
   padding-inline-start: 30px;
   gap: 15px;
-  max-
+  max-height: 0;
+  overflow: hidden;
+  transition: max;
 }
 
 .child-links {
