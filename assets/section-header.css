@@ -187,7 +187,7 @@
 .mega-menu__child-dropdown.open {
   max-height: 100%;
   opacity: 1;
-  transition: height 0.3s ease-in, ;
+  transition: max-height 0.3s ease-in, opacity  ;
 }
 
 .child-links {
