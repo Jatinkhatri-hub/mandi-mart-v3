@@ -87,7 +87,7 @@
         <li class="nav-bar__mega-menu-item">
           <a href="{{ link.url }}">
             {% if collection.image != blank %}
-              <img src="{{ collection.image | imag }}" class="collection__featured-image">
+              <img src="{{ collection.image | image_url: width: collection.image.width }}" class="collection__featured-image">
             {% endif %}
             {{ link.title }}
           </a>
