@@ -1,5 +1,9 @@
 .nav-bar__container {
   display: flex;
   width: 100%;
-  justify-content: ;
+  align-items: center;
+}
+
+.nav-bar__items {
+  di
 }
