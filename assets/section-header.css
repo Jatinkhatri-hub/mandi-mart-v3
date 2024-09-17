@@ -227,13 +227,13 @@
     padding: 0 60px ;
   }
 
-  .nav-bar__mega-menu-item {
+  .nav-bar__menu-item {
     display: inline-block;
     position: relative;
     color: #0087ca;
   }
   
-  .nav-bar__mega-menu-item::after {
+  .nav-bar__menu-item::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -246,7 +246,7 @@
     transition: transform 0.25s ease-out;
   }
 
-  .nav-bar__mega-menu-item:hover::after {
+  .nav-bar__menu-item:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
