@@ -79,7 +79,7 @@
 
 
 
-.nav-bar__mega-menu-item::after {
+.footer__menu-child-item-wrapper::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -92,7 +92,7 @@
   transition: transform 0.25s ease-out;
 }
 
-.nav-bar__mega-menu-item:hover::after {
+.footer__menu-child-item-wrapper:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
