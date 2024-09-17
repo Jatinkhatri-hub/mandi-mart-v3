@@ -19,6 +19,7 @@
   font-size: 3.7rem;
   color: rgb(var(--color-foreground));
   font-weight: 600;
+  margin: 0;
 }
 
 .review__list-wrapper {
