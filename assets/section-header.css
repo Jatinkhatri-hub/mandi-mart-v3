@@ -281,6 +281,10 @@
     display: none;
   }
 
+  .mega-menu__items {
+    flex-direction: row;
+  }
+
   
 
 }
