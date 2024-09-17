@@ -103,7 +103,7 @@ function renderProductCards(products, container) {
         <a href='${productURL}'>
           <p class="mega-menu__product-title">${product.title}</p>
         </a>
-        <div class="mega-menu__product-card-container">
+        <a href='${}' class="mega-menu__product-card-container">
           <div class="mega-menu__product-card-info">
             <p>${product.vendor}</p>
             <p class="mega-menu__product-price">$${product.variants[0].price}</p>
@@ -111,7 +111,7 @@ function renderProductCards(products, container) {
           <div class="mega-menu__product-img-wrapper">
             <img src="${product.images[0].src}" alt="${product.title}" class="mega-menu__product-image"/>
           </div>
-        </div>
+        </a>
         <button class="mega-menu__atc-btn" href="#" data-variant-id="${product.variants[0].id}">+ ADD TO CART</button>
       </div>
     `;
