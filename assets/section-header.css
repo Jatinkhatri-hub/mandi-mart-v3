@@ -68,7 +68,11 @@
   border-radius: 0 4px 4px 0;
 }
 
-.nav-var
+.nav-bar__mega-menu {
+  position: fixed;
+  top: 0;
+  
+}
 
 @media screen and (min-width: 789px) {
 
