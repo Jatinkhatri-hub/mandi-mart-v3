@@ -289,9 +289,12 @@
     margin: 0;
     padding: 0;
     align-items: center;
+    gap:
   }
 
-  
+  .collection__featured-image {
+    display: none;
+  }
   
   .nav-bar__mega-menu-item {
     padding: 0;
