@@ -23,5 +23,8 @@
 }
 
 @media screen and (min-width: 789px) {
-  grid-template-columns: repeat(4, minmax(0, 280px));
+
+  .collection__product-wrapper {
+    grid-template-columns: repeat(4, minmax(0, 280px));
+  }
 }
