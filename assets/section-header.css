@@ -65,6 +65,10 @@
     align-items: center;
   }
 
+  .search-form.desktop {
+    display: flex;
+  }
+
   .search-input {
     border: none;
     outline: none;
