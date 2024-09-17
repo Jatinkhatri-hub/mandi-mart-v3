@@ -305,6 +305,10 @@
     position: relative;
   }
 
+  .nav-bar__mega-menu-item a {
+    font
+  }
+
   .icon-arrow-down{
     top: 0;
     background-color: white;
