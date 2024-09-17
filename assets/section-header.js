@@ -10,7 +10,7 @@ addEventListener('DOMContentLoaded', () => {
 
   const productPreview = document.getElementById('product-preview');
 
-  const productPreview = document.getElementById('product-preview');
+ //const productPreview = document.getElementById('product-preview');
 
   // Function to fetch collection data and render products
   function fetchProducts(collectionHandle) {
