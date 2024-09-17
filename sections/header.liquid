@@ -35,9 +35,11 @@
       </form>
 
     </div>
-    <div class="nav-bar__menu">
+    <ul class="nav-bar__menu">
+      {% for link in section.settings.main-nav.links %}
       
-    </div>
+      {% endfor %}
+    </ul>
     <div class="nav-bar__options">
       <span>{% render 'icon-search-2' %}</span>
       <a href="{{ routes.account_login_url }}">{% render 'icon-user' %}</a>
