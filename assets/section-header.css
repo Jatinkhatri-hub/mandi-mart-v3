@@ -473,12 +473,13 @@
 
   .mega-menu__product-img-wrapper {
     width: 110px;
-    height: ;
+    height: 115px;
   }
 
   .mega-menu__product-image {
     width: 110px;
     height: 115px;
+    object-fit: contain;
   }
 
   .mega-menu__atc-btn {
