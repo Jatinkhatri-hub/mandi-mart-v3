@@ -24,6 +24,10 @@ addEventListener('DOMContentLoaded', () => {
     
   });
 
+  backdrop.addEventListener('click', () => {
+    navdrawer.classList.remove('open');
+    backdrop.classList.remove('show');
+  });
 
 
 
