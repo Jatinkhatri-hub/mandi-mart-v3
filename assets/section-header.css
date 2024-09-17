@@ -92,12 +92,13 @@
     gap: 35px;
   }
 
-  .nav-bar__menu-item {
+  .nav-bar__menu-item a {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style-type: none;
     color: rgb(var(--color-foreground));
+    text-decoration: none;
   }
 
 }
