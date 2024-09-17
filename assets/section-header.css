@@ -275,6 +275,8 @@
 
   .mega-menu__wrapper {
     display: flex;
+    height: 70px;
+    align-items: center;
   }
 
   .search-form.mobile {
