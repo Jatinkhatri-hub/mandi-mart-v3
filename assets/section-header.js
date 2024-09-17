@@ -25,6 +25,23 @@ addEventListener('DOMContentLoaded', () => {
     backdrop.classList.remove('show');
   });
 
+  const megaMenuItems = document.querySelectorAll('.nav-bar__mega-menu-item');
+
+  megaMenuItems.forEach(item => {
+    const link = item.querySelector('a');
+    const childDropdown = item.querySelector('.mega-menu__child-dropdown');
+
+    // If child links exist
+    if (childDropdown) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        // Toggle the open class to show/hide child links
+        childDropdown.classList.toggle('open');
+      });
+    }
+  });
+
 
 
 });
