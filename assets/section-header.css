@@ -97,6 +97,11 @@
   list-style-type: none;
 }
 
+.nav-bar__mega-menu-item a {
+  color: rgb(var(--color-foreground));
+  
+}
+
 @media screen and (min-width: 789px) {
 
   .nav-bar__items {
