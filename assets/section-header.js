@@ -20,6 +20,7 @@ addEventListener('DOMContentLoaded', () => {
     navDrawer.classList.remove('open');
     navDrawer.classList.add('close');
     megaMenuWrapper.style.display = 'none';
+    navCloseBtn.classList.
     
   });
 
