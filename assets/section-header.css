@@ -52,7 +52,11 @@
   }
 
   .nav-bar__search-btn {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: ;
   }
 
 }
