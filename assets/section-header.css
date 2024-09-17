@@ -105,7 +105,9 @@
   .nav-bar__menu-item a {
     text-decoration: none;
     text-transform: capitalize;
-    color: 
+    color: rgb(var(--color-foreground));
+    display: flex;
+    
   }
 
 }
