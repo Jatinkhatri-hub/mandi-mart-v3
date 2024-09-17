@@ -397,6 +397,28 @@
     opacity: 1;
   }
 
+  .product-preview {
+    display: flex;
+    gap: 20px;
+    position: relative;
+  }
+  
+  /* Hide the product cards initially (when changing) */
+  .product-card {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Show the product cards when loaded */
+  .product-card.show {
+    opacity: 1;
+  }
+  
+  /* Optional: Add a fade-out effect before the product change */
+  .product-preview.fade-out .product-card {
+    opacity: 0;
+  }
+
   
 
 }
