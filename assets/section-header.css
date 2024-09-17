@@ -170,7 +170,12 @@
   fill: white;
 }
 
-.mega-menu
+.mega-menu__child-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  al
+}
 
 
 
