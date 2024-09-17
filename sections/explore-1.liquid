@@ -20,17 +20,17 @@
     <div class="explore-container">
         {% for block in section.blocks %}
             {% if block.type == 'big-div' %}
-                <div class="big-div">
+                <a class="big-div">
                     <div class="big-div-img" style="width: {{ block.settings.big_img_width }}px;">
                         <img src="{{ block.settings.big_img | image_url }}" alt="Big Div Image" />
                     </div>
                     <div class="big-div-content">
                         <h4>{{ block.settings.big_heading }}</h4>
-                        <a href="{{ block.settings.big_div_button_link }}">
+                         href="{{ block.settings.big_div_button_link }}">
                         <button class="big-div-btn explore-btn">{{ block.settings.big_button_text }}</button>
-                        </a>
+                        </>
                     </div>
-                </div>
+                </a>
             {% elsif block.type == 'small-div' %}
                 <div class="small-div">
                     <div class="small-div-content">
