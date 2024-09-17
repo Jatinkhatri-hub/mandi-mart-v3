@@ -426,13 +426,13 @@
     opacity: 0;
   }
 
-  mega-menu__product-card-container {
+  .mega-menu__product-card-container {
     width: 210px;
     height: 115px;
     display: flex;
     flex-direction: row;
   }
-  
+
 
   .mega-menu__product-image {
     width: 110px;
