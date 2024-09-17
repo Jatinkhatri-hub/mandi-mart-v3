@@ -91,10 +91,10 @@
           <a href="{{ link.url }}" data-count="{{counter}}">
             {% if collection.image != blank %}
               <img src="{{ collection.image | image_url: width: collection.image.width }}" class="collection__featured-image">
-            {% elsif counter == 0 %}
+            {% elsif counter == 1 %}
             <img src="https://cdn.shopify.com/s/files/1/0852/8553/6031/files/Rectangle_49.png?v=1726555526" class="collection__featured-image">
 
-            {% elsif counter == 4 %}
+            {% elsif counter == 5 %}
             <img src="https://cdn.shopify.com/s/files/1/0852/8553/6031/files/Rectangle_52.png?v=1726555709" class="collection__featured-image">
             {% endif %}
             {{ link.title }}
