@@ -302,6 +302,10 @@
     position: relative;
   }
 
+  .icon-arrow-down{
+    top: 0;
+  }
+
   
 
 }
