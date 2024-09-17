@@ -83,6 +83,7 @@
   background-color: rgb(var(--color-background));
   z-index: 10;
   padding-block: 25px;
+  transition: width;
 }
 
 .mega-menu__items {
@@ -125,7 +126,6 @@
 
 .open {
   width: 85%;
-  
 }
 
 .icon-arrow-down {
