@@ -35,9 +35,17 @@ addEventListener('DOMContentLoaded', () => {
       const productImage = product.images.length > 0 ? product.images[0].src : 'default-image.jpg';
       productHTML += `
         <div class="product-card show">
-          <img src="${productImage}" alt="${product.title}">
-          <h3>${product.title}</h3>
-          <p>${(product.variants[0].price)}</p>
+          <p class="mega-menu__product-title">${product.title}</p>
+    <div class="mega-menu__product-card-container">
+      <div class="mega-menu__product-card-info">
+        <p>${product.vendor}</p>
+        <p class="mega-menu__product-price">$${product.variants[0].price}</p>
+      </div>
+      <div class="mega-menu__product-img-wrapper">
+      <img src="${product.images[0].src}" alt="${product.title}" class="mega-menu__product-image"/>
+      </div>
+      </div>
+    <a class="mega-menu__atc-btn" href="#" data-variant-id="${product.variants[0].id}">+ ADD TO CART</a>
         </div>
       `;
     });
