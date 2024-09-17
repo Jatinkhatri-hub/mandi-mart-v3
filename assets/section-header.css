@@ -36,4 +36,8 @@
   .nav-bar__open-btn {
     display: none;
   }
+
+  .nav-bar__options {
+    display: none;
+  }
 }
