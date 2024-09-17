@@ -26,7 +26,9 @@ addEventListener('DOMContentLoaded', () => {
     backdrop.classList.remove('show');
   });
 
-  desktopBackdrop.addEventListener('click', ())
+  desktopBackdrop.addEventListener('click', () => {
+    back
+  });
 
   const megaMenuItems = document.querySelectorAll('.nav-bar__mega-menu-item');
 
