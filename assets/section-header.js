@@ -50,7 +50,7 @@ addEventListener('DOMContentLoaded', () => {
         });
 
         desktopBackdrop.addEventListener('click', () => {
-          desktopBackdrop.classList.remove('show')
+          desktopBackdrop.classList.remove('show');
           childDropdown.classList.remove('open');
         });
 
