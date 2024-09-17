@@ -7,10 +7,10 @@ addEventListener('DOMContentLoaded', () => {
 
   const backdrop = document.getElementById('backdrop');
   const desktopBackdrop = document.getElementById('desktopBackdrop');
-  const productPreview = document.getElementById('product-preview');
+  const productPreviewClass = document.getElementById('product-preview');
 
   // Function to fetch collection data
-  function fetchProducts(collectionHandle, product) {
+  function fetchProducts(collectionHandle, productPreview) {
     // Add fade-out class before changing the products
     productPreview.classList.add('fade-out');
 
