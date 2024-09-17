@@ -99,7 +99,8 @@ function renderProductCards(products, container) {
     const productImage = product.images.length > 0 ? product.images[0].src : 'default-image.jpg';
     const productURL = `/products/${product.handle}`;
     productHTML += `
-      <div href='${product.url}' class="product-card show">
+      <div href='${productURL}' class="product-card show">
+        <a></a>
         <p class="mega-menu__product-title">${product.title}</p>
         <div class="mega-menu__product-card-container">
           <div class="mega-menu__product-card-info">
