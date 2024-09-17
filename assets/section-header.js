@@ -41,7 +41,7 @@ addEventListener('DOMContentLoaded', () => {
         </div>
       `;
     });
-    productPreview.innerHTML = productHTML; // Update the product preview area
+    container.innerHTML = productHTML; // Update the product preview area
 
     // Ensure the fade-in effect starts after the cards are added
     setTimeout(() => {
