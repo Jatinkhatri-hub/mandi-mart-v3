@@ -94,7 +94,7 @@
 }
 
 .nav-bar__mega-menu-item {
-  ;
+  list-style-type: none;
 }
 
 @media screen and (min-width: 789px) {
