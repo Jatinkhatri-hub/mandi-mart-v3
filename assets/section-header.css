@@ -433,7 +433,9 @@
     flex-direction: row;
   }
 
-  .mega-menu__product
+  .mega-menu__product-title {
+    
+  }
 
 
   .mega-menu__product-image {
