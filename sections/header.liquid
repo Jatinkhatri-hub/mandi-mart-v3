@@ -112,7 +112,7 @@
                   {% if child_collection.image != blank %}
                     <img src="{{ child_collection.image | img_url: 'medium'}}" class="collection-brand__featured-image">
                   {% endif %}
-                  
+                  {{ child.title }}
                 </a>
 
               </li>
