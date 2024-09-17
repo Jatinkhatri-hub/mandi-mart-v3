@@ -18,4 +18,8 @@
   height: 50px;
 }
 
-.nav
+.nav-bar__options {
+  display: flex;
+  flex-direction: row;
+  
+}
