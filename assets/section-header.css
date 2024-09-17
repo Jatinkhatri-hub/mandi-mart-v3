@@ -175,7 +175,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
+  padding-inline-start: 30px;
 }
+
 
 
 
