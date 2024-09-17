@@ -1,1 +1,408 @@
-{"sections":{"hero_46kHtt":{"type":"hero","blocks":{"banner_GKALLL":{"type":"banner","settings":{"hero_bg_image":"shopify:\/\/shop_images\/Wireframe_-_2.png","hero_bg_image_mobile":"shopify:\/\/shop_images\/iPhone_13_14_-_2.png","hero_title_text":"Transform Your Health With Premium Supplements","hero_para_text":"Discover our range of curated health supplements by trusted brands!","hero_point_text_1":"Wide range of brands and categories","hero_point_text_2":"Premium supplements trusted by experts","hero_point_text_3":"Best prices and fast delivery","hero_button_text":"Browse All Supplements","button_link":""}}},"block_order":["banner_GKALLL"],"settings":{"hero_color_scheme":"scheme-a73226a4-c9ed-453c-bc4b-18163a2a018e"}},"hero_carousel_XFifLk":{"type":"hero-carousel","blocks":{"image_cxjfMt":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/yellow-winner-podium-pedestal-showcase-product-space-presentation-background-3d-rendering_copy_3_466d1b3a-ada9-4e38-81e6-8da3eeb41cbe.png","alt":"Slide","carousel_heading":"Transform Your Health With Premium Supplements","carousel_sub_heading":"Discover our range of curated health supplements by trusted brands!","carousel_list_item_1":"Wide range of brands and categories","carousel_list_item_2":"Premium supplements trusted by experts","carousel_list_item_3":"Best prices and fast delivery","carousel_button_text":"Browse All Supplements","carousel_alignment":"left"}},"image_TtdHrm":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/medical-doctors-desk.jpg","alt":"Slide","carousel_heading":"Lorem ipsum dolor, sit amet consectetur adipisicing elit.","carousel_sub_heading":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, architecto. Atque voluptate delectus deleniti labore laborum?","carousel_list_item_1":"Lorem ipsum dolor","carousel_list_item_2":"Lorem ipsum dolor","carousel_list_item_3":"Lorem ipsum dolor","carousel_button_text":"CTA TEXT","carousel_alignment":"left"}}},"block_order":["image_cxjfMt","image_TtdHrm"],"disabled":true,"settings":{}},"feature_product_collection_FNdwGC":{"type":"feature-product-collection","settings":{"heading":"Feature Collection","products_per_slide_mobile":2,"products_per_slide_desktop":4,"section_color_scheme":"scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6","collection":"anrc-protocol","color_scheme":"scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6","padding_top":36,"padding_bottom":36}},"featured_collection_v2_xbrdmy":{"type":"featured-collection-v2","blocks":{"collection_card_UWbT8T":{"type":"collection_card","settings":{"collection_img":"shopify:\/\/shop_images\/Ellipse_218.png","card_background":"#3AAFA9","collection":"best-sellers"}},"collection_card_ceVWRm":{"type":"collection_card","settings":{"collection_img":"shopify:\/\/shop_images\/Group_1000007089.png","card_background":"#3AAFA9","collection":"clearance"}},"collection_card_XMUYQq":{"type":"collection_card","settings":{"collection_img":"shopify:\/\/shop_images\/Ellipse_219.png","card_background":"#3AAFA9","collection":"new-products"}},"collection_card_wnGVDx":{"type":"collection_card","settings":{"collection_img":"shopify:\/\/shop_images\/Group_1000007091_1.png","card_background":"#3AAFA9","collection":"top"}}},"block_order":["collection_card_UWbT8T","collection_card_ceVWRm","collection_card_XMUYQq","collection_card_wnGVDx"],"settings":{"heading":"","section_color_scheme":"","color_scheme":"","padding_top":36,"padding_bottom":36}},"section_review_UMij8M":{"type":"section-review","blocks":{"review_carousle_EEFHhP":{"type":"review_carousle","settings":{"user_name":"Name","user_description":"Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"}},"review_carousle_UTY3wA":{"type":"review_carousle","settings":{"user_name":"Name","user_description":"Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"}},"review_carousle_tpKhMt":{"type":"review_carousle","settings":{"user_name":"Name","user_description":"Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"}},"review_carousle_wi49bP":{"type":"review_carousle","settings":{"user_name":"Name","user_description":"Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"}},"review_carousle_QkRFjV":{"type":"review_carousle","settings":{"user_name":"Name","user_description":"Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"}}},"block_order":["review_carousle_EEFHhP","review_carousle_UTY3wA","review_carousle_tpKhMt","review_carousle_wi49bP","review_carousle_QkRFjV"],"settings":{"heading":"<p>Rich text<\/p>","section_color_scheme":"scheme-73da2105-31f1-46f6-bd3a-71060749aa24","color_scheme":"scheme-73da2105-31f1-46f6-bd3a-71060749aa24","padding_top":36,"padding_bottom":36}},"image_with_text_v2_ixiN7B":{"type":"image-with-text-v2","blocks":{"title_77rBtW":{"type":"title","settings":{"title":"Lorem ipsum dolor sit amet cons ectetur acus sit amet"}},"paragraph_hkJMKB":{"type":"paragraph","settings":{"paragraph":"<p>Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames gravida et rhoncus ut. Sit cras!<\/p>"}},"button_JGj4N3":{"type":"button","settings":{"button_label":"Button","button_url":"","outline_btn":false}}},"block_order":["title_77rBtW","paragraph_hkJMKB","button_JGj4N3"],"settings":{"heading":"Heading","image":"shopify:\/\/shop_images\/Yams_-_2024-05-21T174334_1.png","section_color_scheme":"scheme-1","color_scheme":"scheme-0ecd3135-8fa9-45f3-8af3-f71617a54edb","padding_top":36,"padding_bottom":36}},"feature_product_collection_fcn3Nn":{"type":"feature-product-collection","settings":{"heading":"Best Sellers","products_per_slide_mobile":2,"products_per_slide_desktop":4,"section_color_scheme":"","collection":"anrc-protocol","color_scheme":"scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6","padding_top":36,"padding_bottom":36}},"brand_collection_G4Yttb":{"type":"brand-collection","blocks":{"brand_collection_6UnA84":{"type":"brand_collection","settings":{"product_image":"shopify:\/\/shop_images\/Untitleddesign_97.png","collection":"neurobiologix","button_text":"Explore Brand"}},"brand_collection_fHDQfN":{"type":"brand_collection","settings":{"product_image":"shopify:\/\/shop_images\/image_9_1.png","collection":"metabolics","button_text":"Explore Brand"}},"brand_collection_pUwPqY":{"type":"brand_collection","settings":{"product_image":"shopify:\/\/shop_images\/image_9_2.png","collection":"probiotics","button_text":"Explore Brand"}},"brand_collection_zjxkBG":{"type":"brand_collection","settings":{"product_image":"shopify:\/\/shop_images\/image_9_5.png","collection":"anrc-protocol","button_text":"Explore Brand"}}},"block_order":["brand_collection_6UnA84","brand_collection_fHDQfN","brand_collection_pUwPqY","brand_collection_zjxkBG"],"settings":{"heading":"<p>Explore Our Top Brands<\/p>","section_color_scheme":"scheme-73da2105-31f1-46f6-bd3a-71060749aa24","color_scheme":"scheme-73da2105-31f1-46f6-bd3a-71060749aa24","padding_top":36,"padding_bottom":36}},"explore_VwPVRU":{"type":"explore","disabled":true,"settings":{"section_color_scheme":"","color_scheme":"scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6","image_1":"shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-17-24.png","link_1":"shopify:\/\/collections\/best-sellers","image_2":"shopify:\/\/shop_images\/Group_1000007081_5.png","link_2":"shopify:\/\/collections\/new-products","image_3":"shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-18-18.png","link_3":"shopify:\/\/collections\/clearance","image_4":"shopify:\/\/shop_images\/Group_1000007080_1.png","link_4":"shopify:\/\/collections\/digestive-enzymes","h4_text":"Explore all categories","h4_link":"shopify:\/\/pages\/categories-directory","padding_top":36,"padding_bottom":36}},"explore_1_VcCQc7":{"type":"explore-1","blocks":{"big_div_m8rEB4":{"type":"big-div","settings":{"big_img":"shopify:\/\/shop_images\/image_20_1.png","big_img_width":370,"big_heading":"AMINO ACID","big_button_text":"Explore Now","big_div_button_link":"shopify:\/\/collections\/amino-acids"}},"small_div_y6GBid":{"type":"small-div","settings":{"small_img":"shopify:\/\/shop_images\/Untitleddesign-2023-11-23T142142.304_large_2x.progressive_1.png","small_img_width":350,"small_heading":"EFA'S OIL","small_button_text":"Explore Now","small_div_button_link":"shopify:\/\/collections\/efas-oils"}},"small_div_iAHzeJ":{"type":"small-div","settings":{"small_img":"shopify:\/\/shop_images\/Untitleddesign_24_large_2x.progressive_1.png","small_img_width":350,"small_heading":"Z","small_button_text":"Explore Now","small_div_button_link":"shopify:\/\/collections\/vitamins"}},"big_div_UCmFC4":{"type":"big-div","settings":{"big_img":"shopify:\/\/shop_images\/image_21.png","big_img_width":250,"big_heading":"DIGESTIVE ENZYMES","big_button_text":"Explore Now","big_div_button_link":"shopify:\/\/collections\/digestive-enzymes"}}},"block_order":["big_div_m8rEB4","small_div_y6GBid","small_div_iAHzeJ","big_div_UCmFC4"],"settings":{"h3_text":"Explore Our Categories","h3_color":"#074542","h5_text":"Explore all categories","h5_color":"#074542","h5_link":"shopify:\/\/collections\/clearance","padding_top":36,"padding_bottom":36,"section_color_scheme":"","color_scheme":""}},"featured_blog_ne43LD":{"type":"featured-blog","settings":{"heading":"<strong>Latest News<\/strong>","heading_size":"h1","blog":"news","post_limit":3,"columns_desktop":3,"color_scheme":"scheme-73da2105-31f1-46f6-bd3a-71060749aa24","show_image":true,"show_date":true,"show_author":false,"show_view_all":true,"padding_top":36,"padding_bottom":36}}},"order":["hero_46kHtt","hero_carousel_XFifLk","feature_product_collection_FNdwGC","featured_collection_v2_xbrdmy","section_review_UMij8M","image_with_text_v2_ixiN7B","feature_product_collection_fcn3Nn","brand_collection_G4Yttb","explore_VwPVRU","explore_1_VcCQc7","featured_blog_ne43LD"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "hero_46kHtt": {
+      "type": "hero",
+      "blocks": {
+        "banner_GKALLL": {
+          "type": "banner",
+          "settings": {
+            "hero_bg_image": "shopify:\/\/shop_images\/Wireframe_-_2.png",
+            "hero_bg_image_mobile": "shopify:\/\/shop_images\/iPhone_13_14_-_2.png",
+            "hero_title_text": "Transform Your Health With Premium Supplements",
+            "hero_para_text": "Discover our range of curated health supplements by trusted brands!",
+            "hero_point_text_1": "Wide range of brands and categories",
+            "hero_point_text_2": "Premium supplements trusted by experts",
+            "hero_point_text_3": "Best prices and fast delivery",
+            "hero_button_text": "Browse All Supplements",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_GKALLL"
+      ],
+      "settings": {
+        "hero_color_scheme": "scheme-a73226a4-c9ed-453c-bc4b-18163a2a018e"
+      }
+    },
+    "hero_carousel_XFifLk": {
+      "type": "hero-carousel",
+      "blocks": {
+        "image_cxjfMt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yellow-winner-podium-pedestal-showcase-product-space-presentation-background-3d-rendering_copy_3_466d1b3a-ada9-4e38-81e6-8da3eeb41cbe.png",
+            "alt": "Slide",
+            "carousel_heading": "Transform Your Health With Premium Supplements",
+            "carousel_sub_heading": "Discover our range of curated health supplements by trusted brands!",
+            "carousel_list_item_1": "Wide range of brands and categories",
+            "carousel_list_item_2": "Premium supplements trusted by experts",
+            "carousel_list_item_3": "Best prices and fast delivery",
+            "carousel_button_text": "Browse All Supplements",
+            "carousel_alignment": "left"
+          }
+        },
+        "image_TtdHrm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/medical-doctors-desk.jpg",
+            "alt": "Slide",
+            "carousel_heading": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            "carousel_sub_heading": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, architecto. Atque voluptate delectus deleniti labore laborum?",
+            "carousel_list_item_1": "Lorem ipsum dolor",
+            "carousel_list_item_2": "Lorem ipsum dolor",
+            "carousel_list_item_3": "Lorem ipsum dolor",
+            "carousel_button_text": "CTA TEXT",
+            "carousel_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_cxjfMt",
+        "image_TtdHrm"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "feature_product_collection_FNdwGC": {
+      "type": "feature-product-collection",
+      "settings": {
+        "heading": "Feature Collection",
+        "products_per_slide_mobile": 2,
+        "products_per_slide_desktop": 4,
+        "section_color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
+        "collection": "anrc-protocol",
+        "color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_v2_xbrdmy": {
+      "type": "featured-collection-v2",
+      "blocks": {
+        "collection_card_UWbT8T": {
+          "type": "collection_card",
+          "settings": {
+            "collection_img": "shopify:\/\/shop_images\/Ellipse_218.png",
+            "card_background": "#3AAFA9",
+            "collection": "best-sellers"
+          }
+        },
+        "collection_card_ceVWRm": {
+          "type": "collection_card",
+          "settings": {
+            "collection_img": "shopify:\/\/shop_images\/Group_1000007089.png",
+            "card_background": "#3AAFA9",
+            "collection": "clearance"
+          }
+        },
+        "collection_card_XMUYQq": {
+          "type": "collection_card",
+          "settings": {
+            "collection_img": "shopify:\/\/shop_images\/Ellipse_219.png",
+            "card_background": "#3AAFA9",
+            "collection": "new-products"
+          }
+        },
+        "collection_card_wnGVDx": {
+          "type": "collection_card",
+          "settings": {
+            "collection_img": "shopify:\/\/shop_images\/Group_1000007091_1.png",
+            "card_background": "#3AAFA9",
+            "collection": "top"
+          }
+        }
+      },
+      "block_order": [
+        "collection_card_UWbT8T",
+        "collection_card_ceVWRm",
+        "collection_card_XMUYQq",
+        "collection_card_wnGVDx"
+      ],
+      "settings": {
+        "heading": "",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_review_UMij8M": {
+      "type": "section-review",
+      "blocks": {
+        "review_carousle_EEFHhP": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+          }
+        },
+        "review_carousle_UTY3wA": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+          }
+        },
+        "review_carousle_tpKhMt": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+          }
+        },
+        "review_carousle_wi49bP": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+          }
+        },
+        "review_carousle_QkRFjV": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+          }
+        }
+      },
+      "block_order": [
+        "review_carousle_EEFHhP",
+        "review_carousle_UTY3wA",
+        "review_carousle_tpKhMt",
+        "review_carousle_wi49bP",
+        "review_carousle_QkRFjV"
+      ],
+      "settings": {
+        "heading": "<p>TrustPilot Reviews<\/p>",
+        "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
+        "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_v2_ixiN7B": {
+      "type": "image-with-text-v2",
+      "blocks": {
+        "title_77rBtW": {
+          "type": "title",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet cons ectetur acus sit amet"
+          }
+        },
+        "paragraph_hkJMKB": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames gravida et rhoncus ut. Sit cras!<\/p>"
+          }
+        },
+        "button_JGj4N3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button",
+            "button_url": "",
+            "outline_btn": false
+          }
+        }
+      },
+      "block_order": [
+        "title_77rBtW",
+        "paragraph_hkJMKB",
+        "button_JGj4N3"
+      ],
+      "settings": {
+        "heading": "Heading",
+        "image": "shopify:\/\/shop_images\/Yams_-_2024-05-21T174334_1.png",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-0ecd3135-8fa9-45f3-8af3-f71617a54edb",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "feature_product_collection_fcn3Nn": {
+      "type": "feature-product-collection",
+      "settings": {
+        "heading": "Best Sellers",
+        "products_per_slide_mobile": 2,
+        "products_per_slide_desktop": 4,
+        "section_color_scheme": "",
+        "collection": "anrc-protocol",
+        "color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "brand_collection_G4Yttb": {
+      "type": "brand-collection",
+      "blocks": {
+        "brand_collection_6UnA84": {
+          "type": "brand_collection",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/Untitleddesign_97.png",
+            "collection": "neurobiologix",
+            "button_text": "Explore Brand"
+          }
+        },
+        "brand_collection_fHDQfN": {
+          "type": "brand_collection",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/image_9_1.png",
+            "collection": "metabolics",
+            "button_text": "Explore Brand"
+          }
+        },
+        "brand_collection_pUwPqY": {
+          "type": "brand_collection",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/image_9_2.png",
+            "collection": "probiotics",
+            "button_text": "Explore Brand"
+          }
+        },
+        "brand_collection_zjxkBG": {
+          "type": "brand_collection",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/image_9_5.png",
+            "collection": "anrc-protocol",
+            "button_text": "Explore Brand"
+          }
+        }
+      },
+      "block_order": [
+        "brand_collection_6UnA84",
+        "brand_collection_fHDQfN",
+        "brand_collection_pUwPqY",
+        "brand_collection_zjxkBG"
+      ],
+      "settings": {
+        "heading": "<p>Explore Our Top Brands<\/p>",
+        "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
+        "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "explore_VwPVRU": {
+      "type": "explore",
+      "disabled": true,
+      "settings": {
+        "section_color_scheme": "",
+        "color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
+        "image_1": "shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-17-24.png",
+        "link_1": "shopify:\/\/collections\/best-sellers",
+        "image_2": "shopify:\/\/shop_images\/Group_1000007081_5.png",
+        "link_2": "shopify:\/\/collections\/new-products",
+        "image_3": "shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-18-18.png",
+        "link_3": "shopify:\/\/collections\/clearance",
+        "image_4": "shopify:\/\/shop_images\/Group_1000007080_1.png",
+        "link_4": "shopify:\/\/collections\/digestive-enzymes",
+        "h4_text": "Explore all categories",
+        "h4_link": "shopify:\/\/pages\/categories-directory",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "explore_1_VcCQc7": {
+      "type": "explore-1",
+      "blocks": {
+        "big_div_m8rEB4": {
+          "type": "big-div",
+          "settings": {
+            "big_img": "shopify:\/\/shop_images\/image_20_1.png",
+            "big_img_width": 370,
+            "big_heading": "AMINO ACID",
+            "big_button_text": "Explore Now",
+            "big_div_button_link": "shopify:\/\/collections\/amino-acids"
+          }
+        },
+        "small_div_y6GBid": {
+          "type": "small-div",
+          "settings": {
+            "small_img": "shopify:\/\/shop_images\/Untitleddesign-2023-11-23T142142.304_large_2x.progressive_1.png",
+            "small_img_width": 350,
+            "small_heading": "EFA'S OIL",
+            "small_button_text": "Explore Now",
+            "small_div_button_link": "shopify:\/\/collections\/efas-oils"
+          }
+        },
+        "small_div_iAHzeJ": {
+          "type": "small-div",
+          "settings": {
+            "small_img": "shopify:\/\/shop_images\/Untitleddesign_24_large_2x.progressive_1.png",
+            "small_img_width": 350,
+            "small_heading": "Z",
+            "small_button_text": "Explore Now",
+            "small_div_button_link": "shopify:\/\/collections\/vitamins"
+          }
+        },
+        "big_div_UCmFC4": {
+          "type": "big-div",
+          "settings": {
+            "big_img": "shopify:\/\/shop_images\/image_21.png",
+            "big_img_width": 250,
+            "big_heading": "DIGESTIVE ENZYMES",
+            "big_button_text": "Explore Now",
+            "big_div_button_link": "shopify:\/\/collections\/digestive-enzymes"
+          }
+        }
+      },
+      "block_order": [
+        "big_div_m8rEB4",
+        "small_div_y6GBid",
+        "small_div_iAHzeJ",
+        "big_div_UCmFC4"
+      ],
+      "settings": {
+        "h3_text": "Explore Our Categories",
+        "h3_color": "#074542",
+        "h5_text": "Explore all categories",
+        "h5_color": "#074542",
+        "h5_link": "shopify:\/\/collections\/clearance",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "section_color_scheme": "",
+        "color_scheme": ""
+      }
+    },
+    "featured_blog_ne43LD": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "<strong>Latest News<\/strong>",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "hero_46kHtt",
+    "hero_carousel_XFifLk",
+    "feature_product_collection_FNdwGC",
+    "featured_collection_v2_xbrdmy",
+    "section_review_UMij8M",
+    "image_with_text_v2_ixiN7B",
+    "feature_product_collection_fcn3Nn",
+    "brand_collection_G4Yttb",
+    "explore_VwPVRU",
+    "explore_1_VcCQc7",
+    "featured_blog_ne43LD"
+  ]
+}
