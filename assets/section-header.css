@@ -469,7 +469,7 @@
   .mega-menu__product-price {
     font-size: 12px;
     font-weight: 600;
-    color: #008780;
+    color: #008780 !important;
     margin: 0;
   }
 
