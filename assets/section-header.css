@@ -479,7 +479,9 @@
     border-radius: 20px;
   }
 
-  .our-top
+  .our-top-brands {
+    height: 510px;
+  }
   
 
 }
