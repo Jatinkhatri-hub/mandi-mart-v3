@@ -75,6 +75,31 @@
   flex-direction: column;
 }
 
+.nav-bar__mega-menu-item {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.nav-bar__mega-menu-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(var(--color-foreground));
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-bar__mega-menu-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
 .footer__menu-child-item-wrapper a {
   color: rbg(var(--color-foreground));
   font-size: 16px;
