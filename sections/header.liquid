@@ -86,10 +86,12 @@
       {% for link in section.settings.mega_menu.links %} 
         {% assign collection_handle = link.url | remove: '/collections/' %}
         {% assign collection = collections[collection_handle] %}
+        {% assign counter = counter | plus: 1 %} 
         <li class="nav-bar__mega-menu-item">
           <a href="{{ link.url }}">
             {% if collection.image != blank %}
               <img src="{{ collection.image | image_url: width: collection.image.width }}" class="collection__featured-image">
+            
             {% endif %}
             {{ link.title }}
             {% if link.links != blank %}
