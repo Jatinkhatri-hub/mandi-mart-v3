@@ -115,7 +115,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
-  padding: 30px 15px;
+  padding: 0 15px 30px 15px;
 }
 
 .nav-bar__mega-menu-item {
