@@ -29,7 +29,7 @@ addEventListener('DOMContentLoaded', () => {
   }
 
   // Function to render product cards
-  function renderProductCards(products) {
+  function renderProductCards(products, container) {
     let productHTML = '';
     products.forEach(product => {
       const productImage = product.images.length > 0 ? product.images[0].src : 'default-image.jpg';
