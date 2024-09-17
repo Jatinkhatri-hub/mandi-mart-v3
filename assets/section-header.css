@@ -181,7 +181,7 @@
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out, opacity 0.3s;
 }
 
 .mega-menu__child-dropdown.open {
