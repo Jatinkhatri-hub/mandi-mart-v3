@@ -29,7 +29,7 @@
     <div class="collection__list swiper mySwiper mySwiper-{{ section.id }}">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
-          <div class="container__collection-card swiper-slide custom-card">
+          <a href="{{}}" class="container__collection-card swiper-slide custom-card">
             <div class="container__brand-product-image">
               <img src="{{ block.settings.product_image |  img_url: 'medium' }}" class="brand-image">
             </div>
@@ -39,7 +39,7 @@
             <div>
               <button class="collection-btn" href="{{ block.settings.collection.url }}">{{ block.settings.button_text }}</button>
             </div>
-          </div>
+          </a>
         {% endfor %}
       </div>
       <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
