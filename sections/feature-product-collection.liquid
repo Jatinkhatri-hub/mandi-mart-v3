@@ -21,10 +21,10 @@
     <div class="product-collection__header">
       <h2 class="poppins-semibold">{{ section.settings.heading }}</h2>
     </div>
-    {% comment %} <div class="btn-group-feature-collection">
+    <div class="btn-group-feature-collection">
       <div class="swiper-btn button--{{ section.id }} swiper-button-prev"></div>
       <div class="swiper-btn button--{{ section.id }} swiper-button-next "></div>
-    </div> {% endcomment %}
+    </div>
 {% comment %} 
     <div class=" mySwiper swiper mySwiper-{{ section.id }}">
       <div class="swiper-wrapper">
@@ -93,26 +93,26 @@
       </div>
     </div>
 
-  <!-- Swiper for Mobile (4 products per slide) -->
-  <div class="swiper mySwiper-{{ section.id }} swiper-mobile">
-    <div class="swiper-wrapper">
-      {% for product in section.settings.collection.products %}
-        {% assign index4 = forloop.index0 | modulo: 4 %}
+    <!-- Swiper for Mobile (4 products per slide) -->
+    <div class="swiper mySwiper-{{ section.id }} swiper-mobile">
+      <div class="swiper-wrapper">
+        {% for product in section.settings.collection.products %}
+          {% assign index4 = forloop.index0 | modulo: 4 %}
 
-        {% if index4 == 0 %}
-          <div class="swiper-slide">
-            <div class="collection__product-wrapper">
-        {% endif %}
+          {% if index4 == 0 %}
+            <div class="swiper-slide">
+              <div class="collection__product-wrapper">
+          {% endif %}
 
-        {% render 'product-card-v2', product: product %}
+          {% render 'product-card-v2', product: product %}
 
-        {% if index4 == 3 or forloop.last %}
+          {% if index4 == 3 or forloop.last %}
+              </div>
             </div>
-          </div>
-        {% endif %}
-      {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
   </div>
 </div>
 
@@ -256,22 +256,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const swiperDesktopClass = `.mySwiper-${id}.swiper-desktop`;
   const swiperMobileClass = `.mySwiper-${id}.swiper-mobile`;
-//  const swiperPaginationClass = `.swiper-pagination-${id}`;
-//  const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
-//  const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
+  const swiperPaginationClass = `.swiper-pagination-${id}`;
+  const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
+  const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
 
   // Initialize Swiper for Desktop (8 slides per view)
   new Swiper(swiperDesktopClass, {
     slidesPerView: 8,
     spaceBetween: 10,
-    // navigation: {
-    //   nextEl: swiperButtonNextClass,
-    //   prevEl: swiperButtonPrevClass,
-    // },
-    // pagination: {
-    //   el: swiperPaginationClass,
-    //   clickable: true,
-    // },
+    navigation: {
+      nextEl: swiperButtonNextClass,
+      prevEl: swiperButtonPrevClass,
+    },
+    pagination: {
+      el: swiperPaginationClass,
+      clickable: true,
+    },
     observer: true,
     observeParents: true,
   });
