@@ -61,8 +61,8 @@
 }
 
 .solid-btn:hover {
-  background: transparent;
-  color: rgb(var(--color-button));
+  background: rgb(var(--color-button-text));
+  color: rgb(var(--color-button-text));
   border: 4px solid rgb(var(--color-button));
 }
 
