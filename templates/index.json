@@ -276,13 +276,22 @@
             "collection": "anrc-protocol",
             "button_text": "Explore Brand"
           }
+        },
+        "brand_collection_TpawwA": {
+          "type": "brand_collection",
+          "settings": {
+            "product_image": "shopify:\/\/shop_images\/PSNVitDFront30clear.png",
+            "collection": "biom",
+            "button_text": "Biom"
+          }
         }
       },
       "block_order": [
         "brand_collection_6UnA84",
         "brand_collection_fHDQfN",
         "brand_collection_pUwPqY",
-        "brand_collection_zjxkBG"
+        "brand_collection_zjxkBG",
+        "brand_collection_TpawwA"
       ],
       "settings": {
         "heading": "<p>Explore Our Top Brands<\/p>",
