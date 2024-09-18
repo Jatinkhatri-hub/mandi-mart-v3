@@ -12,8 +12,8 @@
     "banner": {
       "type": "coll-section",
       "settings": {
-        "heading": "Lorem ipsum dolor sit amet cons",
-        "subhead": "Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames",
+        "heading": "Your One-Stop-Shop For Better Health",
+        "subhead": "Improve your well-being with the right supplements, for the best price available.",
         "image": "shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-23-19.png"
       }
     },
@@ -69,7 +69,7 @@
         "review_carousle_X4XMYU"
       ],
       "settings": {
-        "heading": "<p>Rich text<\/p>",
+        "heading": "<p>TrustPilot Reviews<\/p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "padding_top": 36,
