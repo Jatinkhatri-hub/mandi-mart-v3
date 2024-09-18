@@ -37,5 +37,7 @@
     display: block;
   }
 
-  .product-card-
+  .product-card-mobile {
+    display: none;
+  }
 }
