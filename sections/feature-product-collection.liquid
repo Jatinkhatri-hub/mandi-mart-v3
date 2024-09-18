@@ -73,7 +73,7 @@
     </div>
     <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
     </div> {% endcomment %}
-    <div class="swiper mySwiper-{{ section.id }} swiper-desktop"></div>
+    <div class="swiper mySwiper-{{ section.id }} swiper-desktop">
   <div class="swiper-wrapper">
     {% for product in section.settings.collection.products %}
       {% assign index8 = forloop.index0 | modulo: 8 %}
