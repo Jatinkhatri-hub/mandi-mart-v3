@@ -30,8 +30,6 @@
       <div class="swiper-wrapper">
         {% for product in section.settings.collection.products %}
           {%  assign index8 = forloop.index0 |  modulo: 8 %}
-
-          {% comment %}  {% endcomment %}
           
           {% if index8 == 0 %}
             <div class="swiper-slide swiper-slide-desktop">
