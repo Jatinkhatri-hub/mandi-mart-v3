@@ -118,18 +118,18 @@
 
 <style>
 
-@media (max-width: 767px) {
-  .swiper-slide-desktop {
-    display: none !important;
+.swiper-mobile {
+    display: none;
   }
-}
 
-@media (min-width: 768px) {
-  .swiper-slide-mobile {
-    display: none !important;
+  @media (max-width: 768px) {
+    .swiper-desktop {
+      display: none;
+    }
+    .swiper-mobile {
+      display: block;
+    }
   }
-}
-
 .container__feature-collection {
   position: relative
 }
