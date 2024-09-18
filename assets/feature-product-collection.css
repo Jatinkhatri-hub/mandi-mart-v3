@@ -22,7 +22,9 @@
   grid-template-columns: repeat(2, minmax(0, 160px));
 }
 
-
+.swiper-slide-desktop {
+  
+}
 
 
 @media screen and (min-width: 789px) {
