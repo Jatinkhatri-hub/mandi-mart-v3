@@ -203,14 +203,14 @@
         "paragraph_hkJMKB": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "<p>Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames gravida et rhoncus ut. Sit cras!<\/p>"
+            "paragraph": "<p>Improve your well-being with the right supplements, for the best price available.<\/p>"
           }
         },
         "button_JGj4N3": {
           "type": "button",
           "settings": {
-            "button_label": "Button",
-            "button_url": "",
+            "button_label": "Shop Now",
+            "button_url": "shopify:\/\/collections\/anrc-protocol",
             "outline_btn": false
           }
         }
@@ -221,7 +221,7 @@
         "button_JGj4N3"
       ],
       "settings": {
-        "heading": "Heading",
+        "heading": "Your One-Stop-Shop For Better Health",
         "image": "shopify:\/\/shop_images\/Yams_-_2024-05-21T174334_1.png",
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-0ecd3135-8fa9-45f3-8af3-f71617a54edb",
