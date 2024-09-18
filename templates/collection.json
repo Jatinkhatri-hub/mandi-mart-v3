@@ -46,25 +46,18 @@
             "user_description": "He is so pleasant and helpful. If there is an issue he always deals with it straight away. We have been buying supplements from mandimart for a few years now."
           }
         },
-        "review_carousle_3QAKfF": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet"
-          }
-        },
         "review_carousle_hLEVar": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Aditi",
+            "user_description": "Amazing service, I am regular online shopper at Mandi. I was looking for aspire brand and found here. Super fast delivery, very very happy, thank you :-) Aditi."
           }
         },
         "review_carousle_X4XMYU": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Geetha",
+            "user_description": "Product reached very well and I'm happy with the service! Using it for my daughter and looking forward to seeing an overall improvement in her well-being."
           }
         }
       },
@@ -72,7 +65,6 @@
         "review_carousle_qiFgje",
         "review_carousle_nph63F",
         "review_carousle_bDcgaM",
-        "review_carousle_3QAKfF",
         "review_carousle_hLEVar",
         "review_carousle_X4XMYU"
       ],
