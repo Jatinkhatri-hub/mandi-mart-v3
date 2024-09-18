@@ -74,24 +74,24 @@
     <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
     </div> {% endcomment %}
     <div class="swiper mySwiper-{{ section.id }} swiper-desktop">
-  <div class="swiper-wrapper">
-    {% for product in section.settings.collection.products %}
-      {% assign index8 = forloop.index0 | modulo: 8 %}
+      <div class="swiper-wrapper">
+        {% for product in section.settings.collection.products %}
+          {% assign index8 = forloop.index0 | modulo: 8 %}
 
-      {% if index8 == 0 %}
-        <div class="swiper-slide">
-          <div class="collection__product-wrapper">
-      {% endif %}
+          {% if index8 == 0 %}
+            <div class="swiper-slide">
+              <div class="collection__product-wrapper">
+          {% endif %}
 
-      {% render 'product-card-v2', product: product %}
+          {% render 'product-card-v2', product: product %}
 
-      {% if index8 == 7 or forloop.last %}
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
+          {% if index8 == 7 or forloop.last %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
 
 <!-- Swiper for Mobile (4 products per slide) -->
 <div class="swiper mySwiper-{{ section.id }} swiper-mobile">
