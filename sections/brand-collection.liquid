@@ -47,7 +47,7 @@
 
     <div class="collection__list swiper mySwiper-{{ section.id }} swiper-mobile">
       <div class="swiper-wrapper">
-        {% for block in bloc %}
+        {% for block in section.blocks %}
           {% assign index4 = forloop.index0 | modulo: 4 %}
 
           {% if index4 == 0 %}
