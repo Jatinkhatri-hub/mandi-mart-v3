@@ -251,8 +251,50 @@
 //     });    
 // });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const id = "{{ section.id }}";
+
+  const swiperDesktopClass = `.mySwiper-${id}.swiper-desktop`;
+  const swiperMobileClass = `.mySwiper-${id}.swiper-mobile`;
+  const swiperPaginationClass = `.swiper-pagination-${id}`;
+  const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
+  const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
+
+  // Initialize Swiper for Desktop (8 slides per view)
+  new Swiper(swiperDesktopClass, {
+    slidesPerView: 8,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: swiperButtonNextClass,
+      prevEl: swiperButtonPrevClass,
+    },
+    pagination: {
+      el: swiperPaginationClass,
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+  });
+
+  // Initialize Swiper for Mobile (4 slides per view)
+  new Swiper(swiperMobileClass, {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: swiperButtonNextClass,
+      prevEl: swiperButtonPrevClass,
+    },
+    pagination: {
+      el: swiperPaginationClass,
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+  });
+});
+
 // document.addEventListener('DOMContentLoaded', () => {
-//   const id = "{{ section.id }}";
+//   const id = "";
 //   const swiperClass = `.mySwiper-${id}`;
 //   const swiperPaginationClass = `.swiper-pagination-${id}`;
 //   const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
