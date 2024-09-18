@@ -224,31 +224,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiperButtonNext = document.querySelector(swiperButtonNextClass);
   const swiperButtonPrev = document.querySelector(swiperButtonPrevClass);
 
-  let swiper = new Swiper(swiperClass, {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: swiperButtonNextClass,
-      prevEl: swiperButtonPrevClass,
-    },
-    pagination: {
-      el: swiperPaginationClass,
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      }
-    },
-    observer: true,
-    observeParents: true,
-  });
+  let swiper;
 
-  function updateSlides() {
+  function initSwiper() {
+    if (swiper) {
+      swiper.destroy(true, true);
+    }
+
     const isMobile = window.innerWidth < 768;
-    const slides = swiperContainer.querySelectorAll('.swiper-slide');
     
+    swiper = new Swiper(swiperClass, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: swiperButtonNextClass,
+        prevEl: swiperButtonPrevClass,
+      },
+      pagination: {
+        el: swiperPaginationClass,
+        clickable: true,
+      },
+      observer: true,
+      observeParents: true,
+    });
+
+    const slides = swiperContainer.querySelectorAll('.swiper-slide');
     slides.forEach(slide => {
       if (isMobile) {
         slide.classList.remove('swiper-slide-desktop');
@@ -262,9 +262,63 @@ document.addEventListener('DOMContentLoaded', () => {
     swiper.update();
   }
 
-  updateSlides();
-  window.addEventListener('resize', updateSlides);
+  initSwiper();
+  window.addEventListener('resize', initSwiper);
 });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const id = "";
+//   const swiperClass = `.mySwiper-${id}`;
+//   const swiperPaginationClass = `.swiper-pagination-${id}`;
+//   const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
+//   const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
+
+//   const swiperContainer = document.querySelector(swiperClass);
+//   const swiperPagination = document.querySelector(swiperPaginationClass);
+//   const swiperButtonNext = document.querySelector(swiperButtonNextClass);
+//   const swiperButtonPrev = document.querySelector(swiperButtonPrevClass);
+
+//   let swiper = new Swiper(swiperClass, {
+//     slidesPerView: 1,
+//     spaceBetween: 10,
+//     navigation: {
+//       nextEl: swiperButtonNextClass,
+//       prevEl: swiperButtonPrevClass,
+//     },
+//     pagination: {
+//       el: swiperPaginationClass,
+//       clickable: true,
+//     },
+//     breakpoints: {
+//       768: {
+//         slidesPerView: 1,
+//         spaceBetween: 20,
+//       }
+//     },
+//     observer: true,
+//     observeParents: true,
+//   });
+
+//   function updateSlides() {
+//     const isMobile = window.innerWidth < 768;
+//     const slides = swiperContainer.querySelectorAll('.swiper-slide');
+    
+//     slides.forEach(slide => {
+//       if (isMobile) {
+//         slide.classList.remove('swiper-slide-desktop');
+//         slide.classList.add('swiper-slide-mobile');
+//       } else {
+//         slide.classList.remove('swiper-slide-mobile');
+//         slide.classList.add('swiper-slide-desktop');
+//       }
+//     });
+
+//     swiper.update();
+//   }
+
+//   updateSlides();
+//   window.addEventListener('resize', updateSlides);
+// });
 
 </script>
 
