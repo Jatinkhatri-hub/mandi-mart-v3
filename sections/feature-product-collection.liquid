@@ -28,7 +28,7 @@
 
     <div class=" mySwiper swiper mySwiper-{{ section.id }}">
       <div class="swiper-wrapper">
-        {% comment %} {% for product in section.settings.collection.products %}
+       {% for product in section.settings.collection.products %}
           {%  assign index8 = forloop.index0 |  modulo: 8 %}
 
           {% if index8 == 0 %}
@@ -42,7 +42,7 @@
         </div>
         {% endif %}
         
-      {% endfor %} {% endcomment %}
+      {% endfor %} 
       {% assign product_count = section.settings.collection.products.size %}
       {% for product in section.settings.collection.products %}
         {% assign index4 = forloop.index0 | modulo: 4 %}
