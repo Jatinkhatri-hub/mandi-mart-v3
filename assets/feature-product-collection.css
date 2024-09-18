@@ -23,7 +23,7 @@
 }
 
 .swiper-slide-desktop {
-  
+  display: none;
 }
 
 
@@ -32,4 +32,6 @@
   .collection__product-wrapper {
     grid-template-columns: repeat(4, minmax(0, 280px));
   }
+
+  .siwper-slide-di
 }
