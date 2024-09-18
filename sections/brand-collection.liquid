@@ -45,7 +45,7 @@
       <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
     </div>
 
-    <div class="swiper mySwiper-{{ section.id }} swiper-mobile">
+    <div class="collection__list swiper mySwiper-{{ section.id }} swiper-mobile">
       <div class="swiper-wrapper">
         {% for product in section.settings.collection.products %}
           {% assign index4 = forloop.index0 | modulo: 4 %}
