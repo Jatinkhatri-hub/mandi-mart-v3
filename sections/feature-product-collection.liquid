@@ -32,7 +32,7 @@
           {%  assign index8 = forloop.index0 |  modulo: 8 %}
           
           {% if index8 == 0 %}
-            <div class="swiper-slide swiper-slide">
+            <div class="swiper-slide swiper-slide-desktop">
             <div class="collection__product-wrapper">
         {% endif %}
         {% render 'product-card-v2' product: product %}
@@ -151,7 +151,7 @@
     const swiperButtonPrev = document.querySelector(swiperButtonPrevClass);
 
     let swiper = new Swiper(swiperClass, {
-      slidesPerView: 1,
+      slidesPerView: auto,
       spaceBetween: 10,
       navigation: {
         nextEl: swiperButtonNextClass,
