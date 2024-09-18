@@ -117,7 +117,9 @@
   background: #008780;
 }
 
-.pro
+.product-card__atc-btn-v2 svg path {
+  fill: white;
+}
 
 @media screen and (min-width: 789px) {
 
