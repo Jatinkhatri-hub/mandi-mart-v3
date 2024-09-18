@@ -251,59 +251,59 @@
 //     });    
 // });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const id = "{{ section.id }}";
-  const swiperClass = `.mySwiper-${id}`;
-  const swiperPaginationClass = `.swiper-pagination-${id}`;
-  const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
-  const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
+// document.addEventListener('DOMContentLoaded', () => {
+//   const id = "{{ section.id }}";
+//   const swiperClass = `.mySwiper-${id}`;
+//   const swiperPaginationClass = `.swiper-pagination-${id}`;
+//   const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
+//   const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
 
-  const swiperContainer = document.querySelector(swiperClass);
-  const swiperPagination = document.querySelector(swiperPaginationClass);
-  const swiperButtonNext = document.querySelector(swiperButtonNextClass);
-  const swiperButtonPrev = document.querySelector(swiperButtonPrevClass);
+//   const swiperContainer = document.querySelector(swiperClass);
+//   const swiperPagination = document.querySelector(swiperPaginationClass);
+//   const swiperButtonNext = document.querySelector(swiperButtonNextClass);
+//   const swiperButtonPrev = document.querySelector(swiperButtonPrevClass);
 
-  let swiper;
+//   let swiper;
 
-  function initSwiper() {
-    if (swiper) {
-      swiper.destroy(true, true);
-    }
+//   function initSwiper() {
+//     if (swiper) {
+//       swiper.destroy(true, true);
+//     }
 
-    const isMobile = window.innerWidth < 768;
+//     const isMobile = window.innerWidth < 768;
     
-    swiper = new Swiper(swiperClass, {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: swiperButtonNextClass,
-        prevEl: swiperButtonPrevClass,
-      },
-      pagination: {
-        el: swiperPaginationClass,
-        clickable: true,
-      },
-      observer: true,
-      observeParents: true,
-    });
+//     swiper = new Swiper(swiperClass, {
+//       slidesPerView: 1,
+//       spaceBetween: 10,
+//       navigation: {
+//         nextEl: swiperButtonNextClass,
+//         prevEl: swiperButtonPrevClass,
+//       },
+//       pagination: {
+//         el: swiperPaginationClass,
+//         clickable: true,
+//       },
+//       observer: true,
+//       observeParents: true,
+//     });
 
-    const slides = swiperContainer.querySelectorAll('.swiper-slide');
-    slides.forEach(slide => {
-      if (isMobile) {
-        slide.classList.remove('swiper-slide-desktop');
-        slide.classList.add('swiper-slide-mobile');
-      } else {
-        slide.classList.remove('swiper-slide-mobile');
-        slide.classList.add('swiper-slide-desktop');
-      }
-    });
+//     const slides = swiperContainer.querySelectorAll('.swiper-slide');
+//     slides.forEach(slide => {
+//       if (isMobile) {
+//         slide.classList.remove('swiper-slide-desktop');
+//         slide.classList.add('swiper-slide-mobile');
+//       } else {
+//         slide.classList.remove('swiper-slide-mobile');
+//         slide.classList.add('swiper-slide-desktop');
+//       }
+//     });
 
-    swiper.update();
-  }
+//     swiper.update();
+//   }
 
-  initSwiper();
-  window.addEventListener('resize', initSwiper);
-});
+//   initSwiper();
+//   window.addEventListener('resize', initSwiper);
+// });
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   const id = "";
