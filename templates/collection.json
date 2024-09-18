@@ -12,8 +12,8 @@
     "banner": {
       "type": "coll-section",
       "settings": {
-        "heading": "Transform Your Health With Premium Supplements",
-        "subhead": "Discover our range of curated health supplements by trusted brands!",
+        "heading": "Lorem ipsum dolor sit amet cons",
+        "subhead": "Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames",
         "image": "shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-23-19.png"
       }
     },
@@ -28,36 +28,36 @@
         "review_carousle_qiFgje": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Aditi",
-            "user_description": "Amazing service, I am regular online shopper at Mandi. I was looking for aspire brand and found here. Super fast delivery, very very happy, thank you :-) Aditi"
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_nph63F": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Geetha",
-            "user_description": "Product reached very well and I'm happy with the service! Using it for my daughter and looking forward to seeing an overall improvement in her well-being."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_bDcgaM": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Paula Easterly",
-            "user_description": "It was seamless to get a product that I can't obtain anywhere in my own country. Thank you for making it available, fast shipping even coming from the UK."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_hLEVar": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Kimberly Auger",
-            "user_description": "What a great experience! My order was well packaged and arrived quickly. I'm in the US and it got here faster that some things I have ordered here in my country."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_X4XMYU": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Anna Kottobay",
-            "user_description": "Really fast delivery. Well packaged. Great price, great Unique product and great service from seller. Would buy from this seller again. I really appreciate an Amazing Deal from the seller and educational information."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         }
       },
@@ -69,7 +69,7 @@
         "review_carousle_X4XMYU"
       ],
       "settings": {
-        "heading": "<p>Hear From Our Customers<\/p>",
+        "heading": "<p>Rich text<\/p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "padding_top": 36,
