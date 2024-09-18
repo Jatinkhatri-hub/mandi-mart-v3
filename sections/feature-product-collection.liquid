@@ -32,7 +32,7 @@
           {%  assign index8 = forloop.index0 |  modulo: 8 %}
 
           <div>
-            {%  render '' %} 
+            {%  render 'product-card-v2', product: p %} 
           </div>
           
           {% if index8 == 0 %}
