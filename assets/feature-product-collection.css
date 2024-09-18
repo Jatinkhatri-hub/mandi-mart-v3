@@ -22,13 +22,13 @@
   grid-template-columns: repeat(2, minmax(0, 160px));
 }
 
-.swiper-slide-desktop {
+/* .swiper-slide-desktop {
   display: none;
 }
 
 .product-card-mobile {
   display: block;
-}
+} */
 
 
 @media screen and (min-width: 789px) {
@@ -37,11 +37,11 @@
     grid-template-columns: repeat(4, minmax(0, 280px));
   }
 
-  .swiper-slide-desktop {
+  /* .swiper-slide-desktop {
     display: block;
   }
 
   .product-card-mobile {
     display: none;
-  }
+  } */
 }
