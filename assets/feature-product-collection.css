@@ -33,5 +33,7 @@
     grid-template-columns: repeat(4, minmax(0, 280px));
   }
 
-  .siwper-slide-di
+  .swiper-slide-desktop {
+    display: block;
+  }
 }
