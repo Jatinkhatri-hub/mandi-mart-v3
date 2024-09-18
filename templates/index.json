@@ -94,7 +94,7 @@
           "type": "collection_card",
           "settings": {
             "collection_img": "shopify:\/\/shop_images\/Ellipse_218.png",
-            "card_background": "77c7c3",
+            "card_background": "#77c7c3",
             "collection": "best-sellers"
           }
         },
@@ -110,7 +110,7 @@
           "type": "collection_card",
           "settings": {
             "collection_img": "shopify:\/\/shop_images\/Ellipse_219.png",
-            "card_background": "#3AAFA9",
+            "card_background": "#77c7c3",
             "collection": "new-products"
           }
         },
