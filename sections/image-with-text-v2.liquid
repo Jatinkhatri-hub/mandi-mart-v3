@@ -28,7 +28,7 @@
             {% when 'paragraph' %}
               {{ block.settings.paragraph }}
             {% when 'button'%}
-              <button href="{{ block.settings.button_url }}" class="iwt__button poppins-semibold {% if block.settings.outline_btn %} outline-btn {% else %} solid-btn {% endif %}">{{ block.settings.button_label }}</button>
+              <a href="{{ block.settings.button_url }}" class="iwt__button poppins-semibold {% if block.settings.outline_btn %} outline-btn {% else %} solid-btn {% endif %}">{{ block.settings.button_label }}</a>
           {% endcase %}
         {% endfor %}
       </div>
