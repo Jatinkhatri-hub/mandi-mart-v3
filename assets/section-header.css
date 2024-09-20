@@ -188,6 +188,8 @@
 
 .child-links-group {
   margin-top: 25px;
+  display: flex;
+  fle
 }
 
 .dropdown-divider-mobile {
