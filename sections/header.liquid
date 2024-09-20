@@ -112,10 +112,6 @@
               {% assign child_collection_handle = child.url | remove: '/collections/' %}
               {% assign child_collection = collections[child_collection_handle] %}
 
-              {% comment %} {% if forloop.index0 == 0 or forloop.index0 % 12 == 0 %}
-                <div class="child-links-group">
-              {% endif %} {% endcomment %}
-              
 
               <li class="child-links" data-collection-handle="{{ child_collection_handle }}">
                 <a href="{{ child.url }}">
