@@ -345,6 +345,7 @@
   }
 
   .mega-menu__child-dropdown {
+    z-index: -111;
     max-height: none; /* Disable height transition */
     opacity: 0;
     transition: opacity 0.2s ease-in-out; /* Only fade effect */
