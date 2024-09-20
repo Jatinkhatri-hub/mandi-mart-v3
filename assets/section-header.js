@@ -147,7 +147,7 @@ childLinks.forEach(link => {
             desktopBackdrop.classList.remove('show');
             icon.style.transform = 'rotate(360deg)';
             dropdownIndicator.style.borderBottom = '30px solid transparent';
-            dropdownIndicator.style.d
+            dropdownIndicator.style.display = 'none';
           }, 200); // Add delay to prevent accidental close
         });
   
@@ -161,6 +161,9 @@ childLinks.forEach(link => {
           timeout = setTimeout(() => {
             childDropdown.classList.remove('open');
             desktopBackdrop.classList.remove('show');
+            icon.style.transform = 'rotate(360deg)';
+            dropdownIndicator.style.borderBottom = '30px solid transparent';
+            dropdownIndicator.style.display = 'none';
           }, 200);
         });
       }
