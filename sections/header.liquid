@@ -88,7 +88,7 @@
         {% assign collection_handle = link.url | remove: '/collections/' %}
         {% assign collection = collections[collection_handle] %}
         {% assign counter = counter | plus: 1 %} 
-        <li class="nav-bar__mega-menu-item">
+        <li class="nav-bar__mega-menu-item" {%  continue  %} %}>
           <a href="{{ link.url }}" class="a" data-count="{{counter}}">
             {% if collection.image != blank %}
               <img src="{{ collection.image | image_url: width: collection.image.width }}" class="collection__featured-image">
