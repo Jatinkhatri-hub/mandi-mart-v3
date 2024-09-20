@@ -344,18 +344,6 @@
     transform-origin: bottom left;
   }
 
-  .mega-menu__child-dropdown {
-    z-index: -111;
-    max-height: none; /* Disable height transition */
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out; /* Only fade effect */
-  }
-
-  .mega-menu__child-dropdown.open {
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-    z-index: 10;
-  }
 
   .nav-bar__menu-item a {
     text-decoration: none;
