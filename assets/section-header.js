@@ -144,7 +144,7 @@ childLinks.forEach(link => {
             childDropdown.classList.remove('open');
             desktopBackdrop.classList.remove('show');
             icon.style.transform = 'rotate(360deg)';
-            dropdownIndicator.style.display = 'none';
+            dropdownIndicator.style.borderBottom = '30px solid transparent';
           }, 200); // Add delay to prevent accidental close
         });
   
