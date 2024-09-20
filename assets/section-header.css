@@ -190,7 +190,9 @@
   margin-top: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  justify-content: center;
+  align-items: baseline;
+  gap: 15px;
 }
 
 .dropdown-divider-mobile {
