@@ -371,6 +371,11 @@
   display: none !important;
 }
 
+.child-links-group {
+  display: grid;
+  gr
+}
+
 /* Open state: only allow pointer events when visible */
 .mega-menu__child-dropdown.open {
   pointer-events: auto;
