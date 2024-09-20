@@ -504,7 +504,7 @@
 
   .mega-menu__child-dropdown {
     position: fixed;
-    top: 200px;
+    top: 220px;
     left: 50%;
     right: 0;
     z-index: 1000;
