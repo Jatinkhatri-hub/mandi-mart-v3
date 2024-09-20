@@ -155,7 +155,7 @@ childLinks.forEach(link => {
 
         // If it was closed, open it; otherwise, close it
         if (!isOpen) {
-          childDropdown.classList.add('open');
+          childDropdown.classList.remove('open');
           desktopBackdrop.classList.add('show');        
         } else {
           childDropdown.classList.remove('open');
