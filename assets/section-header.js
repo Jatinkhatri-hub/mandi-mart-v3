@@ -134,7 +134,7 @@ childLinks.forEach(link => {
         closeTimeout = setTimeout(() => {
           childDropdown.classList.remove('open');
           desktopBackdrop.classList.remove('show');
-        }, 300); // Adjust the delay duration (in milliseconds) as needed
+        }, 100); // Adjust the delay duration (in milliseconds) as needed
       });
     }
   });
