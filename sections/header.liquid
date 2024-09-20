@@ -117,7 +117,7 @@
                 <div class="child-links-group"> <!-- Start a new block for every 12 child links -->
               {% endif %}
 
-              <li class="child-links {{ child_count }}" data-collection-handle="{{ child_collection_handle }}">
+              <li class="child-links {{ index_mod }}" data-collection-handle="{{ child_collection_handle }}">
                 <a href="{{ child.url }}">
                   {% if child_collection.image != blank %}
                     <img src="{{ child_collection.image | img_url: 'medium' }}" class="collection-brand__featured-image">
@@ -127,7 +127,7 @@
 
               </li>
 
-              {% if child_count == 4 or child_count == 8 or child_count == 12 or child_count == 16 or child_count == 20 or child_count == 24 %}
+              {% if index_mod == 4 or child_count == 8 or child_count == 12 or child_count == 16 or child_count == 20 or child_count == 24 %}
                 <div class="dropdown-divider-mobile"></div>
               {% endif %}
 
