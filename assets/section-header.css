@@ -367,6 +367,10 @@
   transition: opacity 0.2s ease-in-out;
 }
 
+.dropdown-divider-mobile {
+  display: none;
+}
+
 /* Open state: only allow pointer events when visible */
 .mega-menu__child-dropdown.open {
   pointer-events: auto;
