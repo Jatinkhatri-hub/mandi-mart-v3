@@ -375,7 +375,7 @@
   display: block !important;
   border: 1px solid #DADADA;
   width: 100%;
-  padding-block-start: 35px;
+  padding-inline-start: 35px;
 }
 
 .child-links-group {
@@ -387,7 +387,6 @@
   width: 100%;
   align-items: baseline;
   justify-content: flex-start;
-  padding: 35px 45px 0 55px;
 }
 
 .child-links-group li {
