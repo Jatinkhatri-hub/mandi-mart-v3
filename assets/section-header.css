@@ -377,8 +377,8 @@
   position: absolute;
   left: 50%;
   display: block !important;
-  tra
-
+  transform: translate(-50%);
+  top: 190px;
 }
 
 .dropdown-divider-mobile {
