@@ -382,6 +382,10 @@
   justify-content: flex-start;
 }
 
+.child-links-group li {
+  width: 300px;
+}
+
 /* Open state: only allow pointer events when visible */
 .mega-menu__child-dropdown.open {
   pointer-events: auto;
