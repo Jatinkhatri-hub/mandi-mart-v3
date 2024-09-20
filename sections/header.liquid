@@ -111,7 +111,8 @@
             {% for child in link.links %}
               {% assign child_collection_handle = child.url | remove: '/collections/' %}
               {% assign child_collection = collections[child_collection_handle] %}
-
+              {% assign index_mod = forloop.index0 | modulo: 12 %}
+              
 
               <li class="child-links" data-collection-handle="{{ child_collection_handle }}">
                 <a href="{{ child.url }}">
