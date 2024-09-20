@@ -384,7 +384,7 @@
 
 .child-links-group li {
   width: 300px;
-  margin-right: ;
+  margin-right: 30px;
 }
 
 /* Open state: only allow pointer events when visible */
