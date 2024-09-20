@@ -126,6 +126,7 @@ childLinks.forEach(link => {
         if (!isOpen) {
           childDropdown.classList.add('open');
           desktopBackdrop.classList.add('show');
+          icon.style.transform = 'rotate(180deg)';
         }
       });
   
