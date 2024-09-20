@@ -414,6 +414,7 @@
   .icon-arrow-down{
     top: 5px;
     background-color: white;
+    position: relative;
   }
 
   .icon-arrow-down svg path {
