@@ -192,7 +192,7 @@
 
 .dropdown-divider-mobile {
   border: 1px solid #DADADA;
-  
+  display: block !important;
 }
 
 .mega-menu__child-dropdown.open {
