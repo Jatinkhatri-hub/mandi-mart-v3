@@ -114,7 +114,7 @@
                 
                 {% if index_mod == 0 %}
                   {%  assign count = count | plus : 1 %}
-                  <div class="child-links-group {}"> <!-- Start a new block for every 12 child links -->
+                  <div class="child-links-group {{ count }}"> <!-- Start a new block for every 12 child links -->
               {% endif %}
 
               <li class="child-links" data-collection-handle="{{ child_collection_handle }}">
@@ -134,6 +134,7 @@
               {% assign index_mod_next = forloop.index0 | modulo: 12 %} <!-- Calculate for next index -->
               {% if index_mod_next == 11 or forloop.last %}
                 </div> <!-- Close the block after 12 child links or at the last one -->
+                {}
               {% endif %}
 
             {% endfor %}
