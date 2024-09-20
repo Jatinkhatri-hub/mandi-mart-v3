@@ -588,7 +588,8 @@
   .divider {
     border: 1px solid black;
     display: block !important;
-    height: 100%;
+    height: 24px;
+    border-radius: 1px;
   }
   
 
