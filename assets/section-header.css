@@ -373,7 +373,7 @@
 
 .child-links-group {
   display: grid;
-  gr
+  grid-template-rows: repeat(4);
 }
 
 /* Open state: only allow pointer events when visible */
