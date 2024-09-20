@@ -373,7 +373,7 @@
 
 .desktop-divider {
   display: block !important;
-  
+  border: 1px solid #DADADA;
 }
 
 .child-links-group {
