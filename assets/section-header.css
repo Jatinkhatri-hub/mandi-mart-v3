@@ -368,7 +368,7 @@
 }
 
 .dropdown-divider-mobile {
-  display: none;
+  display: none !important;
 }
 
 /* Open state: only allow pointer events when visible */
