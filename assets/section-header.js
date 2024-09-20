@@ -134,7 +134,7 @@ childLinks.forEach(link => {
             childDropdown.classList.add('open');
             desktopBackdrop.classList.add('show');
             icon.style.transform = 'rotate(180deg)';
-            dropdownIndicator.style.borderBottomColor = 'block';
+            dropdownIndicator.style.borderBottom = '30x solid black';
           }
         });
   
