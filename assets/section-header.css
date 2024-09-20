@@ -376,6 +376,7 @@
   border: 1px solid #DADADA;
   width: 100%;
   padding-inline-start: 35px;
+  padding-block: 50px;
 }
 
 .child-links-group {
