@@ -323,6 +323,7 @@
     display: inline-block;
     position: relative;
     color: #0087ca;
+    width: auto;
   }
   
   .nav-bar__mega-menu-item::after {
