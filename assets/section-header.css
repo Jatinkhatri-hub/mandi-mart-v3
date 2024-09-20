@@ -384,6 +384,7 @@
   pointer-events: auto;
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
+  max-width: 1300px;
 }
 
   .nav-bar__menu-item a {
