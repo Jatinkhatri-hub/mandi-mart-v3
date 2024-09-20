@@ -374,6 +374,8 @@
 .desktop-divider {
   display: block !important;
   border: 1px solid #DADADA;
+  width: 100%;
+  padding-block-start: ;
 }
 
 .child-links-group {
