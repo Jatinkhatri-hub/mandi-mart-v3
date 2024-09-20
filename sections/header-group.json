@@ -39,7 +39,10 @@
       "type": "header",
       "settings": {
         "brand_logo": "shopify:\/\/shop_images\/image_15_1.png",
-        "color_scheme": "scheme-93f7b37b-8f6a-4118-8237-7439f252f558"
+        "main_menu": "main-menu-1",
+        "color_scheme": "scheme-93f7b37b-8f6a-4118-8237-7439f252f558",
+        "mega_menu": "mega-menu-new",
+        "mega_menu_color_scheme": ""
       }
     }
   },
