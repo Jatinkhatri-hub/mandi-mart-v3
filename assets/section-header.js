@@ -109,6 +109,8 @@ childLinks.forEach(link => {
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
     let closeTimeout; // Variable to store the timeout for delay
   
+    console.log(icon);
+
     if (childDropdown) {
       // Handle mouseenter for the entire item (link + dropdown)
       item.addEventListener('mouseenter', function (e) {
