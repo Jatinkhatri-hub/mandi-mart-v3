@@ -28,7 +28,7 @@ function fetchRandomProducts(collectionHandle, productPreview) {
       setTimeout(() => {
         renderProductCards(randomProducts, productPreview);
         productPreview.classList.remove('fade-out'); // Remove fade-out after rendering
-      }, 300); // Adjust timing as per the fade-out duration
+      }, 100); // Adjust timing as per the fade-out duration
     })
     .catch(error => console.error('Error fetching products:', error));
 }
