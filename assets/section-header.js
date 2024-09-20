@@ -105,7 +105,7 @@ childLinks.forEach(link => {
 
   megaMenuItems.forEach(item => {
     const link = item.querySelector('a');
-    const 
+    const icon = item.querySelector('.icon-arrow-')
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
     let closeTimeout; // Variable to store the timeout for delay
   
