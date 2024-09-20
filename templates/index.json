@@ -23,7 +23,7 @@
             "hero_point_text_2": "Premium supplements trusted by experts",
             "hero_point_text_3": "Best prices and fast delivery",
             "hero_button_text": "Browse All Supplements",
-            "button_link": "shopify:\/\/collections\/algonot"
+            "button_link": ""
           }
         }
       },
@@ -83,8 +83,8 @@
         "section_color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
         "collection": "anrc-protocol",
         "color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection_v2_xbrdmy": {
@@ -94,7 +94,7 @@
           "type": "collection_card",
           "settings": {
             "collection_img": "shopify:\/\/shop_images\/Ellipse_218.png",
-            "card_background": "#77c7c3",
+            "card_background": "#3AAFA9",
             "collection": "best-sellers"
           }
         },
@@ -110,7 +110,7 @@
           "type": "collection_card",
           "settings": {
             "collection_img": "shopify:\/\/shop_images\/Ellipse_219.png",
-            "card_background": "#77c7c3",
+            "card_background": "#3AAFA9",
             "collection": "new-products"
           }
         },
@@ -133,7 +133,7 @@
         "heading": "",
         "section_color_scheme": "",
         "color_scheme": "",
-        "padding_top": 20,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -143,36 +143,36 @@
         "review_carousle_EEFHhP": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Erik",
-            "user_description": "Request quickly handled and sent. Arrived in good state and without European customs delays and extra costs. Excellent service and product!Very satisfied with MandiMart!Until next order! :)"
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_UTY3wA": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Adrian",
-            "user_description": "Great range of products available.My order arrived quickly with no fuss.I highly recommend the company."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_tpKhMt": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Nadine Lubanda",
-            "user_description": "Excellent service every time. Been sourcing supplements for my family for over 2yrs with Mandimart. Never disappointed. Excellent customer service, prompt delivery."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_wi49bP": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Sonya",
-            "user_description": "Great and fast delivery but most importantly the nobs toothpaste is amazing! I feel my teeth so clean after using it. Too early to provide feedback on the long term usage."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_QkRFjV": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Angela",
-            "user_description": "The customer service  was absolutely wonderful. The gentlemen dealt with was patient and knowledgeable. He explained everything thoroughly."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         }
       },
@@ -184,7 +184,7 @@
         "review_carousle_QkRFjV"
       ],
       "settings": {
-        "heading": "<p>Hear From Our Customers<\/p>",
+        "heading": "<p>Rich text<\/p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "padding_top": 36,
@@ -197,20 +197,20 @@
         "title_77rBtW": {
           "type": "title",
           "settings": {
-            "title": "Your One-Stop-Shop For Better Health"
+            "title": "Lorem ipsum dolor sit amet cons ectetur acus sit amet"
           }
         },
         "paragraph_hkJMKB": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "<p>Improve your well-being with the right supplements, for the best price available.<\/p>"
+            "paragraph": "<p>Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames gravida et rhoncus ut. Sit cras!<\/p>"
           }
         },
         "button_JGj4N3": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
-            "button_url": "shopify:\/\/collections\/anrc-protocol",
+            "button_label": "Button",
+            "button_url": "",
             "outline_btn": false
           }
         }
@@ -221,7 +221,7 @@
         "button_JGj4N3"
       ],
       "settings": {
-        "heading": "",
+        "heading": "Heading",
         "image": "shopify:\/\/shop_images\/Yams_-_2024-05-21T174334_1.png",
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-0ecd3135-8fa9-45f3-8af3-f71617a54edb",
@@ -238,7 +238,7 @@
         "section_color_scheme": "",
         "collection": "anrc-protocol",
         "color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
-        "padding_top": 0,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -276,29 +276,20 @@
             "collection": "anrc-protocol",
             "button_text": "Explore Brand"
           }
-        },
-        "brand_collection_TpawwA": {
-          "type": "brand_collection",
-          "settings": {
-            "product_image": "shopify:\/\/shop_images\/PSNVitDFront30clear.png",
-            "collection": "biom",
-            "button_text": "Explore Brand"
-          }
         }
       },
       "block_order": [
         "brand_collection_6UnA84",
         "brand_collection_fHDQfN",
         "brand_collection_pUwPqY",
-        "brand_collection_zjxkBG",
-        "brand_collection_TpawwA"
+        "brand_collection_zjxkBG"
       ],
       "settings": {
         "heading": "<p>Explore Our Top Brands<\/p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
-        "padding_top": 0,
-        "padding_bottom": 12
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "explore_VwPVRU": {
@@ -349,7 +340,7 @@
           "settings": {
             "small_img": "shopify:\/\/shop_images\/Untitleddesign_24_large_2x.progressive_1.png",
             "small_img_width": 350,
-            "small_heading": "Vitamins",
+            "small_heading": "Z",
             "small_button_text": "Explore Now",
             "small_div_button_link": "shopify:\/\/collections\/vitamins"
           }
