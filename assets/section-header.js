@@ -106,11 +106,15 @@ childLinks.forEach(link => {
   megaMenuItems.forEach(item => {
     const link = item.querySelector('a');
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
+    let closeTimeout; // Variable to store the timeout for delay
   
     if (childDropdown) {
       // Handle mouseenter for the entire item (link + dropdown)
       item.addEventListener('mouseenter', function (e) {
         e.preventDefault();
+  
+        // Clear any existing timeout to prevent accidental closing
+        clearTimeout(closeTimeout);
   
         // Close any other open dropdowns
         document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
@@ -126,9 +130,11 @@ childLinks.forEach(link => {
       item.addEventListener('mouseleave', function (e) {
         e.preventDefault();
   
-        // Close the dropdown when the mouse leaves the entire item
-        childDropdown.classList.remove('open');
-        desktopBackdrop.classList.remove('show');
+        // Add a delay before closing the dropdown
+        closeTimeout = setTimeout(() => {
+          childDropdown.classList.remove('open');
+          desktopBackdrop.classList.remove('show');
+        }, 300); // Adjust the delay duration (in milliseconds) as needed
       });
     }
   });
@@ -140,7 +146,6 @@ childLinks.forEach(link => {
     });
     desktopBackdrop.classList.remove('show');
   });
-
   // megaMenuItems.forEach(item => {
   //   const link = item.querySelector('a');
   //   const childDropdown = item.querySelector('.mega-menu__child-dropdown');
