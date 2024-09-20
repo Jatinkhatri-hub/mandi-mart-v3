@@ -190,7 +190,10 @@
   margin-top: 25px;
 }
 
-.dropdown
+.dropdown-divider-mobile {
+  border: 1px solid;
+  
+}
 
 .mega-menu__child-dropdown.open {
   max-height: 100%;
