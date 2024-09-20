@@ -333,6 +333,7 @@
     color: rgb(var(--color-foreground));
     text-decoration: none;
     text-transform: capitalize;
+    overflow: visible;
   }
 
   .nav-bar__mega-menu-item {
