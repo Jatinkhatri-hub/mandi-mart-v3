@@ -415,7 +415,10 @@
     background-color: white;
     position: relative;
     top: unset;
-    bottom: ;
+    bottom: unset;
+    right: unset;
+    display: flex;
+    align-items: center;
   }
 
   .icon-arrow-down svg path {
