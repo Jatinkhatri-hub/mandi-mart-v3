@@ -127,7 +127,7 @@ childLinks.forEach(link => {
         // Open this dropdown
         childDropdown.classList.add('open');
         desktopBackdrop.classList.add('show');
-        icon.style.transform = 'rotate()'
+        icon.style.transform = 'rotate(180deg)';
       });
   
       // Handle mouseleave for the entire item (link + dropdown)
