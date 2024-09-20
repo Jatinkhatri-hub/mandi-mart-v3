@@ -371,7 +371,10 @@
   display: none !important;
 }
 
-.desktop-divider 
+.desktop-divider {
+  display: block !important;
+  
+}
 
 .child-links-group {
   /* display: grid;
