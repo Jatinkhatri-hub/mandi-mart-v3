@@ -487,7 +487,7 @@
   /* Hide the product cards initially (when changing) */
   .product-card {
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
