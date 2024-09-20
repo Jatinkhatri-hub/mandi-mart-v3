@@ -137,7 +137,7 @@ childLinks.forEach(link => {
     }
 
     if (childDropdown) {
-      link.addEventListener('mouseenter', function (e) {
+      link.addEventListener('mouseleave', function (e) {
         e.preventDefault(); // Prevent default anchor behavior
 
         // Check if the dropdown is open
