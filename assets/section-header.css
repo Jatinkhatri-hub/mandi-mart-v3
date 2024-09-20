@@ -372,8 +372,9 @@
 }
 
 .child-links-group {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); */
+  height: 170px;
 }
 
 /* Open state: only allow pointer events when visible */
