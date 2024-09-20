@@ -138,7 +138,7 @@ childLinks.forEach(link => {
         closeTimeout = setTimeout(() => {
           childDropdown.classList.remove('open');
           desktopBackdrop.classList.remove('show');
-          icon.style.transform = 'rotate(180deg)';
+         // icon.style.transform = 'rotate(180deg)';
         }, 100); // Adjust the delay duration (in milliseconds) as needed
       });
     }
