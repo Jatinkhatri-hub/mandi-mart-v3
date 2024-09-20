@@ -455,7 +455,6 @@
     transform: translateX(-50%);
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-top: 25px;
   }
 
   .mega-menu__child-dropdown.open {
