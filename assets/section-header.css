@@ -459,7 +459,7 @@
 
   .mega-menu__child-dropdown.open {
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 8px;
     max-height: 510px;
     z-index: 12;
     padding-right: 150px;
