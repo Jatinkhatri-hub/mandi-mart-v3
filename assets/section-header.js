@@ -121,7 +121,7 @@ childLinks.forEach(link => {
         link.addEventListener('mouseenter', function (e) {
           clearTimeout(timeout); // Clear any previous timeout
           e.preventDefault();
-          console.log('')
+          console.log(dropdownIndicator);
   
           const isOpen = childDropdown.classList.contains('open');
   
