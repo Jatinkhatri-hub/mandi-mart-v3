@@ -377,6 +377,9 @@
   height: 180px;
   flex-wrap: wrap;
   margin: 0;
+  width: 100%;
+  align-items: baseline;
+  justify-content: ;
 }
 
 /* Open state: only allow pointer events when visible */
