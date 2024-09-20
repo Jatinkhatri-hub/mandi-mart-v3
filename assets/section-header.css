@@ -403,7 +403,9 @@
     position: relative;
   }
 
-  nab
+  .nav-bar__mega-menu-item a {
+    gap:
+  }
 
   .nav-bar__mega-menu-item .a {
     font-size: 18px;
