@@ -380,6 +380,7 @@
   width: 100%;
   align-items: baseline;
   justify-content: flex-start;
+  padding: 35px 
 }
 
 .child-links-group li {
