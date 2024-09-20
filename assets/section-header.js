@@ -135,6 +135,7 @@ childLinks.forEach(link => {
         timeout = setTimeout(() => {
           childDropdown.classList.remove('open');
           desktopBackdrop.classList.remove('show');
+          icon.style.transform = 'rotate(360deg)';
         }, 200); // Add delay to prevent accidental close
       });
   
