@@ -105,44 +105,92 @@ childLinks.forEach(link => {
 
   megaMenuItems.forEach(item => {
     const link = item.querySelector('a');
-    const icon = item.querySelector('.icon-arrow-down');
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
-    let closeTimeout; // Variable to store the timeout for delay
   
-    console.log(icon);
-
     if (childDropdown) {
-      // Handle mouseenter for the entire item (link + dropdown)
-      item.addEventListener('mouseenter', function (e) {
+      let timeout;
+  
+      // Show dropdown with slight delay to avoid accidental hovers
+      link.addEventListener('mouseenter', function (e) {
+        clearTimeout(timeout); // Clear any previous timeout
         e.preventDefault();
   
-        // Clear any existing timeout to prevent accidental closing
-        clearTimeout(closeTimeout);
+        const isOpen = childDropdown.classList.contains('open');
   
-        // Close any other open dropdowns
+        // Close other dropdowns
         document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
           openDropdown.classList.remove('open');
         });
   
-        // Open this dropdown
-        childDropdown.classList.add('open');
-        desktopBackdrop.classList.add('show');
-        icon.style.transform = 'rotate(180deg)';
+        if (!isOpen) {
+          childDropdown.classList.add('open');
+          desktopBackdrop.classList.add('show');
+        }
       });
   
-      // Handle mouseleave for the entire item (link + dropdown)
-      item.addEventListener('mouseleave', function (e) {
-        e.preventDefault();
-  
-        // Add a delay before closing the dropdown
-        closeTimeout = setTimeout(() => {
+      // Add slight delay on mouse leave
+      link.addEventListener('mouseleave', function (e) {
+        timeout = setTimeout(() => {
           childDropdown.classList.remove('open');
           desktopBackdrop.classList.remove('show');
-          icon.style.transform = 'rotate(360deg)';
-        }, 100); // Adjust the delay duration (in milliseconds) as needed
+        }, 200); // Add delay to prevent accidental close
+      });
+  
+      // Prevent accidental close when moving inside the dropdown
+      childDropdown.addEventListener('mouseenter', function () {
+        clearTimeout(timeout); // Clear timeout if hovering inside dropdown
+      });
+  
+      // Hide dropdown when moving out of it
+      childDropdown.addEventListener('mouseleave', function () {
+        timeout = setTimeout(() => {
+          childDropdown.classList.remove('open');
+          desktopBackdrop.classList.remove('show');
+        }, 200);
       });
     }
   });
+
+  // megaMenuItems.forEach(item => {
+  //   const link = item.querySelector('a');
+  //   const icon = item.querySelector('.icon-arrow-down');
+  //   const childDropdown = item.querySelector('.mega-menu__child-dropdown');
+  //   let closeTimeout; // Variable to store the timeout for delay
+  
+  //   console.log(icon);
+
+  //   if (childDropdown) {
+  //     // Handle mouseenter for the entire item (link + dropdown)
+  //     item.addEventListener('mouseenter', function (e) {
+  //       e.preventDefault();
+  
+  //       // Clear any existing timeout to prevent accidental closing
+  //       clearTimeout(closeTimeout);
+  
+  //       // Close any other open dropdowns
+  //       document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
+  //         openDropdown.classList.remove('open');
+  //       });
+  
+  //       // Open this dropdown
+  //       childDropdown.classList.add('open');
+  //       desktopBackdrop.classList.add('show');
+  //       icon.style.transform = 'rotate(180deg)';
+  //     });
+  
+  //     // Handle mouseleave for the entire item (link + dropdown)
+  //     item.addEventListener('mouseleave', function (e) {
+  //       e.preventDefault();
+  
+  //       // Add a delay before closing the dropdown
+  //       closeTimeout = setTimeout(() => {
+  //         childDropdown.classList.remove('open');
+  //         desktopBackdrop.classList.remove('show');
+  //         icon.style.transform = 'rotate(360deg)';
+  //       }, 100); // Adjust the delay duration (in milliseconds) as needed
+  //     });
+  //   }
+  // });
   
   // Close dropdown if clicking outside the mega menu
   desktopBackdrop.addEventListener('click', () => {
