@@ -106,6 +106,7 @@ childLinks.forEach(link => {
   megaMenuItems.forEach(item => {
     const link = item.querySelector('a');
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
+    const icon = item.querySelector('.icon-arrow-down');
   
     if (childDropdown) {
       let timeout;
