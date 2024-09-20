@@ -184,8 +184,9 @@
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-in;
-  padding-top: 25px;
 }
+
+.child-
 
 .mega-menu__child-dropdown.open {
   max-height: 100%;
