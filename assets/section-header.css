@@ -189,7 +189,8 @@
 .child-links-group {
   margin-top: 25px;
   display: flex;
-  fle
+  flex-direction: column;
+  justify-content: baseline;
 }
 
 .dropdown-divider-mobile {
