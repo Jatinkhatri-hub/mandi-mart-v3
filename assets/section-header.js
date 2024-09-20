@@ -106,6 +106,7 @@ childLinks.forEach(link => {
   megaMenuItems.forEach(item => {
     const link = item.querySelector('a');
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
+    const arrow
     const icon = item.querySelector('.icon-arrow-down');
   
     // Check if it's a mobile device or a touch device
