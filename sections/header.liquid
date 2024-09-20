@@ -127,6 +127,10 @@
 
               </li>
 
+              {% if child_count == 4 or dropdownDividerMobile == 8 or dropdownDividerMobile == 12 or dropdownDividerMobile == 16 or dropdownDividerMobile == 20 or dropdownDividerMobile == 24 %}
+                <div class="dropdown-divider-mobile"></div>
+              {% endif %}
+
               {% assign index_mod_next = forloop.index0 | modulo: 12 %} <!-- Calculate for next index -->
               {% if index_mod_next == 11 or forloop.last %}
                 </div> <!-- Close the block after 12 child links or at the last one -->
