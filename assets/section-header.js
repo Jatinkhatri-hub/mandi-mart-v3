@@ -133,7 +133,7 @@ childLinks.forEach(link => {
             childDropdown.classList.add('open');
             desktopBackdrop.classList.add('show');
             icon.style.transform = 'rotate(180deg)';
-            dropdownIndicator.s
+            dropdownIndicator.style.display = 'block';
           }
         });
   
