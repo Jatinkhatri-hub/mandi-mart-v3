@@ -368,7 +368,13 @@
   gap: 0
 }
 
-.aroww
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f00;
+}
 
 .dropdown-divider-mobile {
   display: none !important;
