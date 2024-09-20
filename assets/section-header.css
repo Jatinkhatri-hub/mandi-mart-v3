@@ -374,7 +374,7 @@
   height: 0; 
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 30px solid black;
+  border-bottom: 30px solid transparent;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
