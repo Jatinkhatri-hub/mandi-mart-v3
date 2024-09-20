@@ -379,7 +379,7 @@
   margin: 0;
   width: 100%;
   align-items: baseline;
-  justify-content: ;
+  justify-content: flex-start;
 }
 
 /* Open state: only allow pointer events when visible */
