@@ -178,6 +178,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
+  width: 100%;
   padding-inline-start: 30px;
   gap: 15px;
   max-height: 0;
