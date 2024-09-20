@@ -106,65 +106,100 @@ childLinks.forEach(link => {
   megaMenuItems.forEach(item => {
     const link = item.querySelector('a');
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
-
-    // If child links exist
+  
     if (childDropdown) {
-      link.addEventListener('mouseenter', function (e) {
-        e.preventDefault(); // Prevent default anchor behavior
-
-        // Check if the dropdown is open
-        const isOpen = childDropdown.classList.contains('open');
-
+      // Handle mouseenter for the entire item (link + dropdown)
+      item.addEventListener('mouseenter', function (e) {
+        e.preventDefault();
+  
         // Close any other open dropdowns
         document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
           openDropdown.classList.remove('open');
         });
-
-        desktopBackdrop.addEventListener('click', () => {
-          desktopBackdrop.classList.remove('show');
-          childDropdown.classList.remove('open');
-        });
-
-        // If it was closed, open it; otherwise, close it
-        if (!isOpen) {
-          childDropdown.classList.add('open');
-          desktopBackdrop.classList.add('show');        
-        } else {
-          childDropdown.classList.remove('open');
-          desktopBackdrop.classList.remove('show');
-        }
+  
+        // Open this dropdown
+        childDropdown.classList.add('open');
+        desktopBackdrop.classList.add('show');
+      });
+  
+      // Handle mouseleave for the entire item (link + dropdown)
+      item.addEventListener('mouseleave', function (e) {
+        e.preventDefault();
+  
+        // Close the dropdown when the mouse leaves the entire item
+        childDropdown.classList.remove('open');
+        desktopBackdrop.classList.remove('show');
       });
     }
-
-    if (childDropdown) {
-      link.addEventListener('mouseleave', function (e) {
-        e.preventDefault(); // Prevent default anchor behavior
-
-        // Check if the dropdown is open
-        const isOpen = childDropdown.classList.contains('open');
-
-        // Close any other open dropdowns
-        document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
-          openDropdown.classList.remove('open');
-        });
-
-        desktopBackdrop.addEventListener('click', () => {
-          desktopBackdrop.classList.remove('show');
-          childDropdown.classList.remove('open');
-        });
-
-        // If it was closed, open it; otherwise, close it
-        if (isOpen) {
-          childDropdown.classList.remove('open');
-          desktopBackdrop.classList.remove('show');        
-        } else {
-          childDropdown.classList.remove('open');
-          desktopBackdrop.classList.remove('show');
-        }
-      });
-    }
-
   });
+  
+  // Close dropdown if clicking outside the mega menu
+  desktopBackdrop.addEventListener('click', () => {
+    document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
+      openDropdown.classList.remove('open');
+    });
+    desktopBackdrop.classList.remove('show');
+  });
+
+  // megaMenuItems.forEach(item => {
+  //   const link = item.querySelector('a');
+  //   const childDropdown = item.querySelector('.mega-menu__child-dropdown');
+
+  //   // If child links exist
+  //   if (childDropdown) {
+  //     link.addEventListener('mouseenter', function (e) {
+  //       e.preventDefault(); // Prevent default anchor behavior
+
+  //       // Check if the dropdown is open
+  //       const isOpen = childDropdown.classList.contains('open');
+
+  //       // Close any other open dropdowns
+  //       document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
+  //         openDropdown.classList.remove('open');
+  //       });
+
+  //       desktopBackdrop.addEventListener('click', () => {
+  //         desktopBackdrop.classList.remove('show');
+  //         childDropdown.classList.remove('open');
+  //       });
+
+  //       // If it was closed, open it; otherwise, close it
+  //       if (!isOpen) {
+  //         childDropdown.classList.add('open');
+  //         desktopBackdrop.classList.add('show');        
+  //       } else {
+  //         childDropdown.classList.remove('open');
+  //         desktopBackdrop.classList.remove('show');
+  //       }
+  //     });
+  //   }
+
+  //   if (childDropdown) {
+  //     link.addEventListener('mouseleave', function (e) {
+  //       e.preventDefault(); // Prevent default anchor behavior
+
+  //       // Check if the dropdown is open
+  //       const isOpen = childDropdown.classList.contains('open');
+
+  //       // Close any other open dropdowns
+  //       document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
+  //         openDropdown.classList.remove('open');
+  //       });
+
+  //       desktopBackdrop.addEventListener('click', () => {
+  //         desktopBackdrop.classList.remove('show');
+  //         childDropdown.classList.remove('open');
+  //       });
+
+  //       // If it was closed, open it; otherwise, close it
+  //       if (isOpen) {
+  //         childDropdown.classList.remove('open');
+  //         desktopBackdrop.classList.remove('show');        
+  //       }
+  //     });
+  //   }
+
+  // });
 
 
 });
