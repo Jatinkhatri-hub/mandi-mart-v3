@@ -108,6 +108,7 @@ childLinks.forEach(link => {
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
     const dropdownIndicator = item.querySelector('.arrow-down');
     const icon = item.querySelector('.icon-arrow-down');
+    console.log(dropdownIndicator);
   
     // Check if it's a mobile device or a touch device
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
