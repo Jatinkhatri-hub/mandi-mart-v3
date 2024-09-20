@@ -374,8 +374,9 @@
 .child-links-group {
   /* display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr)); */
-  height: 170px;
+  height: 180px;
   flex-wrap: wrap;
+  margin: 0;
 }
 
 /* Open state: only allow pointer events when visible */
