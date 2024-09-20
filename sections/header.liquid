@@ -108,13 +108,13 @@
 {% assign variant_title_hyphenated = variant_title_parts | join: '-' |  downcase %}
             <ul class="mega-menu__child-dropdown  {{ variant_title_hyphenated }}">
               {% for child in link.links %}
-              {%  assign count = count | plus : 1 %}
-              {% assign child_collection_handle = child.url | remove: '/collections/' %}
-              {% assign child_collection = collections[child_collection_handle] %}
-              {% assign index_mod = forloop.index0 | modulo: 12 %}
-
-              {% if index_mod == 0 %}
-                <div class="child-links-group "> <!-- Start a new block for every 12 child links -->
+                {% assign child_collection_handle = child.url | remove: '/collections/' %}
+                {% assign child_collection = collections[child_collection_handle] %}
+                {% assign index_mod = forloop.index0 | modulo: 12 %}
+                
+                {% if index_mod == 0 %}
+                  {%  assign count = count | plus : 1 %}
+                  <div class="child-links-group {}"> <!-- Start a new block for every 12 child links -->
               {% endif %}
 
               <li class="child-links" data-collection-handle="{{ child_collection_handle }}">
