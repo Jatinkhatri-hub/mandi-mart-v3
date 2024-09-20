@@ -373,10 +373,11 @@
   height: 0; 
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid #f00;
+  border-bottom: 5px solid black;
   position: absolute;
   left: 50%;
   display: block !important;
+  tra
 
 }
 
