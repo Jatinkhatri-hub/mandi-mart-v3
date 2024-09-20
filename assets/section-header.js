@@ -109,7 +109,7 @@ childLinks.forEach(link => {
 
     // If child links exist
     if (childDropdown) {
-      link.addEventListener('mouseover', function (e) {
+      link.addEventListener('mouseenter', function (e) {
         e.preventDefault(); // Prevent default anchor behavior
 
         // Check if the dropdown is open
