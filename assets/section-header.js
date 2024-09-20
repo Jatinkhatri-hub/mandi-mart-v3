@@ -106,7 +106,7 @@ childLinks.forEach(link => {
   megaMenuItems.forEach(item => {
     const link = item.querySelector('a');
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
-    const dropdownIndicator = item.querySelector('')
+    const dropdownIndicator = item.querySelector('.arrow-down');
     const icon = item.querySelector('.icon-arrow-down');
   
     // Check if it's a mobile device or a touch device
@@ -133,6 +133,7 @@ childLinks.forEach(link => {
             childDropdown.classList.add('open');
             desktopBackdrop.classList.add('show');
             icon.style.transform = 'rotate(180deg)';
+            
           }
         });
   
