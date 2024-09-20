@@ -344,6 +344,19 @@
     transform-origin: bottom left;
   }
 
+  /* Ensure the dropdown is hidden when not hovered */
+.mega-menu__child-dropdown {
+  pointer-events: none; /* Prevent interactions when closed */
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Open state: only allow pointer events when visible */
+.mega-menu__child-dropdown.open {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
 
   .nav-bar__menu-item a {
     text-decoration: none;
