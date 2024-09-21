@@ -8,6 +8,7 @@
   height: 340px;
   width: 300px;
   gap: 10px;
+  text-decoration: none;
 }
 
 .article__img-wrapper {
