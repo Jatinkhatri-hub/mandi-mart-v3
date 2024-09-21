@@ -36,7 +36,7 @@
         <p class="article-card__title poppins-semibold">
           {{ article.title |  truncate: 50 |  escape }}
         </p>
-        <p class="article-card__content">
+        <p class="article-card__content poppins-regular">
           {{ article.excerpt |  strip_html |  truncatewords: 10 }}
         </p>
         <p class="article-card__read-more">Read More {% render 'icon-arrow' %}
