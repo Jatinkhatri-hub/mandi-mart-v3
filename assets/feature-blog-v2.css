@@ -32,4 +32,7 @@
   align-items: baseline;
 }
 
-.arti
+.article__date {
+  font-size: 11px;
+  color: #3;
+}
