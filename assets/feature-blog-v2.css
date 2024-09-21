@@ -53,5 +53,6 @@
 
 .article-card__read-more {
   margin: 0;
+  text-transform: uppercase;
 }
 
