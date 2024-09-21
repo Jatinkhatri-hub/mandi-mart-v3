@@ -10,5 +10,6 @@
 }
 
 .article__img-wrapper {
-  display: 
+  display: flex;
+  flex-direction: ;
 }
