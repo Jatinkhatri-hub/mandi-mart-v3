@@ -25,11 +25,7 @@
     </div>
     <div class="test">
 
-      <a href="{{ article.url }}" class="article-card__wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
-              {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};
-              {% endif %}">
+      <a href="{{ article.url }}" class="article-card__wrapper">
         <div class="article__img-wrapper">
           {% if article.image != blank %}
             {{ article.image.src | image_url: width: article.image.src.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: "article__img" }}
