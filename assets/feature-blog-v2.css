@@ -25,4 +25,8 @@
   object-fit: cover;
 }
 
-.article
+.article__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: s;
+}
