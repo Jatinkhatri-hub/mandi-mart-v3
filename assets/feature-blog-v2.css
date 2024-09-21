@@ -11,5 +11,7 @@
 
 .article__img-wrapper {
   display: flex;
-  flex-direction: ;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
 }
