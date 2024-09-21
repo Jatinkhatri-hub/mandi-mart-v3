@@ -28,5 +28,6 @@
 .article__info-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: s;
+  justify-content: space-between;
+  align-items: baseline;
 }
