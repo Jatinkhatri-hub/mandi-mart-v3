@@ -34,7 +34,7 @@
       <div class="article__info-wrapper">
         <span class="article__date">{{ article.published_at | time_tag: format: 'date' }}</span>
         <a href="{{ article.url }}">
-          {{ article.title | tur }}
+          {{ article.title |  truncate: 50 |  escape }}
         </a>
       </div>
     </div>
