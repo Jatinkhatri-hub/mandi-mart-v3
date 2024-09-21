@@ -37,7 +37,7 @@
           {{ article.title |  truncate: 50 |  escape }}
         </a>
         <p class="article-card__content">
-          
+          {{ article.excerpt |  strip_html | t }}
         </p>
 
       </div>
