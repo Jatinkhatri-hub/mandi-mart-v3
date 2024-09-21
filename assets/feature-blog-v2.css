@@ -7,6 +7,7 @@
   align-items: center;
   height: 340px;
   width: 300px;
+  gap: 10px;
 }
 
 .article__img-wrapper {
@@ -49,5 +50,7 @@
   margin: 0;
 }
 
-.article
+.article-card__read-more {
+  margin: 0;
+}
 
