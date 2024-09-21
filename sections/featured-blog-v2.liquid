@@ -24,24 +24,25 @@
       </h2>
     </div>
     <div class="test">
-      <div class="article-card__wrapper">
+
+      <a class="article-card__wrapper">
         <div class="article__img-wrapper">
           {% if article.image != blank %}
             {{ article.image.src | image_url: width: article.image.src.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: "article__img" }}
           {% endif %}
         </div>
-      </div>
-      <div class="article__info-wrapper">
-        <span class="article__date poppins-regular">{{ article.published_at | time_tag: format: 'date' }}</span>
-        <p class="article-card__title poppins-semibold">
-          {{ article.title |  truncate: 50 |  escape }}
-        </p>
-        <p class="article-card__content poppins-regular">
-          {{ article.excerpt |  strip_html |  truncatewords: 10 }}
-        </p>
-        <p class="article-card__read-more">Read More {% render 'icon-arrow' %}
-        </p>
-      </div>
+        <div class="article__info-wrapper">
+          <span class="article__date poppins-regular">{{ article.published_at | time_tag: format: 'date' }}</span>
+          <p class="article-card__title poppins-semibold">
+            {{ article.title |  truncate: 50 |  escape }}
+          </p>
+          <p class="article-card__content poppins-regular">
+            {{ article.excerpt |  strip_html |  truncatewords: 10 }}
+          </p>
+          <p class="article-card__read-more">Read More {% render 'icon-arrow' %}
+          </p>
+        </div>
+      </a>
     </div>
   </div>
 </div>
