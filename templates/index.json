@@ -390,6 +390,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "featured_blog_v2_NRaUbg": {
+      "type": "featured-blog-v2",
+      "settings": {
+        "heading": "Heading",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -403,6 +413,7 @@
     "brand_collection_G4Yttb",
     "explore_VwPVRU",
     "explore_1_VcCQc7",
-    "featured_blog_ne43LD"
+    "featured_blog_ne43LD",
+    "featured_blog_v2_NRaUbg"
   ]
 }
