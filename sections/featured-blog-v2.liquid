@@ -33,7 +33,7 @@
       </div>
       <div class="article__info-wrapper">
         <span class="article__date poppins-regular">{{ article.published_at | time_tag: format: 'date' }}</span>
-        <p class="article-card__title">
+        <p class="article-card__title poppins-semibold">
           {{ article.title |  truncate: 50 |  escape }}
         </p>
         <p class="article-card__content">
