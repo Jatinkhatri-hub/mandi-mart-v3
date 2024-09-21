@@ -1,4 +1,4 @@
-{{ 'feature-blog-v2.css' | a }}
+{{ 'feature-blog-v2.css' |  asset_url |  stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -22,7 +22,9 @@
       </h2>
     </div>
     <div class="test">
-
+      <div>
+        
+      </div>
     </div>
   </div>
 </div>
