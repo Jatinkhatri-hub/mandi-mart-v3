@@ -161,6 +161,13 @@
             "user_name": "Name",
             "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
+        },
+        "review_carousle_LbY9kw": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet"
+          }
         }
       },
       "block_order": [
@@ -168,7 +175,8 @@
         "review_carousle_UTY3wA",
         "review_carousle_tpKhMt",
         "review_carousle_wi49bP",
-        "review_carousle_QkRFjV"
+        "review_carousle_QkRFjV",
+        "review_carousle_LbY9kw"
       ],
       "settings": {
         "heading": "<p>Rich text<\/p>",
