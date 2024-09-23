@@ -12,9 +12,9 @@
     "banner": {
       "type": "coll-section",
       "settings": {
-        "heading": "Lorem ipsum dolor sit amet cons",
-        "subhead": "Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames",
-        "image": "shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-23-19.png"
+        "heading": "Your One-Stop-Shop For Better Health",
+        "subhead": "Improve your well-being with the right supplements, for the best price available.",
+        "image": "shopify://shop_images/Screenshot_from_2024-08-13_17-23-19.png"
       }
     },
     "product-grid": {
@@ -101,7 +101,7 @@
         "review_carousle_eHaT4q"
       ],
       "settings": {
-        "heading": "<p>Hear From Our Customers<\/p>",
+        "heading": "<p>Hear From Our Customers</p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "padding_top": 36,
@@ -114,16 +114,16 @@
       "settings": {
         "section_color_scheme": "",
         "color_scheme": "",
-        "image_1": "shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-17-24.png",
-        "link_1": "shopify:\/\/collections\/best-sellers",
-        "image_2": "shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-18-18.png",
-        "link_2": "shopify:\/\/collections\/new-products",
-        "image_3": "shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-18-56.png",
-        "link_3": "shopify:\/\/collections\/new-products",
-        "image_4": "shopify:\/\/shop_images\/Screenshot_from_2024-08-13_17-17-48.png",
-        "link_4": "shopify:\/\/collections\/our-top-brands",
+        "image_1": "shopify://shop_images/Screenshot_from_2024-08-13_17-17-24.png",
+        "link_1": "shopify://collections/best-sellers",
+        "image_2": "shopify://shop_images/Screenshot_from_2024-08-13_17-18-18.png",
+        "link_2": "shopify://collections/new-products",
+        "image_3": "shopify://shop_images/Screenshot_from_2024-08-13_17-18-56.png",
+        "link_3": "shopify://collections/new-products",
+        "image_4": "shopify://shop_images/Screenshot_from_2024-08-13_17-17-48.png",
+        "link_4": "shopify://collections/our-top-brands",
         "h4_text": "Explore all categories",
-        "h4_link": "shopify:\/\/pages\/categories-directory",
+        "h4_link": "shopify://pages/categories-directory",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -134,41 +134,41 @@
         "big_div_TkgDGH": {
           "type": "big-div",
           "settings": {
-            "big_img": "shopify:\/\/shop_images\/image_20_1.png",
+            "big_img": "shopify://shop_images/image_20_1.png",
             "big_img_width": 360,
             "big_heading": "BEST SELLERS",
             "big_button_text": "Explore Now",
-            "big_div_button_link": "shopify:\/\/collections\/best-sellers"
+            "big_div_button_link": "shopify://collections/best-sellers"
           }
         },
         "small_div_MgGNEM": {
           "type": "small-div",
           "settings": {
-            "small_img": "shopify:\/\/shop_images\/Untitleddesign-2023-11-23T142142.304_large_2x.progressive_1_2a6f491f-0d93-4708-a55f-2bb51d7e7994.png",
+            "small_img": "shopify://shop_images/Untitleddesign-2023-11-23T142142.304_large_2x.progressive_1_2a6f491f-0d93-4708-a55f-2bb51d7e7994.png",
             "small_img_width": 320,
             "small_heading": "CLEARANCE",
             "small_button_text": "Explore Now",
-            "small_div_button_link": "shopify:\/\/collections\/clearance"
+            "small_div_button_link": "shopify://collections/clearance"
           }
         },
         "small_div_EaAkDK": {
           "type": "small-div",
           "settings": {
-            "small_img": "shopify:\/\/shop_images\/Untitleddesign_24_large_2x.progressive_1.png",
+            "small_img": "shopify://shop_images/Untitleddesign_24_large_2x.progressive_1.png",
             "small_img_width": 350,
             "small_heading": "NEW PRODUCTS",
             "small_button_text": "Explore Now",
-            "small_div_button_link": "shopify:\/\/collections\/new-products"
+            "small_div_button_link": "shopify://collections/new-products"
           }
         },
         "big_div_EUFgDR": {
           "type": "big-div",
           "settings": {
-            "big_img": "shopify:\/\/shop_images\/image_21.png",
+            "big_img": "shopify://shop_images/image_21.png",
             "big_img_width": 260,
             "big_heading": "TOP BRANDS",
             "big_button_text": "Explore Now",
-            "big_div_button_link": "shopify:\/\/collections\/top"
+            "big_div_button_link": "shopify://collections/top"
           }
         }
       },
