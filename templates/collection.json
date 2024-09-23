@@ -80,6 +80,13 @@
             "user_name": "Caroline",
             "user_description": "Great choice, especially in the specialist field of Autism keeping up with new developments, and always a great service. Have been using Mandi Mart for well over 15 years and they never disappoint. Received this order the very next day! Thank you!"
           }
+        },
+        "review_carousle_eHaT4q": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Rebekah Rottier",
+            "user_description": "just got the products as a part of the function medicine plan by my doctor. I'm happy with the timely shipping and easy purchase from the website and cost as I don't have insurance."
+          }
         }
       },
       "block_order": [
@@ -90,7 +97,8 @@
         "review_carousle_hLEVar",
         "review_carousle_X4XMYU",
         "review_carousle_eVfnFz",
-        "review_carousle_bizPfa"
+        "review_carousle_bizPfa",
+        "review_carousle_eHaT4q"
       ],
       "settings": {
         "heading": "<p>Rich text<\/p>",
