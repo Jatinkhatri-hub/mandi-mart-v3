@@ -62,7 +62,72 @@
 </div>
 
 
+<>
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const id = "{{ section.id }}";
+  
+  const swiperDesktopClass = `.mySwiper-${id}.swiper-desktop`;
+  const swiperMobileClass = `.mySwiper-${id}.swiper-mobile`;
+  const swiperPaginationClass = `.swiper-pagination-${id}`;
+  const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
+  const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
+
+  const swiperContainer = document.querySelector(swiperDesktopClass);
+  const swiperPagination = document.querySelector(swiperPaginationClass);
+  const swiperButtonNext = document.querySelector(swiperButtonNextClass);
+  const swiperButtonPrev = document.querySelector(swiperButtonPrevClass);
+
+  if (swiperContainer && swiperPagination && swiperButtonNext && swiperButtonPrev) {
+    let swiper = new Swiper(swiperDesktopClass, {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: swiperButtonNextClass,
+        prevEl: swiperButtonPrevClass,
+      },
+      pagination: {
+        el: swiperPaginationClass,
+        clickable: true,
+      },
+      breakpoints: {
+        786: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        }
+      },
+      observer: true, 
+      observeParents: true,
+    });
+
+    swiper.init();
+    swiper.update();
+  } else {
+    console.error('Swiper initialization elements not found for section:', id);
+  }
+
+  new Swiper(swiperMobileClass, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: swiperButtonNextClass,
+      prevEl: swiperButtonPrevClass,
+    },
+    pagination: {
+      el: swiperPaginationClass,
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+  });
+
+});
+
+
+
+
+</scrip>
 
 
 {% schema %}
