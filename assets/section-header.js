@@ -133,6 +133,7 @@ childLinks.forEach(link => {
             childDropdown.classList.add('open');
             dropdownIndicator.style.display = 'block';
             icon.style.transform = 'rotate(180deg)';
+            dropdownIndicator.style.borderBottom = '30px solid white';
           }
         });
 
