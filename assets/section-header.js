@@ -166,6 +166,7 @@ function openDropdown(dropdown, indicator, icon) {
   desktopBackdrop.classList.add('show');
   indicator.classList.add('show');
   icon.style.transform = 'rotate(180deg)';
+  
 }
 
 function closeDropdown(dropdown, indicator, icon) {
