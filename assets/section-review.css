@@ -31,7 +31,7 @@
 .review-list {
   justify-content: center;
   align-items: center;
-  gap:
+  gap: 20px;
 }
 
 .review__card {
