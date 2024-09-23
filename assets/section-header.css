@@ -365,8 +365,10 @@
 .mega-menu__child-dropdown {
   pointer-events: none; /* Prevent interactions when closed */
   opacity: 0;
+  transform: ;
   transition: opacity 0.2s ease-in-out;
   gap: 0
+
 }
 
 .arrow-down {
