@@ -81,7 +81,10 @@
     font-size: 14px;
   }
 
-  .artic
+  .article-card__title {
+    font-size: 24px;
+    
+  }
 
 }
 
