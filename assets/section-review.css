@@ -30,7 +30,8 @@
 
 .review-list {
   justify-content: center;
-  align-items: ;
+  align-items: center;
+  gap:
 }
 
 .review__card {
