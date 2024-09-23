@@ -72,7 +72,12 @@
     border-radius: 14px;
   }
 
-  .ar
+  .article__img {
+    width: 385px;
+    height: 225px;
+  }
+
+  
 
 }
 
