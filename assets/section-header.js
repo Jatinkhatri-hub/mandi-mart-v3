@@ -11,6 +11,49 @@ addEventListener('DOMContentLoaded', () => {
 
   const productPreviewClass = 'product-preview';
 
+  const productDataCache = {};
+
+// Function to fetch product data for a collection and cache it
+function fetchProductData(collectionHandle) {
+  if (productDataCache[collectionHandle]) {
+    return Promise.resolve(productDataCache[collectionHandle]); // Return cached data if available
+  }
+  
+  return fetch(`/collections/${collectionHandle}/products.json`)
+    .then(response => response.json())
+    .then(data => {
+      productDataCache[collectionHandle] = data.products; // Cache the data
+      return data.products;
+    })
+    .catch(error => console.error('Error fetching products:', error));
+}
+
+// Function to render random products
+function fetchAndRenderProducts(collectionHandle, productPreview) {
+  productPreview.classList.add('fade-out');
+  
+  fetchProductData(collectionHandle).then(products => {
+    const shuffledProducts = products.sort(() => 0.5 - Math.random());
+    const randomProducts = shuffledProducts.slice(0, 2);
+
+    // Small delay to allow fade-out animation to play
+    setTimeout(() => {
+      renderProductCards(randomProducts, productPreview);
+      productPreview.classList.remove('fade-out'); // Remove fade-out after rendering
+    }, 10); // Adjust timing as per the fade-out duration
+  });
+}
+
+childLinks.forEach(link => {
+  link.addEventListener('mouseover', function () {
+    const collectionHandle = this.getAttribute('data-collection-handle');
+    const previewContainer = this.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
+    
+    // Use pre-fetched data instead of making a new fetch request on hover
+    fetchAndRenderProducts(collectionHandle, previewContainer);
+  });
+});
+
 // // Function to fetch and render random products
 // function fetchRandomProducts(collectionHandle, productPreview) {
 //   // Add fade-out class before changing the products
