@@ -110,7 +110,8 @@
 
   .review__card {
     border-radius: 4px;
-
+    gap: 5px;
+    padding
   }
 
   .review__section-header-wrapper {
