@@ -113,7 +113,9 @@
     font-family: 'Poppins';
   }
 
-  .btn
+  .review-btn-group {
+    top: 30px;
+  }
 
 }
 
