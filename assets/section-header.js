@@ -11,91 +11,27 @@ addEventListener('DOMContentLoaded', () => {
 
   const productPreviewClass = 'product-preview';
 
-  const productDataCache = {};
+// Function to fetch and render random products
+function fetchRandomProducts(collectionHandle, productPreview) {
+  // Add fade-out class before changing the products
+  productPreview.classList.add('fade-out');
 
-// Function to fetch product data for a collection and cache it
-function fetchProductData(collectionHandle) {
-  if (productDataCache[collectionHandle]) {
-    return Promise.resolve(productDataCache[collectionHandle]); // Return cached data if available
-  }
-  
-  return fetch(`/collections/${collectionHandle}/products.json`)
+  fetch(`/collections/${collectionHandle}/products.json`)
     .then(response => response.json())
     .then(data => {
-      productDataCache[collectionHandle] = data.products; // Cache the data
-      return data.products;
+      const products = data.products;
+      // Shuffle products and select the first 2 for display
+      const shuffledProducts = products.sort(() => 0.5 - Math.random());
+      const randomProducts = shuffledProducts.slice(0, 2);
+
+      // Small delay to allow fade-out animation to play
+      setTimeout(() => {
+        renderProductCards(randomProducts, productPreview);
+        productPreview.classList.remove('fade-out'); // Remove fade-out after rendering
+      }, 10); // Adjust timing as per the fade-out duration
     })
     .catch(error => console.error('Error fetching products:', error));
 }
-
-// Function to render random products
-function fetchAndRenderProducts(collectionHandle, productPreview) {
-  productPreview.classList.add('fade-out');
-  
-  fetchProductData(collectionHandle).then(products => {
-    const shuffledProducts = products.sort(() => 0.5 - Math.random());
-    const randomProducts = shuffledProducts.slice(0, 2);
-
-    // Small delay to allow fade-out animation to play
-    setTimeout(() => {
-      renderProductCards(randomProducts, productPreview);
-      productPreview.classList.remove('fade-out'); // Remove fade-out after rendering
-    }, 10); // Adjust timing as per the fade-out duration
-  });
-}
-
-childLinks.forEach(link => {
-  link.addEventListener('mouseover', function () {
-    const collectionHandle = this.getAttribute('data-collection-handle');
-    const previewContainer = this.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
-    
-    // Use pre-fetched data instead of making a new fetch request on hover
-    fetchAndRenderProducts(collectionHandle, previewContainer);
-  });
-});
-
-const firstChildLink = document.querySelector('.our-top-brands .child-links');
-if (firstChildLink) {
-  const collectionHandle = firstChildLink.getAttribute('data-collection-handle');
-  const previewContainer = firstChildLink.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
-  
-  // Pre-fetch product data for the first collection and display the products
-  fetchAndRenderProducts(collectionHandle, previewContainer);
-}
-
-let hoverTimeout;
-childLinks.forEach(link => {
-  link.addEventListener('mouseover', function () {
-    clearTimeout(hoverTimeout);
-    hoverTimeout = setTimeout(() => {
-      const collectionHandle = this.getAttribute('data-collection-handle');
-      const previewContainer = this.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
-      fetchAndRenderProducts(collectionHandle, previewContainer);
-    }, 100); // Debounce time (adjust as needed)
-  });
-});
-
-// // Function to fetch and render random products
-// function fetchRandomProducts(collectionHandle, productPreview) {
-//   // Add fade-out class before changing the products
-//   productPreview.classList.add('fade-out');
-
-//   fetch(`/collections/${collectionHandle}/products.json`)
-//     .then(response => response.json())
-//     .then(data => {
-//       const products = data.products;
-//       // Shuffle products and select the first 2 for display
-//       const shuffledProducts = products.sort(() => 0.5 - Math.random());
-//       const randomProducts = shuffledProducts.slice(0, 2);
-
-//       // Small delay to allow fade-out animation to play
-//       setTimeout(() => {
-//         renderProductCards(randomProducts, productPreview);
-//         productPreview.classList.remove('fade-out'); // Remove fade-out after rendering
-//       }, 10); // Adjust timing as per the fade-out duration
-//     })
-//     .catch(error => console.error('Error fetching products:', error));
-// }
 
 // Function to render product cards
 function renderProductCards(products, container) {
@@ -124,24 +60,24 @@ function renderProductCards(products, container) {
   container.innerHTML = productHTML; // Update the product preview container
 }
 
-// // Event listener for hovering over child links
-// const childLinks = document.querySelectorAll('.our-top-brands .child-links');
-// childLinks.forEach(link => {
-//   link.addEventListener('mouseover', function () {
-//     const collectionHandle = this.getAttribute('data-collection-handle');
-//     const previewContainer = this.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
-//     fetchRandomProducts(collectionHandle, previewContainer); // Fetch random products for the hovered collection
-//   });
-// });
+// Event listener for hovering over child links
+const childLinks = document.querySelectorAll('.our-top-brands .child-links');
+childLinks.forEach(link => {
+  link.addEventListener('mouseover', function () {
+    const collectionHandle = this.getAttribute('data-collection-handle');
+    const previewContainer = this.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
+    fetchRandomProducts(collectionHandle, previewContainer); // Fetch random products for the hovered collection
+  });
+});
 
-// // Ensure the first child element's products are shown initially when the dropdown is opened
+// Ensure the first child element's products are shown initially when the dropdown is opened
 
-//   const firstChildLink = document.querySelector('.our-top-brands .child-links');
-//   if (firstChildLink) {
-//     const collectionHandle = firstChildLink.getAttribute('data-collection-handle');
-//     const previewContainer = firstChildLink.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
-//     fetchRandomProducts(collectionHandle, previewContainer); // Fetch random products for the first child element
-//   }
+  const firstChildLink = document.querySelector('.our-top-brands .child-links');
+  if (firstChildLink) {
+    const collectionHandle = firstChildLink.getAttribute('data-collection-handle');
+    const previewContainer = firstChildLink.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
+    fetchRandomProducts(collectionHandle, previewContainer); // Fetch random products for the first child element
+  }
 
 
   navOpenBtn.addEventListener('click', () => {
@@ -172,192 +108,99 @@ function renderProductCards(products, container) {
     const childDropdown = item.querySelector('.mega-menu__child-dropdown');
     const dropdownIndicator = item.querySelector('.arrow-down');
     const icon = item.querySelector('.icon-arrow-down');
-    
-    // Check if it's a mobile or touch device
+    console.log(dropdownIndicator);
+  
+    // Check if it's a mobile device or a touch device
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
+  
     if (childDropdown) {
       let timeout;
-
+  
       // Handle hover behavior for desktop
       if (!isTouchDevice) {
-        // Show dropdown and indicator when hovering on the link
+        // Show dropdown with slight delay to avoid accidental hovers
         link.addEventListener('mouseenter', function (e) {
-          clearTimeout(timeout); // Clear any previous close timeout
+          clearTimeout(timeout); // Clear any previous timeout
           e.preventDefault();
-
+          console.log(dropdownIndicator);
+  
           const isOpen = childDropdown.classList.contains('open');
-
-          // Close other open dropdowns
+  
+          // Close other dropdowns
           document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
             openDropdown.classList.remove('open');
           });
-
+  
           if (!isOpen) {
             childDropdown.classList.add('open');
-            dropdownIndicator.style.display = 'block';
+            desktopBackdrop.classList.add('show');
             icon.style.transform = 'rotate(180deg)';
-            dropdownIndicator.style.borderBottom = '30px solid white';
+            dropdownIndicator.style.borderBottom = '30px solid white'; // Example change
+            dropdownIndicator.style.display = 'block';
           }
         });
-
-        // Add a slight delay before hiding dropdown and indicator
+  
+        // Add slight delay on mouse leave
         link.addEventListener('mouseleave', function (e) {
           timeout = setTimeout(() => {
             childDropdown.classList.remove('open');
-            dropdownIndicator.style.display = 'none';
+            desktopBackdrop.classList.remove('show');
             icon.style.transform = 'rotate(360deg)';
-          }, 200); // Adjust this delay if needed
+            dropdownIndicator.style.borderBottom = '30px solid transparent';
+            dropdownIndicator.style.display = 'none';
+          }, 200); // Add delay to prevent accidental close
         });
-
-        // Prevent accidental closing when hovering inside the dropdown
+  
+        // Prevent accidental close when moving inside the dropdown
         childDropdown.addEventListener('mouseenter', function () {
-          clearTimeout(timeout);
+          clearTimeout(timeout); // Clear timeout if hovering inside dropdown
         });
-
-        // Close the dropdown when moving out of the dropdown area
+  
+        // Hide dropdown when moving out of it
         childDropdown.addEventListener('mouseleave', function () {
           timeout = setTimeout(() => {
             childDropdown.classList.remove('open');
-            dropdownIndicator.style.display = 'none';
+            desktopBackdrop.classList.remove('show');
             icon.style.transform = 'rotate(360deg)';
+            dropdownIndicator.style.borderBottom = '30px solid transparent';
+            dropdownIndicator.style.display = 'none';
           }, 200);
         });
       }
-
-      // Handle click behavior for mobile devices
+  
+      // Handle click behavior for mobile
       if (isTouchDevice) {
         link.addEventListener('click', function (e) {
           e.preventDefault(); // Prevent the default anchor behavior
-
+  
           const isOpen = childDropdown.classList.contains('open');
-
+  
           // Close any open dropdowns
           document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
             openDropdown.classList.remove('open');
           });
-
+  
           if (!isOpen) {
             childDropdown.classList.add('open');
-            dropdownIndicator.style.display = 'block';
+            desktopBackdrop.classList.add('show');
             icon.style.transform = 'rotate(180deg)';
           } else {
             childDropdown.classList.remove('open');
-            dropdownIndicator.style.display = 'none';
+            desktopBackdrop.classList.remove('show');
             icon.style.transform = 'rotate(360deg)';
           }
         });
-
+  
         // Optional: Close dropdown when clicking outside
-        document.getElementById('desktopBackdrop').addEventListener('click', () => {
+        desktopBackdrop.addEventListener('click', () => {
           document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
             openDropdown.classList.remove('open');
-            dropdownIndicator.style.display = 'none';
-            icon.style.transform = 'rotate(360deg)';
+            desktopBackdrop.classList.remove('show');
           });
         });
       }
     }
   });
-
-  // megaMenuItems.forEach(item => {
-  //   const link = item.querySelector('a');
-  //   const childDropdown = item.querySelector('.mega-menu__child-dropdown');
-  //   const dropdownIndicator = item.querySelector('.arrow-down');
-  //   const icon = item.querySelector('.icon-arrow-down');
-  //   console.log(dropdownIndicator);
-  
-  //   // Check if it's a mobile device or a touch device
-  //   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  
-  //   if (childDropdown) {
-  //     let timeout;
-  
-  //     // Handle hover behavior for desktop
-  //     if (!isTouchDevice) {
-  //       // Show dropdown with slight delay to avoid accidental hovers
-  //       link.addEventListener('mouseenter', function (e) {
-  //         clearTimeout(timeout); // Clear any previous timeout
-  //         e.preventDefault();
-  //         console.log(dropdownIndicator);
-  
-  //         const isOpen = childDropdown.classList.contains('open');
-  
-  //         // Close other dropdowns
-  //         document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
-  //           openDropdown.classList.remove('open');
-  //         });
-  
-  //         if (!isOpen) {
-  //           childDropdown.classList.add('open');
-  //           desktopBackdrop.classList.add('show');
-  //           icon.style.transform = 'rotate(180deg)';
-  //           dropdownIndicator.style.borderBottom = '30px solid white'; // Example change
-  //           dropdownIndicator.style.display = 'block';
-  //         }
-  //       });
-  
-  //       // Add slight delay on mouse leave
-  //       link.addEventListener('mouseleave', function (e) {
-  //         timeout = setTimeout(() => {
-  //           childDropdown.classList.remove('open');
-  //           desktopBackdrop.classList.remove('show');
-  //           icon.style.transform = 'rotate(360deg)';
-  //           dropdownIndicator.style.borderBottom = '30px solid transparent';
-  //           dropdownIndicator.style.display = 'none';
-  //         }, 200); // Add delay to prevent accidental close
-  //       });
-  
-  //       // Prevent accidental close when moving inside the dropdown
-  //       childDropdown.addEventListener('mouseenter', function () {
-  //         clearTimeout(timeout); // Clear timeout if hovering inside dropdown
-  //       });
-  
-  //       // Hide dropdown when moving out of it
-  //       childDropdown.addEventListener('mouseleave', function () {
-  //         timeout = setTimeout(() => {
-  //           childDropdown.classList.remove('open');
-  //           desktopBackdrop.classList.remove('show');
-  //           icon.style.transform = 'rotate(360deg)';
-  //           dropdownIndicator.style.borderBottom = '30px solid transparent';
-  //           dropdownIndicator.style.display = 'none';
-  //         }, 200);
-  //       });
-  //     }
-  
-  //     // Handle click behavior for mobile
-  //     if (isTouchDevice) {
-  //       link.addEventListener('click', function (e) {
-  //         e.preventDefault(); // Prevent the default anchor behavior
-  
-  //         const isOpen = childDropdown.classList.contains('open');
-  
-  //         // Close any open dropdowns
-  //         document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
-  //           openDropdown.classList.remove('open');
-  //         });
-  
-  //         if (!isOpen) {
-  //           childDropdown.classList.add('open');
-  //           desktopBackdrop.classList.add('show');
-  //           icon.style.transform = 'rotate(180deg)';
-  //         } else {
-  //           childDropdown.classList.remove('open');
-  //           desktopBackdrop.classList.remove('show');
-  //           icon.style.transform = 'rotate(360deg)';
-  //         }
-  //       });
-  
-  //       // Optional: Close dropdown when clicking outside
-  //       desktopBackdrop.addEventListener('click', () => {
-  //         document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
-  //           openDropdown.classList.remove('open');
-  //           desktopBackdrop.classList.remove('show');
-  //         });
-  //       });
-  //     }
-  //   }
-  // });
 
   // megaMenuItems.forEach(item => {
   //   const link = item.querySelector('a');
