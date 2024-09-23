@@ -78,7 +78,7 @@
       "type": "feature-product-collection",
       "settings": {
         "heading": "Feature Products",
-        "products_per_slide_mobile": 2,
+        "products_per_slide_mobile": 4,
         "products_per_slide_desktop": 4,
         "section_color_scheme": "",
         "collection": "clearance",
