@@ -133,6 +133,8 @@
   /* Styles for Swiper slides */
 .swiper-slide-{{ section.id }} {
   transition: opacity 0.3s ease;  /* Smooth transition for opacity */
+  transition:all 200ms linear;
+  transform: scale(0.8);
 }
 
 .swiper-wrapper-{{ section.id }} .swiper-slide-next {
@@ -148,6 +150,7 @@
 /* Make the active slide fully visible */
 .swiper-slide-active {
   opacity: 1;  /* Full opacity for the current slide */
+
 }
 
 
