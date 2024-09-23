@@ -80,16 +80,16 @@
 @media screen and (min-width: 789px) {
   
   .article-card__wrapper {
-    width: 375px;
+    width: 370px;
     height: 430px;
   }
 
   .article__info-wrapper {
-    height: 205px;
+    height: 200px;
   }
 
   .article__img-wrapper {
-    width: 375px;
+    width: 370px;
     height: 225px;
     border-radius: 14px;
   }
