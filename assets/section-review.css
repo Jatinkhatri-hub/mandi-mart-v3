@@ -106,6 +106,10 @@
     border-radius: 0;
   }
 
+  .review__card {
+    border-radius: 4px;
+  }
+
   .review__section-header-wrapper {
     justify-content: center;
     padding-bottom: 30px;
