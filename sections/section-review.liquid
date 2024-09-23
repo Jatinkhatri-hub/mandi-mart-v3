@@ -46,7 +46,7 @@
         {% if index3 == 0 %}
 
           <div class=" swiper-slide swiper-slide-{{ section.id }}">
-            <div class="review-">
+            <div class="review-list">
         {% endif %}
         <div class="review__card custom-card">
           <div class="review__card-header">
@@ -66,6 +66,8 @@
               <p class="review__description">{{ block.settings.user_description }}</p>
             </div>
         </div>
+        
+
       {% endfor %}
       </div>
       <div class="swiper-pagination swiper-pagination-{{ section.id }}"></div>
