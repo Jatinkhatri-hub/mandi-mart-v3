@@ -74,6 +74,19 @@
       "settings": {
       }
     },
+    "feature_product_collection_bPiGTk": {
+      "type": "feature-product-collection",
+      "settings": {
+        "heading": "Feature Products",
+        "products_per_slide_mobile": 2,
+        "products_per_slide_desktop": 4,
+        "section_color_scheme": "",
+        "collection": "clearance",
+        "color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection_v2_xbrdmy": {
       "type": "featured-collection-v2",
       "blocks": {
@@ -408,6 +421,7 @@
   "order": [
     "hero_46kHtt",
     "hero_carousel_XFifLk",
+    "feature_product_collection_bPiGTk",
     "featured_collection_v2_xbrdmy",
     "section_review_UMij8M",
     "image_with_text_v2_ixiN7B",
