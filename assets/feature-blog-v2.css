@@ -1,4 +1,7 @@
 
+.section-review {
+  position: relative;
+}
 
 .article-card__wrapper {
   display: flex;
@@ -57,6 +60,10 @@
   margin: 0;
   text-transform: uppercase;
   color: #364241;
+}
+
+.review-btn-group {
+  
 }
 
 
