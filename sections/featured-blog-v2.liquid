@@ -1,4 +1,4 @@
-{{ 'feature-blog-v2.css' |  asset_url |  stylesheet_tag }}
+{{ 'feature-blog-v2.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-{%  assign article = section.settings.article %}
+{% assign article = section.settings.article %}
 
 <div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} custom-section">
   <div class="page-width color-{{ section.settings.color_scheme }}">
@@ -30,111 +30,108 @@
     <div class="swiper mySwiper mySwiper-{{ section.id }}">
       <div class="swiper-wrapper">
 
-      <a href="{{ article.url }}" class="article-card__wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-              {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};"
-              {% endif %}>
-        <div class="article__img-wrapper">
-          {% if article.image != blank %}
-            {{ article.image.src | image_url: width: article.image.src.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: "article__img" }}
-          {% endif %}
-        </div>
-        <div class="article__info-wrapper">
-          <span class="article__date poppins-regular">{{ article.published_at | time_tag: format: 'date' }}</span>
-          <p class="article-card__title poppins-semibold">
-            {{ article.title |  truncate: 50 |  escape }}
-          </p>
-          <p class="article-card__content poppins-regular">
-            {{ article.excerpt |  strip_html |  truncatewords: 10 }}
-          </p>
-          <p class="article-card__read-more">Read More {% render 'icon-arrow-right-2' %}
-          </p>
-        </div>
-      </a>
+        <a
+          href="{{ article.url }}"
+          class="article-card__wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+          data-cascade
+          style="--animation-order: {{ forloop.index }};"
+          {% endif %}>
+          <div class="article__img-wrapper">
+            {% if article.image != blank %}
+              {{ article.image.src | image_url: width: article.image.src.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: "article__img" }}
+            {% endif %}
+          </div>
+          <div class="article__info-wrapper">
+            <span class="article__date poppins-regular">{{ article.published_at | time_tag: format: 'date' }}</span>
+            <p class="article-card__title poppins-semibold">
+              {{ article.title | truncate: 50 | escape }}
+            </p>
+            <p class="article-card__content poppins-regular">
+              {{ article.excerpt | strip_html | truncatewords: 10 }}
+            </p>
+            <p class="article-card__read-more">Read More {% render 'icon-arrow-right-2' %}
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-</div>
-
-
-
-{% schema %}
-  {
-    "name": "Blog Posts v2",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "inline_richtext",
-        "id": "heading",
-        "default": "Heading",
-        "label": "Heading"
-      },
-      {
-        "type": "select",
-        "id": "heading_size",
-        "options": [
-          {
-            "value": "h2",
-            "label": "t:sections.all.heading_size.options__1.label"
-          },
-          {
-            "value": "h1",
-            "label": "t:sections.all.heading_size.options__2.label"
-          },
-          {
-            "value": "h0",
-            "label": "t:sections.all.heading_size.options__3.label"
-          },
-          {
-            "value": "hxl",
-            "label": "t:sections.all.heading_size.options__4.label"
-          }, {
-            "value": "hxxl",
-            "label": "t:sections.all.heading_size.options__5.label"
-          }
-        ],
-        "default": "h1",
-        "label": "t:sections.all.heading_size.label"
-      },
-      {
-        "type": "article",
-        "id": "article",
-        "label": "Article"
-      },
-      {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:sections.all.colors.label",
-        "info": "t:sections.all.colors.has_cards_info",
-        "default": "scheme-1"
-      },
-      {
-        "type": "header",
-        "content": "t:sections.all.padding.section_padding_heading"
-      }, {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_top",
-        "default": 36
-      }, {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_bottom",
-        "default": 36
-      }
-    ],
-    "presets": [
-      {
-        "name": "Blog Posts"
-      }
-    ]
-  }
-{% endschema %}
+</div></div>{% schema %}
+{
+  "name": "Blog Posts v2",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        }, {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "article",
+      "id": "article",
+      "label": "Article"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
+    }, {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    }, {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    }, {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Posts"
+    }
+  ]
+}{% endschema %}
