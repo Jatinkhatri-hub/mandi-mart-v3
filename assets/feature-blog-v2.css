@@ -67,8 +67,8 @@
   position: absolute;
   gap: 20px;
   right: 20px;
-  
-
+  bottom: 0;
+  top: auto;
 }
 
 
@@ -112,6 +112,8 @@
     font-weight: 600;
     font-family: 'Poppins';
   }
+
+  .btn
 
 }
 
