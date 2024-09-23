@@ -177,7 +177,7 @@ function closeDropdown(dropdown, indicator, icon) {
   desktopBackdrop.classList.remove('show');
   indicator.classList.remove('show');
   icon.style.transform = 'rotate(0deg)';
-  dropdownIndicator.style.borderBottom = '30px solid white';
+  indicator.style.borderBottom = '30px solid c';
 }
 
 function toggleDropdown(dropdown, indicator, icon) {
