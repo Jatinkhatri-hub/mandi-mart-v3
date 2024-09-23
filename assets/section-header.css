@@ -383,7 +383,9 @@
   top: 52px;
 }
 
-
+.arrow-down.show {
+  display: block;
+}
 
 .dropdown-divider-mobile {
   display: none !important;
