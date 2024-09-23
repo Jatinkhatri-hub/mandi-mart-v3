@@ -64,7 +64,10 @@
   .article-card__wrapper {
     width: 385px;
     height: 430px;
-    
+  }
+
+  .article__img-wrapper {
+    width: 385px;
   }
 
 }
