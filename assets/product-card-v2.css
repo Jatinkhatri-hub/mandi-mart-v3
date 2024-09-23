@@ -45,13 +45,14 @@
   justify-content: center;
   margin: 9px 7px 0;
   background-color: #78C8C4;
+  border-radius: 4px;
 
 }
 
 .product-card__img-v2 {
   width: 150px;
   height: 125px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .product-card__rating-v2 {
