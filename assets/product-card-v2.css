@@ -39,17 +39,17 @@
 
 .product-card__img-wrapper-v2 {
   display: flex;
-  width: 155px;
+  width: 150px;
   height: 125px;
   align-items: center;
   justify-content: center;
   margin: 9px 7px 0;
   background-color: #78C8C4;
-  
+
 }
 
 .product-card__img-v2 {
-  width: 155px;
+  width: 150px;
   height: 125px;
   object-fit: contain;
 }
