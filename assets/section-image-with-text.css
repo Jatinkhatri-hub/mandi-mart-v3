@@ -47,7 +47,7 @@
 .iwt__button {
   cursor: pointer;
   border-radius: 80px;
-  padding: 1rem 8rem;
+  padding: .5rem 8rem;
   text-transform: capitalize;
   border: none;
   outline: none;
