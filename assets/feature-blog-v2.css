@@ -83,6 +83,10 @@
 
 
 @media screen and (min-width: 789px) {
+
+  .section-title__wrapper h2 {
+    text-align: start;
+  }
   
   .article-card__wrapper {
     width: 370px;
