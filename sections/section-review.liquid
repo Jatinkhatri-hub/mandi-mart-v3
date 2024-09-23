@@ -43,8 +43,11 @@
       {% for block in section.blocks %}
         {% assign index3 = forloop.index0 |  modulo: 3 %}
            
+        {% if index3 == 0 %}
 
         <div class=" swiper-slide swiper-slide-{{ section.id }}">
+          
+        {% endif %}
         <div class="review__card custom-card">
           <div class="review__card-header">
             <div class="review__user-wrapper">
