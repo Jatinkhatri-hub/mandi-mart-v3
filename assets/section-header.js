@@ -54,6 +54,15 @@ childLinks.forEach(link => {
   });
 });
 
+const firstChildLink = document.querySelector('.our-top-brands .child-links');
+if (firstChildLink) {
+  const collectionHandle = firstChildLink.getAttribute('data-collection-handle');
+  const previewContainer = firstChildLink.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
+  
+  // Pre-fetch product data for the first collection and display the products
+  fetchAndRenderProducts(collectionHandle, previewContainer);
+}
+
 // // Function to fetch and render random products
 // function fetchRandomProducts(collectionHandle, productPreview) {
 //   // Add fade-out class before changing the products
