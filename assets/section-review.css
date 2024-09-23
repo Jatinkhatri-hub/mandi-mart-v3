@@ -130,5 +130,7 @@
     padding: 25px
   }
 
-  revi
+  .review__verified-badge {
+    font-size: 14px;
+  }
 }
