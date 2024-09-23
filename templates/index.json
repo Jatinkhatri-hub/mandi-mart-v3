@@ -130,43 +130,64 @@
         "review_carousle_EEFHhP": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Erik",
+            "user_description": "Request quickly handled and sent.Arrived in good state and without European customs delays and extra costs.Excellent service and product!Very satisfied with MandiMart!Until next order! :)"
           }
         },
         "review_carousle_UTY3wA": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Ebune Esunju",
+            "user_description": "Well i order from Mandimart EU and their services are top notch. I order a lot of things online from about 30 stores regularly and i can confirm they are one of two who are the most reliable."
           }
         },
         "review_carousle_tpKhMt": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Razvan Ionescu",
+            "user_description": "The order has not arrived on time due to very dezastrous Romanian Post. After complaining to Mandimart I imediately got a replacement order sent with priority delivery."
           }
         },
         "review_carousle_wi49bP": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Laura Brooking",
+            "user_description": "Love Mandimart. They are a company with a heart and a passion for helping people"
           }
         },
         "review_carousle_QkRFjV": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Nadine Lubanda",
+            "user_description": "Excellent service every time. Been sourcing supplements for my family for over 2yrs with Mandimart. Never disappointed. Excellent customer service, prompt delivery. Simply the Best."
           }
         },
         "review_carousle_LbY9kw": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet"
+            "user_name": "Adrian",
+            "user_description": "Great range of products available.My order arrived quickly with no fuss.I highly recommend the company."
+          }
+        },
+        "review_carousle_U4AAA8": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Sonya",
+            "user_description": "Great and fast delivery but most importantly the nobs toothpaste is amazing! I feel my teeth so clean after using it. Too early to provide feedback on the long term usage."
+          }
+        },
+        "review_carousle_RxFXit": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Angela",
+            "user_description": "The customer service was absolutely wonderful. The gentlemen dealt with was patient and knowledgeable. He explained everything thoroughly and made me change my mind about ordering."
+          }
+        },
+        "review_carousle_77nazn": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Jaroslaw",
+            "user_description": "Very quick and honest service. We had one item sent in error. We contacted the shop and the response was super quick. The originally requested product was quickly dispatched and delivered."
           }
         }
       },
@@ -176,7 +197,10 @@
         "review_carousle_tpKhMt",
         "review_carousle_wi49bP",
         "review_carousle_QkRFjV",
-        "review_carousle_LbY9kw"
+        "review_carousle_LbY9kw",
+        "review_carousle_U4AAA8",
+        "review_carousle_RxFXit",
+        "review_carousle_77nazn"
       ],
       "settings": {
         "heading": "<p>Rich text<\/p>",
