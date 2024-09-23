@@ -103,6 +103,88 @@ childLinks.forEach(link => {
 
   const megaMenuItems = document.querySelectorAll('.nav-bar__mega-menu-item');
 
+  // const desktopBackdrop = document.getElementById('desktopBackdrop');
+
+megaMenuItems.forEach(item => {
+  const link = item.querySelector('a');
+  const childDropdown = item.querySelector('.mega-menu__child-dropdown');
+  const dropdownIndicator = item.querySelector('.arrow-down');
+  const icon = item.querySelector('.icon-arrow-down');
+
+  // Check if it's a touch device
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+  if (childDropdown) {
+    let timeout;
+
+    // Hover behavior for desktop
+    if (!isTouchDevice) {
+      link.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+        openDropdown(childDropdown, dropdownIndicator, icon);
+      });
+
+      link.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          closeDropdown(childDropdown, dropdownIndicator, icon);
+        }, 300);  // Slight delay for smoother experience
+      });
+
+      childDropdown.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+      });
+
+      childDropdown.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          closeDropdown(childDropdown, dropdownIndicator, icon);
+        }, 300);
+      });
+    }
+
+    // Click behavior for mobile
+    if (isTouchDevice) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleDropdown(childDropdown, dropdownIndicator, icon);
+      });
+
+      // Close dropdown when clicking outside
+      desktopBackdrop.addEventListener('click', () => {
+        closeDropdown(childDropdown, dropdownIndicator, icon);
+      });
+    }
+  }
+});
+
+// Helper functions
+function openDropdown(dropdown, indicator, icon) {
+  document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
+    openDropdown.classList.remove('open');
+  });
+
+  dropdown.classList.add('open');
+  desktopBackdrop.classList.add('show');
+  indicator.classList.add('show');
+  icon.style.transform = 'rotate(180deg)';
+}
+
+function closeDropdown(dropdown, indicator, icon) {
+  dropdown.classList.remove('open');
+  desktopBackdrop.classList.remove('show');
+  indicator.classList.remove('show');
+  icon.style.transform = 'rotate(0deg)';
+}
+
+function toggleDropdown(dropdown, indicator, icon) {
+  const isOpen = dropdown.classList.contains('open');
+
+  if (isOpen) {
+    closeDropdown(dropdown, indicator, icon);
+  } else {
+    openDropdown(dropdown, indicator, icon);
+  }
+}
+
   // megaMenuItems.forEach(item => {
   //   const link = item.querySelector('a');
   //   const childDropdown = item.querySelector('.mega-menu__child-dropdown');
