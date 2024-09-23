@@ -46,6 +46,7 @@
   width: 310px;
   height: 230px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
 .review__card-header {
