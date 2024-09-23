@@ -379,7 +379,6 @@
   left: 50%;
   transform: translate(-50%);
   top: 52px;
-  display: block !important;
 }
 
 .dropdown-divider-mobile {
