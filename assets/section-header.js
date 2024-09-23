@@ -164,7 +164,7 @@ childLinks.forEach(link => {
             icon.style.transform = 'rotate(360deg)';
             dropdownIndicator.style.borderBottom = '30px solid transparent';
             dropdownIndicator.style.display = 'none';
-          }, 200);
+          }, 400);
         });
       }
   
