@@ -366,7 +366,7 @@
   pointer-events: none; /* Prevent interactions when closed */
   opacity: 0;
   transform: translateY(-20px);
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease, transform;
   gap: 0
 
 }
