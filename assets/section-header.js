@@ -103,6 +103,98 @@ childLinks.forEach(link => {
 
   const megaMenuItems = document.querySelectorAll('.nav-bar__mega-menu-item');
 
+  megaMenuItems.forEach(item => {
+    const link = item.querySelector('a');
+    const childDropdown = item.querySelector('.mega-menu__child-dropdown');
+    const dropdownIndicator = item.querySelector('.arrow-down');
+    const icon = item.querySelector('.icon-arrow-down');
+    
+    // Check if it's a mobile or touch device
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (childDropdown) {
+      let timeout;
+
+      // Handle hover behavior for desktop
+      if (!isTouchDevice) {
+        // Show dropdown and indicator when hovering on the link
+        link.addEventListener('mouseenter', function (e) {
+          clearTimeout(timeout); // Clear any previous close timeout
+          e.preventDefault();
+
+          const isOpen = childDropdown.classList.contains('open');
+
+          // Close other open dropdowns
+          document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
+            openDropdown.classList.remove('open');
+          });
+
+          if (!isOpen) {
+            childDropdown.classList.add('open');
+            dropdownIndicator.style.display = 'block';
+            icon.style.transform = 'rotate(180deg)';
+          }
+        });
+
+        // Add a slight delay before hiding dropdown and indicator
+        link.addEventListener('mouseleave', function (e) {
+          timeout = setTimeout(() => {
+            childDropdown.classList.remove('open');
+            dropdownIndicator.style.display = 'none';
+            icon.style.transform = 'rotate(360deg)';
+          }, 200); // Adjust this delay if needed
+        });
+
+        // Prevent accidental closing when hovering inside the dropdown
+        childDropdown.addEventListener('mouseenter', function () {
+          clearTimeout(timeout);
+        });
+
+        // Close the dropdown when moving out of the dropdown area
+        childDropdown.addEventListener('mouseleave', function () {
+          timeout = setTimeout(() => {
+            childDropdown.classList.remove('open');
+            dropdownIndicator.style.display = 'none';
+            icon.style.transform = 'rotate(360deg)';
+          }, 200);
+        });
+      }
+
+      // Handle click behavior for mobile devices
+      if (isTouchDevice) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault(); // Prevent the default anchor behavior
+
+          const isOpen = childDropdown.classList.contains('open');
+
+          // Close any open dropdowns
+          document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
+            openDropdown.classList.remove('open');
+          });
+
+          if (!isOpen) {
+            childDropdown.classList.add('open');
+            dropdownIndicator.style.display = 'block';
+            icon.style.transform = 'rotate(180deg)';
+          } else {
+            childDropdown.classList.remove('open');
+            dropdownIndicator.style.display = 'none';
+            icon.style.transform = 'rotate(360deg)';
+          }
+        });
+
+        // Optional: Close dropdown when clicking outside
+        document.getElementById('desktopBackdrop').addEventListener('click', () => {
+          document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
+            openDropdown.classList.remove('open');
+            dropdownIndicator.style.display = 'none';
+            icon.style.transform = 'rotate(360deg)';
+          });
+        });
+      }
+    }
+  });
+
   // megaMenuItems.forEach(item => {
   //   const link = item.querySelector('a');
   //   const childDropdown = item.querySelector('.mega-menu__child-dropdown');
