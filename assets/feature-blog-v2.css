@@ -111,6 +111,7 @@
 
   .article-card__content {
     font-size: 15px;
+    line-height: 23px;
   }
 
   .article-card__read-more {
