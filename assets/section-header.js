@@ -97,32 +97,32 @@ childLinks.forEach(link => {
 //     .catch(error => console.error('Error fetching products:', error));
 // }
 
-// // Function to render product cards
-// function renderProductCards(products, container) {
-//   let productHTML = '';
-//   products.forEach(product => {
-//     const productImage = product.images.length > 0 ? product.images[0].src : 'default-image.jpg';
-//     const productURL = `/products/${product.handle}`;
-//     productHTML += `
-//       <div href='${productURL}' class="product-card show">
-//         <a href='${productURL}'>
-//           <p class="mega-menu__product-title">${product.title}</p>
-//         </a>
-//         <a href='${productURL}' class="mega-menu__product-card-container">
-//           <div class="mega-menu__product-card-info">
-//             <p>${product.vendor}</p>
-//             <p class="mega-menu__product-price">$${product.variants[0].price}</p>
-//           </div>
-//           <div class="mega-menu__product-img-wrapper">
-//             <img src="${product.images[0].src}" alt="${product.title}" class="mega-menu__product-image"/>
-//           </div>
-//         </a>
-//         <a href='${productURL}' class="mega-menu__atc-btn" href="#" data-variant-id="${product.variants[0].id}">+ ADD TO CART</a>
-//       </div>
-//     `;
-//   });
-//   container.innerHTML = productHTML; // Update the product preview container
-// }
+// Function to render product cards
+function renderProductCards(products, container) {
+  let productHTML = '';
+  products.forEach(product => {
+    const productImage = product.images.length > 0 ? product.images[0].src : 'default-image.jpg';
+    const productURL = `/products/${product.handle}`;
+    productHTML += `
+      <div href='${productURL}' class="product-card show">
+        <a href='${productURL}'>
+          <p class="mega-menu__product-title">${product.title}</p>
+        </a>
+        <a href='${productURL}' class="mega-menu__product-card-container">
+          <div class="mega-menu__product-card-info">
+            <p>${product.vendor}</p>
+            <p class="mega-menu__product-price">$${product.variants[0].price}</p>
+          </div>
+          <div class="mega-menu__product-img-wrapper">
+            <img src="${product.images[0].src}" alt="${product.title}" class="mega-menu__product-image"/>
+          </div>
+        </a>
+        <a href='${productURL}' class="mega-menu__atc-btn" href="#" data-variant-id="${product.variants[0].id}">+ ADD TO CART</a>
+      </div>
+    `;
+  });
+  container.innerHTML = productHTML; // Update the product preview container
+}
 
 // // Event listener for hovering over child links
 // const childLinks = document.querySelectorAll('.our-top-brands .child-links');
