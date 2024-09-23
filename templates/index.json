@@ -229,7 +229,7 @@
           "type": "button",
           "settings": {
             "button_label": "Button",
-            "button_url": "",
+            "button_url": "shopify://collections/aspire-nutrition",
             "outline_btn": false
           }
         }
