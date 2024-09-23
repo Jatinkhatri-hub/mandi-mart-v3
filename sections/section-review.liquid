@@ -86,6 +86,22 @@
     
   }
 
+  /* Styles for Swiper slides */
+.swiper-slide {
+  transition: opacity 0.3s ease;  /* Smooth transition for opacity */
+}
+
+/* Lower the opacity for overflow (non-active) slides */
+.swiper-slide-prev, .swiper-slide-next {
+  opacity: 0.5; /* Set desired opacity for slides outside the main view */
+}
+
+/* Make the active slide fully visible */
+.swiper-slide-active {
+  opacity: 1;  /* Full opacity for the current slide */
+}
+
+
   .swiper-btn {
     display: flex !important;
     width: 40px;
