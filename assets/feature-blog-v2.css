@@ -63,7 +63,12 @@
 }
 
 .review-btn-group {
+  display: flex;
+  position: absolute;
+  gap: 20px;
+  right: 20px;
   
+
 }
 
 
