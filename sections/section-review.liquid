@@ -283,7 +283,22 @@
       },
       observer: true, 
       observeParents: true,
-    });    
+    }); 
+    
+    new Swiper(swiperMobileClass, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: swiperButtonNextClass,
+      prevEl: swiperButtonPrevClass,
+    },
+    pagination: {
+      el: swiperPaginationClass,
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+  });
 });
 </script>
 
