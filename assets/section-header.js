@@ -160,8 +160,8 @@ megaMenuItems.forEach(item => {
 function openDropdown(dropdown, indicator, icon) {
   document.querySelectorAll('.mega-menu__child-dropdown.open').forEach(openDropdown => {
     openDropdown.classList.remove('open');
-    indicator.style.borderBottom = '30px solid transparent';
-    indicator.
+  //  indicator.style.borderBottom = '30px solid transparent';
+    indicator.classList.remove('show');
   });
 
   dropdown.classList.add('open');
