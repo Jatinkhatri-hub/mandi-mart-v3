@@ -148,7 +148,7 @@ childLinks.forEach(link => {
             icon.style.transform = 'rotate(360deg)';
             dropdownIndicator.style.borderBottom = '30px solid transparent';
             dropdownIndicator.style.display = 'none';
-          }, 400); // Add delay to prevent accidental close
+          }, 200); // Add delay to prevent accidental close
         });
   
         // Prevent accidental close when moving inside the dropdown
@@ -164,7 +164,7 @@ childLinks.forEach(link => {
             icon.style.transform = 'rotate(360deg)';
             dropdownIndicator.style.borderBottom = '30px solid transparent';
             dropdownIndicator.style.display = 'none';
-          }, 400);
+          }, 200);
         });
       }
   
