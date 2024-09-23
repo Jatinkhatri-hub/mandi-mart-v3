@@ -94,7 +94,10 @@
     font-size: 15px;
   }
 
-  .ar
+  .article-card__read-more {
+    font-size: 20px;
+    font-weight: ;
+  }
 
 }
 
