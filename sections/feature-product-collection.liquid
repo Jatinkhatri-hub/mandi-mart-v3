@@ -17,7 +17,7 @@
 {%- endstyle -%}
 
 {%  assign no_of_product_mobile = section.settings.products_per_slide_mobile %} 
-{%  assign divClose = section.settings.products_per_slide_mobile  %} 
+{%  assign divClose = section.settings.products_per_slide_mobile |  minus: 1 %} 
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} custom-section">
   <div class="page-width collection-container color-{{ section.settings.color_scheme }}">
@@ -101,7 +101,7 @@
     <div class="swiper mySwiper-{{ section.id }} swiper-mobile">
       <div class="swiper-wrapper">
         {% for product in section.settings.collection.products %}
-          {% assign index4 = forloop.index0 | modulo: 4 %}
+          {% assign index4 = forloop.index0 | modulo: no %}
 
           {% if index4 == 0 %}
             <div class="swiper-slide">
