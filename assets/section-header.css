@@ -419,7 +419,7 @@
 .mega-menu__child-dropdown.open {
   pointer-events: auto;
   opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  transition: translateY(0);
   max-width: 1350px;
 }
 
