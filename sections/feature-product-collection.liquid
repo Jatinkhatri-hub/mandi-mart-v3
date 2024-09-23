@@ -266,7 +266,8 @@ document.addEventListener('DOMContentLoaded', () => {
   new Swiper(swiperDesktopClass, {
     slidesPerView: 1,
     spaceBetween: 10,
-    effect: ''
+    effect: 'slide',
+    speed: 600,
     navigation: {
       nextEl: swiperButtonNextClass,
       prevEl: swiperButtonPrevClass,
@@ -283,6 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new Swiper(swiperMobileClass, {
     slidesPerView: 1,
     spaceBetween: 10,
+    
     navigation: {
       nextEl: swiperButtonNextClass,
       prevEl: swiperButtonPrevClass,
