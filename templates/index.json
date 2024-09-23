@@ -270,8 +270,8 @@
         "section_color_scheme": "",
         "collection": "anrc-protocol",
         "color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "brand_collection_G4Yttb": {
@@ -320,8 +320,8 @@
         "heading": "<p>Explore Our Top Brands</p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "explore_VwPVRU": {
