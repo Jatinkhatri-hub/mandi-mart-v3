@@ -77,7 +77,11 @@
     height: 225px;
   }
 
-  .article__date
+  .article__date {
+    font-size: 14px;
+  }
+
+  .artic
 
 }
 
