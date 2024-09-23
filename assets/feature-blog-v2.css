@@ -68,7 +68,8 @@
 
   .article__img-wrapper {
     width: 385px;
-    height: ;
+    height: 225px;
+    border-radius: 1;
   }
 
 }
