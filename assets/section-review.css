@@ -28,7 +28,10 @@
   justify-content: center;
 }
 
-.review__
+.review-list {
+  justify-content: center;
+  align-items: ;
+}
 
 .review__card {
   display: flex;
