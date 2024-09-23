@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const swiperButtonPrev = document.querySelector(swiperButtonPrevClass);
 
   if (swiperContainer && swiperPagination && swiperButtonNext && swiperButtonPrev) {
-    let swiper = new Swiper(swiperDesktopClass, {
+    let swiper = new Swiper(swiperContainer, {
       slidesPerView: 'auto',
       spaceBetween: 10,
       centeredSlides: true,
