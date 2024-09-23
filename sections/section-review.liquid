@@ -38,7 +38,7 @@
         <h1 class="review__section-header">{{ section.settings.heading }}</h1>
       </div>
 
-      <div class="review__list-wrapper swiper mySwiper mySwiper-{{ section.id }} swiper-desktop">
+      <div class="review__list-wrapper swiper mySwiper mySwiper-{{ section.id }} swiper-desktop-{{ section.id }}">
       <div class="swiper-wrapper swiper-wrapper-{{ section.id }}">
       {% for block in section.blocks %}
         {% assign index3 = forloop.index0 |  modulo: 3 %}
