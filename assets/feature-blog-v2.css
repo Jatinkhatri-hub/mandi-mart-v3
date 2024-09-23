@@ -71,8 +71,8 @@
   top: auto;
 }
 
-.article-card__read-more {
-  
+.article-card__read-more svg {
+  height: 13px;
 }
 
 
