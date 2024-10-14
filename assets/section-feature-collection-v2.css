@@ -52,7 +52,7 @@
   display: inline-block;
 }
 
-.fea::after {
+.feature-collection__title::after {
   content: '';
   position: absolute;
   width: 100%; /* Full width underline */
