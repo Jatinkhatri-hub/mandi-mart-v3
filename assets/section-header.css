@@ -232,6 +232,10 @@
   max-height: 0;
   opacity: 0;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
 }
 
 .mega-menu-dropdown__child-dropdown.open {
