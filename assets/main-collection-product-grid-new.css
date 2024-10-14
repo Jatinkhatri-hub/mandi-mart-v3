@@ -79,7 +79,11 @@
   flex-direction: column;
 }
 
-.filter-dropdown-
+.filter-dropdown-divider {
+  border: 1px solid #DADADA;
+  display: block !important;
+  width: 100%;
+}
 
 .collection__custom-sort-by {
   display: flex;
