@@ -241,8 +241,8 @@
         "button_JGj4N3": {
           "type": "button",
           "settings": {
-            "button_label": "Button",
-            "button_url": "",
+            "button_label": "Shop Now",
+            "button_url": "shopify://collections/clearance",
             "outline_btn": false
           }
         }
