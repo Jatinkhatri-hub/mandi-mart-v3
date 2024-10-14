@@ -10,6 +10,8 @@ addEventListener('DOMContentLoaded', () => {
 
   const childTwoDropdown = document.querySelectorAll('.categories .child-links');
 
+  const 
+
 
   const productPreviewClass = 'product-preview';
 
@@ -109,7 +111,7 @@ childLinks.forEach(link => {
 
   
 
-  childLinks.forEach(link => {
+  childTwoDropdown.forEach(link => {
     const dropdown = link.querySelector('.mega-menu-dropdown__child-dropdown');
     let closeTimeout; // Variable to store the timeout ID
   
