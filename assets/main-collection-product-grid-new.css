@@ -182,7 +182,9 @@
   font-size: 1.8rem;
 }
 
-.li__remove-default-style:
+.li__remove-default-style:hover {
+  cursor: pointer;
+}
 
 .li__remove-default-style label {
   display: flex;
