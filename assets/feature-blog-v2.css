@@ -41,8 +41,8 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.article__img:hover {
-  scale: (1.2);
+.article-card__wrapper:hover .article__img {
+  transform: ;
 }
 
 .article__info-wrapper {
