@@ -83,7 +83,7 @@ childLinks.forEach(link => {
     fetchRandomProducts(collectionHandle, previewContainer); // Fetch random products for the first child element
   }
 
-  const secondChild
+  const subChildLink = document.querySelector('.')
 
 
   navOpenBtn.addEventListener('click', () => {
