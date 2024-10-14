@@ -400,10 +400,14 @@
   margin-block: 50px;
 }
 
+.categories .child-links-group {
+
+}
+
 .child-links-group {
   /* display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr)); */
-  /* max-height: 180px;
+  max-height: 180px;
   flex-wrap: wrap;
   margin: 0;
   width: 100%;
