@@ -84,7 +84,9 @@ childLinks.forEach(link => {
   }
 
   const subChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links');
-  subChildLink.forEach()
+  subChildLink.forEach('mouseover', function() {
+
+  });
 
   const firstSubChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links');
   if(firstSubChildLink) {
