@@ -242,7 +242,7 @@
 }
 
 .mega-menu-dropdown__child-dropdown-links {
-  text-decoration: n;
+  list-style-type: none;
 }
 
 
