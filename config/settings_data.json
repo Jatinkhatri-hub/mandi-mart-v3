@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo_width": 90,
@@ -257,7 +257,7 @@
       },
       "scheme-0ecd3135-8fa9-45f3-8af3-f71617a54edb": {
         "settings": {
-          "background": "#55c9c2",
+          "background": "#26a49d",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",

@@ -1,19 +1,19 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
       "type": "coll-section",
       "settings": {
-        "heading": "Your One-Stop-Shop For Better Health",
-        "subhead": "Improve your well-being with the right supplements, for the best price available.",
+        "heading": "Lorem ipsum dolor sit amet cons",
+        "subhead": "Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames",
         "image": "shopify://shop_images/Screenshot_from_2024-08-13_17-23-19.png"
       }
     },
@@ -28,64 +28,36 @@
         "review_carousle_qiFgje": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Sioban",
-            "user_description": "He is so pleasant and helpful. If there is an issue he always deals with it straight away. We have been buying supplements from mandimart for a few years now. They are superb quality."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_nph63F": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Aditi",
-            "user_description": "Amazing service, I am regular online shopper at Mandi. I was looking for aspire brand and found here. Super fast delivery, very very happy, thank you :-) Aditi."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_bDcgaM": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Imamul Haq",
-            "user_description": "I received product after 15 days even though i have paid premium postage charge. However, the customer service try to help, appreciate that"
-          }
-        },
-        "review_carousle_JMEyf7": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Geetha",
-            "user_description": "Product reached very well and I'm happy with the service! Using it for my daughter and looking forward to seeing an overall improvement in her well-being."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_hLEVar": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Ebune Esunju",
-            "user_description": "Rapid service as promised, same day shipping for orders before 14:00 hr, no errors on orders and the product is good quality."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_X4XMYU": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Paula Esterly",
-            "user_description": "It was seamless to get a product that I can't obtain anywhere in my own country. Thank you for making it available, fast shipping even coming from the UK."
-          }
-        },
-        "review_carousle_eVfnFz": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Kimberly Auger",
-            "user_description": "What a great experience! My order was well packaged and arrived quickly. I'm in the US and it got here faster that some things I have ordered here in my country."
-          }
-        },
-        "review_carousle_bizPfa": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Caroline",
-            "user_description": "Great choice, especially in the specialist field of Autism keeping up with new developments, and always a great service. Have been using Mandi Mart for well over 15 years and they never disappoint."
-          }
-        },
-        "review_carousle_eHaT4q": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Rebekah Rottier",
-            "user_description": "just got the products as a part of the function medicine plan by my doctor. I'm happy with the timely shipping and easy purchase from the website and cost as I don't have insurance."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         }
       },
@@ -93,15 +65,11 @@
         "review_carousle_qiFgje",
         "review_carousle_nph63F",
         "review_carousle_bDcgaM",
-        "review_carousle_JMEyf7",
         "review_carousle_hLEVar",
-        "review_carousle_X4XMYU",
-        "review_carousle_eVfnFz",
-        "review_carousle_bizPfa",
-        "review_carousle_eHaT4q"
+        "review_carousle_X4XMYU"
       ],
       "settings": {
-        "heading": "<p>Hear From Our Customers</p>",
+        "heading": "<p>Rich text</p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "padding_top": 36,
