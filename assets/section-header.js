@@ -10,7 +10,7 @@ addEventListener('DOMContentLoaded', () => {
 
   const childTwoDropdown = document.querySelectorAll('.categories .child-links');
 
-  const 
+  const productRenderTw
 
 
   const productPreviewClass = 'product-preview';
