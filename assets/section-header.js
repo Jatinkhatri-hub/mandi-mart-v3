@@ -83,7 +83,7 @@ childLinks.forEach(link => {
     fetchRandomProducts(collectionHandle, previewContainer); // Fetch random products for the first child element
   }
 
-  const subChildLink = document.querySelector('.')
+  const subChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links')
 
 
   navOpenBtn.addEventListener('click', () => {
