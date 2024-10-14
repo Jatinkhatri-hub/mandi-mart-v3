@@ -109,46 +109,51 @@ childLinks.forEach(link => {
 
   
 
-// Add click event for mobile behavior
-childTwoDropdown.forEach(link => {
-  const dropdown = link.querySelector('.mega-menu-dropdown__child-dropdown');
-
-  // Handle mobile click event
-  link.addEventListener('click', function(event) {
-    if (window.innerWidth < 769) { // Adjust based on your mobile breakpoint
-      event.preventDefault(); // Prevent default link behavior
-
-      // Toggle the dropdown visibility on mobile
-      if (dropdown.classList.contains('open')) {
-        dropdown.classList.remove('open'); // Hide dropdown
-      } else {
-        // Close all other open dropdowns
-        document.querySelectorAll('.mega-menu-dropdown__child-dropdown.open').forEach(d => {
-          d.classList.remove('open');
-        });
-        dropdown.classList.add('open'); // Show dropdown
+  childLinks.forEach(link => {
+    const dropdown = link.querySelector('.mega-menu-dropdown__child-dropdown');
+    let closeTimeout; // Variable to store the timeout ID
+  
+    // Handle mobile click event
+    link.addEventListener('click', function(event) {
+      if (window.innerWidth < 769) { // Adjust based on your mobile breakpoint
+        event.preventDefault(); // Prevent default link behavior
+  
+        // Toggle the dropdown visibility on mobile
+        if (dropdown.classList.contains('open')) {
+          dropdown.classList.remove('open'); // Hide dropdown
+        } else {
+          // Close all other open dropdowns
+          document.querySelectorAll('.mega-menu-dropdown__child-dropdown.open').forEach(d => {
+            d.classList.remove('open');
+          });
+          dropdown.classList.add('open'); // Show dropdown
+        }
       }
+    });
+  
+    // Handle desktop mouseenter and mouseleave events
+    if (window.innerWidth >= 769) { // Adjust based on your desktop breakpoint
+      link.addEventListener('mouseenter', function() {
+        // Clear any existing close timeout to prevent premature hiding
+        clearTimeout(closeTimeout);
+        dropdown.classList.add('open'); // Show the dropdown on mouseenter
+      });
+  
+      link.addEventListener('mouseleave', function() {
+        // Set a timeout to close the dropdown after a short delay
+        closeTimeout = setTimeout(function() {
+          dropdown.classList.remove('open'); // Hide the dropdown after delay
+        }, 300); // Adjust the delay (300ms) as per your requirement
+      });
     }
   });
-
-  // Handle desktop mouseenter and mouseleave events
-  if (window.innerWidth >= 769) { // Adjust based on your desktop breakpoint
-    link.addEventListener('mouseenter', function() {
-      dropdown.classList.add('open'); // Show the dropdown on mouseenter
+  
+  // Optional: Reset dropdowns on window resize
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.mega-menu-dropdown__child-dropdown').forEach(d => {
+      d.classList.remove('open'); // Reset all dropdowns when resizing
     });
-
-    link.addEventListener('mouseleave', function() {
-      dropdown.classList.remove('open'); // Hide the dropdown on mouseleave
-    });
-  }
-});
-
-// Optional: Reset dropdowns on window resize
-window.addEventListener('resize', () => {
-  document.querySelectorAll('.mega-menu-dropdown__child-dropdown').forEach(d => {
-    d.classList.remove('open'); // Reset all dropdowns when resizing
   });
-});
 
 
 megaMenuItems.forEach(item => {
