@@ -234,6 +234,10 @@
   transition: max-height 0.3s ease-out, opacity 0.3s ease-in;
 }
 
+.mega-menu-dropdown__child-dropdown.open {
+  
+}
+
 
 
 
