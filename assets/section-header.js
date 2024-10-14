@@ -8,7 +8,7 @@ addEventListener('DOMContentLoaded', () => {
   const backdrop = document.getElementById('backdrop');
   const desktopBackdrop = document.getElementById('desktopBackdrop');
 
-  const childTwoDropdown = document.q
+  const childTwoDropdown = document.querySelectorAll('.categories');
 
 
   const productPreviewClass = 'product-preview';
