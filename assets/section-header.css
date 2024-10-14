@@ -111,7 +111,7 @@
   padding-block: 25px;
   transition: width .5s;
   overflow-y: auto;
-  border-bottom: 1px solid ;
+  border-bottom: 1px solid #E9E9E9;
 }
 
 .mega-menu__items {
