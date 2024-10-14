@@ -111,6 +111,8 @@ megaMenuItems.forEach(item => {
   const dropdownIndicator = item.querySelector('.arrow-down');
   const icon = item.querySelector('.icon-arrow-down');
 
+  const 
+
   // Check if it's a touch device
   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
@@ -141,7 +143,7 @@ megaMenuItems.forEach(item => {
       });
     }
 
-    
+
 
     // Click behavior for mobile
     if (isTouchDevice) {
