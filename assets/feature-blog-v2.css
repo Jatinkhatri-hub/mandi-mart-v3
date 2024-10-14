@@ -15,8 +15,8 @@
   margin-right: 10px;
 }
 
-.article-card__wrapper:hover article {
-  scale: (1);
+.article-card__wrapper:hover article_img {
+  scale: (1.2);
 }
 
 
