@@ -404,7 +404,9 @@
   max-height: max-content !important;
 }
 
-.mega-menu-dropdown {
+.mega-menu-dropdown__child-dropdown {
+  display: flex;
+  ju
 }
 
 .child-links-group {
