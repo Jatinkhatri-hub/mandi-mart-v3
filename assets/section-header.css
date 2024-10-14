@@ -245,7 +245,7 @@
   list-style-type: none;
 }
 
-.mega-menu-dropdown__child-dropdown-links {
+.mega-menu-dropdown__child-dropdown-links, .mega-menu-dropdown__child-dropdown  {
   position: relative;
   display: inline-block; /* Makes sure the underline is sized correctly */
   color: #000; /* Text color */
