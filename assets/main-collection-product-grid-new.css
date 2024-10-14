@@ -272,7 +272,9 @@ product-card__atc-btn-v2 svg {
     border-radius: .5rem;
   }
 
-  .custom-collection-product-grid
+  .custom-collection-product-grid {
+    gap: 10px !important;
+  }
 
   .filter-collection__page-width {
     padding: 0 1rem;
