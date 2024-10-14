@@ -266,7 +266,7 @@ product-card__atc-btn-v2 svg {
 }
 
 /* Basic link or text style */
-.filter {
+.filter-name {
   position: relative;
   display: inline-block; /* Makes sure the underline is sized correctly */
   color: #000; /* Text color */
