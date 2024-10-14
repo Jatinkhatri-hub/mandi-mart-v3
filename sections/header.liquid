@@ -130,10 +130,11 @@
                   {% endif %}
                 </a>
                 {% if child.links != blank %} 
-                  {% assign child_two_collection_handle = child_two.url | remove: '/collections/' %}
-                  {% assign child_two_collection = collections[child_two_collection_handle] %}
+                  
                   <ul class="mega-menu-dropdown__child-dropdown">
                     {% for child_two in child.links %}
+                      {% assign child_two_collection_handle = child_two.url | remove: '/collections/' %}
+                      {% assign child_two_collection = collections[child_two_collection_handle] %}
                     <li class="mega-menu-dropdown__child-dropdown-links">
                       <a href="{{ child_two.url }}">
                         {{ child_two.title }}
