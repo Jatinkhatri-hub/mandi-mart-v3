@@ -83,7 +83,7 @@ childLinks.forEach(link => {
     fetchRandomProducts(collectionHandle, previewContainer); // Fetch random products for the first child element
   }
 
-  const subChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links');
+  const subChildLink = document.querySelectorAll('.mega-menu-dropdown__child-dropdown-links');
   subChildLink.forEach(link => {
     link.addEventListener('mouseover', function() {
       const collectionTwoHandle = subChildLink.getAttribute('data-two-collection-handle');
