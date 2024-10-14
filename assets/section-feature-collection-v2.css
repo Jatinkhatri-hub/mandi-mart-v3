@@ -40,7 +40,7 @@
   width: 150px;
   height: 150px;
   object-fit: contain;
-  transition: transform 1s ease-in-out;
+  transition: transform .6s ease-in-out;
 }
 
 .feature-collection__title {
