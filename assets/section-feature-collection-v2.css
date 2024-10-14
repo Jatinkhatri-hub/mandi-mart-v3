@@ -21,7 +21,9 @@
   color: rgb(var(--color-foreground));
 }
 
-.feature-collection__card-wrapper:hover 
+.feature-collection__card-wrapper:hover .feature-collection__img {
+  
+}
 
 
 .feature-collection__img-wrapper {
