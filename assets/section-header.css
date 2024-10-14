@@ -235,7 +235,8 @@
 }
 
 .mega-menu-dropdown__child-dropdown.open {
-  
+  max-height: 100%;
+  opacity: 0;
 }
 
 
