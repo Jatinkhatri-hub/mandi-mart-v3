@@ -73,6 +73,7 @@
 
 .collection__filter-dropdown ul {
   padding: 0;
+  gap: 14px;
 }
 
 .collection__custom-sort-by {
