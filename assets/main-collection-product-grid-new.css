@@ -274,7 +274,7 @@ product-card__atc-btn-v2 svg {
 }
 
 /* Create the underline effect */
-.hover-underline::after {
+.filter-name::after {
   content: '';
   position: absolute;
   width: 100%; /* Full width underline */
