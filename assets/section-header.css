@@ -404,6 +404,8 @@
   max-height: max-content !important;
 }
 
+.categories .child-links-group 
+
 .child-links-group {
   /* display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr)); */
