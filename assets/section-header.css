@@ -401,7 +401,7 @@
 }
 
 .categories .child-links-group {
-
+  max-height: auto !important;
 }
 
 .child-links-group {
