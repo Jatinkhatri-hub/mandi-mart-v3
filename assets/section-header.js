@@ -156,7 +156,9 @@ megaMenuItems.forEach(item => {
   }
 });
 
-function openChildDropdown()
+function openChildDropdown() {
+  
+}
 
 // Helper functions
 function openDropdown(dropdown, indicator, icon) {
