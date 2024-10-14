@@ -288,7 +288,7 @@ product-card__atc-btn-v2 svg {
 }
 
 /* On hover, animate the underline */
-.hover-underline:hover::after {
+.filter-name:hover::after {
   transform: scaleX(1); /* Full width underline on hover */
   transform-origin: bottom left; /* Animation ends at the left */
 }
