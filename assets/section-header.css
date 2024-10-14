@@ -411,6 +411,10 @@
   justify-content: flex-start;
 }
 
+.max-height {
+  
+}
+
 .child-links-group li {
   width: 300px;
   margin-right: 30px;
