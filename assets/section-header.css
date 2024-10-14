@@ -411,9 +411,11 @@
   justify-content: flex-start;
 }
 
-.max-height {
+.child-links-group:f
+
+/* .max-height {
   max-height: 180px;
-}
+} */
 
 .child-links-group li {
   width: 300px;
