@@ -136,7 +136,7 @@
                       {% assign child_two_collection_handle = child_two.url | remove: '/collections/' %}
                       {% assign child_two_collection = collections[child_two_collection_handle] %}
                     <li class="mega-menu-dropdown__child-dropdown-links"
-                    data-two-collection-handle = "{{ child_two_collection }}"
+                    data-two-collection-handle = "{{ child_two_collection_handle }}"
                     >
                       <a href="{{ child_two.url }}">
                         {{ child_two.title }}
