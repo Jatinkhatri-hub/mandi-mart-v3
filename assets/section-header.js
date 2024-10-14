@@ -94,7 +94,7 @@ childLinks.forEach(link => {
 
   const firstSubChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links');
   if(firstSubChildLink) {
-    const collectionTwoHandle = subChildLink.getAttribute('data-two-collection-handle');
+    const collectionTwoHandle = firstSubChildLink.getAttribute('data-two-collection-handle');
     const previewContainer = firstChildLink.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
     fetchRandomProducts(collectionTwoHandle, previewContainer);
   }
