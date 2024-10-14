@@ -254,7 +254,7 @@
 }
 
 /* Create the underline effect */
-.mega-menu-dropdown__child-dropdown-links::after {
+.mega-menu-dropdown__child-dropdown-links::after , mega-menu-dropdown__child-dropdown::after {
   content: '';
   position: absolute;
   width: 100%; /* Full width underline */
