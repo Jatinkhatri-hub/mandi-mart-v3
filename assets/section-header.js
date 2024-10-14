@@ -141,6 +141,8 @@ megaMenuItems.forEach(item => {
       });
     }
 
+    
+
     // Click behavior for mobile
     if (isTouchDevice) {
       link.addEventListener('click', (e) => {
