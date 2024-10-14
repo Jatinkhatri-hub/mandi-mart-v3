@@ -84,10 +84,7 @@ childLinks.forEach(link => {
   }
 
   const subChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links');
-  subChildLink.forEach('mouseover', function() {
-    const collectionTwoHandle = subChildLink.getAttribute('data-two-collection-handle');
-    const previewContainer = firstChildLink.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
-    fetchRandomProducts(collectionTwoHandle, previewContainer);
+  subChildLink.forEach(
   });
 
   const firstSubChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links');
