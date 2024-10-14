@@ -268,7 +268,7 @@
 }
 
 /* On hover, animate the underline */
-.mega-menu-dropdown__child-dropdown-links:hover::after {
+.mega-menu-dropdown__child-dropdown-links:hover::after , .mega-menu-dropdown__child-dropdown:hover::after {
   transform: scaleX(1); /* Full width underline on hover */
   transform-origin: bottom left; /* Animation ends at the left */
 }
