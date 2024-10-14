@@ -245,7 +245,7 @@
   list-style-type: none;
 }
 
-.mega-menu-dropdown__child-dropdown-links, .mega-menu-dropdown__child-dropdown  {
+.mega-menu-dropdown__child-dropdown-links {
   position: relative;
   display: inline-block; /* Makes sure the underline is sized correctly */
   color: #000; /* Text color */
@@ -254,7 +254,7 @@
 }
 
 /* Create the underline effect */
-.mega-menu-dropdown__child-dropdown-links::after , .mega-menu-dropdown__child-dropdown::after {
+.mega-menu-dropdown__child-dropdown-links::after {
   content: '';
   position: absolute;
   width: 100%; /* Full width underline */
@@ -268,7 +268,7 @@
 }
 
 /* On hover, animate the underline */
-.mega-menu-dropdown__child-dropdown-links:hover::after , .mega-menu-dropdown__child-dropdown:hover::after {
+.mega-menu-dropdown__child-dropdown-links:hover::after {
   transform: scaleX(1); /* Full width underline on hover */
   transform-origin: bottom left; /* Animation ends at the left */
 }
