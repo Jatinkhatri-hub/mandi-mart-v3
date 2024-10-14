@@ -142,8 +142,8 @@
                         {{ child_two.title }}
                       </a>
                     </li>
-                    {%  assign countTwo= countTwo | plus : 1 %}
-                    {% if countTwo == 3 or countTwo == 7 or countTwo == 11 or countTwo == 15 or index_mod == 19 or index_mod == 24 %}
+                    {%  assign countTwo = countTwo | plus : 1 %}
+                    {% if countTwo == 4 or countTwo == 8 or countTwo == 11 or countTwo == 15 or countTwo == 19 or countTwo == 24 %}
                       <div class="dropdown-divider-mobile"></div>
                     {% endif %}
                     {% endfor %}
