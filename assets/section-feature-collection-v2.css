@@ -22,7 +22,7 @@
 }
 
 .feature-collection__card-wrapper:hover .feature-collection__img {
-  transform: ;
+  transform: scale(1.2);
 }
 
 
@@ -39,6 +39,7 @@
   width: 150px;
   height: 150px;
   object-fit: contain;
+  transition: ;
 }
 
 .feature-collection__title {
