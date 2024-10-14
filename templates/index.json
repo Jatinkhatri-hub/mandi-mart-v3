@@ -143,36 +143,43 @@
         "review_carousle_EEFHhP": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Nadine Lubanda",
+            "user_description": "Joe & his team goes above & beyond to assist you as a customer, they are efficient & good at what they do. I thank God i found Mandimart in 2022."
           }
         },
         "review_carousle_UTY3wA": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Audrey Joseph",
+            "user_description": "Easy to navigate, detailed information about product, easy to search and find products, easy straight forward payment system and goods delivered in 48hrs.Great shopping experience!"
           }
         },
         "review_carousle_tpKhMt": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Hope Harris",
+            "user_description": "The official UK stockist for NOBS remineralising Toothpaste tablets. I was fooled by a fake product so glad to be able to order the real thing. It was easy and quick to order."
           }
         },
         "review_carousle_wi49bP": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Sophia",
+            "user_description": "Rapid delivery and excellent customer services. Mandimart have made it so much easier to access to supplements we need. Great team of people. I would highly recommend them."
           }
         },
         "review_carousle_QkRFjV": {
           "type": "review_carousle",
           "settings": {
+            "user_name": "Erik",
+            "user_description": "Request quickly handled and sent. Arrived in good state and without European customs delays and extra costs. Excellent service and product!Very satisfied with MandiMart!Until next order! :)"
+          }
+        },
+        "review_carousle_JTrfgt": {
+          "type": "review_carousle",
+          "settings": {
             "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_description": "Lorem ipsum dolor sit amet"
           }
         }
       },
@@ -181,7 +188,8 @@
         "review_carousle_UTY3wA",
         "review_carousle_tpKhMt",
         "review_carousle_wi49bP",
-        "review_carousle_QkRFjV"
+        "review_carousle_QkRFjV",
+        "review_carousle_JTrfgt"
       ],
       "settings": {
         "heading": "<p>Rich text</p>",
