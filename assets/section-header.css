@@ -403,17 +403,17 @@
 .child-links-group {
   /* display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr)); */
-  /* max-height: 180px; */
+  /* max-height: 180px;
   flex-wrap: wrap;
   margin: 0;
   width: 100%;
   align-items: baseline;
   justify-content: flex-start;
 }
-
+/* 
 .child-links-group:first {
-  
-}
+
+} */
 
 /* .max-height {
   max-height: 180px;
