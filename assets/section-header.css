@@ -568,6 +568,7 @@
     max-height: 550px;
     z-index: 12;
     padding-right: 150px;
+    overflow-y: auto;
   }
 
   #desktopBackdrop {
