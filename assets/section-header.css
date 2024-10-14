@@ -245,6 +245,33 @@
   list-style-type: none;
 }
 
+.mega {
+  position: relative;
+  display: inline-block; /* Makes sure the underline is sized correctly */
+  color: #000; /* Text color */
+  text-decoration: none; /* Remove default underline */
+  cursor: pointer;
+}
+
+/* Create the underline effect */
+.filter-name::after {
+  content: '';
+  position: absolute;
+  width: 100%; /* Full width underline */
+  height: 2px; /* Thickness of the underline */
+  background-color: #000; /* Underline color */
+  bottom: 0; /* Position at the bottom of the text */
+  left: 0;
+  transform: scaleX(0); /* Start with no underline (scaleX=0) */
+  transform-origin: bottom right; /* Animation starts from the right */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* On hover, animate the underline */
+.li__remove-default-style:hover .filter-name::after {
+  transform: scaleX(1); /* Full width underline on hover */
+  transform-origin: bottom left; /* Animation ends at the left */
+}
 
 
 
