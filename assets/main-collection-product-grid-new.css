@@ -74,6 +74,8 @@
 .collection__filter-dropdown ul {
   padding: 0;
   gap: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .collection__custom-sort-by {
