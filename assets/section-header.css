@@ -405,8 +405,7 @@
 }
 
 .mega-menu-dropdown__child-dropdown {
-  display: flex;
-  ju
+  columns: ;
 }
 
 .child-links-group {
