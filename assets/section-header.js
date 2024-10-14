@@ -85,7 +85,8 @@ childLinks.forEach(link => {
 
   const subChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links');
   if(subChildLink) {
-    const collectionTwoHandle = subChildLink.getAttribute('data-two')
+    const collectionTwoHandle = subChildLink.getAttribute('data-two-collection-handle');
+    const p
   }
 
 
