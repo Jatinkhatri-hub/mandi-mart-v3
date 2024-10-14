@@ -15,7 +15,9 @@
   margin-right: 10px;
 }
 
-.article-card__wrapper:hover 
+.article-card__wrapper:hover img {
+  scale: ();
+}
 
 
 .article__img-wrapper {
