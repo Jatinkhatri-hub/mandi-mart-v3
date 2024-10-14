@@ -85,7 +85,9 @@ childLinks.forEach(link => {
 
   const subChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links');
   subChildLink.forEach(link => {
-    link.addEventListener()
+    link.addEventListener(
+      
+    )
   });
 
   const firstSubChildLink = document.querySelector('.mega-menu-dropdown__child-dropdown-links');
