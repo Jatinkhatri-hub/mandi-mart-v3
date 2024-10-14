@@ -408,7 +408,9 @@
   column-count: 3;
 }
 
-.mega-menu-dropdown__child-dropdown-links
+.mega-menu-dropdown__child-dropdown-links {
+  width: ;
+}
 
 .child-links-group {
   /* display: grid;
