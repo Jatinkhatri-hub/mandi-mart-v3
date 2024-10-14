@@ -228,7 +228,11 @@
   display: none;
 }
 
-.mega-menu-drop
+.mega-menu-dropdown__child-dropdown {
+  max-height: 0;
+  opacity: 0;
+  
+}
 
 
 
