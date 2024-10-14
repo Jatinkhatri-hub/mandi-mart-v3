@@ -83,7 +83,7 @@ childLinks.forEach(link => {
     fetchRandomProducts(collectionHandle, previewContainer); // Fetch random products for the first child element
   }
 
-  const productRenderTwo = document.querySelectorAll('.categories ')
+  
 
 
   navOpenBtn.addEventListener('click', () => {
