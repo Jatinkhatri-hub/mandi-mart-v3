@@ -65,6 +65,11 @@
   transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
+.hover-underline:hover::after {
+  transform: scaleX(1); /* Full width underline on hover */
+  transform-origin: bottom left; /* Animation ends at the left */
+}
+
 @media screen and (min-width: 789px) {
   .feature-collection__header-wrapper {
     font-size: 37px;
