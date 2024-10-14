@@ -87,7 +87,7 @@ childLinks.forEach(link => {
   subChildLink.forEach(link => {
     link.addEventListener('mouseover', function() {
       const collectionTwoHandle = link.getAttribute('data-two-collection-handle');
-      const previewContainer = subChildLink.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
+      const previewContainer = link.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
       fetchRandomProducts(collectionTwoHandle, previewContainer);
     })
   });
