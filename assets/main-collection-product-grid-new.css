@@ -183,7 +183,7 @@
 }
 
 .li__remove-default-style:hover {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .li__remove-default-style label {
