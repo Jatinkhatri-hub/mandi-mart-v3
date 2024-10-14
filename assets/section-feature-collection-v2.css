@@ -52,6 +52,19 @@
   display: inline-block;
 }
 
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%; /* Full width underline */
+  height: 2px; /* Thickness of the underline */
+  background-color: #000; /* Underline color */
+  bottom: 0; /* Position at the bottom of the text */
+  left: 0;
+  transform: scaleX(0); /* Start with no underline (scaleX=0) */
+  transform-origin: bottom right; /* Animation starts from the right */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
 @media screen and (min-width: 789px) {
   .feature-collection__header-wrapper {
     font-size: 37px;
