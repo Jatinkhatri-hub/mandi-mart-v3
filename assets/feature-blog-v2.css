@@ -39,6 +39,10 @@
   align-items: baseline;
 }
 
+.article__info-wrapper:hover {
+  text-transform: ;
+}
+
 .article__date {
   font-size: 11px;
   color: #364241;
