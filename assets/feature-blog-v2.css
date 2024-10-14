@@ -19,7 +19,9 @@
   scale: (1.2);
 } */
 
-.article-card__wrapper:hover 
+.article-card__wrapper:hover .article__img {
+  scale: ;
+}
 
 
 
