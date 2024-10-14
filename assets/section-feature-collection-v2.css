@@ -19,8 +19,9 @@
   gap: 1.8rem;
   text-decoration: none;
   color: rgb(var(--color-foreground));
-  
 }
+
+.feature-collection__card-wrapper:hover 
 
 
 .feature-collection__img-wrapper {
