@@ -245,7 +245,7 @@
   list-style-type: none;
 }
 
-.mega {
+.mega-menu-dropdown__child-dropdown-links {
   position: relative;
   display: inline-block; /* Makes sure the underline is sized correctly */
   color: #000; /* Text color */
@@ -254,7 +254,7 @@
 }
 
 /* Create the underline effect */
-.filter-name::after {
+.mega-menu-dropdown__child-dropdown-links::after {
   content: '';
   position: absolute;
   width: 100%; /* Full width underline */
