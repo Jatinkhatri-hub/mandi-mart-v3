@@ -229,13 +229,13 @@
         "title_77rBtW": {
           "type": "title",
           "settings": {
-            "title": "Lorem ipsum dolor sit amet cons ectetur acus sit amet"
+            "title": "Your One-Stop-Shop For Better Health"
           }
         },
         "paragraph_hkJMKB": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "<p>Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames gravida et rhoncus ut. Sit cras!</p>"
+            "paragraph": "<p>Improve your well-being with the right supplements, for the best price available.</p>"
           }
         },
         "button_JGj4N3": {
@@ -256,7 +256,7 @@
         "heading": "Heading",
         "image": "shopify://shop_images/Yams_-_2024-05-21T174334_1.png",
         "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-0ecd3135-8fa9-45f3-8af3-f71617a54edb",
+        "color_scheme": "scheme-9aca750f-bec0-4192-bfb3-2c9a1106e968",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -270,8 +270,8 @@
         "section_color_scheme": "",
         "collection": "anrc-protocol",
         "color_scheme": "scheme-6940cb94-c89f-4f72-9e98-10b956f1bed6",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "brand_collection_G4Yttb": {
@@ -320,8 +320,8 @@
         "heading": "<p>Explore Our Top Brands</p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "explore_VwPVRU": {
