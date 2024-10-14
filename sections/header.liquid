@@ -131,7 +131,7 @@
                 </a>
                 {% if child.links != blank %} 
                   {% assign child_two_collection_handle = child_two.url | remove: '/collections/' %}
-                  {% assign child_collection = collections[child_collection_handle] %}
+                  {% assign child_two_collection = collections[child_two_collection_handle] %}
                   <ul class="mega-menu-dropdown__child-dropdown">
                     {% for child_two in child.links %}
                     <li class="mega-menu-dropdown__child-dropdown-links">
