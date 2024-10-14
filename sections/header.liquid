@@ -127,12 +127,13 @@
                 </a>
                 {% if child.links != blank %} 
                   <ul class="mega-menu-dropdown__child-dropdown">
-                    
+                    {% for child_two in child.links %}
                     <li class="mega-menu-dropdown__child-dropdown">
                       <a href="{{}}">
 
                       </a>
                     </li>
+                    {% endfor %}
                   </ul>
                 {% endif %}
 
