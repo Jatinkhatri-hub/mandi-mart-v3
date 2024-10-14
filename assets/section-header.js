@@ -8,6 +8,8 @@ addEventListener('DOMContentLoaded', () => {
   const backdrop = document.getElementById('backdrop');
   const desktopBackdrop = document.getElementById('desktopBackdrop');
 
+  const child
+
 
   const productPreviewClass = 'product-preview';
 
@@ -104,7 +106,7 @@ childLinks.forEach(link => {
   const megaMenuItems = document.querySelectorAll('.nav-bar__mega-menu-item');
 
   // const desktopBackdrop = document.getElementById('desktopBackdrop');
-  
+
 
 megaMenuItems.forEach(item => {
   const link = item.querySelector('a');
