@@ -110,7 +110,7 @@ childLinks.forEach(link => {
   
 
 // Add click event for mobile behavior
-childLinks.forEach(link => {
+childTwoDropdown.forEach(link => {
   const dropdown = link.querySelector('.mega-menu-dropdown__child-dropdown');
 
   // Handle mobile click event
