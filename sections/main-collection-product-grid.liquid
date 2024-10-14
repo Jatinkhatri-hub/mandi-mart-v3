@@ -127,8 +127,9 @@
 
                           </label>
                           {%  assign count = count | plus : 1 %}
-                          
+                          {% if index_mod == 3 or index_mod == 7 or index_mod == 11 or index_mod == 15 or index_mod == 19 or index_mod == 24 %}
                           <div class="filter-dropdown-divider"></div>
+                          {% endif %}
                         </li>
                       {%- endfor -%}
                     </ul>
