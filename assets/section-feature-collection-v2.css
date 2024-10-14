@@ -65,7 +65,7 @@
   transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
-.hover-underline:hover::after {
+.feature-collection__card-wrapper:hover::after {
   transform: scaleX(1); /* Full width underline on hover */
   transform-origin: bottom left; /* Animation ends at the left */
 }
