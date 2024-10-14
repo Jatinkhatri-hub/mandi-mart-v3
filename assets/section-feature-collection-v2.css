@@ -52,7 +52,7 @@
   display: inline-block;
 }
 
-.hover-underline::after {
+.fea::after {
   content: '';
   position: absolute;
   width: 100%; /* Full width underline */
