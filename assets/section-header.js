@@ -107,7 +107,7 @@ childLinks.forEach(link => {
 
   // const desktopBackdrop = document.getElementById('desktopBackdrop');
 
-  const childLinks = document.querySelectorAll('.child-links');
+  
 
 // Add click event for mobile behavior
 childLinks.forEach(link => {
