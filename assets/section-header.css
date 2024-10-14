@@ -404,13 +404,15 @@
   max-height: max-content !important;
 }
 
+.categories .chi
+
 .mega-menu-dropdown__child-dropdown {
   column-count: 3;
 }
 
-.mega-menu-dropdown__child-dropdown-links {
-  width: ;
-}
+/* .mega-menu-dropdown__child-dropdown-links {
+  width: auto;
+} */
 
 .child-links-group {
   /* display: grid;
