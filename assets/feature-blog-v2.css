@@ -15,7 +15,7 @@
   margin-right: 10px;
 }
 
-.article-card__wrapper:hover .article_img {
+.article-card__wrapper:hover .article__img {
   scale: (1.2);
 }
 
@@ -46,7 +46,7 @@
   align-items: baseline;
 }
 
-.article__info-wrapper:hover {
+.article__:hover {
   text-decoration: underline;
 }
 
