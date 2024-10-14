@@ -404,7 +404,8 @@
   max-height: max-content !important;
 }
 
-.categories .child-links-group 
+.categories .child-links-group mega {
+}
 
 .child-links-group {
   /* display: grid;
