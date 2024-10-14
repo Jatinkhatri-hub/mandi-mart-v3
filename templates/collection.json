@@ -73,6 +73,27 @@
             "user_name": "Dianne Farrugia",
             "user_description": "MandiMart is a small family run company but there customer service is amazing. So helpful and they work very hard to provide the best service."
           }
+        },
+        "review_carousle_y9tFLf": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Geetha",
+            "user_description": "Product reached very well and I'm happy with the service! Using it for my daughter and looking forward to seeing an overall improvement in her well-being."
+          }
+        },
+        "review_carousle_dULCbz": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Paula Easterly",
+            "user_description": "It was seamless to get a product that I can't obtain anywhere in my own country. Thank you for making it available, fast shipping even coming from the UK."
+          }
+        },
+        "review_carousle_HCTLJd": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet"
+          }
         }
       },
       "block_order": [
@@ -82,7 +103,10 @@
         "review_carousle_bDcgaM",
         "review_carousle_hLEVar",
         "review_carousle_X4XMYU",
-        "review_carousle_QUY9ci"
+        "review_carousle_QUY9ci",
+        "review_carousle_y9tFLf",
+        "review_carousle_dULCbz",
+        "review_carousle_HCTLJd"
       ],
       "settings": {
         "heading": "<p>Rich text</p>",
