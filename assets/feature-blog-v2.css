@@ -40,7 +40,7 @@
 }
 
 .article__info-wrapper:hover {
-  text-transform: ;
+  text-decoration: underline;
 }
 
 .article__date {
