@@ -48,6 +48,8 @@
   text-align: center;
   text-decoration: none;
   margin: 0;
+  position: relative;
+  display: inline-block;
 }
 
 @media screen and (min-width: 789px) {
