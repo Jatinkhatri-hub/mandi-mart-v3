@@ -261,7 +261,9 @@ product-card__atc-btn-v2 svg {
   right: 10px;
 }
 
-.custom-collection
+.custom-collection-product-grid {
+  gap: 20px;
+}
 
 @media screen and (max-width: 896px) {
 
