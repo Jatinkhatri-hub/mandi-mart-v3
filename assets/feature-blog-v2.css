@@ -46,7 +46,7 @@
   align-items: baseline;
 }
 
-.article__:hover {
+.article-card__wrapper:hover {
   text-decoration: underline;
 }
 
