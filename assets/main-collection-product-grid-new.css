@@ -276,6 +276,7 @@ product-card__atc-btn-v2 svg {
   display: inline-block; /* Makes sure the underline is sized correctly */
   color: #000; /* Text color */
   text-decoration: none; /* Remove default underline */
+  cursor: pointer;
 }
 
 /* Create the underline effect */
