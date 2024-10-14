@@ -405,7 +405,7 @@
 }
 
 .mega-menu-dropdown__child-dropdown {
-  columns: ;
+  column-count: 3;
 }
 
 .child-links-group {
