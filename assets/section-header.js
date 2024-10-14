@@ -109,7 +109,7 @@ childLinks.forEach(link => {
 
   childTwoDropdown.forEach(btn => {
     btn.addEventListener('mouseenter', () => {
-      document.querySelector('.mega-menu')
+      document.querySelector('.mega-menu-dropdown__child-dropdown')
     })
 
   });
