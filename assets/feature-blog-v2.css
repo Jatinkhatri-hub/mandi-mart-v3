@@ -19,9 +19,7 @@
   scale: (1.2);
 } */
 
-.article-card__wrapper:hover .article__img {
-  scale: ;
-}
+
 
 
 
@@ -41,6 +39,10 @@
   height: 175px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+}
+
+.article-card__wrapper:hover .article__img {
+  scale: (1.2);
 }
 
 .article__info-wrapper {
