@@ -265,6 +265,34 @@ product-card__atc-btn-v2 svg {
   gap: 20px !important;
 }
 
+/* Basic link or text style */
+.filter {
+  position: relative;
+  display: inline-block; /* Makes sure the underline is sized correctly */
+  color: #000; /* Text color */
+  text-decoration: none; /* Remove default underline */
+}
+
+/* Create the underline effect */
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%; /* Full width underline */
+  height: 2px; /* Thickness of the underline */
+  background-color: #000; /* Underline color */
+  bottom: 0; /* Position at the bottom of the text */
+  left: 0;
+  transform: scaleX(0); /* Start with no underline (scaleX=0) */
+  transform-origin: bottom right; /* Animation starts from the right */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* On hover, animate the underline */
+.hover-underline:hover::after {
+  transform: scaleX(1); /* Full width underline on hover */
+  transform-origin: bottom left; /* Animation ends at the left */
+}
+
 @media screen and (max-width: 896px) {
 
   .custom-filters {
