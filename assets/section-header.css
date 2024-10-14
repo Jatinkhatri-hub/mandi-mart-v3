@@ -571,6 +571,10 @@
     overflow-y: auto;
   }
 
+  .mega-menu-dropdown__child-dropdown.open {
+    margin-left: 4rem;
+  }
+
   #desktopBackdrop {
     display: flex !important;
   position: fixed;
