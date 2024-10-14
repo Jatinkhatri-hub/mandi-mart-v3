@@ -569,6 +569,7 @@
     z-index: 12;
     padding-right: 150px;
     overflow-y: auto;
+    height: 100%;
   }
 
   .mega-menu-dropdown__child-dropdown.open {
