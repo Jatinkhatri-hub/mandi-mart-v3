@@ -124,10 +124,10 @@
                     <img src="{{ child_collection.image | img_url: 'medium' }}" class="collection-brand__featured-image">
                   {% endif %}
                   {{ child.title }}
-                  {% if link.links != blank %}
+                  {% if child.links != blank %}
                     <span class="icon-arrow-down"> {% render 'icon-arrow-down' %}</span>
                     <span class="arrow-down"></span>
-                    {% endif %}
+                  {% endif %}
                 </a>
                 {% if child.links != blank %} 
                   <ul class="mega-menu-dropdown__child-dropdown">
