@@ -55,6 +55,7 @@
   height: 310px;
   flex-wrap: wrap;
   gap: 3rem;
+  width: 100%;
 }
 
 .footer__menu-item-wrapper {
