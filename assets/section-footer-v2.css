@@ -155,6 +155,8 @@
     justify-content: space-evenly;
   }
 
+  
+
   .footer__brand-info {
     width: 380px;
     align-items: baseline;
@@ -178,6 +180,7 @@
   .footer__menu-wrapper {
     height: 350px;
     gap: 0;
+    width: auto;
   }
 
   .footer__menu-item {
