@@ -54,6 +54,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "custom_liquid_WpCeLV": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<a href=\"https://quickstart-e9e06218.myshopify.com/a/review/write?productid={{ product.id }}\">Write a Review</a>"
+          }
         }
       },
       "block_order": [
@@ -64,7 +70,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "custom_liquid_WpCeLV"
       ],
       "settings": {
         "enable_sticky_info": true,
