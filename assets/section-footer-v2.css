@@ -178,6 +178,7 @@
   .footer__menu-wrapper {
     height: 350px;
     gap: 0;
+    width: auto;
   }
 
   .footer__menu-item {
