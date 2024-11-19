@@ -7,5 +7,8 @@
 
 
 .about-us__banner-img-wrapper {
-  max-width: ;
+  max-width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  
 }
