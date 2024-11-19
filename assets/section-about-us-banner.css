@@ -7,7 +7,10 @@
 
 
 .about-us__banner-info {
-  di
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  felx
 }
 
 .about-us__banner-img-wrapper {
