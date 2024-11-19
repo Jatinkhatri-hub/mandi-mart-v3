@@ -145,19 +145,28 @@
     "blocks": {
       "733389323033596483": {
         "type": "shopify://apps/okendo/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "show_preview_data": true
         }
       },
-      "11532412952436166569": {
-        "type": "shopify://apps/loox-reviews/blocks/loox-inject/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-        "disabled": false,
-        "settings": {}
+      "7612553728132747764": {
+        "type": "shopify://apps/stamped-reviews/blocks/net-promoter-score-form-modal/a103faaf-2125-4b0e-89fa-de5149736723",
+        "disabled": true,
+        "settings": {
+          "email": "",
+          "name": "",
+          "title": "",
+          "message": "Enable advanced features and increase your monthly order limit to match your business's needs.",
+          "reason": "",
+          "thank_you": "",
+          "label_name": "",
+          "label_email": ""
+        }
       },
       "4697538150380142411": {
         "type": "shopify://apps/stamped-reviews/blocks/reviews-popup/a103faaf-2125-4b0e-89fa-de5149736723",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "layout": "horizontal",
           "effect": "slidetop",
@@ -179,9 +188,14 @@
           "with_photos": false
         }
       },
+      "11532412952436166569": {
+        "type": "shopify://apps/loox-reviews/blocks/loox-inject/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+        "disabled": true,
+        "settings": {}
+      },
       "1575957009345749421": {
         "type": "shopify://apps/stamped-reviews/blocks/side-drawer/a103faaf-2125-4b0e-89fa-de5149736723",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "show_avatar": true,
           "position": "left",
@@ -203,20 +217,6 @@
           "fill_empty": false,
           "random": false,
           "with_photos": false
-        }
-      },
-      "7612553728132747764": {
-        "type": "shopify://apps/stamped-reviews/blocks/net-promoter-score-form-modal/a103faaf-2125-4b0e-89fa-de5149736723",
-        "disabled": false,
-        "settings": {
-          "email": "",
-          "name": "",
-          "title": "",
-          "message": "Enable advanced features and increase your monthly order limit to match your business's needs.",
-          "reason": "",
-          "thank_you": "",
-          "label_name": "",
-          "label_email": ""
         }
       }
     },
