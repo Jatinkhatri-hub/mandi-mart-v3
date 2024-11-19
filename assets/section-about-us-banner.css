@@ -1,3 +1,6 @@
 .about-us__banner-wrapper {
-  display: ;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  
 }
