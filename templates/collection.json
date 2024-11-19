@@ -19,8 +19,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "settings": {
-      }
+      "settings": {}
     },
     "review": {
       "type": "section-review",
@@ -28,88 +27,48 @@
         "review_carousle_qiFgje": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Jaroslaw",
-            "user_description": "Very quick and honest service. We had one item sent in error. We contacted the shop and the response was super quick. The originally requested product was quickly dispatched and delivered."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_nph63F": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Siobhan",
-            "user_description": "He is so pleasant and helpful. If there is an issue he always deals with it straight away. We have been buying supplements from mandimart for a few years now. They are superb quality."
-          }
-        },
-        "review_carousle_hD9DJy": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Sonya Gerasimova",
-            "user_description": "Great and fast delivery but most importantly the nobs toothpaste is amazing! I feel my teeth so clean after using it. Too early to provide feedback on the long term usage."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_bDcgaM": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Aditi",
-            "user_description": "Amazing service, I am regular online shopper at Mandi. I was looking for aspire brand and found here. Super fast delivery, very very happy, thank you :-) Aditi"
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_hLEVar": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Adrian Incledon-Webber",
-            "user_description": "Great range of products available.My order arrived quickly with no fuss.I highly recommend the company."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_X4XMYU": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Caroline",
-            "user_description": "Great choice, especially in the specialist field of Autism keeping up with new developments, and always a great service. Have been using Mandi Mart for well over 15 years and they never disappoint."
-          }
-        },
-        "review_carousle_QUY9ci": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Dianne Farrugia",
-            "user_description": "MandiMart is a small family run company but there customer service is amazing. So helpful and they work very hard to provide the best service."
-          }
-        },
-        "review_carousle_y9tFLf": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Geetha",
-            "user_description": "Product reached very well and I'm happy with the service! Using it for my daughter and looking forward to seeing an overall improvement in her well-being."
-          }
-        },
-        "review_carousle_dULCbz": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Paula Easterly",
-            "user_description": "It was seamless to get a product that I can't obtain anywhere in my own country. Thank you for making it available, fast shipping even coming from the UK."
-          }
-        },
-        "review_carousle_HCTLJd": {
-          "type": "review_carousle",
-          "settings": {
-            "user_name": "Anna Kotlobay",
-            "user_description": "Really fast delivery. Well packaged. Great price, great Unique product and great service from seller. Would buy from this seller again. I really appreciate an Amazing Deal from the seller and educational information."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         }
       },
       "block_order": [
         "review_carousle_qiFgje",
         "review_carousle_nph63F",
-        "review_carousle_hD9DJy",
         "review_carousle_bDcgaM",
         "review_carousle_hLEVar",
-        "review_carousle_X4XMYU",
-        "review_carousle_QUY9ci",
-        "review_carousle_y9tFLf",
-        "review_carousle_dULCbz",
-        "review_carousle_HCTLJd"
+        "review_carousle_X4XMYU"
       ],
       "settings": {
-        "heading": "<p>Hear From Our Customers</p>",
+        "heading": "<p>Rich text</p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "padding_top": 36,
