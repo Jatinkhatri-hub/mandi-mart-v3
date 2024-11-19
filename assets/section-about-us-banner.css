@@ -12,5 +12,10 @@
   overflow: hidden;
   height: 300px;;
   display: flex;
-  al
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us__banner-img {
+  object-fit: ;
 }
