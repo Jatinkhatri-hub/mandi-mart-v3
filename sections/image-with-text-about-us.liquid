@@ -24,7 +24,7 @@
         </p>
       </div>
       <div class="about-us__banner-img-wrapper">
-        <img src="{{ section.settings.image | im }}">
+        <img src="{{ section.settings.image |  image_url: width: section.settings.image.width  }}"  class="">
       </div>
     </div>
   </div>
