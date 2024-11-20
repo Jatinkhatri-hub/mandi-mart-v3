@@ -29,7 +29,7 @@
                     <h3>{{ block.settings.title }}</h3>
                     <p>{{ block.settings.description }}</p>
                 </div>
-                <img src="{{}}" alt="First Event" class="timeline-image">
+                <img src="{{ block.settings.image | ima }}" alt="First Event" class="timeline-image">
             </div>
         
         {% endcase %} 
