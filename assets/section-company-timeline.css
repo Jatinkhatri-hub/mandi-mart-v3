@@ -1,10 +1,10 @@
-.comtimeline {
+.company-timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 0;
 }
-.timeline-line {
+.company-timeline__line {
   position: absolute;
   width: 4px;
   background-color: #333;
