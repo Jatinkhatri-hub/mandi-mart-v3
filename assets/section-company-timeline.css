@@ -8,9 +8,10 @@
 .company-timeline__line {
   position: absolute;
   width: 3px;
-  background-color: #333;
+  background-color: #074542;
   top: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  /* left: 50%;
+  transform: translateX(-50%); */
 }
