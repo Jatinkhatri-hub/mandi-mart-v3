@@ -22,7 +22,10 @@
   justify-content: center;
 }
 
-.about-us
+.about-us__banner-review-img {
+  width: 330px;
+  object-fit: ;
+}
 
 
 .about-us__banner-title {
