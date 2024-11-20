@@ -21,7 +21,7 @@
       </div>
       {% for block in section.blocks %}
         {%  case block.type %}
-          {% when '' %} 
+          {% when 'timeline_point' %} 
             <div class="timeline-point" style="top: 10%;"></div>
             <div class="timeline-item left">
                 <div class="timeline-content">
