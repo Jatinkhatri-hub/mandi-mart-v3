@@ -17,8 +17,12 @@
 .about-us__banner-review-img-wrapper {
   width: 330px;
   height: 26px;
-  display: fle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.about-us
 
 
 .about-us__banner-title {
