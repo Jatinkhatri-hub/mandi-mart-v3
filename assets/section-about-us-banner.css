@@ -62,7 +62,7 @@
 @media screen and (min-width: 789px) {
   
   .about-us__banner-wrapper {
-    grid-template-columns: ;
+    grid-template-columns: repeat(2, );
   }
 
 }
