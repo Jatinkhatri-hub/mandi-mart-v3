@@ -19,15 +19,16 @@
     <div class="company-timeline">
       <div class="company-timeline__line">
       </div>
-      {}
-      <div class="timeline-point" style="top: 10%;"></div>
-      <div class="timeline-item left">
-          <div class="timeline-content">
-              <h3>First Event</h3>
-              <p>Description of the first important event in the timeline.</p>
-          </div>
-          <img src="/api/placeholder/200/200" alt="First Event" class="timeline-image">
-      </div>
+      {% for block in section.blocks %}
+        <div class="timeline-point" style="top: 10%;"></div>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>First Event</h3>
+                <p>Description of the first important event in the timeline.</p>
+            </div>
+            <img src="/api/placeholder/200/200" alt="First Event" class="timeline-image">
+        </div>
+      {% endfor %}
     </div>
   </div>
 </div>
