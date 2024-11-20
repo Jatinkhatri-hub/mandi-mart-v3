@@ -87,7 +87,9 @@
     text-align: start;
   }
   
-  .about-us__banner
+  .about-us__banner-img-wrapper {
+    max-width: ;
+  }
 
 
 }
