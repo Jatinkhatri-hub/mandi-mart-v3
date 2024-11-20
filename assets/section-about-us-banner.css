@@ -33,7 +33,9 @@
   text-align: center;
 }
 
-.about-us__banner-info 
+.about-us__banner-info p {
+  font: 400 16px ;
+}
 
 
 
