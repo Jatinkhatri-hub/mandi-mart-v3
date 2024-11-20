@@ -38,6 +38,33 @@
   </div>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      const timelinePoints = document.querySelectorAll('.timeline-point');
+
+      const revealOnScroll = () => {
+          const triggerBottom = window.innerHeight * 0.8;
+
+          timelineItems.forEach((item, index) => {
+              const itemTop = item.getBoundingClientRect().top;
+              const point = timelinePoints[index];
+
+              if (itemTop < triggerBottom) {
+                  item.classList.add('reveal');
+                  point.classList.add('active');
+              } else {
+                  item.classList.remove('reveal');
+                  point.classList.remove('active');
+              }
+          });
+      };
+
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll(); // Trigger initial check
+  });
+</script>
+
 {%  schema  %} 
 {
   "name": "Company Timeline",
