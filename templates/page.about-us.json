@@ -184,6 +184,7 @@
         "brand_Tyiaz3",
         "brand_at4QYd"
       ],
+      "disabled": true,
       "settings": {
         "heading": "<p>All Brands</p>",
         "section_color_scheme": "",
@@ -194,6 +195,7 @@
     },
     "bd_explore_KAazk9": {
       "type": "BD-explore",
+      "disabled": true,
       "settings": {
         "section_color_scheme": "",
         "color_scheme": "",
@@ -206,11 +208,25 @@
         "image_3": "shopify://shop_images/Screenshot_from_2024-08-13_17-18-56.png",
         "link_3": "shopify://collections/new-products"
       }
+    },
+    "image_with_text_about_us_n4Qq4C": {
+      "type": "image-with-text-about-us",
+      "settings": {
+        "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
+        "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
+        "heading": "Our Story: Family-Owned Since 1999",
+        "description": "Lorem ipsum dolor sit amet consectetur. Vitae vivamus nullam pharetra maecenas elementum ultricies faucibus!",
+        "review_image": "shopify://shop_images/Frame_1484581704.png",
+        "image": "shopify://shop_images/Rectangle_6628.png",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "brand_directory_BcWLGN",
-    "bd_explore_KAazk9"
+    "bd_explore_KAazk9",
+    "image_with_text_about_us_n4Qq4C"
   ]
 }
