@@ -65,7 +65,10 @@
     grid-template-columns: repeat(2, minmax(0 , 1fr));
   }
 
-  .about-us__banner-review-img-wrapper
+  .about-us__banner-review-img-wrapper {
+    width: 430px;
+    
+  }
 
 
 }
