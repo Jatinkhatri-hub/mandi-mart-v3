@@ -91,7 +91,9 @@
     max-width: 550px;
   }
 
-  .about-us__banner-img
+  .about-us__banner-img {
+    max-width: 550px;
+  }
 
 
 }
