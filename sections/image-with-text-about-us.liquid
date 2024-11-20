@@ -19,7 +19,7 @@
     <div class="about-us__banner-wrapper">
       <div class="about-us__banner-info">
         <div class="about-us__banner-review">
-          <img src="{{ section.settings.review_image | ima }}">
+          <img src="{{ section.settings.review_image |  image_url: width: section.settings.review_image.width }}">
         </div>
         <h2 class="about-us__banner-title">{{ section.settings.heading }}</h2>
         <p>
