@@ -9,7 +9,10 @@
   align-items: center;
 }
 
-.main-product
+.main-product-star__wrapper {
+  display: flex;
+  al
+}
 
 .main-product-star__wrapper svg {
   width: 21px;
