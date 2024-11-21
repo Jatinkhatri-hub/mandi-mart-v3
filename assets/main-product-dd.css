@@ -61,7 +61,8 @@
 }
 
 .main-product__current-price, .main-product__cap {
-  font: 600 31px 'Poppins'
+  font: 600 31px 'Poppins';
+  
 }
 
 
