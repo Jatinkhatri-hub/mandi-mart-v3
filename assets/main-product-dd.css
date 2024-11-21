@@ -37,7 +37,9 @@
 .main-product__media-wrapper {
   overflow: hidden;
   height: 340px;
-  
+  background: #E5E5E5;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .main-product__img {
