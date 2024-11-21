@@ -22,6 +22,8 @@
 
 .main-product__review-text {
   font: 400 15px 'Poppins';
+  display: flex;
+  align-items: center;
 }
 
 .main-product__title h2 {
