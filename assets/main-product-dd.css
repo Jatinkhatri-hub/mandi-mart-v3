@@ -53,6 +53,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
+  padding-block: 2.5rem;
 }
 
 .main-product__price-wrapper {
