@@ -11,7 +11,8 @@
 
 .main-product-star__wrapper {
   display: flex;
-  al
+  align-items: center;
+  
 }
 
 .main-product-star__wrapper svg {
