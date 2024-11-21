@@ -6,5 +6,8 @@
 
 .main-product-review-star__wrapper {
   display: flex;
-
+  align-items: center;
 }
+
+
+
