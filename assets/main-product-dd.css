@@ -54,6 +54,7 @@
   justify-content: center;
   align-items: baseline;
   padding-block: 2.5rem;
+  gap: 20px;
 }
 
 .main-product__price-wrapper {
