@@ -85,7 +85,9 @@
 }
 
 .main-product__variant-option {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
