@@ -51,8 +51,11 @@
 .main-product__info-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: ;
+  justify-content: center;
+  align-items: baseline;
 }
+
+.main-product__pr
 
 
 
