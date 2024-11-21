@@ -40,6 +40,7 @@
   background: #E5E5E5;
   overflow: hidden;
   border-radius: 8px;
+  max-width: 400px;
 }
 
 .main-product__img {
