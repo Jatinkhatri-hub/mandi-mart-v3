@@ -35,8 +35,10 @@
 }
 
 .main-product__media-wrapper {
-  
+  overflow: hidden;
 }
+
+
 
 
 
