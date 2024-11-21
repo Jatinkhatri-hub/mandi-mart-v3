@@ -79,8 +79,12 @@
 
 .main-product__variants-list {
   display: flex;
-  align-items: ;
+  align-items: center;
+  justify-content: baseline;
+  gap:
 }
+
+
 
 
 
