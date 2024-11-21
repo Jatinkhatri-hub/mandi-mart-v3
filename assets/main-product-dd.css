@@ -38,7 +38,10 @@
   overflow: hidden;
 }
 
-
+.main-product__img {
+  width: 345px;
+  object-fit: cover;
+}
 
 
 
