@@ -55,7 +55,10 @@
   align-items: baseline;
 }
 
-.main-product__pr
+.main-product__price-wrapper {
+  display: flex;
+  
+}
 
 
 
