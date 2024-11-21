@@ -4,4 +4,6 @@
   align-items: center;
 }
 
-.main-product-review
+.main-product-review-star__wrapper {
+  display: flex;
+}
