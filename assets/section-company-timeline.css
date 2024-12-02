@@ -123,7 +123,9 @@
 }
 
 .timeline__description {
-  font: 16px 400 'Poppins';
+  font-size: 16px ;
+  font-weight: 400;
+  font-family: "Poppins";
   color: #000;
 
 }
