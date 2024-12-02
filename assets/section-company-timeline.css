@@ -115,7 +115,9 @@
   width: fit-content;
 }
 
-.container.right 
+.container.right .timeline__title {
+  text
+}
 
 .timeline__title {
   font-size: 26px ;
