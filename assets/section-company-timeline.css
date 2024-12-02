@@ -108,7 +108,10 @@
   font: 26px 600 'Poppins';
   color: rgb(var(--color-foreground));
   background-color: #F3F7F7;
+  padding: 2px 20px;
 }
+
+.timeline
 
 /* The circles on the timeline */
 .container::after {
