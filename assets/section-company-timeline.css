@@ -105,7 +105,8 @@
 }
 
 .timeline__year {
-  font: 26px 600 
+  font: 26px 600 'Poppins';
+  color: --
 }
 
 /* The circles on the timeline */
