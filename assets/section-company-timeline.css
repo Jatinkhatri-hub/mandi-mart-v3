@@ -112,6 +112,7 @@
   color: rgb(var(--color-foreground));
   background-color: #F3F7F7;
   padding: 2px 20px;
+  width: fit-content;
 }
 
 .timeline__title {
