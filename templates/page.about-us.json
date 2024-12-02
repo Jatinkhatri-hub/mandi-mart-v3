@@ -225,7 +225,7 @@
     "section_company_timeline_MkR4tC": {
       "type": "section-company-timeline",
       "blocks": {
-        "timeline_point_9bAMjF": {
+        "timeline_point_XY8eij": {
           "type": "timeline_point",
           "settings": {
             "year": "",
@@ -235,7 +235,7 @@
         }
       },
       "block_order": [
-        "timeline_point_9bAMjF"
+        "timeline_point_XY8eij"
       ],
       "settings": {
         "section_color_scheme": "",
