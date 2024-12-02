@@ -17,13 +17,18 @@
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     <div class="timeline">
-      <div class="container right">
-        <div class="content">
-          <h2 class="timeline__year">1999</h2>
-          <h2 class="timeline__title">Sam is diagnosed with Autism.</h2>
-          <p class="timeline__description">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-      </div>
+      {% for block in section.block %}
+        {% case block.type %}
+          {% when 'timeline_point' %}
+            <div class="container right">
+              <div class="content">
+                <h2 class="timeline__year">1999</h2>
+                <h2 class="timeline__title">Sam is diagnosed with Autism.</h2>
+                <p class="timeline__description">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
 
     </div>
     {%  comment  %}     
