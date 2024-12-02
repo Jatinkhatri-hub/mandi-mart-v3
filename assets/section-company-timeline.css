@@ -117,6 +117,10 @@
   
 }
 
+.timeline__description {
+  font: 
+}
+
 /* The circles on the timeline */
 .container::after {
   content: '';
