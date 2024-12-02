@@ -112,7 +112,8 @@
 }
 
 .timeline__title {
-  font: 
+  font: 26px 600 'Poppins';
+  color: rg
 }
 
 /* The circles on the timeline */
