@@ -190,7 +190,7 @@
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
+  padding: 20px 0;
   background: transparent;
   position: relative;
   border-radius: 6px;
