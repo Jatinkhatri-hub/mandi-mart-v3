@@ -1,4 +1,4 @@
-.company-timeline {
+/* .company-timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
@@ -12,8 +12,8 @@
   top: 0;
   bottom: 0;
   left: 0;
-  /* left: 50%;
-  transform: translateX(-50%); */
+  left: 50%;
+  transform: translateX(-50%); 
 }
 
 .timeline-point {
@@ -75,4 +75,4 @@
 .timeline-content {
   position: relative;
   z-index: 5;
-}
+} */
