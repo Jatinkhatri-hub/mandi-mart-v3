@@ -111,7 +111,9 @@
   padding: 2px 20px;
 }
 
-.timeline
+.timeline__title {
+  font
+}
 
 /* The circles on the timeline */
 .container::after {
