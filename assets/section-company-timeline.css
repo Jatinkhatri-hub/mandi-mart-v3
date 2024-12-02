@@ -116,8 +116,10 @@
 }
 
 .container.right .timeline__title {
-  text
+  text-align: start;
 }
+
+.contianer
 
 .timeline__title {
   font-size: 26px ;
