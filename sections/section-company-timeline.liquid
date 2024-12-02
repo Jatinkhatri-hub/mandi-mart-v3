@@ -38,7 +38,7 @@
   </div>
 </div>
 
-<script>
+{% comment %} <script>
   document.addEventListener('DOMContentLoaded', () => {
       const timelineItems = document.querySelectorAll('.timeline-item');
       const timelinePoints = document.querySelectorAll('.timeline-point');
@@ -63,7 +63,7 @@
       window.addEventListener('scroll', revealOnScroll);
       revealOnScroll(); // Trigger initial check
   });
-</script>
+</script> {% endcomment %}
 
 {%  schema  %} 
 {
