@@ -88,8 +88,8 @@
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
-  background-color: white;
+  width: 3px;
+  background-color: #074542;
   top: 0;
   bottom: 0;
   left: 50%;
