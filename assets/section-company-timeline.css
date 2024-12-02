@@ -107,7 +107,8 @@
 .timeline__year {
   /* font: 31px 600 'Poppins'; */
   font-size: 31px ;
-  font-weight: ;
+  font-weight: 600;
+  font-family: "Poppins";
   color: rgb(var(--color-foreground));
   background-color: #F3F7F7;
   padding: 2px 20px;
