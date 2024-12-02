@@ -228,9 +228,9 @@
         "timeline_point_XY8eij": {
           "type": "timeline_point",
           "settings": {
-            "year": "",
-            "title": "Title",
-            "description": "Lorem ipsum dolor sit amet consectetur. Vitae vivamus nullam pharetra maecenas elementum ultricies faucibus!"
+            "year": "1999",
+            "title": "Sam is diagnosed with Autism.",
+            "description": "Lorem ipsum dolor sit amet consectetur. Bibendum placerat ornare erat interdum nisl. Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.<br><br>Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna fermentum malesuada arcu viverra neque dui malesuada. Libero faucibus quis at fringilla.<br><br>Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices."
           }
         }
       },
