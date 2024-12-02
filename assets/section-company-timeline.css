@@ -104,6 +104,8 @@
   width: 50%;
 }
 
+
+
 /* The circles on the timeline */
 .container::after {
   content: '';
