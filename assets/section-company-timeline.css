@@ -80,7 +80,7 @@
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  max-width: 1200px;
+  max-width: rgb(var);
   margin: 0 auto;
 }
 
