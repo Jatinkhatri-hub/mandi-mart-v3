@@ -119,7 +119,9 @@
   text-align: start;
 }
 
-.container.right
+.container.right .timeline__description {
+  text-align: start;
+}
 
 .timeline__title {
   font-size: 26px ;
