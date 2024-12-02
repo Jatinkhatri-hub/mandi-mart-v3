@@ -118,7 +118,9 @@
 }
 
 .timeline__description {
-  font: 16px 
+  font: 16px 400 'Poppins';
+  color: #000;
+  
 }
 
 /* The circles on the timeline */
