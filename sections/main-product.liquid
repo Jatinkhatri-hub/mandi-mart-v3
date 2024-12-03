@@ -62,9 +62,10 @@
           <h2>Size:</h2>
           <div class="main-product__variants-list">
             {% for variant in product.variants %} 
-              <div class="main-product__variant-option">
+              <label class="main-product__variant-option">
+                <
                 {{ variant.title |  truncate: 10 }}
-              </div>
+              </label>
             {% endfor %}
           </div>
         </div>
