@@ -44,7 +44,7 @@
           <div class="swiper-wrapper main-product__thumb">
             {% for media in product.media %} 
               <div class="swiper-slide main-product__thumb-wrapper">
-                <img src="{{ media | image_url: width: media.width }}">
+                <img src="{{ media | image_url: width: media.width }}" class="main-product__img">
               </div>
             {% endfor %}
 
