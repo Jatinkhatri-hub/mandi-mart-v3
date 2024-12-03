@@ -228,7 +228,9 @@
 }
 
 .main-product__quantity-box:has(.quantity-radio:checked) .quantity__save-badge,
-.main-product__quantity-box:has(.quantity-radio:checked) .
+.main-product__quantity-box:has(.quantity-radio:checked) .quantity__value-badge {
+  opacity: 1;
+}
 
 
 
