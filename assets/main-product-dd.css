@@ -191,6 +191,7 @@
   color: #20202085;
   position: relative;
   gap: 5px;
+  fle
 }
 
 .main-product__quantity-box.active {
@@ -205,7 +206,7 @@
   padding: 1px 8px;
   border-radius: 2px;
   font-size: 11px;
-  fom
+  font-family: 'Poppins';
 }
 
 
