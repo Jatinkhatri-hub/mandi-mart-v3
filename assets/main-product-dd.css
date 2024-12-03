@@ -65,6 +65,11 @@
     position: initial;
   }
 
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 15px;
+    font-weight: 900;
+  }
+
 .main-product__thumb-wrapper {
   display: flex;
   align-items: center;
