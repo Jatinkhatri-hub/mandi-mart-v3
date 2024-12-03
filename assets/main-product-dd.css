@@ -135,6 +135,11 @@
   flex-wrap: wrap;
 }
 
+.variant-radio {
+  position: absolute;
+  
+}
+
 .active {
   background-color: #F3F7F7;
   color: #074542;
