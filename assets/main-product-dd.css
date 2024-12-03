@@ -141,7 +141,7 @@
   cursor: pointer;
 }
 
-.variant-label:has(.variant-radio:checked),
+.main-product__variant-option:has(.variant-radio:checked),
 
 .active {
   background-color: #F3F7F7;
