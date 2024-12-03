@@ -135,7 +135,8 @@
   flex-wrap: wrap;
 }
 
-.variant-radio {
+.variant-radio,
+.quantity-radio {
   position: absolute;
   opacity: 0;
   cursor: pointer;
