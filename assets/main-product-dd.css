@@ -171,9 +171,10 @@
   width: 110px;
   border: 2px solid #20202085;
   border-radius: 5px;
-  font: 700 16px ;
+  font-family: 'Poppins';
   font-weight: 700;
   font-size: 16px;
+  color: #20202085;
 }
 
 .main-product__quantity-box.active {
