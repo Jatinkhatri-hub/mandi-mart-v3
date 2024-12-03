@@ -32,9 +32,9 @@
       </div>
       <div class="main-product__media-wrapper">
         <div class="swiper mySwiper mySwiper-{{ section.id }}">
-          <div class="swiper-wrapper main-product__img-wrapper">
+          <div class="swiper-wrapper ">
             {% for media in product.media %}
-              <div class="swiper-slide">
+              <div class="swiper-slide main-product__img-wrapper">
                 <img src="{{ media |  image_url: width: media.width  }}" class="main-product__img">
               </div>
             {% endfor %}
@@ -42,7 +42,7 @@
         </div>
         <div class="swiper mySwiperThumb mySwiper-{{ section.id }}">
           <div class="swiper-wrapper main-product__thumb">
-              
+
 
           </div>
         </div>
