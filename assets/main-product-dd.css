@@ -138,8 +138,10 @@
 .variant-radio {
   position: absolute;
   opacity: 0;
-  
+  cursor: pointer;
 }
+
+.variant-label:has(.variant-radio:checked),
 
 .active {
   background-color: #F3F7F7;
