@@ -54,7 +54,9 @@
   object-fit: cover;
 }
 
-.my
+.mySwiperThumb {
+  height: ;
+}
 
 .main-product__info-wrapper {
   display: flex;
