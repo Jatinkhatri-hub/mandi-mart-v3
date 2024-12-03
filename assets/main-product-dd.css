@@ -227,7 +227,7 @@
   opacity: 0.6;
 }
 
-.main-product__quantity-box:has(.quantity-radio:checked)
+.main-product__quantity-box:has(.quantity-radio:checked) .quantity__save-badge
 
 
 
