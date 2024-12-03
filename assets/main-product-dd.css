@@ -155,7 +155,7 @@
   font: 500 16px 'Poppins';
 }
 
-.main-product__ {
+.main-product__quantity-list {
   display: flex;
   align-items: center;
   justify-content: baseline;
