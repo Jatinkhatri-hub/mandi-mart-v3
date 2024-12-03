@@ -32,13 +32,16 @@
       </div>
       <div class="main-product__media-wrapper">
         <div class="swiper mySwiper mySwiper-{{ section.id }}">
-          <div class="swiper-wrapper ">
+          <div class="swiper-wrapper main-product__img-wrapper">
             {% for media in product.media %}
               <div class="swiper-slide">
                 <img src="{{ media |  image_url: width: media.width  }}" class="main-product__img">
               </div>
             {% endfor %}
           </div>
+        </div>
+        <div class="swiper mySwiper ">
+
         </div>
       </div>
       <div class="main-product__info-wrapper">
