@@ -135,6 +135,10 @@
   flex-wrap: wrap;
 }
 
+.active {
+  background-color: ;
+}
+
 .main-product__variant-option {
   display: flex;
   align-items: center;
