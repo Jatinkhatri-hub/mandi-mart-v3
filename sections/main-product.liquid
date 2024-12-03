@@ -53,8 +53,8 @@
           </div>
         </div>
       </div>
-      
-      <div class="main-product__info-wrapper">
+      {% form 'product', product, id: 'product-form' %}
+        <div class="main-product__info-wrapper">
         <div class="main-product__price-wrapper">
           <span class="main-product__current-price">{{ product.price |  money_with_currency}}</span>
           <span class="main-product__cap">{{ product.compare_at_price | money_with_currency }}</span>
@@ -219,6 +219,7 @@
 
 
       </div>
+      {% endform %}
     </div>
   </div>
 
