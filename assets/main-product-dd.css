@@ -60,7 +60,7 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  
+  border: 5px;
 }
 
 .main-product__info-wrapper {
