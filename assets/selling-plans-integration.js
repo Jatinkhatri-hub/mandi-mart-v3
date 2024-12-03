@@ -127,11 +127,11 @@ class SellingPlansWidget {
   }
 
   get regularPriceElement() {
-    return this.shopifySection.querySelector('.main-product__price');
+    return this.shopifySection.querySelector('.main-product__price-wrapper');
   }
 
   get salePriceElement() {
-    return this.shopifySection.querySelector('.price__sale');
+    return this.shopifySection.querySelector('.main-product__current-price');
   }
 
   get salePriceValue() {
