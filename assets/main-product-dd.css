@@ -55,7 +55,9 @@
 }
 
 .mySwiperThumb {
-  height: ;
+  height: 60px;
+  width: 60px;
+  
 }
 
 .main-product__info-wrapper {
