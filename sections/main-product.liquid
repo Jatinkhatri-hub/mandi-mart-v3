@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observeParents: true,
   });
 
-  const thumbsSwiper = new Swiper('.mySwiperThumb-{}', {
+  const thumbsSwiper = new Swiper(`.mySwiperThumb-${id}`, {
                 spaceBetween: 10,
                 slidesPerView: 4,
                 watchSlidesProgress: true,
