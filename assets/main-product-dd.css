@@ -55,7 +55,12 @@
 }
 
 .main-product__thumb-wrapper {
-  di
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  
 }
 
 .main-product__info-wrapper {
