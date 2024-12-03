@@ -36,7 +36,7 @@ class SellingPlansWidget {
   }
 
   get comparedAtPrice() {
-    return this.shopifySection.querySelector('.price__sale');
+    return this.shopifySection.querySelector('.main-product__cap');
   }
 
   get visibleSellingPlanForm() {
