@@ -171,10 +171,9 @@
   width: 110px;
   border: 2px solid #20202085;
   border-radius: 5px;
-  font: 700 16px #20202085;
+  font: 700 16px ;
   font-weight: 700;
   font-size: 16px;
-  c
 }
 
 .main-product__quantity-box.active {
