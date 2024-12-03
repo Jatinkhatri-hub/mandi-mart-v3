@@ -227,7 +227,7 @@
   opacity: 0.6;
 }
 
-.main
+.main-product__quantity-box:has(.quantity-radio:checked)
 
 
 
