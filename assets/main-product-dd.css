@@ -221,7 +221,8 @@
   line-height: initial;
   position: absolute;
   top: 20px;
-  border-top-left-radius: ;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 
