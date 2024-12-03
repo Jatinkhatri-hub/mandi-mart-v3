@@ -163,6 +163,16 @@
   flex-wrap: wrap;
 }
 
+.main-product__ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  width: 110px;
+  border: 2px solid #20202085;
+  border-radius: 5px;
+}
+
 
 
 
