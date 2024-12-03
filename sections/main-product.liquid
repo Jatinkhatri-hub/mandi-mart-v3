@@ -67,7 +67,8 @@
                   type="radio"
                   name="variant"
                   value="{{ variant.id }}"
-                  
+                  {% if forloop.first %}checked{% endif %}
+                  class="variant-radio"
                 >
 
                 {{ variant.title |  truncate: 10 }}
