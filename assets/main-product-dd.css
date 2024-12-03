@@ -142,7 +142,8 @@
   cursor: pointer;
 }
 
-.main-product__variant-option:has(.variant-radio:checked) {
+.main-product__variant-option:has(.variant-radio:checked),
+.main-product__quantity-box {
   background-color: #F3F7F7;
   color: #074542;
   border-color: #074542;
