@@ -191,7 +191,8 @@
   color: #20202085;
   position: relative;
   gap: 5px;
-  fle
+  flex-direction: column;
+  line-height: 1.6;
 }
 
 .main-product__quantity-box.active {
