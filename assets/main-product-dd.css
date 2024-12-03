@@ -62,7 +62,8 @@
     color: white;
     justify-content: center;
     align-items: center;
-    position: initial;
+    position: absolute;
+
   }
 
   .swiper-button-next:after, .swiper-button-prev:after {
