@@ -65,7 +65,9 @@
 }
 
 .main-product__thumb {
-  width: ;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
 }
 
 .main-product__info-wrapper {
