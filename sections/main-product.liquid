@@ -32,7 +32,7 @@
       </div>
       <div class="main-product__media-wrapper">
         <div class="swiper mySwiper mySwiper-{{ section.id }}">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper ">
             {% for media in product.media %}
               <div class="swiper-slide">
                 <img src="{{ media |  image_url: width: media.width  }}" class="main-product__img">
@@ -157,7 +157,7 @@
               type='hidden'>
           {% endif %} 
         </div> {% endcomment %}
-        
+
 
       </div>
     </div>
