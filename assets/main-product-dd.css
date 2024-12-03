@@ -136,9 +136,15 @@
 }
 
 .active {
-  background-color: #F3F7F7;
-  color: #074542;
-  border: #074542;
+  .main-product__variant-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 110px;
+    border: 2px solid #20202085;
+    border-radius: 5px;
+  }
 }
 
 .main-product__variant-option {
