@@ -63,7 +63,11 @@
           <div class="main-product__variants-list">
             {% for variant in product.variants %} 
               <label class="main-product__variant-option">
-                <
+                <input
+                  type="radio"
+                  
+                >
+
                 {{ variant.title |  truncate: 10 }}
               </label>
             {% endfor %}
