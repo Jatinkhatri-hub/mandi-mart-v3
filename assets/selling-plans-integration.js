@@ -127,7 +127,7 @@ class SellingPlansWidget {
   }
 
   get regularPriceElement() {
-    return this.shopifySection.querySelector('.price__regular');
+    return this.shopifySection.querySelector('.');
   }
 
   get salePriceElement() {
