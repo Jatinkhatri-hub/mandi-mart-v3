@@ -177,6 +177,37 @@
 
 </div>
 
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const id = "{{ section.id }}";
+
+  const swiperDesktopClass = `.mySwiper-${id}.swiper-desktop`;
+  const swiperMobileClass = `.mySwiper-${id}.swiper-mobile`;
+  const swiperPaginationClass = `.swiper-pagination-${id}`;
+  const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
+  const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
+
+  // Initialize Swiper for Desktop (8 slides per view)
+  new Swiper(swiperDesktopClass, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    effect: 'slide',
+    speed: 600,
+    navigation: {
+      nextEl: swiperButtonNextClass,
+      prevEl: swiperButtonPrevClass,
+    },
+    pagination: {
+      el: swiperPaginationClass,
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+  });
+
+</script>
+
 {%  schema  %} 
  {
   "name": "t:sections.main-product.name",
