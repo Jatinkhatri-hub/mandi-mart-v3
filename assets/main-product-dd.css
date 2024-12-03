@@ -151,11 +151,11 @@
   border-radius: 5px;
 }
 
-.main-product__variants h2 {
+.main-product__quantity-selector h2 {
   font: 500 16px 'Poppins';
 }
 
-.main-product__variants-list {
+.main-product__ {
   display: flex;
   align-items: center;
   justify-content: baseline;
