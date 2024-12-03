@@ -209,7 +209,7 @@
   font-size: 11px;
   font-family: 'Poppins';
   line-height: initial;
-  
+  opacity: 0.6;
 }
 
 .quantity__value-badge {
@@ -226,6 +226,8 @@
   border-top-right-radius: 4px;
   opacity: 0.6;
 }
+
+.main
 
 
 
