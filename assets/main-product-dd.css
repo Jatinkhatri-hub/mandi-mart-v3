@@ -141,7 +141,10 @@
   cursor: pointer;
 }
 
-.main-product__variant-option:has(.variant-radio:checked),
+.main-product__variant-option:has(.variant-radio:checked) {
+  background-color: #F3F7F7;
+  color: ;
+}
 
 .active {
   background-color: #F3F7F7;
