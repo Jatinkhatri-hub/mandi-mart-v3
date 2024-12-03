@@ -57,7 +57,8 @@
 .mySwiperThumb {
   height: 60px;
   width: 60px;
-  
+  display: flex;
+  align-items: center;
 }
 
 .main-product__info-wrapper {
