@@ -163,7 +163,7 @@
   flex-wrap: wrap;
 }
 
-.main-product__ {
+.main-product__quantity-box {
   display: flex;
   align-items: center;
   justify-content: center;
