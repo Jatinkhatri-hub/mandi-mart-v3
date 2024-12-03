@@ -32,7 +32,7 @@ class SellingPlansWidget {
   }
 
   get priceElement() {
-    return this.shopifySection.querySelector('.price');
+    return this.shopifySection.querySelector('.main-product__current-price');
   }
 
   get comparedAtPrice() {
