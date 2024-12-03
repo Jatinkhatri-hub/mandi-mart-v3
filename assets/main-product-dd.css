@@ -43,7 +43,11 @@
   max-width: 400px;
 }
 
-.main-product
+.main-product__img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .main-product__img {
   width: 345px;
