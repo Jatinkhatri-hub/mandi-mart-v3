@@ -54,11 +54,8 @@
   object-fit: cover;
 }
 
-.mySwiperThumb {
-  height: 60px;
-  width: 60px;
-  display: flex;
-  align-items: center;
+.main-product__thumb-wrapper {
+  di
 }
 
 .main-product__info-wrapper {
