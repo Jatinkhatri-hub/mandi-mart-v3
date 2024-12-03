@@ -184,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const swiperDesktopClass = `.mySwiper-${id}`;
   const swiperMobileClass = `.mySwiper-${id}.swiper-mobile`;
-  const swiperPaginationClass = `.swiper-pagination-${id}`;
   const swiperButtonNextClass = `.button--${id}.swiper-button-next`;
   const swiperButtonPrevClass = `.button--${id}.swiper-button-prev`;
 
@@ -197,10 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation: {
       nextEl: swiperButtonNextClass,
       prevEl: swiperButtonPrevClass,
-    },
-    pagination: {
-      el: swiperPaginationClass,
-      clickable: true,
     },
     observer: true,
     observeParents: true,
