@@ -342,7 +342,9 @@
 
 .review__user-info {
   display: flex;
-  flex
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
 }
 
 
