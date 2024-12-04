@@ -177,7 +177,7 @@ class SellingPlansWidget {
     }
     
     // Fallback formatting
-    return 'Rs' + (price;
+    return 'Rs' + (price * 100);
   }
 }
 
