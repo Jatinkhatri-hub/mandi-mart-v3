@@ -260,7 +260,8 @@
 }
 
 .main-product__atc-btn:hover {
-  color: ;
+  color: #228B85;
+  background-image: linear-gradient();
 }
 
 .main-product__value-point {
