@@ -423,7 +423,9 @@
     align-self: center;
   }
 
-  .main-pro
+  .main-product__info-wrapper {
+    padding-top: 0;
+  }
 
   .main-product-star__wrapper svg {
     width: 25px;
@@ -439,6 +441,8 @@
     font-size: 26px;
     margin: 0;
   }
+
+  .main-product__va
 }
 
 
