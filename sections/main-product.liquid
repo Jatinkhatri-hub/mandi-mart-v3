@@ -407,62 +407,83 @@ document.addEventListener('DOMContentLoaded', () => {
     observeParents: true,
   });
 
+  
+
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const variantRadios = document.querySelectorAll('.variant-radio');
-  const sellingPlanSections = document.querySelectorAll('.selling_plan_theme_integration');
+  const sellingPlanContainer = document.querySelector('.selling-plan-options');
   const sellingPlanInput = document.querySelector('.selected-selling-plan-id');
   const priceElement = document.querySelector('.main-product__current-price');
   const comparePriceElement = document.querySelector('.main-product__cap');
 
-  // Update selling plan visibility
-  const updateSellingPlanData = (variantId) => {
-    // Hide all selling plan sections
-    sellingPlanSections.forEach(section => {
-      section.classList.add('selling_plan_theme_integration--hidden');
-    });
+  // Store variant-specific selling plan data
+  const sellingPlansData = {};
+  document.querySelectorAll('[data-variant-id]').forEach((section) => {
+    const variantId = section.getAttribute('data-variant-id');
+    const plans = Array.from(section.querySelectorAll('input[data-radio-type="selling_plan"]')).map(plan => ({
+      id: plan.getAttribute('data-selling-plan-id'),
+      name: plan.parentNode.textContent.trim(),
+      price: plan.getAttribute('data-variant-price'),
+    }));
+    sellingPlansData[variantId] = plans;
+  });
 
-    // Show the relevant section for the selected variant
-    const selectedSection = document.querySelector(`.selling_plan_theme_integration[data-variant-id="${variantId}"]`);
-    if (selectedSection) {
-      selectedSection.classList.remove('selling_plan_theme_integration--hidden');
+  // Update selling plan options dynamically
+  const updateSellingPlanOptions = (variantId) => {
+    const plans = sellingPlansData[variantId] || [];
+    sellingPlanContainer.innerHTML = ''; // Clear previous options
+
+    if (plans.length > 0) {
+      plans.forEach(plan => {
+        const label = document.createElement('label');
+        label.innerHTML = `
+          <input 
+            type="radio" 
+            name="selling_plan"
+            value="${plan.id}"
+            data-plan-price="${plan.price}">
+          ${plan.name}
+        `;
+        label.querySelector('input').addEventListener('change', (e) => {
+          sellingPlanInput.value = e.target.value;
+        });
+        sellingPlanContainer.appendChild(label);
+      });
+    } else {
+      sellingPlanContainer.textContent = 'No subscription options available for this variant.';
     }
-    
-    // Reset the selling plan input
-    const selectedSellingPlan = selectedSection?.querySelector('input[data-radio-type="selling_plan"]:checked');
-    sellingPlanInput.value = selectedSellingPlan ? selectedSellingPlan.value : '';
   };
 
   // Update displayed price
   const updatePriceDisplay = (variantId) => {
     const selectedVariant = Array.from(variantRadios).find(radio => radio.value == variantId);
     if (selectedVariant) {
-      const newPrice = selectedVariant.dataset.price;
-      const newComparePrice = selectedVariant.dataset.compareAtPrice;
+      const newPrice = selectedVariant.getAttribute('data-price');
+      const newComparePrice = selectedVariant.getAttribute('data-compare-price');
 
       if (newPrice) priceElement.textContent = newPrice;
       if (newComparePrice) comparePriceElement.textContent = newComparePrice;
     }
   };
 
-  // Variant change event
+  // Listen for variant changes
   variantRadios.forEach(radio => {
     radio.addEventListener('change', (e) => {
       const variantId = e.target.value;
-      updateSellingPlanData(variantId);
+      updateSellingPlanOptions(variantId);
       updatePriceDisplay(variantId);
     });
   });
 
-  // Selling plan change event
-  sellingPlanSections.forEach(section => {
-    section.addEventListener('change', (e) => {
-      if (e.target.dataset.radioType === 'selling_plan') {
-        sellingPlanInput.value = e.target.value;
-      }
-    });
-  });
-
-
+  // Initialize with the first variant
+  const initialVariantId = document.querySelector('.variant-radio:checked').value;
+  updateSellingPlanOptions(initialVariantId);
+  updatePriceDisplay(initialVariantId);
 });
+
 </script>
 
 {%  schema  %} 
