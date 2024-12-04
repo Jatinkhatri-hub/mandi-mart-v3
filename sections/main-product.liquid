@@ -537,7 +537,9 @@ document.addEventListener('DOMContentLoaded', () => {
   accordionBtn.forEach(btn => {
 
     btn.addEventListener('click', (e) => {
-      this.classList.toggle("active");
+      e.preventDefault();
+      e.stopPropagation();
+      // this.classList.toggle("active");
       let panel = this.nextElementSibling;
       if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
