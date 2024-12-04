@@ -119,7 +119,7 @@
 
           {% if product.selling_plan_groups.size > 0 %}
             <div class="selling_plan_app_container" data-section-id='{{ section.id }}'>
-              {% comment %} <script src="{{ 'selling-plans-integration.js' | asset_url }}" defer></script> {% endcomment %}
+              <script src="{{ 'selling-plans-integration.js' | asset_url }}" defer></script>
               <style>.selling_plan_theme_integration--hidden {display: none;}</style>
               {% for variant in product.variants %}
                 {%liquid
