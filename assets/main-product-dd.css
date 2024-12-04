@@ -469,6 +469,10 @@
   .quantity__save-badge {
     font-size: 18px;
   }
+
+  .main-product__atc-btn-wrapper {
+    width: 100%;
+  }
 }
 
 
