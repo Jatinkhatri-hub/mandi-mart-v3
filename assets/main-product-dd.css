@@ -307,6 +307,10 @@
 
 }
 
+.accordion:last-child {
+  
+}
+
 .panel {
   /* display: flex;
   align-items: baseline;
