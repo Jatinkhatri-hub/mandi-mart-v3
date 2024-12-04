@@ -281,13 +281,13 @@
   height: 15px;
 }
 
-
+/* 
 .main-product__accordion-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .accordion {
   font-size: 16px;
