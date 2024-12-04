@@ -358,6 +358,62 @@ document.addEventListener('DOMContentLoaded', () => {
     observeParents: true,
   });
 
+   // Elements
+   const variantRadios = document.querySelectorAll('.variant-radio');
+  const sellingPlanRadios = document.querySelectorAll('[data-radio-type="selling_plan"]');
+  const oneTimePurchaseRadios = document.querySelectorAll('[data-radio-type="one_time_purchase"]');
+  const sellingPlanInput = document.querySelector('.selected-selling-plan-id');
+  const priceElement = document.querySelector('.main-product__current-price');
+  const compareAtPriceElement = document.querySelector('.main-product__cap');
+
+  // Function to update selling plan data
+  const updateSellingPlanData = (variantId) => {
+    // Hide all selling plan sections
+    document.querySelectorAll('.selling_plan_theme_integration').forEach((section) => {
+      section.classList.add('selling_plan_theme_integration--hidden');
+    });
+
+    // Show the section for the selected variant
+    const selectedSection = document.querySelector(`.selling_plan_theme_integration[data-variant-id="${variantId}"]`);
+    if (selectedSection) {
+      selectedSection.classList.remove('selling_plan_theme_integration--hidden');
+    }
+
+    // Update prices
+    const selectedVariant = selectedSection.querySelector('[data-radio-type="selling_plan"]:checked');
+    if (selectedVariant) {
+      const newPrice = selectedVariant.getAttribute('data-variant-price');
+      const newCompareAtPrice = selectedVariant.getAttribute('data-variant-compare-at-price');
+      priceElement.textContent = newPrice;
+      compareAtPriceElement.textContent = newCompareAtPrice || '';
+    }
+  };
+
+  // Event listener for variant selection
+  variantRadios.forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      const selectedVariantId = e.target.value;
+      updateSellingPlanData(selectedVariantId);
+    });
+  });
+
+  // Event listener for selling plan selection
+  sellingPlanRadios.forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      sellingPlanInput.value = e.target.getAttribute('data-selling-plan-id');
+    });
+  });
+
+  // Event listener for one-time purchase
+  oneTimePurchaseRadios.forEach((radio) => {
+    radio.addEventListener('change', () => {
+      sellingPlanInput.value = ''; // Clear selling plan for one-time purchase
+    });
+  });
+
+  // Initialize with the first variant's data
+  const initialVariantId = document.querySelector('.variant-radio:checked').value;
+  updateSellingPlanData(initialVariantId);
   
 
 
