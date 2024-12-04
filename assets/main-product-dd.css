@@ -333,7 +333,7 @@
   padding: 10px 25px;
 }
 
-.review-header {
+.review__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -364,7 +364,7 @@
 }
 
 .review__verified-badge svg path {
-  fill: #3AA;
+  fill: #3AAFA9;
 }
 
 .review-description {
