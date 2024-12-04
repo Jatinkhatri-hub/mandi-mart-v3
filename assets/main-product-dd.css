@@ -236,7 +236,9 @@
 .main-product__atc-btn {
   outline: none;
   border: 2px solid #3AAFA9;
-  background-image: linear-gradient(#3AAFA9, );
+  background-image: linear-gradient(#3AAFA9, #228B85);
+  color: white;
+  
 }
 
 
