@@ -541,6 +541,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       // this.classList.toggle("active");
       let panel = btn.nextElementSibling;
+      const icon = button.querySelector('svg');
+
       if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
       } else {
