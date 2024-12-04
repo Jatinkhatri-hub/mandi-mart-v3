@@ -259,6 +259,10 @@
   max-width: 590px;
 }
 
+.main-product__atc-btn:hover {
+  color: ;
+}
+
 .main-product__value-point {
   display: flex;
   align-items: center;
