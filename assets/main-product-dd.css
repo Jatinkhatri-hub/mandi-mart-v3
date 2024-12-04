@@ -423,7 +423,9 @@
     align-self: center;
   }
 
-  .main-product-star__wrapper 
+  .main-product-star__wrapper svg {
+    width: 2;
+  }
 }
 
 
