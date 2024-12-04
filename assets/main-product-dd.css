@@ -238,7 +238,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-area: ;
+  gap: ;
 }
 
 .main-product__atc-btn {
