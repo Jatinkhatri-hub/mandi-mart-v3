@@ -358,7 +358,8 @@
 .review__verified-badge {
   display: flex;
   align-items: center;
-  jua
+  justify-content: center;
+  gap: 5px;
 }
 
 
