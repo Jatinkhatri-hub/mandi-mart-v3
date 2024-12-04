@@ -177,7 +177,7 @@ class SellingPlansWidget {
     }
     
     // Fallback formatting
-    return '$' + price.toFixed(2);
+    return 'Rs' + price;
   }
 }
 
