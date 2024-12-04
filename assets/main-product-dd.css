@@ -39,7 +39,7 @@
 }
 
 .main-product__title.mobile {
-  dif
+  display: flex;
 }
 
 .main-product__media-wrapper {
