@@ -332,7 +332,10 @@
   border-radius: 5px;
 }
 
-.
+.review-header {
+  display: flex;
+  
+}
 
 
 
