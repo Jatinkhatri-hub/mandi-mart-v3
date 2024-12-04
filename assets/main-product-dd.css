@@ -258,7 +258,13 @@
   max-width: 590px;
 }
 
-
+.main-product__value-point {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font: ;
+}
 
 
 
