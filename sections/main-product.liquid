@@ -116,43 +116,43 @@
             </div>
           </div> 
 
-    <!-- Selling Plan Integration -->
-    {% if product.selling_plan_groups.size > 0 %}
-      <div class="selling_plan_app_container">
-        {% for variant in product.variants %}
-          {% if variant.selling_plan_allocations.size > 0 %}
-            <section 
-              data-variant-id="{{ variant.id }}" 
-              class="selling_plan_theme_integration {% if variant != product.selected_or_first_available_variant %}selling_plan_theme_integration--hidden{% endif %}">
-              <fieldset>
-                <legend>Choose a Subscription:</legend>
-                <ul>
-                  {% for allocation in variant.selling_plan_allocations %}
-                    <li>
-                      <label>
-                        <input 
-                          type="radio" 
-                          name="purchaseOption_{{ variant.id }}" 
-                          value="{{ allocation.selling_plan.id }}" 
-                          data-radio-type="selling_plan"
-                          {% if forloop.first %}checked{% endif %}
-                        >
-                        {{ allocation.selling_plan.name }}
-                      </label>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </fieldset>
-            </section>
+          <!-- Selling Plan Integration -->
+          {% if product.selling_plan_groups.size > 0 %}
+            <div class="selling_plan_app_container">
+              {% for variant in product.variants %}
+                {% if variant.selling_plan_allocations.size > 0 %}
+                  <section 
+                    data-variant-id="{{ variant.id }}" 
+                    class="selling_plan_theme_integration {% if variant != product.selected_or_first_available_variant %}selling_plan_theme_integration--hidden{% endif %}">
+                    <fieldset>
+                      <legend>Choose a Subscription:</legend>
+                      <ul>
+                        {% for allocation in variant.selling_plan_allocations %}
+                          <li>
+                            <label>
+                              <input 
+                                type="radio" 
+                                name="purchaseOption_{{ variant.id }}" 
+                                value="{{ allocation.selling_plan.id }}" 
+                                data-radio-type="selling_plan"
+                                {% if forloop.first %}checked{% endif %}
+                              >
+                              {{ allocation.selling_plan.name }}
+                            </label>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </fieldset>
+                  </section>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <input 
+              type="hidden" 
+              name="selling_plan" 
+              class="selected-selling-plan-id"
+            >
           {% endif %}
-        {% endfor %}
-      </div>
-      <input 
-        type="hidden" 
-        name="selling_plan" 
-        class="selected-selling-plan-id"
-      >
-    {% endif %}
           {% comment %} {%- assign current_variant = product.selected_or_first_available_variant | default: product.variants.first -%}
 
           {% if product.selling_plan_groups.size > 0 %}
