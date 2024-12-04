@@ -235,7 +235,9 @@
 
 .main-product__atc-btn-wrapper {
   display: flex;
-  flex
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-product__atc-btn {
