@@ -308,10 +308,10 @@
 }
 
 .panel {
-  display: flex;
+  /* display: flex;
   align-items: baseline;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column; */
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
