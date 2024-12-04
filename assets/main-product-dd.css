@@ -403,6 +403,10 @@
     max-width: 560px;
   }
 
+  .main-product__img {
+    width: ;
+  }
+
   #product-form {
     align-self: center;
   }
