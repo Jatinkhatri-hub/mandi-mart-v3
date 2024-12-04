@@ -3,6 +3,7 @@ class SellingPlansWidget {
     this.sellingPlansWidgetContainer = sellingPlansWidgetContainer;
     this.currentVariant = null;
     this.currentQuantity = 1;
+    this.currentSellingPlan = null;
     
     this.initializeElements();
     this.bindEvents();
@@ -15,7 +16,23 @@ class SellingPlansWidget {
     this.comparePriceElement = document.querySelector('.main-product__cap');
     this.variantRadios = document.querySelectorAll('input[name="variant"]');
     this.quantityRadios = document.querySelectorAll('input[name="quantity"]');
+    this.sellingPlanRadios = this.getSellingPlanRadios();
     this.sellingPlanContainer = document.querySelector('.selling_plan_app_container');
+    this.sellingPlanInput = document.querySelector('.selected-selling-plan-id');
+  }
+
+  getSellingPlanRadios() {
+    const currentVariantId = this.getCurrentVariantId();
+    return document.querySelectorAll(`input[name="purchaseOption_${this.getSectionId()}_${currentVariantId}"]`);
+  }
+
+  getSectionId() {
+    return this.sellingPlanContainer?.getAttribute('data-section-id') || '';
+  }
+
+  getCurrentVariantId() {
+    const selectedVariantRadio = document.querySelector('input[name="variant"]:checked');
+    return selectedVariantRadio ? selectedVariantRadio.value : null;
   }
 
   bindEvents() {
@@ -31,18 +48,27 @@ class SellingPlansWidget {
         this.updatePrice();
       });
     });
+
+    // Selling plan selection events
+    this.bindSellingPlanEvents();
   }
 
-  initialSetup() {
-    // Initial variant selection
-    this.handleVariantChange();
-    // Initial price update
-    this.updatePrice();
+  bindSellingPlanEvents() {
+    // Refresh selling plan radios each time (as they might change with variant)
+    this.sellingPlanRadios = this.getSellingPlanRadios();
+    
+    this.sellingPlanRadios.forEach(radio => {
+      radio.addEventListener('change', (event) => {
+        this.handleSellingPlanChange(event.target);
+      });
+    });
   }
 
   handleVariantChange() {
     // Update visible selling plan sections
     this.updateSellingPlanVisibility();
+    // Rebind selling plan events for new variant
+    this.bindSellingPlanEvents();
     // Update price for new variant
     this.updatePrice();
   }
@@ -60,9 +86,24 @@ class SellingPlansWidget {
     });
   }
 
-  getCurrentVariantId() {
-    const selectedVariantRadio = document.querySelector('input[name="variant"]:checked');
-    return selectedVariantRadio ? selectedVariantRadio.value : null;
+  handleSellingPlanChange(selectedRadio) {
+    // Determine if it's a one-time purchase or subscription
+    const isOneTimePurchase = selectedRadio.dataset.radioType === 'one_time_purchase';
+    
+    // Update hidden input for selling plan
+    if (this.sellingPlanInput) {
+      this.sellingPlanInput.value = isOneTimePurchase ? '' : selectedRadio.dataset.sellingPlanId;
+    }
+
+    // Store current selling plan details
+    this.currentSellingPlan = {
+      type: selectedRadio.dataset.radioType,
+      price: selectedRadio.dataset.variantPrice,
+      compareAtPrice: selectedRadio.dataset.variantCompareAtPrice
+    };
+
+    // Update price
+    this.updatePrice();
   }
 
   updatePrice() {
@@ -74,13 +115,15 @@ class SellingPlansWidget {
         return;
       }
 
-      // Debug logging
-      console.log('Current Variant Radio:', currentVariantRadio);
-      console.log('Variant Radio Dataset:', currentVariantRadio.dataset);
+      // Base prices from variant
+      let basePrice = this.parsePrice(currentVariantRadio.dataset.price);
+      let compareAtPrice = this.parsePrice(currentVariantRadio.dataset.compareAtPrice);
 
-      // Get variant prices safely
-      const basePrice = this.parsePrice(currentVariantRadio.dataset.price);
-      const compareAtPrice = this.parsePrice(currentVariantRadio.dataset.compareAtPrice);
+      // Override prices if selling plan is selected
+      if (this.currentSellingPlan && this.currentSellingPlan.type !== 'one_time_purchase') {
+        basePrice = this.parsePrice(this.currentSellingPlan.price);
+        compareAtPrice = this.parsePrice(this.currentSellingPlan.compareAtPrice);
+      }
 
       // Apply quantity discounts
       let adjustedPrice = basePrice;
@@ -109,7 +152,6 @@ class SellingPlansWidget {
       }
     } catch (error) {
       console.error('Error updating price:', error);
-      console.log('Current variant radio:', document.querySelector('input[name="variant"]:checked'));
     }
   }
 
@@ -155,6 +197,164 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// class SellingPlansWidget {
+//   constructor(sellingPlansWidgetContainer) {
+//     this.sellingPlansWidgetContainer = sellingPlansWidgetContainer;
+//     this.currentVariant = null;
+//     this.currentQuantity = 1;
+    
+//     this.initializeElements();
+//     this.bindEvents();
+//     this.initialSetup();
+//   }
+
+//   initializeElements() {
+//     // Current page elements
+//     this.priceElement = document.querySelector('.main-product__current-price');
+//     this.comparePriceElement = document.querySelector('.main-product__cap');
+//     this.variantRadios = document.querySelectorAll('input[name="variant"]');
+//     this.quantityRadios = document.querySelectorAll('input[name="quantity"]');
+//     this.sellingPlanContainer = document.querySelector('.selling_plan_app_container');
+//   }
+
+//   bindEvents() {
+//     // Variant selection events
+//     this.variantRadios.forEach(radio => {
+//       radio.addEventListener('change', () => this.handleVariantChange());
+//     });
+
+//     // Quantity selection events
+//     this.quantityRadios.forEach(radio => {
+//       radio.addEventListener('change', () => {
+//         this.currentQuantity = parseInt(radio.value);
+//         this.updatePrice();
+//       });
+//     });
+//   }
+
+//   initialSetup() {
+//     // Initial variant selection
+//     this.handleVariantChange();
+//     // Initial price update
+//     this.updatePrice();
+//   }
+
+//   handleVariantChange() {
+//     // Update visible selling plan sections
+//     this.updateSellingPlanVisibility();
+//     // Update price for new variant
+//     this.updatePrice();
+//   }
+
+//   updateSellingPlanVisibility() {
+//     const currentVariantId = this.getCurrentVariantId();
+//     const sellingPlanSections = document.querySelectorAll('.selling_plan_theme_integration');
+    
+//     sellingPlanSections.forEach(section => {
+//       if (section.dataset.variantId === currentVariantId) {
+//         section.classList.remove('selling_plan_theme_integration--hidden');
+//       } else {
+//         section.classList.add('selling_plan_theme_integration--hidden');
+//       }
+//     });
+//   }
+
+//   getCurrentVariantId() {
+//     const selectedVariantRadio = document.querySelector('input[name="variant"]:checked');
+//     return selectedVariantRadio ? selectedVariantRadio.value : null;
+//   }
+
+//   updatePrice() {
+//     try {
+//       // Get current variant radio
+//       const currentVariantRadio = document.querySelector('input[name="variant"]:checked');
+//       if (!currentVariantRadio) {
+//         console.warn('No variant radio selected');
+//         return;
+//       }
+
+//       // Debug logging
+//       console.log('Current Variant Radio:', currentVariantRadio);
+//       console.log('Variant Radio Dataset:', currentVariantRadio.dataset);
+
+//       // Get variant prices safely
+//       const basePrice = this.parsePrice(currentVariantRadio.dataset.price);
+//       const compareAtPrice = this.parsePrice(currentVariantRadio.dataset.compareAtPrice);
+
+//       // Apply quantity discounts
+//       let adjustedPrice = basePrice;
+//       switch (this.currentQuantity) {
+//         case 2:
+//           adjustedPrice *= 0.85; // 15% off
+//           break;
+//         case 3:
+//           adjustedPrice *= 0.80; // 20% off
+//           break;
+//       }
+
+//       // Calculate total prices
+//       const totalPrice = adjustedPrice * this.currentQuantity;
+//       const totalCompareAtPrice = compareAtPrice * this.currentQuantity;
+
+//       // Update price elements
+//       if (this.priceElement) {
+//         this.priceElement.textContent = this.formatPrice(totalPrice);
+//       }
+
+//       // Update compare at price if exists
+//       if (this.comparePriceElement) {
+//         this.comparePriceElement.textContent = this.formatPrice(totalCompareAtPrice);
+//         this.comparePriceElement.style.display = totalPrice < totalCompareAtPrice ? 'inline' : 'none';
+//       }
+//     } catch (error) {
+//       console.error('Error updating price:', error);
+//       console.log('Current variant radio:', document.querySelector('input[name="variant"]:checked'));
+//     }
+//   }
+
+//   // Helper method to parse price safely
+//   parsePrice(priceString) {
+//     if (!priceString) {
+//       console.warn('Price string is undefined or empty');
+//       return 0;
+//     }
+    
+//     // Remove currency symbols and convert to number
+//     const cleanPrice = priceString.replace(/[^\d.-]/g, '');
+//     const price = parseFloat(cleanPrice);
+    
+//     return isNaN(price) ? 0 : price;
+//   }
+
+//   // Helper method to format price (fallback if Shopify.formatMoney is not available)
+//   formatPrice(price) {
+//     // Check if Shopify.formatMoney exists
+//     if (typeof Shopify !== 'undefined' && Shopify.formatMoney) {
+//       return Shopify.formatMoney(price);
+//     }
+    
+//     // Fallback formatting
+//     return '$' + price.toFixed(2);
+//   }
+// }
+
+// // Initialize the widget for each selling plans container
+// document.addEventListener('DOMContentLoaded', () => {
+//   const containers = document.querySelectorAll('.selling_plan_app_container');
+  
+//   if (containers.length === 0) {
+//     console.warn('No selling plan containers found');
+//   }
+  
+//   containers.forEach(container => {
+//     try {
+//       new SellingPlansWidget(container);
+//     } catch (error) {
+//       console.error('Failed to initialize SellingPlansWidget:', error);
+//     }
+//   });
+// });
 
 // class SellingPlansWidget {
 //   constructor(sellingPlansWidgetContainer) {
