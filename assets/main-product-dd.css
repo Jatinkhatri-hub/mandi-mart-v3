@@ -400,7 +400,7 @@
   }
 
   .main-product__media-wrapper {
-    
+    max-width: 560px;
   }
 
   #product-form {
