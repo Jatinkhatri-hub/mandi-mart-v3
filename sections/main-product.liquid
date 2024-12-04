@@ -545,9 +545,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
-        
+        icon.style.transform = 'rotate(0deg)';
       } else {
         panel.style.maxHeight = panel.scrollHeight + "px";
+        icon.style.transform = 'rotate(180deg)';
+
       } 
     })
 
