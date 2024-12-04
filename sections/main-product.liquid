@@ -540,7 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       e.stopPropagation();
       // this.classList.toggle("active");
-      let panel = this.nextElementSibling;
+      let panel = btn.nextElementSibling;
       if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
       } else {
