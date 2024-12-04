@@ -446,7 +446,9 @@
     margin-top: 0;
   }
 
-  .main-product__variant-option 
+  .main-product__variant-option {
+    width: ;
+  }
 }
 
 
