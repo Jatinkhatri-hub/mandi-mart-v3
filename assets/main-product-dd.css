@@ -257,11 +257,12 @@
   justify-content: center;
   width: 100%;
   max-width: 590px;
+  tra
 }
 
 .main-product__atc-btn:hover {
   color: #228B85;
-  background-image: linear-gradient();
+  background-image: linear-gradient(white, white);
 }
 
 .main-product__value-point {
