@@ -322,7 +322,10 @@
   transition: max-height 0.2s ease-out;
 }
 
-
+.main-product__review-card-wrapper {
+  display: flex;
+  align-items: center;
+}
 
 
 
