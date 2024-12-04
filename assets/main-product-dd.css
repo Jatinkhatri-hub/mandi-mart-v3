@@ -396,8 +396,10 @@
   .main-product__wrapper {
     grid-template-columns: 560px 1fr;
     align-items: baseline;
-    gap:
+    gap: 50px;
   }
+
+  .main-
 
   #product-form {
     align-self: center;
