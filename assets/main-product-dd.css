@@ -409,6 +409,12 @@
     height: 550px;
   }
 
+  .main-product__thumb-wrapper {
+    height: 100px;
+  }
+
+  
+
   #product-form {
     align-self: center;
   }
