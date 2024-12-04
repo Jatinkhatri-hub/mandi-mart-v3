@@ -17,7 +17,9 @@
   
 }
 
-.main-prodcut
+.main-product-star__wrapper.mobile {
+  display: flex;
+}
 
 .main-product-star__wrapper svg {
   width: 21px;
