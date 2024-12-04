@@ -503,7 +503,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const id = "{{ section.id }}";
 
-  const accordionBtn = document.querySelectorAll()
+  const accordionBtn = document.querySelectorAll('.accordion');
 
   const swiperDesktopClass = `.mySwiper-${id}`;
   const swiperMobileClass = `.mySwiper-${id}.swiper-mobile`;
@@ -533,6 +533,8 @@ document.addEventListener('DOMContentLoaded', () => {
     observer: true,
     observeParents: true,
   });
+
+  
 
   
 
