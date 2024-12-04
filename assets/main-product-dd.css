@@ -294,7 +294,9 @@
   font-weight: 500;
   font-family: 'Poppins';
   display: flex;
-  al
+  align-items: center;
+  justify-content: space-between;
+  
 }
 
 
