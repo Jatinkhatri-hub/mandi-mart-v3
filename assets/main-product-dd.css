@@ -461,7 +461,8 @@
   }
 
   .quantity__value-badge {
-    font-size: ;
+    font-size: 13px;
+    padding: 6px 
   }
 }
 
