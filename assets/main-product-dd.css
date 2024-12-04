@@ -348,7 +348,11 @@
 }
 
 .review__user-info h2 {
-  ma
+  margin: 0;
+  font-size: 19px;
+  color: black;
+  font-family: 'Poppins';
+  font-weight: ;
 }
 
 
