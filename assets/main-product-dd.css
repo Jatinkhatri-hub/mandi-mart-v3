@@ -413,7 +413,10 @@
     height: 100px;
   }
 
-  .main-product__thumb
+  .main-product__thumb-img {
+    width: 100px;
+    height: 100px;
+  }
 
   #product-form {
     align-self: center;
