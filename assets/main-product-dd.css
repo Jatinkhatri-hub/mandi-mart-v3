@@ -399,7 +399,9 @@
     gap: 50px;
   }
 
-  .main-product
+  .main-product__media-wrapper {
+    
+  }
 
   #product-form {
     align-self: center;
