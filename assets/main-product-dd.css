@@ -411,7 +411,7 @@
 
   .main-product__thumb-wrapper {
     height: 100px;
-    mar
+    margin-top: 15px;
   }
 
   .main-product__thumb-img {
@@ -422,6 +422,8 @@
   #product-form {
     align-self: center;
   }
+
+  .main-product-star__wrapper 
 }
 
 
