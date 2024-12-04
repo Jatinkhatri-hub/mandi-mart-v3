@@ -233,6 +233,11 @@
 }
 
 
+.main-product__atc-btn-wrapper {
+  display: flex;
+  flex
+}
+
 .main-product__atc-btn {
   outline: none;
   border: 2px solid #3AAFA9;
