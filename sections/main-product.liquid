@@ -116,7 +116,9 @@
             </div>
           </div> 
 
-          <!-- Selling Plan Integration -->
+          
+
+          {% comment %} <!-- Selling Plan Integration -->
           {% if product.selling_plan_groups.size > 0 %}
             <div class="selling-plan-app-container">
               <fieldset>
@@ -127,7 +129,7 @@
               </fieldset>
               <input type="hidden" name="selling_plan" class="selected-selling-plan-id">
             </div>
-          {% endif %}
+          {% endif %} {% endcomment %}
           {% comment %} {% if product.selling_plan_groups.size > 0 %}
             <div class="selling_plan_app_container">
               {% for variant in product.variants %}
