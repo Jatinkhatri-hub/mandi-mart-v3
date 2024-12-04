@@ -118,6 +118,17 @@
 
           <!-- Selling Plan Integration -->
           {% if product.selling_plan_groups.size > 0 %}
+            <div class="selling-plan-app-container">
+              <fieldset>
+                <legend>Subscription Options:</legend>
+                <div class="selling-plan-options">
+                  <!-- Selling Plan Options will be dynamically rendered here -->
+                </div>
+              </fieldset>
+              <input type="hidden" name="selling_plan" class="selected-selling-plan-id">
+            </div>
+          {% endif %}
+          {% comment %} {% if product.selling_plan_groups.size > 0 %}
             <div class="selling_plan_app_container">
               {% for variant in product.variants %}
                 {% if variant.selling_plan_allocations.size > 0 %}
@@ -152,7 +163,7 @@
               name="selling_plan" 
               class="selected-selling-plan-id"
             >
-          {% endif %}
+          {% endif %} {% endcomment %}
           {% comment %} {%- assign current_variant = product.selected_or_first_available_variant | default: product.variants.first -%}
 
           {% if product.selling_plan_groups.size > 0 %}
