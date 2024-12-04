@@ -393,7 +393,10 @@
     display: none;
   }
 
-  .main-product
+  .main-product__wrapper {
+    grid-template-columns: 560px 1fr;
+    align-items: baseline;
+  }
 
   #product-form {
     align-self: center;
