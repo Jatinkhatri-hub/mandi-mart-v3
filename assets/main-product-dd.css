@@ -424,7 +424,8 @@
   }
 
   .main-product-star__wrapper svg {
-    width: 2;
+    width: 25px;
+    height: 25px;
   }
 }
 
