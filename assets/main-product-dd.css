@@ -357,7 +357,8 @@
 
 .review__verified-badge {
   display: flex;
-  flex
+  align-items: center;
+  jua
 }
 
 
