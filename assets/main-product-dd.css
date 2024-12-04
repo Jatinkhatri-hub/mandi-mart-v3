@@ -392,6 +392,10 @@
   .main-product-review-star__wrapper.mobile {
     display: none;
   }
+
+  #product-form {
+    align-self: center;
+  }
 }
 
 
