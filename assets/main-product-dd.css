@@ -396,6 +396,7 @@
   .main-product__wrapper {
     grid-template-columns: 560px 1fr;
     align-items: baseline;
+    gap:
   }
 
   #product-form {
