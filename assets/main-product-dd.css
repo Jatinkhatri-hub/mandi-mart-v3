@@ -355,7 +355,10 @@
   font-weight: 400;
 }
 
-.review__
+.review__verified-badge {
+  display: flex;
+  flex
+}
 
 
 
