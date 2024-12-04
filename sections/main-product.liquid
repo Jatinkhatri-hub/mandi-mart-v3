@@ -396,63 +396,59 @@ document.addEventListener('DOMContentLoaded', () => {
     observeParents: true,
   });
 
-   // Elements
-   const variantRadios = document.querySelectorAll('.variant-radio');
-  const sellingPlanRadios = document.querySelectorAll('[data-radio-type="selling_plan"]');
-  const oneTimePurchaseRadios = document.querySelectorAll('[data-radio-type="one_time_purchase"]');
+  const variantRadios = document.querySelectorAll('.variant-radio');
+  const sellingPlanSections = document.querySelectorAll('.selling_plan_theme_integration');
   const sellingPlanInput = document.querySelector('.selected-selling-plan-id');
   const priceElement = document.querySelector('.main-product__current-price');
-  const compareAtPriceElement = document.querySelector('.main-product__cap');
+  const comparePriceElement = document.querySelector('.main-product__cap');
 
-  // Function to update selling plan data
+  // Update selling plan visibility
   const updateSellingPlanData = (variantId) => {
     // Hide all selling plan sections
-    document.querySelectorAll('.selling_plan_theme_integration').forEach((section) => {
+    sellingPlanSections.forEach(section => {
       section.classList.add('selling_plan_theme_integration--hidden');
     });
 
-    // Show the section for the selected variant
+    // Show the relevant section for the selected variant
     const selectedSection = document.querySelector(`.selling_plan_theme_integration[data-variant-id="${variantId}"]`);
     if (selectedSection) {
       selectedSection.classList.remove('selling_plan_theme_integration--hidden');
     }
+    
+    // Reset the selling plan input
+    const selectedSellingPlan = selectedSection?.querySelector('input[data-radio-type="selling_plan"]:checked');
+    sellingPlanInput.value = selectedSellingPlan ? selectedSellingPlan.value : '';
+  };
 
-    // Update prices
-    const selectedVariant = selectedSection.querySelector('[data-radio-type="selling_plan"]:checked');
+  // Update displayed price
+  const updatePriceDisplay = (variantId) => {
+    const selectedVariant = Array.from(variantRadios).find(radio => radio.value == variantId);
     if (selectedVariant) {
-      const newPrice = selectedVariant.getAttribute('data-variant-price');
-      const newCompareAtPrice = selectedVariant.getAttribute('data-variant-compare-at-price');
-      priceElement.textContent = newPrice;
-      compareAtPriceElement.textContent = newCompareAtPrice || '';
+      const newPrice = selectedVariant.dataset.price;
+      const newComparePrice = selectedVariant.dataset.compareAtPrice;
+
+      if (newPrice) priceElement.textContent = newPrice;
+      if (newComparePrice) comparePriceElement.textContent = newComparePrice;
     }
   };
 
-  // Event listener for variant selection
-  variantRadios.forEach((radio) => {
+  // Variant change event
+  variantRadios.forEach(radio => {
     radio.addEventListener('change', (e) => {
-      const selectedVariantId = e.target.value;
-      updateSellingPlanData(selectedVariantId);
+      const variantId = e.target.value;
+      updateSellingPlanData(variantId);
+      updatePriceDisplay(variantId);
     });
   });
 
-  // Event listener for selling plan selection
-  sellingPlanRadios.forEach((radio) => {
-    radio.addEventListener('change', (e) => {
-      sellingPlanInput.value = e.target.getAttribute('data-selling-plan-id');
+  // Selling plan change event
+  sellingPlanSections.forEach(section => {
+    section.addEventListener('change', (e) => {
+      if (e.target.dataset.radioType === 'selling_plan') {
+        sellingPlanInput.value = e.target.value;
+      }
     });
   });
-
-  // Event listener for one-time purchase
-  oneTimePurchaseRadios.forEach((radio) => {
-    radio.addEventListener('change', () => {
-      sellingPlanInput.value = ''; // Clear selling plan for one-time purchase
-    });
-  });
-
-  // Initialize with the first variant's data
-  const initialVariantId = document.querySelector('.variant-radio:checked').value;
-  updateSellingPlanData(initialVariantId);
-  
 
 
 });
