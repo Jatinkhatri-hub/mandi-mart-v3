@@ -257,7 +257,7 @@
   justify-content: center;
   width: 100%;
   max-width: 590px;
-  transition: 0.3ms backg;
+  transition: 0.3ms color ease-in-out, 0.;
 }
 
 .main-product__atc-btn:hover {
