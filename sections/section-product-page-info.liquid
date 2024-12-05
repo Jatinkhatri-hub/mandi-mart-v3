@@ -1,4 +1,4 @@
-{{ 'main-product-dd.css' |  asset_url | stylesheet_tag }}
+{{ 'section-product-page-info.css' |  asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -13,3 +13,6 @@
     }
   }
 {%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }} ">
+  <div class="page-width" style="max-width: 1300px;">
