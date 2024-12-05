@@ -51,7 +51,8 @@
 @media screen and (max-width: 786px) {
 
   .product__info-wrapper {
-    di
+    gap: 25px;
+    flex-wrap: wrap;
   }
 
   .product__value-point-wrapper {
