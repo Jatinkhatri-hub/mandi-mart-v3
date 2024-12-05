@@ -750,13 +750,36 @@ class SellingPlansWidget {
       // Find the visible selling plan section
       const visibleSection = document.querySelector('.selling_plan_theme_integration:not(.selling_plan_theme_integration--hidden)');
       
-      // Add selling plan if subscription is selected
-      if (visibleSection && visibleSection.querySelector('input[data-radio-type="subscribe_and_save"]:checked')) {
-        const sellingPlanInput = visibleSection.querySelector('.selected-selling-plan-id');
-        if (sellingPlanInput && sellingPlanInput.value) {
-          formData.append('selling_plan', sellingPlanInput.value);
-        }
+      // // Add selling plan if subscription is selected
+      // if (visibleSection && visibleSection.querySelector('input[data-radio-type="subscribe_and_save"]:checked')) {
+      //   const sellingPlanInput = visibleSection.querySelector('.selected-selling-plan-id');
+      //   if (sellingPlanInput && sellingPlanInput.value) {
+      //     formData.append('selling_plan', sellingPlanInput.value);
+      //   }
+      // }
+
+
+    // Add selling plan if subscription is selected
+    if (visibleSection && visibleSection.querySelector('input[data-radio-type="subscribe_and_save"]:checked')) {
+      const sellingPlanSelect = visibleSection.querySelector('#selling-plan-options');
+      const sellingPlanInput = visibleSection.querySelector('.selected-selling-plan-id');
+      
+      console.log('Subscription Selected Debug:', {
+        sellingPlanSelect: sellingPlanSelect,
+        sellingPlanInput: sellingPlanInput,
+        selectedOption: sellingPlanSelect ? sellingPlanSelect.value : null,
+        selectedPlanId: sellingPlanInput ? sellingPlanInput.value : null
+      });
+      
+      if (sellingPlanInput && sellingPlanInput.value) {
+        formData.append('selling_plan', sellingPlanInput.value);
+        console.log('Appending Selling Plan:', sellingPlanInput.value);
+      } else if (sellingPlanSelect && sellingPlanSelect.value) {
+        // Fallback: use select value directly
+        formData.append('selling_plan', sellingPlanSelect.value);
+        console.log('Falling back to select value:', sellingPlanSelect.value);
       }
+    }
 
       // Perform AJAX cart add
       fetch('/cart/add.js', {
