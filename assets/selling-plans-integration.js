@@ -127,6 +127,8 @@ class SellingPlansWidget {
     
     // Update price
     this.updatePrice();
+    console.log('Selected Selling Plan:', sellingPlanInput ? sellingPlanInput.value : 'None');
+
   }
   
   updateVariantSpecificContent() {
