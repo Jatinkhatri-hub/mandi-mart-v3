@@ -14,7 +14,9 @@
   display: none;
 }
 
-.main-
+.main-product__title {
+  display: none;
+}
 
 .main-product-star__wrapper {
   display: flex;
