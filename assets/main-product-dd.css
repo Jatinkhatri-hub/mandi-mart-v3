@@ -450,9 +450,9 @@
   font-size: 1.15rem;
   padding: 0.675em 6em 0.675em 1em;
   background-color: #F3F7F7;
-  border: 1px solid #074542;
+  border: 2px solid #074542;
   border-radius: 0.25rem;
-  color: #000;
+  color: #074542;
   cursor: pointer;
 }
 
