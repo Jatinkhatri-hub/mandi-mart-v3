@@ -194,7 +194,7 @@
   border-color: transparent white transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
+
 .right::after {
   left: -16px;
 }
