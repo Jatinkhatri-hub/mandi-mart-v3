@@ -76,6 +76,10 @@
     width: 25px;
     height: 25px;
   }
+
+  .product__value-point-wrapper p {
+    font-size: 16px;
+  }
 }
 
 
