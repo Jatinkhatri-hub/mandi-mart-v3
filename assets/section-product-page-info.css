@@ -54,6 +54,7 @@
     gap: 25px;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-top: 40px;
   }
 
   .product__value-point-wrapper {
