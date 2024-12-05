@@ -414,7 +414,10 @@
   font-family: 'Poppins';
   color: #074542;
   border: 2px solid #074542;
+  opacity: .6;
 }
+
+
 
 
 .onetime__btn input, .subscription__btn input {
