@@ -523,7 +523,7 @@
     color: #074542;
     border: 2px solid #074542;
   }
-  .label:active {
+  .label:has(:checked) {
     background: #F3F7F7;
     color: #074542;
     border: 2px solid #074542;
