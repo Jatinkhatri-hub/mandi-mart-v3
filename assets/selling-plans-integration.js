@@ -19,6 +19,7 @@ class SellingPlansWidget {
     this.sellingPlanRadios = this.getSellingPlanRadios();
     this.sellingPlanContainer = document.querySelector('.selling_plan_app_container');
     this.sellingPlanInput = document.querySelector('.selected-selling-plan-id');
+    
   }
 
   getSellingPlanRadios() {
