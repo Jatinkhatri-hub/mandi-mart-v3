@@ -565,7 +565,9 @@
     display: none;
   }
 
-  
+  .main-product__review-card-wrapper {
+    margin-top: 25px;
+  }
 
 
   
