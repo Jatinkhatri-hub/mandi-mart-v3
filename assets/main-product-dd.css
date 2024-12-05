@@ -518,10 +518,10 @@
     border: 1px solid #4A2FB11C;
   }
   .label:hover {
-    background: #d8d8d8;
+    background: #F3F7F7;
   }
   .label:active {
-    background: #ccc;
+    background: #F3F7F7;
   }
   .input:focus + .label {
     z-index: 1;
