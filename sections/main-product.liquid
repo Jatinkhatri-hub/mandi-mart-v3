@@ -317,7 +317,7 @@
                     {% for allocation in allocations %}
                       <option 
                         value="{{ allocation.selling_plan.id }}"
-                        
+                        data-selling-plan-price='{{ allocation.price | money_without_currency }}'
                         data-selling-plan-id='{{ allocation.selling_plan.id }}'
                         data-selling-plan-adjustment='{{ allocation.selling_plan.price_adjustments.size }}'>
                         {{ allocation.selling_plan.name }} - {{ allocation.price | money_with_currency }}
