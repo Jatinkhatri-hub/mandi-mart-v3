@@ -441,7 +441,7 @@
 
 
 #subscribe-options-dropdown {
-  min-width: 350px;
+  max-width: 700px;
 }
 
 #subscribe-options-dropdown::before,
