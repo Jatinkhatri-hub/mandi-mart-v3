@@ -92,44 +92,20 @@ class SellingPlansWidget {
   
   updateVariantSpecificContent() {
     // Get current variant
-    // const currentVariantRadio = document.querySelector('input[name="variant"]:checked');
-    // if (!currentVariantRadio) return;
+    const currentVariantRadio = document.querySelector('input[name="variant"]:checked');
+    if (!currentVariantRadio) return;
     
-    // const currentVariantId = currentVariantRadio.value;
+    const currentVariantId = currentVariantRadio.value;
     
-    // // Show/hide selling plan sections based on current variant
-    // const sellingPlanSections = document.querySelectorAll('.selling_plan_theme_integration');
-    // sellingPlanSections.forEach(section => {
-    //   if (section.dataset.variantId === currentVariantId) {
-    //     section.classList.remove('selling_plan_theme_integration--hidden');
-    //   } else {
-    //     section.classList.add('selling_plan_theme_integration--hidden');
-    //   }
-    // });
-
-     // Get current variant
-  const currentVariantRadio = document.querySelector('input[name="variant"]:checked');
-  if (!currentVariantRadio) return;
-  
-  const currentVariantId = currentVariantRadio.value;
-  console.log('Current Variant ID:', currentVariantId, typeof currentVariantId);
-  
-  // Show/hide selling plan sections based on current variant
-  const sellingPlanSections = document.querySelectorAll('.selling_plan_theme_integration');
-  console.log('Total Selling Plan Sections:', sellingPlanSections.length);
-  
-  sellingPlanSections.forEach(section => {
-    const sectionVariantId = section.dataset.variantId;
-    console.log('Section Variant ID:', sectionVariantId, typeof sectionVariantId);
-    
-    if (sectionVariantId === currentVariantId) {
-      section.classList.remove('selling_plan_theme_integration--hidden');
-      console.log('Showing section for variant', sectionVariantId);
-    } else {
-      section.classList.add('selling_plan_theme_integration--hidden');
-      console.log('Hiding section for variant', sectionVariantId);
-    }
-  });
+    // Show/hide selling plan sections based on current variant
+    const sellingPlanSections = document.querySelectorAll('.selling_plan_theme_integration');
+    sellingPlanSections.forEach(section => {
+      if (section.dataset.variantId === currentVariantId) {
+        section.classList.remove('selling_plan_theme_integration--hidden');
+      } else {
+        section.classList.add('selling_plan_theme_integration--hidden');
+      }
+    });
     
     // Reset purchase type to one-time
     if (this.oneTimePurchaseRadio) {
