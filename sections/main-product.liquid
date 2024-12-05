@@ -249,6 +249,92 @@
               class='selected-selling-plan-id'
               type='hidden'>
           {% endif %} {% endcomment %}
+          {%- assign current_variant = product.selected_or_first_available_variant | default: product.variants.first -%}
+
+{% if product.selling_plan_groups.size > 0 %}
+  <div class="selling_plan_app_container" data-section-id='{{ section.id }}'>
+    <script src="{{ 'selling-plans-integration.js' | asset_url }}" defer></script>
+    <style>.selling_plan_theme_integration--hidden {display: none;}</style>
+    {% for variant in product.variants %}
+      {%liquid
+        assign variantPrice = variant.price | money_with_currency | escape
+        assign variantComparedAtPrice = variant.compare_at_price | money_with_currency | escape
+      %}
+      {% if variant.selling_plan_allocations.size > 0 %}
+        <section data-variant-id='{{ variant.id }}' class='selling_plan_theme_integration {% if variant.id != current_variant.id %}selling_plan_theme_integration--hidden{% endif %}'>
+          <fieldset>
+            <legend>
+              {{ block.settings.supporting_text_title }}
+            </legend>
+            <div>
+              {% unless product.requires_selling_plan %}
+                <!-- One-Time Purchase Radio Button -->
+                <div>
+                  <label>
+                    <input
+                      aria-label='One-time purchase. Product price {{ variantPrice }}'
+                      type='radio'
+                      name="purchaseOption_{{ section.id }}"
+                      id='{{ section.id }}_one_time_purchase'
+                      data-radio-type='one_time_purchase'
+                      data-variant-id='{{ variant.id }}'
+                      data-variant-price='{{ variantPrice }}'
+                      data-variant-compare-at-price='{{ variantComparedAtPrice }}'
+                      checked
+                      onclick="toggleSubscribeDropdown(false)"
+                    />
+                    One-time purchase
+                  </label>
+                </div>
+              {% endunless %}
+              <!-- Subscribe and Save Radio Button -->
+              <div>
+                <label>
+                  <input
+                    aria-label='Subscribe and Save'
+                    type='radio'
+                    name="purchaseOption_{{ section.id }}"
+                    id='{{ section.id }}_subscribe_and_save'
+                    data-radio-type='subscribe_and_save'
+                    data-variant-id='{{ variant.id }}'
+                    onclick="toggleSubscribeDropdown(true)"
+                  />
+                  Subscribe and Save
+                </label>
+              </div>
+              <!-- Subscribe Options Dropdown -->
+              <div id="subscribe-options-dropdown" style="display: none;">
+                <label for="selling-plan-options">Choose a plan:</label>
+                <select id="selling-plan-options" name="selling_plan">
+                  {% assign group_ids = variant.selling_plan_allocations | map: 'selling_plan_group_id' | uniq %}
+                  {% for group_id in group_ids %}
+                    {%liquid
+                      assign group = product | map: 'selling_plan_groups' | where: 'id', group_id | first
+                      assign allocations = variant | map: 'selling_plan_allocations' | where: 'selling_plan_group_id', group_id
+                    %}
+                    {% for allocation in allocations %}
+                      <option 
+                        value="{{ allocation.selling_plan.id }}"
+                        data-selling-plan-id='{{ allocation.selling_plan.id }}'
+                        data-selling-plan-adjustment='{{ allocation.selling_plan.price_adjustments.size }}'>
+                        {{ allocation.selling_plan.name }} - {{ allocation.price | money_with_currency }}
+                      </option>
+                    {% endfor %}
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <input
+    name='selling_plan'
+    class='selected-selling-plan-id'
+    type='hidden'>
+{% endif %}
+
 
           <div class="main-product__atc-btn-wrapper">
             <button class="main-product__atc-btn">
