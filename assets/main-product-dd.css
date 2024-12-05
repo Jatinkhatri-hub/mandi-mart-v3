@@ -419,7 +419,7 @@
   border-radius: 5px;
 }
 
-.onetime__btn:has(.input:checked), .subscription__btn:has( input:checked) {
+.onetime__btn:has(input:checked), .subscription__btn:has( input:checked) {
   opacity: 1;
 }
 
