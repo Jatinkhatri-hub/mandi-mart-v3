@@ -460,7 +460,7 @@
   top: 40%;
 }
 
-.custom-select::after {
+#subscribe-options-dropdown::after {
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
   border-top: var(--size) solid black;
