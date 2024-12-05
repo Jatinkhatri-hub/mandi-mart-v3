@@ -289,14 +289,14 @@
   width: fit-content;
   margin: 0;
 }
-
+/* 
 .container.right .timeline__title {
   text-align: start;
 }
 
 .container.right .timeline__description {
   text-align: start;
-}
+} */
 
 .timeline__title {
   font-size: 26px ;
