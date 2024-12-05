@@ -84,32 +84,30 @@
   </div>
 </div>
 
-{% comment %} <script>
-  document.addEventListener('DOMContentLoaded', () => {
+<script>
+  // Optional: Add JavaScript for additional interactivity if needed
+  document.addEventListener('DOMContentLoaded', function() {
+      // You can add scroll animations or other interactive features here
       const timelineItems = document.querySelectorAll('.timeline-item');
-      const timelinePoints = document.querySelectorAll('.timeline-point');
 
-      const revealOnScroll = () => {
-          const triggerBottom = window.innerHeight * 0.8;
-
-          timelineItems.forEach((item, index) => {
-              const itemTop = item.getBoundingClientRect().top;
-              const point = timelinePoints[index];
-
-              if (itemTop < triggerBottom) {
-                  item.classList.add('reveal');
-                  point.classList.add('active');
-              } else {
-                  item.classList.remove('reveal');
-                  point.classList.remove('active');
-              }
-          });
+      // Simple fade-in animation on scroll
+      const observerOptions = {
+          threshold: 0.1
       };
 
-      window.addEventListener('scroll', revealOnScroll);
-      revealOnScroll(); // Trigger initial check
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+              }
+          });
+      }, observerOptions);
+
+      timelineItems.forEach(item => {
+          observer.observe(item);
+      });
   });
-</script> {% endcomment %}
+</script>
 
 {%  schema  %} 
 {
