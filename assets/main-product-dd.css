@@ -531,7 +531,9 @@
 
   .main-product__quantity-box:has(.quantity-radio:checked)
 
-  #
+  #tab1:checked {
+    
+  }
 
   .input:focus + .label {
     z-index: 1;
