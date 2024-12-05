@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         successContainer.remove();
       }, 3000);
     }
-  }
+  };
   
 
   // Trigger initial price setup
