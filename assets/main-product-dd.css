@@ -516,8 +516,7 @@
     font-weight: 500;
     transition: background 0.1s, color 0.1s;
     border: 1px solid #4A2FB11C;
-
-    
+    border-radius: 3px;
   }
   .label:hover {
     background: #F3F7F7;
