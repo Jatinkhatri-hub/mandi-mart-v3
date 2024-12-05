@@ -417,6 +417,10 @@
   opacity: .6;
   padding: 17px 25px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 
 }
 
 .onetime__btn:has(input:checked), .subscription__btn:has( input:checked) {
