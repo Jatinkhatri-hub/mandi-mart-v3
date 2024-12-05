@@ -541,7 +541,7 @@
       order: 99;
     }
   }
-  .input:checked + .label + .panel {
+  .input:checked + .label + .panel-tab {
     display: block;
   }
   
