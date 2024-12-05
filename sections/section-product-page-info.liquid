@@ -23,7 +23,8 @@
         {%  case block.type %} 
           {% when 'product_value_point' %}
             <div class="product__value-point-wrapper">
-              <h2>{{ block.settings }}</h2>
+              <h2>{{ block.settings.title }}</h2>
+              {{  }}
             </div>
         {% endcase %} 
       {% endfor %}
