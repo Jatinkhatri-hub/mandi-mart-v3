@@ -520,10 +520,12 @@
   .label:hover {
     background: #F3F7F7;
     color: #074542;
-    border-top: #;
+    border-top: #074542;
   }
   .label:active {
     background: #F3F7F7;
+    color: #074542;
+    bo
   }
   .input:focus + .label {
     z-index: 1;
