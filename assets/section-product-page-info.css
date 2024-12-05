@@ -62,8 +62,13 @@
     
   }
 
+  .product__value-point-wrapper h2 {
+    font-size: 29px;
+  }
+
   .product__value-point-wrapper h2 svg {
     width: 25px;
+    height: 25px;
   }
 }
 
