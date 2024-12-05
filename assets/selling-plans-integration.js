@@ -746,6 +746,12 @@ class SellingPlansWidget {
       const formData = new FormData();
       formData.append('id', variantId);
       formData.append('quantity', quantity);
+
+      console.log('Add to Cart Triggered', {
+        selectedVariantRadio: document.querySelector('input[name="variant"]:checked'),
+        subscribeRadio: document.querySelector('input[data-radio-type="subscribe_and_save"]:checked'),
+        sellingPlanSelect: document.querySelector('#selling-plan-options')
+      });
       
       // Find the visible selling plan section
       const visibleSection = document.querySelector('.selling_plan_theme_integration:not(.selling_plan_theme_integration--hidden)');
