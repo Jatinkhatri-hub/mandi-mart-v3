@@ -24,7 +24,7 @@
           "type": "product_value_point",
           "settings": {
             "title": "Lorem ipsum dolor sit amet",
-            "description": "<p>Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris!</p><p><br/>Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna!</p>"
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris!</p><p>Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna!</p>"
           }
         }
       },
