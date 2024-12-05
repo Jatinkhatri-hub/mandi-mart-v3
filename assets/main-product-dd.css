@@ -393,6 +393,7 @@
 
 .selling_plan_theme_integration fieldset {
   border: none;
+  padding: 0;
 }
 
 
@@ -503,7 +504,7 @@
   }
 
   .main-product-review-star__wrapper.desktop {
-    display: none;
+    display: flex;
   }
   
   .main-product__title.desktop {
