@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Format with two decimal places
-    return `$${numericPrice.toFixed(2)}`;
+    return `Rs. ${numericPrice.toFixed(2)}`;
   };
 
   // Initialize first variant as selected
