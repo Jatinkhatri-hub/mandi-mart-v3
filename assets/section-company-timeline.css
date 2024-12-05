@@ -277,6 +277,44 @@
       /* border-radius: 5px; */
   }
 
+
+.timeline__year {
+  
+  font-size: 31px ;
+  font-weight: 600;
+  font-family: "Poppins";
+  color: rgb(var(--color-foreground));
+  background-color: #F3F7F7;
+  padding: 2px 20px;
+  width: fit-content;
+  margin: 0;
+}
+
+.container.right .timeline__title {
+  text-align: start;
+}
+
+.container.right .timeline__description {
+  text-align: start;
+}
+
+.timeline__title {
+  font-size: 26px ;
+  font-weight: 600;
+  font-family: "Poppins";
+  color: rgb(var(--color-foreground));
+  margin: 0;
+  
+}
+
+.timeline__description {
+  font-size: 16px ;
+  font-weight: 400;
+  font-family: "Poppins";
+  color: #000;
+  margin: 0;
+}
+
   .timeline-image {
       width: 545px;
       height: 410px;
