@@ -26,10 +26,50 @@
             "title": "Lorem ipsum dolor sit amet",
             "description": "<p>Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris!</p><p>Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna!</p>"
           }
+        },
+        "product_value_point_hbW8Wq": {
+          "type": "product_value_point",
+          "settings": {
+            "title": "Title",
+            "description": ""
+          }
+        },
+        "product_value_point_JJJGgp": {
+          "type": "product_value_point",
+          "settings": {
+            "title": "Title",
+            "description": ""
+          }
+        },
+        "product_value_point_ADFcTN": {
+          "type": "product_value_point",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris! Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna!</p>"
+          }
+        },
+        "product_value_point_QTgWdQ": {
+          "type": "product_value_point",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris! Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna!</p>"
+          }
+        },
+        "product_value_point_qr39yp": {
+          "type": "product_value_point",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris! Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna!</p>"
+          }
         }
       },
       "block_order": [
-        "product_value_point_BrBfma"
+        "product_value_point_BrBfma",
+        "product_value_point_hbW8Wq",
+        "product_value_point_JJJGgp",
+        "product_value_point_ADFcTN",
+        "product_value_point_QTgWdQ",
+        "product_value_point_qr39yp"
       ],
       "settings": {
         "color_scheme": "",
