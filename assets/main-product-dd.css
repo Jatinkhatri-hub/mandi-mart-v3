@@ -409,7 +409,9 @@
   width: 100%;
   display: flex;
   position: relative;
+  font
 }
+
 
 .onetime__btn input, .subscription__btn input {
   position: absolute;
