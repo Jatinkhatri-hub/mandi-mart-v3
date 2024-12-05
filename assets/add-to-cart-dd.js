@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             break;
           case 3:
             // 20% off for 3 items
-            basePrice = parseFloat(basePrice.replace(/[^0-9.-]+/g, '')) * 0.80 ;
+            basePrice = parseFloat(basePrice.replace(/[^0-9.-]+/g, '')) * 0.80 * 3;
             break;
           default:
             // Ensure it's the original price for quantity 1
