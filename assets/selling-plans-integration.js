@@ -214,7 +214,7 @@ class SellingPlansWidget {
       })
       .then(addedItem => {
         this.showSuccess(`Added ${quantity} item(s) to cart`);
-        this.updateCartDrawer(addedItem);
+        // this.updateCartDrawer(addedItem);
       })
       .catch(error => {
         console.error('Add to Cart Error:', error);
