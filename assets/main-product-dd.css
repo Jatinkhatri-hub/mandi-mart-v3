@@ -411,9 +411,9 @@
   position: relative;
 }
 
-.onetime__btn input, .subscription__btn .input {
+.onetime__btn input, .subscription__btn input {
   position: absolute;
-  o
+  opacity: 0;
 }
 
 
