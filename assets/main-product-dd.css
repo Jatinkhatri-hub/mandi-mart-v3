@@ -403,6 +403,7 @@
 
 .subscription-button-container {
   width: 100%;
+
 }
 
 .onetime__btn, .subscription__btn {
@@ -422,6 +423,8 @@
   justify-content: flex-start;
   gap: 20px;
 }
+
+.sub
 
 .onetime__btn:has(input:checked), .subscription__btn:has( input:checked) {
   opacity: 1;
