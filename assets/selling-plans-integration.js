@@ -8,6 +8,11 @@ class SellingPlansWidget {
     this.initializeElements();
     this.bindEvents();
     this.initialSetup();
+    this.addToCartButton = document.querySelector('.main-product__atc-btn');
+    this.productForm = document.getElementById('product-form');
+    
+    this.initializeAddToCartEvent();
+
   }
 
   initializeElements() {
