@@ -49,7 +49,9 @@
 }
 
 @media screen and (max-width: 786px) {
-  
+  .product__value-point-wrapper {
+    max-width: ;
+  }
 }
 
 
