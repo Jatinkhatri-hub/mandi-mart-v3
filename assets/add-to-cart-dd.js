@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (response.ok) {
-        window.location.href = '/cart';
+        // window.location.href = '/cart';
       } else {
         const errorData = await response.json();
         throw new Error(errorData.description || 'Failed to add to cart');
@@ -123,6 +123,43 @@ document.addEventListener('DOMContentLoaded', () => {
       alert(error.message);
     }
   });
+
+   // Show error message
+   showError(message) {
+    const errorContainer = document.createElement('div');
+    errorContainer.classList.add('error-message');
+    errorContainer.style.color = 'red';
+    errorContainer.textContent = message;
+    
+    // Append error message near add to cart button
+    if (this.addToCartButton) {
+      this.addToCartButton.parentNode.insertBefore(errorContainer, this.addToCartButton.nextSibling);
+      
+      // Remove error after 3 seconds
+      setTimeout(() => {
+        errorContainer.remove();
+      }, 3000);
+    }
+  }
+  
+  // Show success message
+  showSuccess(message) {
+    const successContainer = document.createElement('div');
+    successContainer.classList.add('success-message');
+    successContainer.style.color = 'green';
+    successContainer.textContent = message;
+    
+    // Append success message near add to cart button
+    if (this.addToCartButton) {
+      this.addToCartButton.parentNode.insertBefore(successContainer, this.addToCartButton.nextSibling);
+      
+      // Remove success message after 3 seconds
+      setTimeout(() => {
+        successContainer.remove();
+      }, 3000);
+    }
+  }
+  
 
   // Trigger initial price setup
   const initialVariant = document.querySelector('.variant-radio:checked');
