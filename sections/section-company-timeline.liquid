@@ -18,6 +18,26 @@
   <div class="page-width" style="max-width: 1300px;">
 
     <div class="timeline-container">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'timeline_point' %}
+            <div class="timeline-item">
+              <div class="timeline-point"></div>
+              <div class="timeline-content">
+                  <h2 class="timeline__year">1999</h2>
+                  <h3 class="timeline__title">Sam is diagnosed with Autism.</h3>
+                  <p class="timeline__description">Lorem ipsum dolor sit amet consectetur. Bibendum placerat ornare erat interdum nisl. Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices. <br><br>
+                    Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna fermentum malesuada arcu viverra neque dui malesuada. Libero faucibus quis at fringilla.<br><br>
+                    Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.</p>
+              </div>
+              <div class="timeline-image">
+                  <img src="{{ section.settings.test_img |  image_url: width: section.settings.test_img.width }}" alt="Event 1 Image">
+              </div>
+          </div>
+
+           
+        {% endcase %}
+      {% endfor %}
       <div class="timeline-item">
         
           <div class="timeline-point"></div>
