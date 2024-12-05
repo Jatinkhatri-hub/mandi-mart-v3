@@ -567,13 +567,13 @@
 
   .main-product__review-card-wrapper {
     margin-top: 25px;
+    padding: 25px;
   }
 
   .review__user-info {
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    padding: 25px;
   }
 
   
