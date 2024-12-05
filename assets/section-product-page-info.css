@@ -1,6 +1,7 @@
 .product__info-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: ce;
-  
+  justify-content: center;
+  align-items: center;
 }
+
