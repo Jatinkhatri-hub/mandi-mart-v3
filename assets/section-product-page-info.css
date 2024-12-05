@@ -18,6 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
+  gap: 10px
 }
 
 .product__value-point-wrapper h2 {
@@ -43,6 +44,7 @@
   text-align: start;
   color: black;
   padding-inline-start: 36px;
+  margin: 0;
   
 }
 
