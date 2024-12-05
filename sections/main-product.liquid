@@ -673,6 +673,16 @@
 <script>
 
 document.addEventListener('DOMContentLoaded', () => {
+
+function toggleSubscribeDropdown(showDropdown) {
+  const dropdown = document.getElementById("subscribe-options-dropdown");
+  if (showDropdown) {
+    dropdown.style.display = "block";
+  } else {
+    dropdown.style.display = "none";
+  }
+}
+
   const id = "{{ section.id }}";
 
   const accordionBtn = document.querySelectorAll('.accordion');
