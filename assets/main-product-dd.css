@@ -510,7 +510,7 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
-    color: #7f7f7f;
+    color: #282828;
     transition: background 0.1s, color 0.1s;
   }
   .label:hover {
