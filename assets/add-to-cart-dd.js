@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         switch(selectedQuantity) {
           case 2:
             // 15% off for 2 items
-            basePrice = parseFloat(basePrice.replace(/[^0-9.-]+/g, '')) * 0.85 * 2;
+            basePrice = parseFloat(basePrice.replace(/[^0-9.-]+/g, '')) * 1 * 2;
             break;
           case 3:
             // 20% off for 3 items
