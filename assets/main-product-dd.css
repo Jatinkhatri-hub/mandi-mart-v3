@@ -409,7 +409,9 @@
   width: 100%;
   display: flex;
   position: relative;
-  font
+  font-size: 19px;
+  font-weight: 500;
+  font-
 }
 
 
