@@ -459,14 +459,14 @@
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
   border-bottom: var(--size) solid black;
-  top: 40%;
+  top: 55%;
 }
 
 #subscribe-options-dropdown::after {
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
   border-top: var(--size) solid black;
-  top: 55%;
+  top: 70%;
 }
 
 #selling-plan-options {
