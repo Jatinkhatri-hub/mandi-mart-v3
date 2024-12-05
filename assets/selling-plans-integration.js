@@ -306,6 +306,120 @@ class SellingPlansWidget {
     return '$' + price.toFixed(2);
   }
   
+
+//   addToCart() {
+//     try {
+//       // Get selected variant
+//       const selectedVariantRadio = document.querySelector('input[name="variant"]:checked');
+//       if (!selectedVariantRadio) {
+//         this.showError('Please select a variant');
+//         return;
+//       }
+
+//       const variantId = selectedVariantRadio.value;
+//       const quantity = this.currentQuantity;
+      
+//       // Prepare form data
+//       const formData = new FormData();
+//       formData.append('id', variantId);
+//       formData.append('quantity', quantity);
+      
+//       // Find the visible selling plan section
+//       const visibleSection = document.querySelector('.selling_plan_theme_integration:not(.selling_plan_theme_integration--hidden)');
+      
+//       // Add selling plan if subscription is selected
+//       if (visibleSection && visibleSection.querySelector('input[data-radio-type="subscribe_and_save"]:checked')) {
+//         const sellingPlanInput = visibleSection.querySelector('.selected-selling-plan-id');
+//         if (sellingPlanInput && sellingPlanInput.value) {
+//           formData.append('selling_plan', sellingPlanInput.value);
+//         }
+//       }
+
+//       // Perform AJAX cart add
+//       fetch('/cart/add.js', {
+//         method: 'POST',
+//         body: formData,
+//         headers: {
+//           'X-Requested-With': 'XMLHttpRequest'
+//         }
+//       })
+//       .then(response => {
+//         if (!response.ok) {
+//           return response.json().then(err => { throw new Error(err.description || 'Failed to add item to cart'); });
+//         }
+//         return response.json();
+//       })
+//       .then(addedItem => {
+//         this.showSuccess(`Added ${quantity} item(s) to cart`);
+//         this.updateCartDrawer(addedItem);
+//       })
+//       .catch(error => {
+//         console.error('Add to Cart Error:', error);
+//         this.showError(error.message);
+//       });
+//     } catch (error) {
+//       console.error('Add to Cart Error:', error);
+//       this.showError(error.message);
+//     }
+//   }
+  
+//   // Utility methods
+//   parsePrice(priceString) {
+//     if (!priceString) return 0;
+//     const cleanPrice = priceString.replace(/[^\d.-]/g, '');
+//     const price = parseFloat(cleanPrice);
+//     return isNaN(price) ? 0 : price;
+//   }
+  
+//   formatPrice(price) {
+//     // Fallback price formatting
+//     return '$' + price.toFixed(2);
+//   }
+  
+//   showError(message) {
+//     const errorContainer = document.createElement('div');
+//     errorContainer.classList.add('error-message');
+//     errorContainer.style.color = 'red';
+//     errorContainer.textContent = message;
+    
+//     // Append error message near add to cart button
+//     if (this.addToCartButton) {
+//       this.addToCartButton.parentNode.insertBefore(errorContainer, this.addToCartButton.nextSibling);
+      
+//       // Remove error after 3 seconds
+//       setTimeout(() => {
+//         errorContainer.remove();
+//       }, 3000);
+//     }
+//   }
+  
+//   showSuccess(message) {
+//     const successContainer = document.createElement('div');
+//     successContainer.classList.add('success-message');
+//     successContainer.style.color = 'green';
+//     successContainer.textContent = message;
+    
+//     // Append success message near add to cart button
+//     if (this.addToCartButton) {
+//       this.addToCartButton.parentNode.insertBefore(successContainer, this.addToCartButton.nextSibling);
+      
+//       // Remove success message after 3 seconds
+//       setTimeout(() => {
+//         successContainer.remove();
+//       }, 3000);
+//     }
+//   }
+  
+//   updateCartDrawer(addedItem) {
+//     // Placeholder for cart drawer update
+//     console.log('Item added to cart:', addedItem);
+    
+//     // Dispatch custom event for potential cart drawer update
+//     const cartUpdateEvent = new CustomEvent('cart:update', { 
+//       detail: { item: addedItem } 
+//     });
+//     document.dispatchEvent(cartUpdateEvent);
+//   }
   // ... (other methods like addToCart, showError, etc. remain the same)
 }
 
