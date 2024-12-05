@@ -512,7 +512,8 @@
     font-size: 18px;
     color: #282828;
     font-family: 'Poppins';
-    font-size: ;
+    font-size: 16px;
+    font
     transition: background 0.1s, color 0.1s;
   }
   .label:hover {
