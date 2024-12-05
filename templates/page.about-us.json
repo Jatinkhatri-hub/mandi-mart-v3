@@ -228,7 +228,8 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "test_img": "shopify://shop_images/Rectangle_6628_1.png"
       }
     }
   },
