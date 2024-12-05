@@ -501,6 +501,10 @@
     display: none;
   }
 
+  .tabs {
+    display: block;
+  }
+
   .main-product-review-star__wrapper.mobile {
     display: none;
   }
