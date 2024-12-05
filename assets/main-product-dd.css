@@ -557,7 +557,11 @@
     display: block;
   }
 
-  .main-product__accor
+  .main-product__accordion-wrapper.mobile {
+    display: none;
+  }
+
+  
   
 
 
