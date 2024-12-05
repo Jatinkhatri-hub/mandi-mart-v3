@@ -528,6 +528,9 @@
     color: #074542;
     border: 2px solid #074542;
   }
+
+  .main-product__quantity-box:has(.quantity-radio:checked)
+
   .input:focus + .label {
     z-index: 1;
   }
