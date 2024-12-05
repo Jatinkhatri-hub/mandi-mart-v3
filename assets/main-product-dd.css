@@ -14,7 +14,7 @@
   display: none;
 }
 
-.main-product__title {
+.main-product__title.desktop {
   display: none;
 }
 
