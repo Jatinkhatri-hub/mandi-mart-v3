@@ -118,7 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
       (variantRadios.length > 0 ? variantRadios[0].value : null);
 
     if (!variantIdToAdd) {
-      alert('Please select a variant');
+      showMessage('Please select a variant', false);
+      addToCartBtn.disabled = false;
+      addToCartBtn.textContent = 'Add to Cart';
       return;
     }
 
@@ -136,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (response.ok) {
+        showMessage('Item successfully added to cart!', true);
         // window.location.href = '/cart';
       } else {
         const errorData = await response.json();
