@@ -6,6 +6,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const compareAtPriceEl = document.querySelector('.main-product__cap');
   const addToCartBtn = document.querySelector('.main-product__atc-btn');
 
+  // Create message container
+  const messageContainer = document.createElement('div');
+  messageContainer.classList.add('add-to-cart-message');
+  messageContainer.style.cssText = `
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    display: none;
+  `;
+  addToCartBtn.parentNode.insertBefore(messageContainer, addToCartBtn.nextSibling);
+
+  // Function to show message
+  const showMessage = (message, isSuccess) => {
+    messageContainer.textContent = message;
+    messageContainer.style.display = 'block';
+    messageContainer.style.color = isSuccess ? 'green' : 'red';
+    
+    // Auto-hide message after 3 seconds
+    setTimeout(() => {
+      messageContainer.style.display = 'none';
+    }, 3000);
+  };
+
   let selectedVariant = null;
   let selectedQuantity = 1;
 
