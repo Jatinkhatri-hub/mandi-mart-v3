@@ -1,8 +1,8 @@
 {{ 'main-product-dd.css' |  asset_url | stylesheet_tag }}
 
 {% if product.selling_plan_groups.size <= 0 %} 
-  {{ 'add-t.css' |  asset_url | stylesheet_tag }}
-
+  
+  <script src="{{ 'add-t0.js' | asset_url }}" defer></script>
 {% endif %}
 
 {%- style -%}
