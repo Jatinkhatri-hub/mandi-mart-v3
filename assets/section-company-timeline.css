@@ -346,5 +346,6 @@
       border-radius: 50%;
       left: 10px;
       top: 0;
+      display: block !important;
   }
 }
