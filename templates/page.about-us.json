@@ -221,12 +221,22 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "section_company_timeline_jTL4Az": {
+      "type": "section-company-timeline",
+      "settings": {
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "brand_directory_BcWLGN",
     "bd_explore_KAazk9",
-    "image_with_text_about_us_gfhd6C"
+    "image_with_text_about_us_gfhd6C",
+    "section_company_timeline_jTL4Az"
   ]
 }
