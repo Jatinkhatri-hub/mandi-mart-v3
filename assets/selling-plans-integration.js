@@ -77,7 +77,7 @@ class SellingPlansWidget {
       this.showSuccess(`Added ${quantity} item(s) to cart`);
 
       // Optional: Update cart drawer or redirect
-      this.updateCartDrawer(addedItem);
+      // this.updateCartDrawer(addedItem);
     } catch (error) {
       console.error('Add to Cart Error:', error);
       this.showError(error.message);
