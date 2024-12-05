@@ -417,7 +417,7 @@
   opacity: .6;
 }
 
-.onetime__btn:has(.input:checked), .subscription__btn input {
+.onetime__btn:has(.input:checked), .subscription__btn:has( input:checked) {
 }
 
 
