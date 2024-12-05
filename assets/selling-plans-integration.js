@@ -27,6 +27,96 @@ class SellingPlansWidget {
     
   }
 
+  initializeAddToCartEvent() {
+    if (this.addToCartButton && this.productForm) {
+      this.addToCartButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        this.addToCart();
+      });
+    }
+  }
+
+  async addToCart() {
+    try {
+      // Get selected variant
+      const selectedVariantRadio = document.querySelector('input[name="variant"]:checked');
+      if (!selectedVariantRadio) {
+        this.showError('Please select a variant');
+        return;
+      }
+
+      const variantId = selectedVariantRadio.value;
+      const quantity = this.currentQuantity;
+      const sellingPlanId = this.sellingPlanInput?.value || null;
+
+      // Prepare form data
+      const formData = new FormData();
+      formData.append('id', variantId);
+      formData.append('quantity', quantity);
+      
+      // Add selling plan if selected
+      if (sellingPlanId) {
+        formData.append('selling_plan', sellingPlanId);
+      }
+
+      // Perform AJAX cart add
+      const response = await fetch('/cart/add.js', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.description || 'Failed to add item to cart');
+      }
+
+      const addedItem = await response.json();
+      this.showSuccess(`Added ${quantity} item(s) to cart`);
+
+      // Optional: Update cart drawer or redirect
+      this.updateCartDrawer(addedItem);
+    } catch (error) {
+      console.error('Add to Cart Error:', error);
+      this.showError(error.message);
+    }
+  }
+
+  showError(message) {
+    // Create or update error message element
+    let errorEl = document.querySelector('.cart-error-message');
+    if (!errorEl) {
+      errorEl = document.createElement('div');
+      errorEl.classList.add('cart-error-message');
+      this.addToCartButton.parentNode.insertBefore(errorEl, this.addToCartButton.nextSibling);
+    }
+    
+    errorEl.textContent = message;
+    errorEl.style.color = 'red';
+    errorEl.style.marginTop = '10px';
+  }
+
+  showSuccess(message) {
+    // Create or update success message element
+    let successEl = document.querySelector('.cart-success-message');
+    if (!successEl) {
+      successEl = document.createElement('div');
+      successEl.classList.add('cart-success-message');
+      this.addToCartButton.parentNode.insertBefore(successEl, this.addToCartButton.nextSibling);
+    }
+    
+    successEl.textContent = message;
+    successEl.style.color = 'green';
+    successEl.style.marginTop = '10px';
+
+    // Optional: Remove success message after 3 seconds
+    setTimeout(() => {
+      successEl.textContent = '';
+    }, 3000);
+  }
+
   getSellingPlanRadios() {
     const currentVariantId = this.getCurrentVariantId();
     return document.querySelectorAll(`input[name="purchaseOption_${this.getSectionId()}_${currentVariantId}"]`);
