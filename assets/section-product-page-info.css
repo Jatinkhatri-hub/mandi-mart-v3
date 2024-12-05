@@ -32,7 +32,8 @@
 
 .product__value-point-wrapper p {
   font-size: 15px;
-  font
+  font-family: 'Poppins';
+  font-weight: 500;
 }
 
 
