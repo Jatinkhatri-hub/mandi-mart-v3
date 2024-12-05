@@ -272,9 +272,9 @@
   .timeline-content {
       width: 510px;
       padding: 20px;
-      background-color: white;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      border-radius: 5px;
+      /* background-color: white; */
+      /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
+      /* border-radius: 5px; */
   }
 
   .timeline-image {
@@ -287,7 +287,7 @@
 
   .timeline-image img {
       max-width: 100%;
-      max-height: 300px;
+      max-height: 410px;
       object-fit: cover;
       border-radius: 5px;
   }
