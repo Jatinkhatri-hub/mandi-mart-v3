@@ -440,7 +440,9 @@
 }
 
 
-.subscribe
+.subscribe-options-dropdown {
+  min-width: 350px;
+}
 
 
 
