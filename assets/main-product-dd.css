@@ -570,7 +570,9 @@
   }
 
   .review__user-info {
-    
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
 
   
