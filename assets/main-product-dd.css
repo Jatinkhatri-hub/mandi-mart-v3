@@ -442,6 +442,8 @@
 
 #subscribe-options-dropdown {
   max-width: 700px;
+  width: 100%;
+  position: relative;
 }
 
 #subscribe-options-dropdown::before,
