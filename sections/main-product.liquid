@@ -152,7 +152,7 @@
 
           {%- assign current_variant = product.selected_or_first_available_variant | default: product.variants.first -%}
 
-          {% if product.selling_plan_groups.size > 0 %}
+          {% comment %} {% if product.selling_plan_groups.size > 0 %}
             <div class="selling_plan_app_container" data-section-id='{{ section.id }}'>
               <script src="{{ 'selling-plans-integration.js' | asset_url }}" defer></script>
               <style>.selling_plan_theme_integration--hidden {display: none;}</style>
@@ -248,7 +248,7 @@
               name='selling_plan'
               class='selected-selling-plan-id'
               type='hidden'>
-          {% endif %}
+          {% endif %} {% endcomment %}
 
           <div class="main-product__atc-btn-wrapper">
             <button class="main-product__atc-btn">
