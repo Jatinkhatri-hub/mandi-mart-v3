@@ -29,6 +29,7 @@
   font-family: 'Poppins';
   color: black;
   gap: 17px;
+  margin-bottom: 0;
 }
 
 .product__value-point-wrapper h2 svg path {
