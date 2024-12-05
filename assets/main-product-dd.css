@@ -516,6 +516,8 @@
     font-weight: 500;
     transition: background 0.1s, color 0.1s;
     border: 1px solid #4A2FB11C;
+
+    
   }
   .label:hover {
     background: #F3F7F7;
@@ -525,7 +527,7 @@
   .label:active {
     background: #F3F7F7;
     color: #074542;
-    bo
+    border: #074542;
   }
   .input:focus + .label {
     z-index: 1;
