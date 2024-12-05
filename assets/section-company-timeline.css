@@ -199,7 +199,7 @@
   left: -16px;
 }
 
-/* The actual content */
+
 .content {
   padding: 0;
   background: transparent;
@@ -210,8 +210,6 @@
   align-items: baseline;
   gap: 15px;
 }
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 
   .timeline::after {
