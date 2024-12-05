@@ -5,13 +5,13 @@ class SellingPlansWidget {
     this.currentQuantity = 1;
     this.currentSellingPlan = null;
     
-    this.initializeElements();
-    this.bindEvents();
-    this.initialSetup();
     this.addToCartButton = document.querySelector('.main-product__atc-btn');
     this.productForm = document.getElementById('product-form');
     
     this.initializeAddToCartEvent();
+    this.initializeElements();
+    this.bindEvents();
+    this.initialSetup();
 
   }
 
