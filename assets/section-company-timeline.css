@@ -344,7 +344,7 @@
   .timeline-container::before {
       content: '';
       position: absolute;
-      width: 4px;
+      width: 3px;
       background-color: #333;
       top: 0;
       bottom: 0;
