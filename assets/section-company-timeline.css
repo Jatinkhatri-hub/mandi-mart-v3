@@ -415,8 +415,8 @@
 
   .timeline-point {
       position: absolute;
-      width: 20px;
-      height: 20px;
+      width: 21px;
+      height: 21px;
       background-color: #074542;
       border-radius: 50%;
       left: 10px;
