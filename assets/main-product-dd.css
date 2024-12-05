@@ -515,7 +515,7 @@
     font-size: 16px;
     font-weight: 500;
     transition: background 0.1s, color 0.1s;
-    border:
+    border: 1px solid #4A2FB11C;
   }
   .label:hover {
     background: #d8d8d8;
