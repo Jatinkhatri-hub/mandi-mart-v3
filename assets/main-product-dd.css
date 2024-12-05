@@ -556,6 +556,8 @@
   .input:checked + .label + .panel-tab {
     display: block;
   }
+
+  .main
   
 
 
