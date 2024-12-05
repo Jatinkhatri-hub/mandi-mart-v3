@@ -505,7 +505,7 @@
   }
   .label {
     width: 100%;
-    padding: 20px 30px;
+    padding: 10px 30px;
     background: #F6F6F6;
     cursor: pointer;
     font-weight: bold;
@@ -513,7 +513,7 @@
     color: #282828;
     font-family: 'Poppins';
     font-size: 16px;
-    font
+    font-weight: 500;
     transition: background 0.1s, color 0.1s;
   }
   .label:hover {
