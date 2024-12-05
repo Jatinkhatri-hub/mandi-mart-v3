@@ -364,7 +364,7 @@
 
 .timeline__year {
   
-  font-size: 31px ;
+  font-size: 24px ;
   font-weight: 600;
   font-family: "Poppins";
   color: rgb(var(--color-foreground));
@@ -376,7 +376,7 @@
 
 
 .timeline__title {
-  font-size: 26px ;
+  font-size: 22px ;
   font-weight: 600;
   font-family: "Poppins";
   color: rgb(var(--color-foreground));
