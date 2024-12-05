@@ -10,7 +10,11 @@
   gap: 10px;
 }
 
-.main-pr
+.main-product-review-star__wrapper.desktop {
+  display: none;
+}
+
+.main-
 
 .main-product-star__wrapper {
   display: flex;
