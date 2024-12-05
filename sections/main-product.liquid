@@ -308,7 +308,7 @@
               </div>
               <!-- Subscribe Options Dropdown -->
               <div id="subscribe-options-dropdown" style="display: none;">
-                <label for="selling-plan-options">Choose a plan:</label>
+                {% comment %} <label for="selling-plan-options">Choose a plan:</label> {% endcomment %}
                 <select id="selling-plan-options" name="selling_plan">
                   {% assign group_ids = variant.selling_plan_allocations | map: 'selling_plan_group_id' | uniq %}
                   {% for group_id in group_ids %}
