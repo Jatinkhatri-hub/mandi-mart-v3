@@ -2,7 +2,7 @@ class SellingPlansWidget {
   constructor(container) {
     this.container = container;
     
-    // Elements specific to selling plans section
+    // Elements
     this.currentVariantId = null;
     
     // Selling plans specific elements
@@ -14,6 +14,15 @@ class SellingPlansWidget {
     
     // Variant-specific sections
     this.variantSellingPlanSections = container.querySelectorAll('.selling_plan_theme_integration');
+    
+    // Product price and cart elements
+    this.priceElement = document.querySelector('.main-product__current-price');
+    this.comparePriceElement = document.querySelector('.main-product__cap');
+    this.variantRadios = document.querySelectorAll('input[name="variant"]');
+    this.quantityRadios = document.querySelectorAll('input[name="quantity"]');
+    this.addToCartButton = document.querySelector('.main-product__atc-btn');
+    
+    this.currentQuantity = 1;
     
     this.bindEvents();
     this.initialSetup();
@@ -34,11 +43,50 @@ class SellingPlansWidget {
     this.sellingPlanOptionsSelects.forEach(select => {
       select.addEventListener('change', () => this.handleSellingPlanChange(select));
     });
+    
+    // Variant change events
+    this.variantRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        this.currentVariantId = radio.value;
+        this.updateVariantSpecificContent();
+        this.updatePrice();
+      });
+    });
+    
+    // Quantity change events
+    this.quantityRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        this.currentQuantity = parseInt(radio.value);
+        this.updatePrice();
+      });
+    });
+    
+    // Add to cart button
+    if (this.addToCartButton) {
+      this.addToCartButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        this.addToCart();
+      });
+    }
   }
   
   initialSetup() {
-    // Initialize first selling plan section visibility
+    // Ensure first variant radio is selected
+    const firstVariantRadio = document.querySelector('input[name="variant"]');
+    if (firstVariantRadio) {
+      firstVariantRadio.checked = true;
+      this.currentVariantId = firstVariantRadio.value;
+    }
+    
+    // Ensure first quantity radio is selected
+    const firstQuantityRadio = document.querySelector('input[name="quantity"]');
+    if (firstQuantityRadio) {
+      firstQuantityRadio.checked = true;
+    }
+    
+    // Initial variant setup
     this.updateVariantSpecificContent();
+    this.updatePrice();
   }
   
   handlePurchaseTypeChange(radio, isSubscription) {
@@ -63,8 +111,8 @@ class SellingPlansWidget {
         : '';
     }
     
-    // Update variant ID
-    this.currentVariantId = radio.dataset.variantId;
+    // Update price
+    this.updatePrice();
   }
   
   handleSellingPlanChange(select) {
@@ -76,6 +124,9 @@ class SellingPlansWidget {
     if (sellingPlanInput) {
       sellingPlanInput.value = select.value;
     }
+    
+    // Update price
+    this.updatePrice();
   }
   
   updateVariantSpecificContent() {
@@ -101,6 +152,196 @@ class SellingPlansWidget {
       }
     }
   }
+  
+  updatePrice() {
+    try {
+      // Get current variant radio
+      const currentVariantRadio = document.querySelector('input[name="variant"]:checked');
+      if (!currentVariantRadio) {
+        console.warn('No variant radio selected');
+        return;
+      }
+
+      // Base prices from variant data attributes
+      let basePrice = this.parsePrice(currentVariantRadio.dataset.price);
+      let compareAtPrice = this.parsePrice(currentVariantRadio.dataset.compareAtPrice);
+
+      console.log('Base Prices:', {
+        basePrice, 
+        compareAtPrice, 
+        variantPriceAttr: currentVariantRadio.dataset.price,
+        variantCompareAtAttr: currentVariantRadio.dataset.compareAtPrice
+      });
+
+      // Check if subscription is selected
+      const visibleSection = document.querySelector('.selling_plan_theme_integration:not(.selling_plan_theme_integration--hidden)');
+      const isSubscription = visibleSection && visibleSection.querySelector('input[data-radio-type="subscribe_and_save"]:checked');
+      
+      // Override prices if subscription is selected and a plan is chosen
+      if (isSubscription) {
+        const sellingPlanSelect = visibleSection.querySelector('#selling-plan-options');
+        if (sellingPlanSelect) {
+          const selectedOption = sellingPlanSelect.options[sellingPlanSelect.selectedIndex];
+          if (selectedOption) {
+            // Extract price from option text
+            const priceMatch = selectedOption.textContent.match(/\$[\d.]+/);
+            if (priceMatch) {
+              basePrice = this.parsePrice(priceMatch[0]);
+              console.log('Updated Subscription Price:', basePrice);
+            }
+          }
+        }
+      }
+
+      // Apply quantity discounts
+      let adjustedPrice = basePrice;
+      switch (this.currentQuantity) {
+        case 2:
+          adjustedPrice *= 0.85; // 15% off
+          break;
+        case 3:
+          adjustedPrice *= 0.80; // 20% off
+          break;
+      }
+
+      // Calculate total prices
+      const totalPrice = adjustedPrice * this.currentQuantity;
+      const totalCompareAtPrice = compareAtPrice * this.currentQuantity;
+
+      console.log('Final Prices:', {
+        totalPrice, 
+        totalCompareAtPrice, 
+        quantity: this.currentQuantity
+      });
+
+      // Update price elements
+      if (this.priceElement) {
+        this.priceElement.textContent = this.formatPrice(totalPrice);
+      }
+
+      // Update compare at price if exists
+      if (this.comparePriceElement) {
+        this.comparePriceElement.textContent = this.formatPrice(totalCompareAtPrice);
+        this.comparePriceElement.style.display = totalPrice < totalCompareAtPrice ? 'inline' : 'none';
+      }
+    } catch (error) {
+      console.error('Error updating price:', error);
+    }
+  }
+  
+  addToCart() {
+    try {
+      // Get selected variant
+      const selectedVariantRadio = document.querySelector('input[name="variant"]:checked');
+      if (!selectedVariantRadio) {
+        this.showError('Please select a variant');
+        return;
+      }
+
+      const variantId = selectedVariantRadio.value;
+      const quantity = this.currentQuantity;
+      
+      // Prepare form data
+      const formData = new FormData();
+      formData.append('id', variantId);
+      formData.append('quantity', quantity);
+      
+      // Find the visible selling plan section
+      const visibleSection = document.querySelector('.selling_plan_theme_integration:not(.selling_plan_theme_integration--hidden)');
+      
+      // Add selling plan if subscription is selected
+      if (visibleSection && visibleSection.querySelector('input[data-radio-type="subscribe_and_save"]:checked')) {
+        const sellingPlanInput = visibleSection.querySelector('.selected-selling-plan-id');
+        if (sellingPlanInput && sellingPlanInput.value) {
+          formData.append('selling_plan', sellingPlanInput.value);
+        }
+      }
+
+      // Perform AJAX cart add
+      fetch('/cart/add.js', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      })
+      .then(response => {
+        if (!response.ok) {
+          return response.json().then(err => { throw new Error(err.description || 'Failed to add item to cart'); });
+        }
+        return response.json();
+      })
+      .then(addedItem => {
+        this.showSuccess(`Added ${quantity} item(s) to cart`);
+        this.updateCartDrawer(addedItem);
+      })
+      .catch(error => {
+        console.error('Add to Cart Error:', error);
+        this.showError(error.message);
+      });
+    } catch (error) {
+      console.error('Add to Cart Error:', error);
+      this.showError(error.message);
+    }
+  }
+  
+  // Utility methods
+  parsePrice(priceString) {
+    if (!priceString) return 0;
+    const cleanPrice = priceString.replace(/[^\d.-]/g, '');
+    const price = parseFloat(cleanPrice);
+    return isNaN(price) ? 0 : price;
+  }
+  
+  formatPrice(price) {
+    // Fallback price formatting
+    return '$' + price.toFixed(2);
+  }
+  
+  showError(message) {
+    const errorContainer = document.createElement('div');
+    errorContainer.classList.add('error-message');
+    errorContainer.style.color = 'red';
+    errorContainer.textContent = message;
+    
+    // Append error message near add to cart button
+    if (this.addToCartButton) {
+      this.addToCartButton.parentNode.insertBefore(errorContainer, this.addToCartButton.nextSibling);
+      
+      // Remove error after 3 seconds
+      setTimeout(() => {
+        errorContainer.remove();
+      }, 3000);
+    }
+  }
+  
+  showSuccess(message) {
+    const successContainer = document.createElement('div');
+    successContainer.classList.add('success-message');
+    successContainer.style.color = 'green';
+    successContainer.textContent = message;
+    
+    // Append success message near add to cart button
+    if (this.addToCartButton) {
+      this.addToCartButton.parentNode.insertBefore(successContainer, this.addToCartButton.nextSibling);
+      
+      // Remove success message after 3 seconds
+      setTimeout(() => {
+        successContainer.remove();
+      }, 3000);
+    }
+  }
+  
+  updateCartDrawer(addedItem) {
+    // Placeholder for cart drawer update
+    console.log('Item added to cart:', addedItem);
+    
+    // Dispatch custom event for potential cart drawer update
+    const cartUpdateEvent = new CustomEvent('cart:update', { 
+      detail: { item: addedItem } 
+    });
+    document.dispatchEvent(cartUpdateEvent);
+  }
 }
 
 // Global function for compatibility with existing Liquid template
@@ -118,6 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new SellingPlansWidget(container);
   });
 });
+
 
 // class SellingPlansWidget {
 //   constructor(container) {
