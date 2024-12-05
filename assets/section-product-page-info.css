@@ -52,6 +52,7 @@
 
   .product__info-section-header {
     font-size: 29px;
+    width: 50%;
   }
 
   .product__info-wrapper {
