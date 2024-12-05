@@ -19,8 +19,21 @@
     },
     "section_product_page_info_tdpeDQ": {
       "type": "section-product-page-info",
+      "blocks": {
+        "product_value_point_BrBfma": {
+          "type": "product_value_point",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris!<br/>Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_value_point_BrBfma"
+      ],
       "settings": {
         "color_scheme": "",
+        "header": "Lorem ipsum dolor sit amet conse ctetur. Adipiscing venenatis urna vel in Interdum",
         "padding_top": 36,
         "padding_bottom": 36
       }
