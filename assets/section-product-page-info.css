@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-.prouduct__value-point-wrapper {
+.product__value-point-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,6 +30,8 @@
   color: black;
 }
 
-.pro
+.product__value-point-wrapper p {
+  
+}
 
 
