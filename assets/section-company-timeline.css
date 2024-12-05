@@ -84,7 +84,7 @@
   margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
+
 .timeline::after {
   content: '';
   position: absolute;
@@ -96,7 +96,7 @@
   margin-left: -3px;
 }
 
-/* Container around content */
+
 .container {
   padding: 0 40px;
   position: relative;
@@ -106,7 +106,7 @@
 }
 
 .timeline__year {
-  /* font: 31px 600 'Poppins'; */
+  
   font-size: 31px ;
   font-weight: 600;
   font-family: "Poppins";
