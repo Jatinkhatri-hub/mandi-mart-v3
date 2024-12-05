@@ -61,6 +61,10 @@
     max-width: 385px;
     
   }
+
+  .product__value-point-wrapper h2 svg {
+    width: 25px;
+  }
 }
 
 
