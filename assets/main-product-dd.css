@@ -402,7 +402,7 @@
 
   .main-product__media-wrapper {
     max-width: 560px;
-    height: 680px;
+    height: 900px;
   }
 
   .main-product__img {
@@ -561,7 +561,11 @@
     display: none;
   }
 
-  .main-product__review-card-wrapper .mobli
+  .main-product__review-card-wrapper.mobile {
+    display: none;
+  }
+
+  
 
 
   
