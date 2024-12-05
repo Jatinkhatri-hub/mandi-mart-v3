@@ -28,6 +28,7 @@
   font-weight: 700;
   font-family: 'Poppins';
   color: black;
+  gap: 17px;
 }
 
 .product__value-point-wrapper h2 svg path {
@@ -40,6 +41,7 @@
   font-weight: 400;
   text-align: start;
   color: black;
+  padding-inline-start: ;
 }
 
 
