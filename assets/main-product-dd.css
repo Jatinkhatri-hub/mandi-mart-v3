@@ -385,8 +385,11 @@
 
 
 .selling_plan_app_container {
+  width: 100%;
 
 }
+
+.main
 
 
 @media screen and (min-width: 789px) {
