@@ -58,6 +58,7 @@
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'timeline_point' %}
+          
             <div class="container right">
               <div class="content">
                 <h2 class="timeline__year">{{ block.settings.year }}</h2>
