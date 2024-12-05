@@ -30,7 +30,9 @@
   color: black;
 }
 
-
+.product__info-section-header h2 svg path {
+  fill: #309F99;
+}
 
 .product__value-point-wrapper p {
   font-size: 15px;
