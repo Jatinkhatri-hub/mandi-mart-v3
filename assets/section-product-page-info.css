@@ -51,7 +51,7 @@
 @media screen and (min-width: 786px) {
 
   .product__info-wrapper {
-    gap: 25px;
+    gap: 50px 25px;
     flex-wrap: wrap;
     flex-direction: row;
     margin-top: 40px;
