@@ -1,4 +1,6 @@
 .product__info-wrapper {
   display: flex;
-  flex
+  flex-direction: column;
+  justify-content: ce;
+  
 }
