@@ -534,8 +534,9 @@
     z-index: 1;
   }
   .input:checked + .label {
-    background: #fff;
-    color: #000;
+    background: #F3F7F7;
+    color: #074542;
+    border: 2px solid #074542;
   }
   @media (min-width: 600px) {
     .label {
