@@ -491,7 +491,9 @@
   margin-top: 10px;
 }
 
-
+.tabs {
+  display: none;
+}
 
 
 @media screen and (min-width: 789px) {
