@@ -1,3 +1,352 @@
+class SellingPlansWidget {
+  constructor(container) {
+    this.container = container;
+    
+    // Elements
+    this.oneTimePurchaseRadio = document.querySelector('input[data-radio-type="one_time_purchase"]');
+    this.subscribeAndSaveRadio = document.querySelector('input[data-radio-type="subscribe_and_save"]');
+    this.subscribeOptionsDropdown = document.getElementById('subscribe-options-dropdown');
+    this.sellingPlanOptionsSelect = document.getElementById('selling-plan-options');
+    this.selectedSellingPlanInput = document.querySelector('.selected-selling-plan-id');
+    
+    this.priceElement = document.querySelector('.main-product__current-price');
+    this.comparePriceElement = document.querySelector('.main-product__cap');
+    this.variantRadios = document.querySelectorAll('input[name="variant"]');
+    this.quantityRadios = document.querySelectorAll('input[name="quantity"]');
+    this.addToCartButton = document.querySelector('.main-product__atc-btn');
+    
+    this.currentQuantity = 1;
+    
+    this.bindEvents();
+    this.initialSetup();
+  }
+  
+  bindEvents() {
+    // Purchase type radio events
+    if (this.oneTimePurchaseRadio) {
+      this.oneTimePurchaseRadio.addEventListener('change', () => this.handlePurchaseTypeChange(false));
+    }
+    
+    if (this.subscribeAndSaveRadio) {
+      this.subscribeAndSaveRadio.addEventListener('change', () => this.handlePurchaseTypeChange(true));
+    }
+    
+    // Selling plan select events
+    if (this.sellingPlanOptionsSelect) {
+      this.sellingPlanOptionsSelect.addEventListener('change', () => this.handleSellingPlanChange());
+    }
+    
+    // Variant change events
+    this.variantRadios.forEach(radio => {
+      radio.addEventListener('change', () => this.updateVariantSpecificContent());
+    });
+    
+    // Quantity change events
+    this.quantityRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        this.currentQuantity = parseInt(radio.value);
+        this.updatePrice();
+      });
+    });
+    
+    // Add to cart button
+    if (this.addToCartButton) {
+      this.addToCartButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        this.addToCart();
+      });
+    }
+  }
+  
+  initialSetup() {
+    // Ensure first variant radio is selected
+    const firstVariantRadio = document.querySelector('input[name="variant"]');
+    if (firstVariantRadio) {
+      firstVariantRadio.checked = true;
+    }
+    
+    // Ensure first quantity radio is selected
+    const firstQuantityRadio = document.querySelector('input[name="quantity"]');
+    if (firstQuantityRadio) {
+      firstQuantityRadio.checked = true;
+    }
+    
+    // Initial variant setup
+    this.updateVariantSpecificContent();
+    this.updatePrice();
+  }
+  
+  handlePurchaseTypeChange(isSubscription) {
+    // Debug logging
+    console.log('Purchase Type Changed:', isSubscription ? 'Subscription' : 'One-Time');
+    
+    // Toggle dropdown visibility
+    if (this.subscribeOptionsDropdown) {
+      this.subscribeOptionsDropdown.style.display = isSubscription ? 'block' : 'none';
+    }
+    
+    // Reset selling plan input
+    if (this.selectedSellingPlanInput) {
+      this.selectedSellingPlanInput.value = isSubscription && this.sellingPlanOptionsSelect 
+        ? this.sellingPlanOptionsSelect.value 
+        : '';
+    }
+    
+    // Update price
+    this.updatePrice();
+  }
+  
+  handleSellingPlanChange() {
+    // Debug logging
+    console.log('Selling Plan Changed:', this.sellingPlanOptionsSelect.value);
+    
+    // Update hidden input with selected selling plan
+    if (this.selectedSellingPlanInput && this.sellingPlanOptionsSelect) {
+      this.selectedSellingPlanInput.value = this.sellingPlanOptionsSelect.value;
+    }
+    
+    // Update price
+    this.updatePrice();
+  }
+  
+  updateVariantSpecificContent() {
+    // Get current variant
+    const currentVariantRadio = document.querySelector('input[name="variant"]:checked');
+    if (!currentVariantRadio) {
+      console.warn('No variant selected');
+      return;
+    }
+    
+    const currentVariantId = currentVariantRadio.value.toString();
+    console.log('Current Variant ID:', currentVariantId, typeof currentVariantId);
+    
+    // Show/hide selling plan sections based on current variant
+    const sellingPlanSections = document.querySelectorAll('.selling_plan_theme_integration');
+    console.log('Total Selling Plan Sections:', sellingPlanSections.length);
+    
+    sellingPlanSections.forEach(section => {
+      const sectionVariantId = section.dataset.variantId.toString();
+      console.log('Comparing Variant IDs:', currentVariantId, sectionVariantId);
+      
+      if (sectionVariantId === currentVariantId) {
+        section.classList.remove('selling_plan_theme_integration--hidden');
+        console.log('Showing section for variant', sectionVariantId);
+      } else {
+        section.classList.add('selling_plan_theme_integration--hidden');
+        console.log('Hiding section for variant', sectionVariantId);
+      }
+    });
+    
+    // Reset purchase type to one-time
+    if (this.oneTimePurchaseRadio) {
+      this.oneTimePurchaseRadio.checked = true;
+      this.handlePurchaseTypeChange(false);
+    }
+    
+    // Update price
+    this.updatePrice();
+  }
+  
+  updatePrice() {
+    try {
+      // Get current variant radio
+      const currentVariantRadio = document.querySelector('input[name="variant"]:checked');
+      if (!currentVariantRadio) {
+        console.warn('No variant radio selected');
+        return;
+      }
+
+      // Base prices from variant data attributes
+      let basePrice = this.parsePrice(currentVariantRadio.dataset.price);
+      let compareAtPrice = this.parsePrice(currentVariantRadio.dataset.compareAtPrice);
+
+      console.log('Base Prices:', {
+        basePrice, 
+        compareAtPrice, 
+        variantPriceAttr: currentVariantRadio.dataset.price,
+        variantCompareAtAttr: currentVariantRadio.dataset.compareAtPrice
+      });
+
+      // Check if subscription is selected
+      const isSubscription = this.subscribeAndSaveRadio && this.subscribeAndSaveRadio.checked;
+      
+      // Override prices if subscription is selected and a plan is chosen
+      if (isSubscription && this.sellingPlanOptionsSelect) {
+        const selectedOption = this.sellingPlanOptionsSelect.options[this.sellingPlanOptionsSelect.selectedIndex];
+        if (selectedOption) {
+          // Extract price from option text
+          const priceMatch = selectedOption.textContent.match(/\$[\d.]+/);
+          if (priceMatch) {
+            basePrice = this.parsePrice(priceMatch[0]);
+            console.log('Updated Subscription Price:', basePrice);
+          }
+        }
+      }
+
+      // Apply quantity discounts
+      let adjustedPrice = basePrice;
+      switch (this.currentQuantity) {
+        case 2:
+          adjustedPrice *= 0.85; // 15% off
+          break;
+        case 3:
+          adjustedPrice *= 0.80; // 20% off
+          break;
+      }
+
+      // Calculate total prices
+      const totalPrice = adjustedPrice * this.currentQuantity;
+      const totalCompareAtPrice = compareAtPrice * this.currentQuantity;
+
+      console.log('Final Prices:', {
+        totalPrice, 
+        totalCompareAtPrice, 
+        quantity: this.currentQuantity
+      });
+
+      // Update price elements
+      if (this.priceElement) {
+        this.priceElement.textContent = this.formatPrice(totalPrice);
+      }
+
+      // Update compare at price if exists
+      if (this.comparePriceElement) {
+        this.comparePriceElement.textContent = this.formatPrice(totalCompareAtPrice);
+        this.comparePriceElement.style.display = totalPrice < totalCompareAtPrice ? 'inline' : 'none';
+      }
+    } catch (error) {
+      console.error('Error updating price:', error);
+    }
+  }
+  
+  addToCart() {
+    try {
+      // Get selected variant
+      const selectedVariantRadio = document.querySelector('input[name="variant"]:checked');
+      if (!selectedVariantRadio) {
+        this.showError('Please select a variant');
+        return;
+      }
+
+      const variantId = selectedVariantRadio.value;
+      const quantity = this.currentQuantity;
+      
+      // Prepare form data
+      const formData = new FormData();
+      formData.append('id', variantId);
+      formData.append('quantity', quantity);
+      
+      // Add selling plan if subscription is selected
+      if (this.subscribeAndSaveRadio && this.subscribeAndSaveRadio.checked) {
+        const sellingPlanId = this.selectedSellingPlanInput.value;
+        if (sellingPlanId) {
+          formData.append('selling_plan', sellingPlanId);
+        }
+      }
+
+      // Perform AJAX cart add
+      fetch('/cart/add.js', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      })
+      .then(response => {
+        if (!response.ok) {
+          return response.json().then(err => { throw new Error(err.description || 'Failed to add item to cart'); });
+        }
+        return response.json();
+      })
+      .then(addedItem => {
+        this.showSuccess(`Added ${quantity} item(s) to cart`);
+        this.updateCartDrawer(addedItem);
+      })
+      .catch(error => {
+        console.error('Add to Cart Error:', error);
+        this.showError(error.message);
+      });
+    } catch (error) {
+      console.error('Add to Cart Error:', error);
+      this.showError(error.message);
+    }
+  }
+  
+  // Utility methods
+  parsePrice(priceString) {
+    if (!priceString) return 0;
+    const cleanPrice = priceString.replace(/[^\d.-]/g, '');
+    const price = parseFloat(cleanPrice);
+    return isNaN(price) ? 0 : price;
+  }
+  
+  formatPrice(price) {
+    // Fallback price formatting
+    return '$' + price.toFixed(2);
+  }
+  
+  showError(message) {
+    const errorContainer = document.createElement('div');
+    errorContainer.classList.add('error-message');
+    errorContainer.style.color = 'red';
+    errorContainer.textContent = message;
+    
+    // Append error message near add to cart button
+    if (this.addToCartButton) {
+      this.addToCartButton.parentNode.insertBefore(errorContainer, this.addToCartButton.nextSibling);
+      
+      // Remove error after 3 seconds
+      setTimeout(() => {
+        errorContainer.remove();
+      }, 3000);
+    }
+  }
+  
+  showSuccess(message) {
+    const successContainer = document.createElement('div');
+    successContainer.classList.add('success-message');
+    successContainer.style.color = 'green';
+    successContainer.textContent = message;
+    
+    // Append success message near add to cart button
+    if (this.addToCartButton) {
+      this.addToCartButton.parentNode.insertBefore(successContainer, this.addToCartButton.nextSibling);
+      
+      // Remove success message after 3 seconds
+      setTimeout(() => {
+        successContainer.remove();
+      }, 3000);
+    }
+  }
+  
+  updateCartDrawer(addedItem) {
+    // Placeholder for cart drawer update
+    console.log('Item added to cart:', addedItem);
+    
+    // Dispatch custom event for potential cart drawer update
+    const cartUpdateEvent = new CustomEvent('cart:update', { 
+      detail: { item: addedItem } 
+    });
+    document.dispatchEvent(cartUpdateEvent);
+  }
+}
+
+// Global function for compatibility with existing Liquid template
+function toggleSubscribeDropdown(show) {
+  const dropdown = document.getElementById('subscribe-options-dropdown');
+  if (dropdown) {
+    dropdown.style.display = show ? 'block' : 'none';
+  }
+}
+
+// Initialize the widget
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.selling_plan_app_container');
+  if (container) {
+    new SellingPlansWidget(container);
+  }
+});
+
 // class SellingPlansWidget {
 //   constructor(container) {
 //     this.container = container;
