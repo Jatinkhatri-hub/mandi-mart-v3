@@ -50,6 +50,10 @@
 
 @media screen and (min-width: 786px) {
 
+  .product__info-section-header {
+    font-size: 29px;
+  }
+
   .product__info-wrapper {
     gap: 50px 25px;
     flex-wrap: wrap;
@@ -62,7 +66,7 @@
     
   }
 
-  
+
 
   .product__value-point-wrapper h2 {
     font-size: 22px;
