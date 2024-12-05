@@ -23,6 +23,8 @@
 .product__value-point-wrapper h2 {
   display: flex;
   align-items: center;
-  justify-content: ;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: ;
 }
 
