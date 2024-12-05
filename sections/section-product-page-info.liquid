@@ -16,6 +16,8 @@
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }} ">
   <div class="page-width" style="max-width: 1300px;">
+
+  
   </div>
 </div>
 
@@ -24,7 +26,7 @@
 
 {%  schema  %} 
   {
-   "name": "t:sections.main-product.name",
+   "name": "Product Page Info",
    "tag": "section",
    "class": "section",
    "settings": [
@@ -58,6 +60,11 @@
        "label": "t:sections.all.padding.padding_bottom",
        "default": 36
      }
+   ],
+   "presets": [
+    {
+      "name": "Product Page Info"
+    }
    ]
   }
  {% endschema %} 
