@@ -416,6 +416,7 @@
   border: 2px solid #074542;
   opacity: .6;
   padding: 25px 17px;
+  border-radius: 5px;
 }
 
 .onetime__btn:has(.input:checked), .subscription__btn:has( input:checked) {
