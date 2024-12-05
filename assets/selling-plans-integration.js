@@ -165,8 +165,8 @@ class SellingPlansWidget {
       }
 
       // Base prices from variant data attributes
-      let basePrice = this.parsePrice(currentVariantRadio.dataset.variantPrice);
-      let compareAtPrice = this.parsePrice(currentVariantRadio.dataset.variantCompareAtPrice);
+      let basePrice = this.parsePrice(currentVariantRadio.dataset.price);
+      let compareAtPrice = this.parsePrice(currentVariantRadio.dataset.compareAtPrice);
 
       console.log('Base Prices:', {
         basePrice, 
