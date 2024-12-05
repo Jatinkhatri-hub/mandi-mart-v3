@@ -16,6 +16,6 @@
 .prouduct__value-point-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  justify-content: center;
 }
 
