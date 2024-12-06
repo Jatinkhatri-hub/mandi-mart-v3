@@ -612,7 +612,8 @@
   .main-product__selling-plan-container {
     display: grid;
     grid-template-areas: 
-    "";
+    "onetime sub"
+    "dropdown";
   }
 
 
