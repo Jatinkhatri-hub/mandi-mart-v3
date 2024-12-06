@@ -678,7 +678,8 @@
   @media (min-width: 600px) {
     .label {
       width: 100%;
-      pa
+      padding: 10px 13px;
+      max-width: 190px;
     }
   }
   .panel-tab {
