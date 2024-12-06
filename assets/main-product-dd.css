@@ -615,7 +615,9 @@
     font-size: 18px;
   }
 
-  .main-product
+  .main-product__selling-plan-container {
+    display: grid;
+  }
 
 
 .subscription-button-container.onetime {
