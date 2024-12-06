@@ -76,7 +76,7 @@ childLinks.forEach(link => {
 
 // Ensure the first child element's products are shown initially when the dropdown is opened
 
-  const firstChildLink = document.querySelector('.our-top-brands .child-links');
+  const firstChildLink = document.querySelector('.all-brands .child-links');
   if (firstChildLink) {
     const collectionHandle = firstChildLink.getAttribute('data-collection-handle');
     const previewContainer = firstChildLink.closest('.mega-menu__child-dropdown').querySelector(`.${productPreviewClass}`);
