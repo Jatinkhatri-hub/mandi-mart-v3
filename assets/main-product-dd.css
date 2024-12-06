@@ -441,7 +441,7 @@
 }
 
 .subscription-options-dropdown {
-  grid-area: ;
+  grid-area: var(--size);
 }
 
 .onetime__btn, .subscription__btn {
