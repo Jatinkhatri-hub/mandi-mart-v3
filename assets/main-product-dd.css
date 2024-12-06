@@ -417,7 +417,7 @@
 }
 
 .main-product__selling-plan-container {
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: center;
   align-items: center;
