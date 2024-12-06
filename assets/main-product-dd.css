@@ -615,6 +615,22 @@
     font-size: 18px;
   }
 
+  .
+
+
+.subscription-button-container.onetime {
+  grid-area: onetime;
+}
+
+.subscription-button-container.sub {
+  grid-area: sub;
+}
+
+.subscription-options-dropdown {
+  grid-area: dropdown;
+}
+
+
   .main-product__atc-btn-wrapper {
     width: 100%;
   }
