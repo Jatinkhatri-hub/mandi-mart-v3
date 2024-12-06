@@ -532,7 +532,7 @@
   }
 
   .main-product__wrapper {
-    grid-template-columns: 560px 1fr;
+    grid-template-columns: 560px minmax(0, 590px);
     align-items: baseline;
     gap: 50px;
   }
