@@ -429,7 +429,9 @@
 
 }
 
-.subscription-button-container.
+.subscription-button-container.onetime {
+  
+}
 
 .onetime__btn, .subscription__btn {
   width: 100%;
