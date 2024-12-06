@@ -383,8 +383,11 @@
             <button class="accordion">Product Information <span>{%  render 'icon-arrow-down' %}</span></button>
             <div class="panel">
               <div class="panel__point">
-                <h2 class="panel__point-title">Active</h2>
-                <p class="panel__point-info">Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris proin a eu. Nunc tempor suspendisse dui id tellus habitasse.</p>
+                <h2 class="panel__point-title">Brand - {{ product.vendor }}</h2>
+                <h2 class="panel__point-title">Form - {{ product.metafields.custom.form.value }}</h2>
+                <h2 class="panel__point-title">Allergens - {% for item in product.metafields.custom.allergens.value %} {{ item }}, {% endfor %}</h2>
+
+                <h2 class="panel__point-title">Certification - {% for item in product.metafields.custom.certification.value %} {{ item }}, {% endfor %}</h2>
               </div>
             </div>
             <button class="accordion">Directions<span>{%  render 'icon-arrow-down' %}</span></button>
