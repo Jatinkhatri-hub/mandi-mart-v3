@@ -383,7 +383,7 @@
             <button class="accordion">Product Information <span>{%  render 'icon-arrow-down' %}</span></button>
             <div class="panel">
               <div class="panel__point">
-                <h2 class="panel__point-description">Brand - {{ product.vendor }}</h2>
+                <h2 class="panel__point-description"><strong></strong>Brand - {{ product.vendor }}</h2>
                 <h2 class="panel__point-description">Form - {{ product.metafields.custom.form.value }}</h2>
                 <h2 class="panel__point-description">Allergens - {% for item in product.metafields.custom.allergens.value %} {{ item }}, {% endfor %}</h2>
 
