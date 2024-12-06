@@ -2,7 +2,7 @@
 
 {% if product.selling_plan_groups.size <= 0 %} 
   
-  <script src="{{ 'add-t0.js' | asset_url }}" defer></script>
+  <script src="{{ 'add-to-cart-dd.js' | asset_url }}" defer></script>
 {% endif %}
 
 {%- style -%}
@@ -357,6 +357,14 @@
             
             <button class="accordion">Ingredients <span>{%  render 'icon-arrow-down' %}</span></button>
             <div class="panel">
+              <div class="panel__point">
+                <h2 class="panel__point-title">Active</h2>
+                <p class="panel__point-info">Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris proin a eu. Nunc tempor suspendisse dui id tellus habitasse.</p>
+              </div>
+              <div class="panel__point">
+                <h2 class="panel__point-title">Active</h2>
+                <p class="panel__point-info">Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris proin a eu. Nunc tempor suspendisse dui id tellus habitasse.</p>
+              </div>
               <div class="panel__point">
                 <h2 class="panel__point-title">Active</h2>
                 <p class="panel__point-info">Lorem ipsum dolor sit amet consectetur. Id purus cras sed habitasse tortor nec risus. In vel scelerisque aliquet mauris proin a eu. Nunc tempor suspendisse dui id tellus habitasse.</p>
