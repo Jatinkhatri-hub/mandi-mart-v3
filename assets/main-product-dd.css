@@ -421,9 +421,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-template-areas:
-   "onetime sub"
-   "dropdown dropdown";
 }
 
 
@@ -438,10 +435,6 @@
 
 .subscription-button-container.sub {
   grid-area: sub;
-}
-
-.subscription-options-dropdown {
-  grid-area: dropdown;
 }
 
 .onetime__btn, .subscription__btn {
