@@ -430,7 +430,7 @@
 }
 
 .subscription-button-container.onetime {
-  
+  grid-area: onetime;
 }
 
 .onetime__btn, .subscription__btn {
