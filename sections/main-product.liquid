@@ -284,7 +284,7 @@
                       id='{{ section.id }}_one_time_purchase'
                       data-radio-type='one_time_purchase'
                       data-variant-id='{{ variant.id }}'
-                      data-variant-price='{{ v }}'
+                      data-variant-price='{{ variant.price | wit }}'
                       data-variant-compare-at-price='{{ variantComparedAtPrice }}'
                       value="{{ variant }}"
                       checked
