@@ -634,6 +634,10 @@
   margin-top: 0;
 }
 
+.onetime__btn, .subscription__btn { 
+  
+}
+
 
   .main-product__atc-btn-wrapper {
     width: 100%;
