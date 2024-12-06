@@ -278,7 +278,7 @@
             <div class="main-product__selling-plan-container">
               {% unless product.requires_selling_plan %}
                 <!-- One-Time Purchase Radio Button -->
-                <div class="subscription-button-container">
+                <div class="subscription-button-container  onetime">
                   <label class="onetime__btn">
                     {% render 'icon-bag-onetime' %}
                     <input
@@ -299,7 +299,7 @@
                 </div>
               {% endunless %}
               <!-- Subscribe and Save Radio Button -->
-              <div class="subscription-button-container one">
+              <div class="subscription-button-container sub">
                 <label class="subscription__btn">
                   {%  render 'icon-rotate' %} 
                   <input
