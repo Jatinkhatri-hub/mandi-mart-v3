@@ -387,7 +387,7 @@
                 <h2 class="panel__point-description"><strong>Form</strong> - {{ product.metafields.custom.form.value }}</h2>
                 <h2 class="panel__point-description"><strong>Allergens</strong> - {% for item in product.metafields.custom.allergens.value %} {{ item }}, {% endfor %}</h2>
 
-                <h2 class="panel__point-description">Certification - {% for item in product.metafields.custom.certification.value %} {{ item }}, {% endfor %}</h2>
+                <h2 class="panel__point-description"><strong>Certification</strong> - {% for item in product.metafields.custom.certification.value %} {{ item }}, {% endfor %}</h2>
               </div>
             </div>
             <button class="accordion">Directions<span>{%  render 'icon-arrow-down' %}</span></button>
