@@ -262,8 +262,8 @@
     <style>.selling_plan_theme_integration--hidden {display: none;}</style>
     {% for variant in product.variants %}
       {%liquid
-        assign variantPrice = variant.price | money_with_currency | escape
-        assign variantComparedAtPrice = variant.compare_at_price | money_with_curr | escape
+        assign variantPrice = variant.price | money_without_currency | escape
+        assign variantComparedAtPrice = variant.compare_at_price | money_without_currency
       %}
       {% if variant.selling_plan_allocations.size > 0 %}
         <section data-variant-id='{{ variant.id }}' class='selling_plan_theme_integration {% if variant.id != current_variant.id %}selling_plan_theme_integration--hidden{% endif %}'>
