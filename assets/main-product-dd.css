@@ -681,11 +681,12 @@
       padding: 10px 13px;
       max-width: 203px;
       margin-right: 13px;
+      text-align: center;
     }
   }
   .panel-tab {
     display: none;
-    padding: 20px 30px 30px;
+    padding: 20px 0;
     background: #fff;
   }
   @media (min-width: 600px) {
