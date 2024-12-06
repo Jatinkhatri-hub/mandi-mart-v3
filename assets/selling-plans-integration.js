@@ -818,7 +818,7 @@ class SellingPlansWidget {
   // Utility method to parse price strings
   parsePrice(priceString) {
     if (!priceString) return 0;
-    console.
+    console.log(priceString)
     const cleanPrice = priceString.replace(/[^\d.-]/g, '');
     const price = parseFloat(cleanPrice);
     return isNaN(price) ? 0 : price;
