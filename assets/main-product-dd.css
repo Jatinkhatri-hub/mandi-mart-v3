@@ -417,7 +417,7 @@
 }
 
 .main-product__selling-plan-container {
-  display: grid;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -429,13 +429,7 @@
 
 }
 
-.subscription-button-container.onetime {
-  grid-area: onetime;
-}
 
-.subscription-button-container.sub {
-  grid-area: sub;
-}
 
 .onetime__btn, .subscription__btn {
   width: 100%;
