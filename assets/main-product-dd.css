@@ -613,7 +613,7 @@
     display: grid;
     grid-template-areas: 
     "onetime sub"
-    "dropdown";
+    "dropdown dropdown";
   }
 
 
@@ -627,6 +627,10 @@
 
 .subscription-options-dropdown {
   grid-area: dropdown;
+}
+
+.subscription__btn {
+  margin-top: 0;
 }
 
 
