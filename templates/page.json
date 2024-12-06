@@ -221,12 +221,36 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "section_company_timeline_dhwLwT": {
+      "type": "section-company-timeline",
+      "blocks": {
+        "timeline_point_GYQtfC": {
+          "type": "timeline_point",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_6628_1.png",
+            "year": "1995",
+            "title": "Sam is diagnosed with Autism.",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "timeline_point_GYQtfC"
+      ],
+      "settings": {
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "brand_directory_BcWLGN",
     "bd_explore_KAazk9",
-    "image_with_text_about_us_6eFm3h"
+    "image_with_text_about_us_6eFm3h",
+    "section_company_timeline_dhwLwT"
   ]
 }
