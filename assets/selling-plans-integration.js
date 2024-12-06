@@ -825,7 +825,7 @@ class SellingPlansWidget {
   
   // Format price to currency
   formatPrice(price) {
-    return '$' + price.toFixed(2);
+    return '$' + (price* 100).toFixed(2);
   }
   
   // Show error message
