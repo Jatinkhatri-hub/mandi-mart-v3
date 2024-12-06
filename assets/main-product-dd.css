@@ -423,7 +423,7 @@
   align-items: center;
   grid-template-areas:
    "onetime sub"
-   "";
+   "dropdown dropdown";
 }
 
 
