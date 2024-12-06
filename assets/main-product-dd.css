@@ -433,6 +433,10 @@
   grid-area: onetime;
 }
 
+.subscription-button-container.sub {
+  grid-are: 
+}
+
 .onetime__btn, .subscription__btn {
   width: 100%;
   display: flex;
