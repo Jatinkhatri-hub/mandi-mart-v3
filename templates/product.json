@@ -84,36 +84,43 @@
         "review_carousle_y9fnNq": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet"
+            "user_name": "Tracy Givens",
+            "user_description": "Communication wonderful. Arrived very timely. Could not be more pleased with the product!"
+          }
+        },
+        "review_carousle_B7FHta": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Ebune Esunju Ebune",
+            "user_description": "Mandimart as i have said many times offers fast and relaible delivery, my order as they promise is always shipped on the same day if i order before 2pm, and i always get exactly the products i ordered"
           }
         },
         "review_carousle_FJnNbM": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet"
+            "user_name": "Gary P",
+            "user_description": "Product and service is good. Shipping costs are prohibitive. Costs as much as the product"
           }
         },
         "review_carousle_BWNrbi": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet"
+            "user_name": "Mary",
+            "user_description": "its always a quick delivery and the products are quite consistent never received different products from those i have odered before.keep it up and thank you.and more to that,am replied as soon as i ask any questions regarding the products in question"
           }
         },
         "review_carousle_AQjGPn": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet"
+            "user_name": "Sandar Elam",
+            "user_description": "I'm really happy that you sell low-dose DMSA capsules, suitable for the Andy Cutler Chelation (ACC) protocol. I've purchased 6.25 mg, 12.5 mg, 25 mg, and 50 mg DMSA capsules in two orders. I can feel them working. My order arrived quickly to the USA in perfect condition! Thank you!"
           }
         },
         "review_carousle_UGnJtN": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet"
+            "user_name": "John Murrphy",
+            "user_description": "Highly recommended. Excellent customer service where you are treated like a friend and very good prices for specialised products."
           }
         },
         "review_carousle_ARnpka": {
@@ -126,6 +133,7 @@
       },
       "block_order": [
         "review_carousle_y9fnNq",
+        "review_carousle_B7FHta",
         "review_carousle_FJnNbM",
         "review_carousle_BWNrbi",
         "review_carousle_AQjGPn",
