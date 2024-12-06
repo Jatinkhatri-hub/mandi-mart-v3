@@ -15,11 +15,12 @@
   align-items: center;
 }
 
-.review__section-header {
+.review__section-header p {
   font-size: 3.7rem;
   color: rgb(var(--color-foreground));
   font-weight: 600;
   margin: 0;
+  font-family: 'Poppins';
 }
 
 .review__list-wrapper {
