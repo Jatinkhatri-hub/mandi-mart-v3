@@ -614,6 +614,7 @@
     grid-template-areas: 
     "onetime sub"
     "dropdown dropdown";
+    gap: 10px;
   }
 
 
