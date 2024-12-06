@@ -384,7 +384,7 @@
             <div class="panel">
               <div class="panel__point">
                 <h2 class="panel__point-description"><strong>Brand</strong> - {{ product.vendor }}</h2>
-                <h2 class="panel__point-description">Form - {{ product.metafields.custom.form.value }}</h2>
+                <h2 class="panel__point-description"><strong></strong> - {{ product.metafields.custom.form.value }}</h2>
                 <h2 class="panel__point-description">Allergens - {% for item in product.metafields.custom.allergens.value %} {{ item }}, {% endfor %}</h2>
 
                 <h2 class="panel__point-description">Certification - {% for item in product.metafields.custom.certification.value %} {{ item }}, {% endfor %}</h2>
