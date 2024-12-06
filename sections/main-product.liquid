@@ -440,11 +440,11 @@
             <label class="label" for="tab-2">Product Information</label>
             <div class="panel-tab">
               <div class="panel__point">
-                <h2 class="panel__point-title">Brand - {{ product.vendor }}</h2>
-                <h2 class="panel__point-title">Form - {{ product.metafields.custom.form.value }}</h2>
-                <h2 class="panel__point-title">Allergens - {% for item in product.metafields.custom.allergens.value %} {{ item }}, {% endfor %}</h2>
+                <h2 class="panel__point-description"><strong>Brand</strong> - {{ product.vendor }}</h2>
+                <h2 class="panel__point-description"><strong>Form</strong> - {{ product.metafields.custom.form.value }}</h2>
+                <h2 class="panel__point-description"><strong>Allergens</strong> - {% for item in product.metafields.custom.allergens.value %} {{ item }}, {% endfor %}</h2>
 
-                <h2 class="panel__point-title">Certification - {% for item in product.metafields.custom.certification.value %} {{ item }}, {% endfor %}</h2>
+                <h2 class="panel__point-description"><strong>Certification</strong> - {% for item in product.metafields.custom.certification.value %} {{ item }}, {% endfor %}</h2>
 
 
 
