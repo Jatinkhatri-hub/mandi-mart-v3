@@ -105,8 +105,8 @@
                     type="radio"
                     name="variant"
                     value="{{ variant.id }}"
-                    data-price="{{ variant.price | mon  }}"
-                    data-compare-at-price="{{ variant.compare_at_price | money }}"
+                    data-price="{{ variant.price |  money  }}"
+                    data-compare-at-price="{{ }}"
                     {% if forloop.first %}checked{% endif %}
                     class="variant-radio"
                   >
