@@ -305,6 +305,7 @@
   font-family: "Poppins";
   color: rgb(var(--color-foreground));
   margin: 0;
+  text-align: start;
   
 }
 
@@ -314,6 +315,7 @@
   font-family: "Poppins";
   color: #000;
   margin: 0;
+  text-align: start;
 }
 
   .timeline-image {
