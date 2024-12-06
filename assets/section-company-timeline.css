@@ -270,7 +270,9 @@
       flex-direction: row;
   }
 
-  .tim
+  .timeline-item:nth-child(even) {
+    
+  }
 
   .timeline-content {
       width: 510px;
