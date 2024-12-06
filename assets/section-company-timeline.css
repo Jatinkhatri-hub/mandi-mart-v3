@@ -263,10 +263,11 @@
       position: relative;
       justify-content: center;
       gap: 120px;
+      flex-direction: row-reverse;
   }
 
   .timeline-item:nth-child(even) {
-      flex-direction: row-reverse;
+      flex-direction: row;
   }
 
   .timeline-content {
