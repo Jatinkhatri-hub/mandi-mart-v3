@@ -339,6 +339,19 @@
   transition: max-height 0.2s ease-out;
 }
 
+
+.panel__point-title {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins';
+}
+
+.panel__point-info {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Poppins';
+}
+
 .main-product__review-card-wrapper {
   display: flex;
   align-items: center;
