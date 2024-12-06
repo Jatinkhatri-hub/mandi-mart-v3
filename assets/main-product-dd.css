@@ -421,6 +421,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  grid
 }
 
 
@@ -434,7 +435,7 @@
 }
 
 .subscription-button-container.sub {
-  grid-are: 
+  grid-area: sub;
 }
 
 .onetime__btn, .subscription__btn {
