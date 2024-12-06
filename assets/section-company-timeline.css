@@ -270,8 +270,8 @@
       flex-direction: row;
   }
 
-  .timeline-item:nth-child(even) time {
-
+  .timeline-item:nth-child(even) .timeline-content {
+    align-items: end;
   }
 
   .timeline-content {
