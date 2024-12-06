@@ -819,7 +819,7 @@ class SellingPlansWidget {
   parsePrice(priceString) {
     if (!priceString) return 0;
     const cleanPrice = priceString.replace(/[^\d.-]/g, '');
-    const price = parseFloat(cleanPrice);
+    const price = parseFloat(cleanPrice*100);
     return isNaN(price) ? 0 : price;
   }
   
