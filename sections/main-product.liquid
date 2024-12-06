@@ -363,7 +363,7 @@
                   {% comment %} {% for item in product.metafields.custom.product_ingredients.value %}
                   {{ item }}<br>
                 {% endfor %} {% endcomment %}
-                {{ product.metafields.custom.product_ingredients.value }}
+                {{ product.metafields.custom.product_ingredients.value[0] }}
 
                 </p>
               </div>
