@@ -233,10 +233,40 @@
             "title": "Sam is diagnosed with Autism.",
             "description": "<p>Lorem ipsum dolor sit amet consectetur. Bibendum placerat ornare erat interdum nisl. Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.</p><p>Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna fermentum malesuada arcu viverra neque dui malesuada. Libero faucibus quis at fringilla.</p><p>Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.</p>"
           }
+        },
+        "timeline_point_yVmCzw": {
+          "type": "timeline_point",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_6628_1.png",
+            "year": "2005",
+            "title": "Title",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Bibendum placerat ornare erat interdum nisl. Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.</p><p>Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna fermentum malesuada arcu viverra neque dui malesuada. Libero faucibus quis at fringilla.</p><p>Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.</p>"
+          }
+        },
+        "timeline_point_aBJ6pi": {
+          "type": "timeline_point",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_6628_1.png",
+            "year": "2008",
+            "title": "Title",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Bibendum placerat ornare erat interdum nisl. Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.</p><p>Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna fermentum malesuada arcu viverra neque dui malesuada. Libero faucibus quis at fringilla.</p><p>Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.</p>"
+          }
+        },
+        "timeline_point_bzMptw": {
+          "type": "timeline_point",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_6628_1.png",
+            "year": "",
+            "title": "Title",
+            "description": "<p>Lorem ipsum dolor sit amet consectetur. Bibendum placerat ornare erat interdum nisl. Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.</p><p>Molestie tempus pulvinar amet et vitae consequat convallis amet at. Ultrices urna fermentum malesuada arcu viverra neque dui malesuada. Libero faucibus quis at fringilla.</p><p>Sed leo felis quam eu consequat. Sit varius blandit turpis tempus magna velit euismod proin viverra. Amet sapien duis interdum ante elit elementum ultrices.</p>"
+          }
         }
       },
       "block_order": [
-        "timeline_point_GYQtfC"
+        "timeline_point_GYQtfC",
+        "timeline_point_yVmCzw",
+        "timeline_point_aBJ6pi",
+        "timeline_point_bzMptw"
       ],
       "settings": {
         "section_color_scheme": "",
