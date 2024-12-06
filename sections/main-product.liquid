@@ -276,28 +276,7 @@
               {{ block.settings.supporting_text_title }}
             </legend>
             <div class="main-product__selling-plan-container">
-              {% unless product.requires_selling_plan %}
-                <!-- One-Time Purchase Radio Button -->
-                <div class="subscription-button-container  onetime">
-                  <label class="onetime__btn">
-                    {% render 'icon-bag-onetime' %}
-                    <input
-                      aria-label='One-time purchase. Product price {{ variantPrice }}'
-                      type='radio'
-                      name="purchaseOption_{{ section.id }}"
-                      id='{{ section.id }}_one_time_purchase'
-                      data-radio-type='one_time_purchase'
-                      data-variant-id='{{ variant.id }}'
-                      data-variant-price='{{ variant.price |  money_without_currency }}'
-                      data-variant-compare-at-price='{{ variant.compare_at_price |  money_without_currency }}'
-                      value="{{ variant }}"
-                      checked
-                      onclick="toggleSubscribeDropdown(false)"
-                    />
-                    One-time purchase
-                  </label>
-                </div>
-              {% endunless %}
+              
               <!-- Subscribe and Save Radio Button -->
               <div class="subscription-button-container sub">
                 <label class="subscription__btn">
@@ -337,6 +316,28 @@
                   {% endfor %}
                 </select>
               </div>
+              {% unless product.requires_selling_plan %}
+                <!-- One-Time Purchase Radio Button -->
+                <div class="subscription-button-container  onetime">
+                  <label class="onetime__btn">
+                    {% render 'icon-bag-onetime' %}
+                    <input
+                      aria-label='One-time purchase. Product price {{ variantPrice }}'
+                      type='radio'
+                      name="purchaseOption_{{ section.id }}"
+                      id='{{ section.id }}_one_time_purchase'
+                      data-radio-type='one_time_purchase'
+                      data-variant-id='{{ variant.id }}'
+                      data-variant-price='{{ variant.price |  money_without_currency }}'
+                      data-variant-compare-at-price='{{ variant.compare_at_price |  money_without_currency }}'
+                      value="{{ variant }}"
+                      checked
+                      onclick="toggleSubscribeDropdown(false)"
+                    />
+                    One-time purchase
+                  </label>
+                </div>
+              {% endunless %}
             </div>
           </fieldset>
         </section>
