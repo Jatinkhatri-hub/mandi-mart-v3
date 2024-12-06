@@ -635,7 +635,7 @@
 }
 
 .onetime__btn, .subscription__btn { 
-  
+  padding-inline: 10px ;
 }
 
 
