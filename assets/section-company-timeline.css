@@ -321,9 +321,6 @@
   .timeline-image {
       width: 545px;
       height: 410px;
-      /* display: flex; */
-      align-items: center;
-      justify-content: center;
       display: block;
       position: sticky;
       top: 3rem;
