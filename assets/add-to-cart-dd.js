@@ -86,14 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (currentVariant) {
         let basePrice = currentVariant.getAttribute('data-price');
-        let compareAtPrice = currentVariant.getAttribute('data-compare-at-price');
+        compareAtPriceEl = currentVariant.getAttribute('data-compare-at-price');
         
         // Example quantity-based pricing logic
         switch(selectedQuantity) {
           case 2:
             // 15% off for 2 items
             basePrice = parseFloat(basePrice.replace(/[^0-9.-]+/g, '')) * 0.85 * 2;
-            compareAtPrice = parseFloat(compareAtPrice) * 2;
+            compareAtPriceEl = parseFloat(compareAtPrice) * 2;
             console.log(currentVariant);
             break;
           case 3:
