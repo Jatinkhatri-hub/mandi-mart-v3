@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
         if (compareAtPriceEl) {
-          compareAtPriceEl.textContent = basePrice === compareAtPrice ? ' ' : for
+          compareAtPriceEl.textContent = basePrice === compareAtPrice ? ' ' : formatMoney(compareAtPrice);
         }
       }
     });
