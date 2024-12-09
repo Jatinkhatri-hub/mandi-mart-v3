@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (currentVariant) {
         let basePrice = currentVariant.getAttribute('data-price');
+        let compareAtPrice = cu
         
         // Example quantity-based pricing logic
         switch(selectedQuantity) {
