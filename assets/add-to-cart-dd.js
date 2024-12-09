@@ -115,7 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
           currentPriceEl.textContent = formatMoney(basePrice);
 
         }
-        if compareAtPriceEl = 
+        if (compareAtPriceEl) {
+          
+        }
       }
     });
   });
