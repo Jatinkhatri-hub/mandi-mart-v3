@@ -356,6 +356,10 @@
   color: #282828;
 }
 
+.panel__point-info strong {
+  fon
+}
+
 .main-product__review-card-wrapper {
   display: flex;
   align-items: center;
