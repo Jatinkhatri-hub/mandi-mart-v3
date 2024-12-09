@@ -614,7 +614,8 @@
     grid-template-areas: 
     "sub onetime"
     "dropdown dropdown";
-    gap: 10px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
   }
 
 
@@ -647,6 +648,15 @@
     font-size: 24px;
     padding: 20px;
     border-radius: 80px;
+  }
+
+  .main-product__value-point {
+    font-size: 16px;
+  }
+
+  .main-product__value-point svg {
+    width: 20px;
+    height: 20px;
   }
 
   h1 {

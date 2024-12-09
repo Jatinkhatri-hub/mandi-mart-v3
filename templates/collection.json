@@ -27,36 +27,36 @@
         "review_carousle_qiFgje": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Tracy Givens",
-            "user_description": "Communication wonderful. Arrived very timely. Could not be more pleased with the product!"
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_nph63F": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Ebune Esunju Ebune",
-            "user_description": "Mandimart as i have said many times offers fast and relaible delivery, my order as they promise is always shipped on the same day if i order before 2pm, and i always get exactly the products i ordered."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_bDcgaM": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Mary",
-            "user_description": "its always a quick delivery and the products are quite consistent never received different products from those i have odered before.keep it up and thank you."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_hLEVar": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "John Murphy",
-            "user_description": "Highly recommended. Excellent customer service where you are treated like a friend and very good prices for specialised products."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         },
         "review_carousle_X4XMYU": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Erik",
-            "user_description": "Highly recommended. Excellent customer service where you are treated like a friend and very good prices for specialised products."
+            "user_name": "Name",
+            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
           }
         }
       },
@@ -68,7 +68,7 @@
         "review_carousle_X4XMYU"
       ],
       "settings": {
-        "heading": "<p>TrustPilot Reviews</p>",
+        "heading": "<p>Rich text</p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "padding_top": 36,
