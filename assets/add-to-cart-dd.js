@@ -114,7 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentPriceEl) {
           currentPriceEl.textContent = formatMoney(basePrice);
 
-          compareAtPriceEl.textContent = formatMoney(compareAtPrice);        }
+        }
+        
       }
     });
   });
