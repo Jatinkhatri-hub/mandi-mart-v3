@@ -546,6 +546,10 @@
   .main-product__media-wrapper {
     max-width: 560px;
     height: 955px;
+    display: block;
+    position: sticky;
+    top: 3rem;
+    z-index: 2;
   }
 
   .main-product__img {
