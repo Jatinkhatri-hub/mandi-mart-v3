@@ -627,7 +627,7 @@
   grid-area: sub;
 }
 
-.subscribe-options-dropdown {
+#subscribe-options-dropdown {
   grid-area: dropdown;
 }
 
