@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
         if (compareAtPriceEl) {
-          
+          compareAtPriceEl.textContent = 
         }
       }
     });
