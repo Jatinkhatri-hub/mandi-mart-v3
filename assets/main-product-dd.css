@@ -180,6 +180,7 @@
   width: 110px;
   border: 2px solid #20202085;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .main-product__quantity-selector h2 {
