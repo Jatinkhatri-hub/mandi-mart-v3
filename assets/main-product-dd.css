@@ -450,6 +450,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
+  cursor: pointer;
 }
 
 .onetime__btn {
