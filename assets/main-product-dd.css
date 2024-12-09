@@ -428,7 +428,7 @@
 
 .subscription-button-container {
   width: 100%;
-
+  cursor: pointer;
 }
 
 
