@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update price display
         if (currentPriceEl) {
           currentPriceEl.textContent = formatMoney(basePrice);
+          compareAtPriceEl.tex
         }
       }
     });
