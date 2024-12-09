@@ -93,20 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
           case 2:
             // 15% off for 2 items
             basePrice = parseFloat(basePrice.replace(/[^0-9.-]+/g, '')) * 0.85 * 2;
-            compareAtPriceEl = parseFloat(compareAtPrice) * 2;
+            compareAtPrice = parseFloat(compareAtPrice) * 2;
             console.log(currentVariant);
             break;
           case 3:
             // 20% off for 3 items
             basePrice = parseFloat(basePrice.replace(/[^0-9.-]+/g, '')) * 0.80 * 3;
-            compareAtPriceEl = parseFloat(compareAtPrice) * 3;
+            compareAtPrice = parseFloat(compareAtPrice) * 3;
             console.log(compareAtPrice);
 
             break;
           default:
             // Ensure it's the original price for quantity 1
             basePrice = parseFloat(basePrice.replace(/[^0-9.-]+/g, ''));
-            compareAtPriceEl = parseFloat(compareAtPrice);
+            compareAtPrice = parseFloat(compareAtPrice);
 
         }
         
