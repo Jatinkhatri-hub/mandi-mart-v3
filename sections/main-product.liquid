@@ -99,9 +99,7 @@
           <div class="main-product__price-wrapper">
             <span class="main-product__current-price">{{ product.price |  money_with_currency }}</span>
             <span class="main-product__cap">
-              {% if product.price < product.compare_at_price %}
-                {{ product.compare_at_price | money_with_currency }}
-              {% endif %}
+              {{ product.compare_at_price | money_with_currency }}
               </span>
           </div>
           <div class="main-product__variants">
