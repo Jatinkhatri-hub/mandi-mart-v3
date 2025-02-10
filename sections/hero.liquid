@@ -1,7 +1,7 @@
 {{ 'https://unpkg.com/swiper/swiper-bundle.min.css' | stylesheet_tag }}
 
 <div class="hero-slider swiper mySwiper mySwiper-{{ section.id }}">
-  <div class="swiper-wrapper section-wrapper-{{ section.id }}">
+  <div class="swiper-wrapper section-wrapper-{{ section.id }}" style="padding-bottom: 0;">
   {% for block in section.blocks %}
     {% if block.type == 'banner' %}
       <div class="hero-div section-{{ section.id }} color-{{ section.settings.hero_color_scheme }} swiper-slide">
