@@ -212,7 +212,7 @@
     "image_with_text_about_us_J4Yg6g": {
       "type": "image-with-text-about-us",
       "settings": {
-        "section_color_scheme": "",
+        "section_color_scheme": "scheme-2",
         "color_scheme": "",
         "heading": "Our Story: Family-Owned Since 1999",
         "description": "Lorem ipsum dolor sit amet consectetur. Vitae vivamus nullam pharetra maecenas elementum ultricies faucibus!",
