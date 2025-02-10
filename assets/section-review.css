@@ -16,6 +16,10 @@
   padding-bottom: 44px;
 }
 
+.review__section-header {
+  margin-block-end: 0;
+}
+
 .review__section-header p {
   font-size: 3.7rem;
   color: rgb(var(--color-foreground));
