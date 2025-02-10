@@ -142,42 +142,50 @@
         "review_carousle_EEFHhP": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Clare de Ville",
+            "user_description": "Really helpful when I asked detailed questions - they being able to answer from personal experience has been invaluable which is why I chose Mandimart.Really fast delivery."
           }
         },
         "review_carousle_UTY3wA": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "DE BOUVERE",
+            "user_description": "Quick delivery! I discovered and enjoyed the ionic formulation of Ca, Mg and Zn. Easy to take."
+          }
+        },
+        "review_carousle_MMVerL": {
+          "type": "review_carousle",
+          "settings": {
+            "user_name": "Mary",
+            "user_description": "I have mercury poisoning from my dental amalgams and I use the transdermal Glutathione on my liver to support detoxification. I think this is the best website for products that support detoxing."
           }
         },
         "review_carousle_tpKhMt": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Osman Akram",
+            "user_description": "I would recommend MandiMart to everyone. This is a place where you get the best medicines/supplements. Joe is extremely responsive to all queries and he very helpful."
           }
         },
         "review_carousle_wi49bP": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Giles",
+            "user_description": "The product is special, the website easy to use and the service efficient. The container it comes in is a bit severe but having read the About Us, it seems to come with a smile."
           }
         },
         "review_carousle_QkRFjV": {
           "type": "review_carousle",
           "settings": {
-            "user_name": "Name",
-            "user_description": "Lorem ipsum dolor sit amet consectetur. Mattis risus neque sed pulvinar in amet sed. Nibh et congue cursus malesuada morbi nunc. Donec mus vitae aliquam scelerisque"
+            "user_name": "Angshuman",
+            "user_description": "Amazing Customer service of Manimart team. I would give 100 stars instead of 10 stars !! Keep your good work going."
           }
         }
       },
       "block_order": [
         "review_carousle_EEFHhP",
         "review_carousle_UTY3wA",
+        "review_carousle_MMVerL",
         "review_carousle_tpKhMt",
         "review_carousle_wi49bP",
         "review_carousle_QkRFjV"
