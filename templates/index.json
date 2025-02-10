@@ -191,7 +191,7 @@
         "review_carousle_QkRFjV"
       ],
       "settings": {
-        "heading": "<p>TrustPilot Reviews</p>",
+        "heading": "<p>Hear From Our Customers</p>",
         "section_color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "color_scheme": "scheme-73da2105-31f1-46f6-bd3a-71060749aa24",
         "padding_top": 36,
@@ -204,13 +204,13 @@
         "title_77rBtW": {
           "type": "title",
           "settings": {
-            "title": "Lorem ipsum dolor sit amet cons ectetur acus sit amet"
+            "title": "Your One-Stop-Shop For Better Health"
           }
         },
         "paragraph_hkJMKB": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "<p>Lorem ipsum dolor sit amet consectetur. Lacus duis justo fames gravida et rhoncus ut. Sit cras!</p>"
+            "paragraph": "<p>Improve your well-being with the right supplements, for the best price available.</p>"
           }
         },
         "button_JGj4N3": {
